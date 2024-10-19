@@ -326,7 +326,7 @@
 | **User**    | 32m46s   | 58m43s   | 8,920s 
 | **Sys**     | 1m47s   | 2m17s   | 0,407s
 
-
+---
 <br>
 
 
@@ -498,3 +498,160 @@
 | **Real**    | 21m38,592s   | 23m0,848s   | 22m8,266s   | 21m37,697s  | 21m34,877s  | 21m37,330s  | 21m42,767s  | 21m34,641s  | 21m34,435s  | 21m38,335s  | 21m47,079s | 0,611s        |
 | **User**    | 25m45,521s   | 27m9,238s   | 26m31,884s  | 25m49,557s  | 25m35,977s  | 25m43,637s  | 25m51,187s  | 25m35,093s  | 25m39,768s  | 25m43,650s  | 25m52,451s | 0,632s        |
 | **Sys**     | 1m51,120s    | 1m53,997s   | 1m50,339s   | 1m55,508s   | 1m50,636s   | 1m47,435s   | 1m50,812s   | 1m47,138s   | 1m48,226s   | 1m48,253s   | 1m50,546s | 0,462s        |
+
+<br>
+
+<br>
+
+# DESEMPENHO KONTROL
+
+
+| Função | Status |
+|--------|--------|
+| prove_MultipleTransferFromsOfZeroAmountAllowed | FAIL |
+| prove_MsgSenderCanTransferTotalBalance | FAIL |
+| prove_TransferDoesNotUpdateOtherBalances | PASS |
+| proveFail_TransferFromUnderBalancei | FAIL |
+| proveFail_TransferFromZeroAddress | FAIL |
+| prove_Approve | FAIL |
+| prove_ApproveMaxAmount | FAIL |
+| prove_TransferFromDecreasesAllowance | FAIL |
+| proveFail_ApproveFromZeroAddress | PASS |
+| proveFail_BurnFromZeroAddress | FAIL |
+| proveFail_ApproveZeroAddress | PASS |
+| prove_BalanceUpdatedAfterBurn | FAIL |
+| proveFail_BurnUnderBalance | FAIL |
+| prove_TokenReceiverCanTransferFromTotalBalance | FAIL |
+| prove_TransferFromZeroAmount | FAIL |
+| prove_DecreaseAllowance | FAIL |
+| prove_SelfApproveZeroAmountAllowed | FAIL |
+| prove_ConsecutiveApprovePositiveToPositive | FAIL |
+| prove_TransferFromNoFees | FAIL |
+| prove_ZeroAddressHasNoToken | PASS |
+| prove_MultipleTransferFromAllowed | FAIL |
+| prove_SelfApprovePositiveAmount | FAIL |
+| prove_SelfTransferPositiveAmountAllowed | FAIL |
+| prove_BurnDifferentAccount | FAIL |
+| prove_Mint | FAIL |
+| prove_IncreaseAllowance | FAIL |
+| prove_MsgSenderCanTransferTotalBalanceZero | FAIL |
+| prove_Transfer | FAIL |
+| proveFail_TransferFromZeroAddressForMSGSender | FAIL |
+| proveFail_TransferFromZeroAmountToZeroAddressReverts | PASS |
+| proveFail_TransferFromUnderBalance | FAIL |
+| prove_AllowanceUpdatedAfterBurn | FAIL |
+| prove_SelfApproveAndTransferFromOwnAccountZeroAmountAllowed | FAIL |
+| proveFail_TransferUnderBalance | FAIL |
+| prove_BurnSameAccount | FAIL |
+| prove_MsgSenderCanRetrieveOwnBalance | PASS |
+| prove_SelfTransferZeroAmountAllowed | FAIL |
+| proveFail_MintToZeroAddress | PASS |
+| prove_MultipleTransfersAllowed | FAIL |
+| proveFail_TransferFromZeroAddress | FAIL |
+| proveFail_TransferZeroAmountToZeroAddressReverts | PASS |
+| prove_TransferFromDoesNotUpdateOtherBalances | FAIL |
+| prove_BurnFromNonZeroAddress | FAIL |
+| proveFail_TransferUnderBalancej | FAIL |
+| proveFail_ApproveZeroAddressForMSGSender | PASS |
+| prove_ApproveNonZeroAmount | FAIL |
+| proveFail_TransferFromToZeroAddress33 | FAIL |
+| prove_ApproveZeroAmount | FAIL |
+| prove_MintZeroTokens | FAIL |
+| proveFail_BurnUnderSupply | FAIL |
+| proveFail_MintOverflow | FAIL |
+| prove_MultipleTransfersOfZeroAmountAllowed | FAIL |
+| prove_BurnZeroTokens | FAIL |
+| proveFail_TransferFromAllowanceReachesZero | FAIL |
+| prove_MsgSenderCanRetrieveOtherBalance | FAIL |
+| prove_SelfApproveAndTransferFromOwnAccount | FAIL |
+| prove_TokenReceiverCanTransferFromTotalBalanceZero | FAIL |
+| prove_TransferFrom | FAIL |
+| proveFail_TransferToZeroAddress | PASS |
+| prove_TransferZeroAmount | FAIL |
+| proveFail_ApproveToZeroAddress | PASS |
+
+**Total de Testes Feitos:** 61
+**Total de Testes Passados:** 11
+**Total de Testes Reprovados** 50
+
+**TEMPO GERAL**
+|             | Tempo 1      | Tempo 2      | Tempo 3      | Tempo 4      | Tempo 5      | Tempo 6      | Tempo 7      | Tempo 8      | Tempo 9      | Média       | Desvio Padrão |
+|-------------|--------------|--------------|--------------|--------------|--------------|--------------|--------------|--------------|--------------|-------------|---------------|
+| **Real**    | 42m15,179s   | 43m0,117s    | 43m19,468s   | 44m53,700s   | 45m7,123s    | 46m24,987s   | 42m44,101s   | 46m11,672s   | 43m48,280s   | 44m5,625s   | 1m27,442s     |
+| **User**    | 45m15,201s   | 46m10,402s   | 46m10,077s   | 47m59,967s   | 48m15,282s   | 49m49,290s   | 45m44,038s   | 49m20,384s   | 46m41,195s   | 47m27,203s  | 1m43,523s     |
+| **Sys**     | 1m23,158s    | 1m24,728s    | 1m25,929s    | 1m30,122s    | 1m32,102s    | 1m33,077s    | 1m24,698s    | 1m30,315s    | 1m26,756s    | 1m27,764s   | 0m3,553s      |
+
+<br>
+
+<br>
+
+# COMPARATIVO GERAL
+
+| Função | HEVM Status | Kontrol Status | Halmos Status |
+|--------|-------------|----------------|---------------|
+| proveFail_TransferUnderBalancej | PASS | FAIL | PASS |
+| prove_ZeroAddressHasNoToken | PASS | PASS | PASS |
+| prove_TokenReceiverCanTransferFromTotalBalance | PASS | FAIL | PASS |
+| prove_TransferFromNoFees | PASS | FAIL | PASS |
+| prove_MintZeroTokens | PASS | FAIL | PASS |
+| proveFail_TransferFromUnderBalancei | PASS | FAIL | PASS |
+| prove_TransferZeroAmount | PASS | FAIL | PASS |
+| prove_TokenReceiverCanTransferFromTotalBalanceZero | PASS | FAIL | PASS |
+| prove_AllowanceUpdatedAfterBurn | PASS | FAIL | PASS |
+| prove_Approve | PASS | FAIL | PASS |
+| prove_SelfApproveAndTransferFromOwnAccount | PASS | FAIL | PASS |
+| prove_SelfTransferZeroAmountAllowed | PASS | FAIL | PASS |
+| prove_TransferFromDecreasesAllowance | PASS | FAIL | PASS |
+| prove_BurnSameAccount | PASS | FAIL | PASS |
+| prove_TransferFrom | PASS | FAIL | PASS |
+| prove_TransferFromZeroAmount | PASS | FAIL | PASS |
+| proveFail_TransferFromZeroAddress | PASS | FAIL | PASS |
+| prove_SelfTransferPositiveAmountAllowed | PASS | FAIL | PASS |
+| proveFail_BurnUnderBalance | PASS | FAIL | PASS |
+| proveFail_TransferFromAllowanceReachesZero | PASS | FAIL | PASS |
+| prove_MultipleTransfersAllowed | PASS | FAIL | PASS |
+| proveFail_MintToZeroAddress | FAIL | PASS | FAIL |
+| prove_ApproveNonZeroAmount | PASS | FAIL | PASS |
+| prove_SelfApprovePositiveAmount | PASS | FAIL | PASS |
+| prove_TransferFromDoesNotUpdateOtherBalances | PASS | FAIL | PASS |
+| proveFail_TransferFromZeroAddressForMSGSender | FAIL | FAIL | FAIL |
+| prove_MsgSenderCanRetrieveOtherBalance | PASS | FAIL | PASS |
+| prove_SelfApproveAndTransferFromOwnAccountZeroAmountAllowed | PASS | FAIL | PASS |
+| prove_Mint | PASS | FAIL | PASS |
+| proveFail_ApproveZeroAddress | FAIL | PASS | FAIL |
+| proveFail_TransferToZeroAddress | FAIL | PASS | FAIL |
+| proveFail_BurnUnderSupply | PASS | FAIL | PASS |
+| proveFail_ApproveFromZeroAddress | FAIL | PASS | FAIL |
+| prove_MultipleTransfersOfZeroAmountAllowed | PASS | FAIL | PASS |
+| proveFail_ApproveZeroAddressForMSGSender | FAIL | PASS | FAIL |
+| prove_TransferDoesNotUpdateOtherBalances | PASS | PASS | PASS |
+| prove_BurnZeroTokens | PASS | FAIL | PASS |
+| prove_SelfApproveZeroAmountAllowed | PASS | FAIL | PASS |
+| prove_MsgSenderCanRetrieveOwnBalance | PASS | PASS | PASS |
+| prove_MsgSenderCanTransferTotalBalance | PASS | FAIL | PASS |
+| prove_BurnDifferentAccount | PASS | FAIL | PASS |
+| prove_MsgSenderCanTransferTotalBalanceZero | PASS | FAIL | PASS |
+| proveFail_TransferFromUnderBalance | PASS | FAIL | PASS |
+| prove_ConsecutiveApprovePositiveToPositive | PASS | FAIL | PASS |
+| proveFail_BurnFromZeroAddress | PASS | FAIL | PASS |
+| prove_MultipleTransferFromAllowed | PASS | FAIL | PASS |
+| proveFail_TransferUnderBalance | PASS | FAIL | PASS |
+| prove_Transfer | PASS | FAIL | PASS |
+| prove_IncreaseAllowance | PASS | FAIL | PASS |
+| prove_BalanceUpdatedAfterBurn | PASS | FAIL | PASS |
+| prove_ApproveZeroAmount | PASS | FAIL | PASS |
+| proveFail_TransferZeroAmountToZeroAddressReverts | FAIL | PASS | FAIL |
+| proveFail_TransferFromToZeroAddress33 | FAIL | FAIL | FAIL |
+| prove_DecreaseAllowance | PASS | FAIL | PASS |
+| prove_ApproveMaxAmount | PASS | FAIL | PASS |
+| prove_BurnFromNonZeroAddress | PASS | FAIL | PASS |
+| proveFail_TransferFromZeroAmountToZeroAddressReverts | FAIL | PASS | FAIL |
+| prove_MultipleTransferFromsOfZeroAmountAllowed | PASS | FAIL | PASS |
+| proveFail_MintOverflow | PASS | FAIL | PASS |
+| proveFail_ApproveToZeroAddress | FAIL | PASS | FAIL |
+
+|             | HEVM | KONTROL | HALMOS |
+|-------------|---------|---------|---------|
+| **Real**    | 21m47s | 44m50s   | 6,652s 
+| **User**    | 25m52s  | 47m27s   | 7,069s 
+| **Sys**     | 1m51s   | 1m27s   | 0,313s

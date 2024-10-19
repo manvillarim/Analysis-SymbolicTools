@@ -7,7 +7,7 @@ import {SafeERC20} from "../lib/openzeppelin-contracts/contracts/token/ERC20/uti
 import "../src/ERC20SOLMock.sol";
 
  contract ERC20SymbolicProperties is Test {
-    using SafeERC20 for ERC20Mock;
+    using SafeERC20 for ERC20SolMock;
 
     ERC20SolMock token;
 
