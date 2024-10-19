@@ -86,9 +86,9 @@ import "../src/ERC20SOLMock.sol";
         
         token.mint(owner, amount);
         token.approve(spender, amount);
-        
+
+        vm.expectRevert();        
         vm.prank(spender);
-        vm.expectRevert();
         token.transferFrom(owner, address(0), amount);
     }
 

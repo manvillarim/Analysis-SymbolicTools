@@ -655,3 +655,22 @@
 | **Real**    | 21m47s | 44m50s   | 6,652s 
 | **User**    | 25m52s  | 47m27s   | 7,069s 
 | **Sys**     | 1m51s   | 1m27s   | 0,313s
+
+
+**ATENÇÂO**
+
+Após usar os contra-exemplos do halmos e hevm nos testes para verificar a confiabilidade das respostas, 9 dos 10 testes que falharam se demonstraram realmente errados. O teste que passou realmente tem a vulnerabilidade detectada pelas tools, porém, ao aplicar o teste, ocorre underflow e o teste reverte, o que passou batido.
+
+
+    Encountered 9 failing tests in test/verifyresults.t.sol:ERC20SymbolicProperties
+    [FAIL. Reason: call did not revert as expected; counterexample: calldata=0xe41cadce00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 args=[0x0000000000000000000000000000000000000000, 0]] testproveFail_ApproveFromZeroAddress(address,uint256) (runs: 0, μ: 0, ~: 0)
+    [FAIL. Reason: call did not revert as expected; counterexample: calldata=0x0b609fcb00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 args=[0x0000000000000000000000000000000000000000, 0]] testproveFail_ApproveToZeroAddress(address,uint256) (runs: 0, μ: 0, ~: 0)
+    [FAIL. Reason: call did not revert as expected; counterexample: calldata=0xa56a12e400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 args=[0x0000000000000000000000000000000000000000, 0]] testproveFail_ApproveZeroAddress(address,uint256) (runs: 0, μ: 0, ~: 0)
+    [FAIL. Reason: call did not revert as expected; counterexample: calldata=0x7b9f0c0e00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 args=[0x0000000000000000000000000000000000000000, 0]] testproveFail_ApproveZeroAddressForMSGSender(address,uint256) (runs: 0, μ: 0, ~: 0)
+    [FAIL. Reason: call did not revert as expected; counterexample: calldata=0xeee61faa0000000000000000000000000000000000000000000000000000000000000000 args=[0]] testproveFail_MintToZeroAddress(uint256) (runs: 0, μ: 0, ~: 0)
+    [FAIL. Reason: call did not revert as expected; counterexample: calldata=0xb664c1be000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 args=[0x0000000000000000000000000000000000000000, 0x0000000000000000000000000000000000000000, 0]] testproveFail_TransferFromZeroAddressForMSGSender(address,address,uint256) (runs: 0, μ: 0, ~: 0)
+    [FAIL. Reason: call did not revert as expected; counterexample: calldata=0xdb4ad5a500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 args=[0x0000000000000000000000000000000000000000, 0x0000000000000000000000000000000000000000]] testproveFail_TransferFromZeroAmountToZeroAddressReverts(address,address) (runs: 0, μ: 0, ~: 0)
+    [FAIL. Reason: call did not revert as expected; counterexample: calldata=0xfe544ff200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 args=[0x0000000000000000000000000000000000000000, 0]] testproveFail_TransferToZeroAddress(address,uint256) (runs: 0, μ: 0, ~: 0)
+    [FAIL. Reason: call did not revert as expected; counterexample: calldata=0x5264851c0000000000000000000000000000000000000000000000000000000000000000 args=[0x0000000000000000000000000000000000000000]] testproveFail_TransferZeroAmountToZeroAddressReverts(address) (runs: 0, μ: 0, ~: 0)
+
+    Encountered a total of 9 failing tests, 1 tests succeeded
