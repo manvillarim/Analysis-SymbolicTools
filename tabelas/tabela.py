@@ -60,7 +60,10 @@ entrada = """[RUNNING] proveFail_TransferUnderBalancej(address,uint256)
 [RUNNING] prove_MultipleTransfersAllowed(address,address,uint256,uint256)
    [PASS] prove_MultipleTransfersAllowed(address,address,uint256,uint256)
 [RUNNING] proveFail_MintToZeroAddress(uint256)
-   [PASS] proveFail_MintToZeroAddress(uint256)
+   [FAIL] proveFail_MintToZeroAddress(uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_MintToZeroAddress(112777989180875142641012667662881322846184324395630932477102348584379903997143)
 [RUNNING] prove_ApproveNonZeroAmount(address,address,uint256)
    [PASS] prove_ApproveNonZeroAmount(address,address,uint256)
 [RUNNING] prove_SelfApprovePositiveAmount(address,uint256)
@@ -68,7 +71,10 @@ entrada = """[RUNNING] proveFail_TransferUnderBalancej(address,uint256)
 [RUNNING] prove_TransferFromDoesNotUpdateOtherBalances(address,address,address,address,uint256)
    [PASS] prove_TransferFromDoesNotUpdateOtherBalances(address,address,address,address,uint256)
 [RUNNING] proveFail_TransferFromZeroAddressForMSGSender(address,address,uint256)
-   [PASS] proveFail_TransferFromZeroAddressForMSGSender(address,address,uint256)
+   [FAIL] proveFail_TransferFromZeroAddressForMSGSender(address,address,uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_TransferFromZeroAddressForMSGSender(0x1000000001000000000000000000000000004000,0x0000000000000000000000000000000000000040,0)
 [RUNNING] prove_MsgSenderCanRetrieveOtherBalance(address,uint256)
    [PASS] prove_MsgSenderCanRetrieveOtherBalance(address,uint256)
 [RUNNING] prove_SelfApproveAndTransferFromOwnAccountZeroAmountAllowed(address,address)
@@ -76,17 +82,29 @@ entrada = """[RUNNING] proveFail_TransferUnderBalancej(address,uint256)
 [RUNNING] prove_Mint(address,uint256)
    [PASS] prove_Mint(address,uint256)
 [RUNNING] proveFail_ApproveZeroAddress(address,uint256)
-   [PASS] proveFail_ApproveZeroAddress(address,uint256)
+   [FAIL] proveFail_ApproveZeroAddress(address,uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_ApproveZeroAddress(0x0000000000000000000000000000000000000000,0)
 [RUNNING] proveFail_TransferToZeroAddress(address,uint256)
-   [PASS] proveFail_TransferToZeroAddress(address,uint256)
+   [FAIL] proveFail_TransferToZeroAddress(address,uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_TransferToZeroAddress(0x8000000000000000000000000000000000000000,57896044618658097711785492504343953926634992332820282019728792003956564819968)
 [RUNNING] proveFail_BurnUnderSupply(address,uint256)
    [PASS] proveFail_BurnUnderSupply(address,uint256)
 [RUNNING] proveFail_ApproveFromZeroAddress(address,uint256)
-   [PASS] proveFail_ApproveFromZeroAddress(address,uint256)
+   [FAIL] proveFail_ApproveFromZeroAddress(address,uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_ApproveFromZeroAddress(0x8000000000000000000000000000000000000000,57896044618658097711785492504343953926634992332820282019728792003956564819968)
 [RUNNING] prove_MultipleTransfersOfZeroAmountAllowed(address,address,uint8)
    [PASS] prove_MultipleTransfersOfZeroAmountAllowed(address,address,uint8)
 [RUNNING] proveFail_ApproveZeroAddressForMSGSender(address,uint256)
-   [PASS] proveFail_ApproveZeroAddressForMSGSender(address,uint256)
+   [FAIL] proveFail_ApproveZeroAddressForMSGSender(address,uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_ApproveZeroAddressForMSGSender(0x8000000000000000000000000000000000000000,0)
 [RUNNING] prove_TransferDoesNotUpdateOtherBalances(address,address,address,uint256)
    [PASS] prove_TransferDoesNotUpdateOtherBalances(address,address,address,uint256)
 [RUNNING] prove_BurnZeroTokens(address)
@@ -122,9 +140,18 @@ entrada = """[RUNNING] proveFail_TransferUnderBalancej(address,uint256)
 [RUNNING] prove_ApproveZeroAmount(address,address)
    [PASS] prove_ApproveZeroAmount(address,address)
 [RUNNING] proveFail_TransferZeroAmountToZeroAddressReverts(address)
-   [PASS] proveFail_TransferZeroAmountToZeroAddressReverts(address)
+   [FAIL] proveFail_TransferZeroAmountToZeroAddressReverts(address)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_TransferZeroAmountToZeroAddressReverts(0x8000000000000000000000000000000000000000)
 [RUNNING] proveFail_TransferFromToZeroAddress33(address,address,uint256)
-   [PASS] proveFail_TransferFromToZeroAddress33(address,address,uint256)
+   [FAIL] proveFail_TransferFromToZeroAddress33(address,address,uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_TransferFromToZeroAddress33(0x000000000000000000000000000000000000ACAb,0x2000000000000000020002C02000000084000000,115792089237316195423570985008687907853269984665640564039457584007913129639935)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_TransferFromToZeroAddress33(0x000000000000000000000000000000000000ACAb,0x080000000100000000000000080000809E00649E,1809251394333065553493296640763603055933037797083688848518798347828176355328)
 [RUNNING] prove_DecreaseAllowance(address,uint256)
    [PASS] prove_DecreaseAllowance(address,uint256)
 [RUNNING] prove_ApproveMaxAmount(address,address)
@@ -132,13 +159,20 @@ entrada = """[RUNNING] proveFail_TransferUnderBalancej(address,uint256)
 [RUNNING] prove_BurnFromNonZeroAddress(address,uint256)
    [PASS] prove_BurnFromNonZeroAddress(address,uint256)
 [RUNNING] proveFail_TransferFromZeroAmountToZeroAddressReverts(address,address)
-   [PASS] proveFail_TransferFromZeroAmountToZeroAddressReverts(address,address)
+   [FAIL] proveFail_TransferFromZeroAmountToZeroAddressReverts(address,address)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_TransferFromZeroAmountToZeroAddressReverts(0x0208000080008000008000000200000000120000,0x0400FffF00Ff20A7200210Ff6f1B20FD11eC30C4)
 [RUNNING] prove_MultipleTransferFromsOfZeroAmountAllowed(address,address,address,uint8)
    [PASS] prove_MultipleTransferFromsOfZeroAmountAllowed(address,address,address,uint8)
 [RUNNING] proveFail_MintOverflow(address)
    [PASS] proveFail_MintOverflow(address)
 [RUNNING] proveFail_ApproveToZeroAddress(address,uint256)
-   [PASS] proveFail_ApproveToZeroAddress(address,uint256)"""
+   [FAIL] proveFail_ApproveToZeroAddress(address,uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_ApproveToZeroAddress(0x8000000000000000000000000000000000000000,57896044618658097711785492504343953926634992332820282019728792003956564819968)
+"""
 
 # Gerando a tabela em Markdown considerando 'PASS' e 'FAIL'
 tabela = gerar_tabela_markdown_pass_fail(entrada)

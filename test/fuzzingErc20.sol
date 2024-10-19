@@ -7,7 +7,7 @@ import {Test, console2} from "forge-std/Test.sol";
 import {ERC20Mock} from "../lib/openzeppelin-contracts/contracts/mocks/token/ERC20Mock.sol";
 import {SafeERC20} from "../lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol";
 import "../src/ERC20.sol";
- contract ERC20SymbolicProperties is Test {
+ /*contract ERC20SymbolicProperties is Test {
     using SafeERC20 for ERC20Mock;
 
     ERC20Mock token;
@@ -718,7 +718,7 @@ import "../src/ERC20.sol";
                 vm.prank(msg.sender);
                 vm.ex
                 token.approve(spender, _allowanceFromTo - subtractedValue);
-    }*/
+    }
 
     // Proves for overflow when minting tokens
     function testproveFail_MintUnderSupplyFuzz(address account, uint256 amount) public {
@@ -841,5 +841,5 @@ import "../src/ERC20.sol";
         vm.expectRevert();
         token.transferFrom(owner, address(0xdead), amount);
     }
-}
+}*/
 

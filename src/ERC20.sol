@@ -180,7 +180,7 @@ contract ERC20 {
                         INTERNAL MINT/BURN LOGIC
     //////////////////////////////////////////////////////////////*/
 
-    function _mint(address to, uint256 amount) internal virtual {
+    function _mint(address to, uint256 amount) internal {
         totalSupply += amount;
 
         // Cannot overflow because the sum of all user
@@ -192,7 +192,7 @@ contract ERC20 {
         emit Transfer(address(0), to, amount);
     }
 
-    function _burn(address from, uint256 amount) internal virtual {
+    function _burn(address from, uint256 amount) internal {
         balanceOf[from] -= amount;
 
         // Cannot underflow because a user's balance

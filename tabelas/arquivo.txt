@@ -37,3 +37,566 @@ sys     1m49,200s
 real    21m7,269s
 user    30m23,078s
 sys     1m48,921s
+
+Running 61 tests for test/ERC20halmos.t.sol:ERC20SymbolicProperties
+Counterexample: 
+    p_amount_uint256 = 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff (115792089237316195423570985008687907853269984665640564039457584007913129639935)
+    p_spender_address = 0x8000000000000000000000000000000000000000
+[FAIL] proveFail_ApproveFromZeroAddress(address,uint256) (paths: 4, time: 0.05s, bounds: [])
+Counterexample: 
+    p_amount_uint256 = 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff (115792089237316195423570985008687907853269984665640564039457584007913129639935)
+    p_owner_address = 0x8000000000000000000000000000000000000000
+[FAIL] proveFail_ApproveToZeroAddress(address,uint256) (paths: 4, time: 0.04s, bounds: [])
+Counterexample: 
+    p_amount_uint256 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
+[FAIL] proveFail_ApproveZeroAddress(uint256) (paths: 1, time: 0.03s, bounds: [])
+Counterexample: 
+    p_amount_uint256 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
+    p_spender_address = 0x8000000000000000000000000000000000000000
+[FAIL] proveFail_ApproveZeroAddressForMSGSender(address,uint256) (paths: 3, time: 0.04s, bounds: [])
+[PASS] proveFail_BurnFromZeroAddress(uint256) (paths: 2, time: 0.02s, bounds: [])
+[PASS] proveFail_BurnUnderBalance(address,uint256) (paths: 5, time: 0.05s, bounds: [])
+[PASS] proveFail_BurnUnderSupply(address,uint256) (paths: 4, time: 0.03s, bounds: [])
+[PASS] proveFail_MintOverflow(address) (paths: 3, time: 0.03s, bounds: [])
+Counterexample: 
+    p_amount_uint256 = 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff (115792089237316195423570985008687907853269984665640564039457584007913129639935)
+[FAIL] proveFail_MintToZeroAddress(uint256) (paths: 2, time: 0.03s, bounds: [])
+[PASS] proveFail_TransferFromAllowanceReachesZero(address,address,address,uint256,uint256) (paths: 15, time: 0.19s, bounds: [])
+Counterexample: 
+    p_amount_uint256 = 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff (115792089237316195423570985008687907853269984665640564039457584007913129639935)
+    p_owner_address = 0x00000000000000000000000000000000aaaa0001
+    p_spender_address = 0x0000000000000000000000000000000000000002
+Counterexample: 
+    p_amount_uint256 = 0xb87c44c08000102010b3bfbf80008f98c001b1ffff0000000000000000000000 (83445127683894876214681179471890527537723466594599135206640548101483254513664)
+    p_owner_address = 0x00000000000000000000000000000000aaaa0001
+    p_spender_address = 0x0010000000000000000000040000002000000011
+[FAIL] proveFail_TransferFromToZeroAddress33(address,address,uint256) (paths: 8, time: 0.17s, bounds: [])
+[PASS] proveFail_TransferFromUnderBalance(address,address,uint256) (paths: 10, time: 0.10s, bounds: [])
+[PASS] proveFail_TransferFromUnderBalancei(address,address,uint256) (paths: 6, time: 0.06s, bounds: [])
+[PASS] proveFail_TransferFromZeroAddress(address,address,uint256) (paths: 6, time: 0.04s, bounds: [])
+[PASS] proveFail_TransferFromZeroAddress(address,uint256) (paths: 4, time: 0.03s, bounds: [])
+Counterexample: 
+    p_amount_uint256 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
+    p_recipient_address = 0xa000000000000000000000000000000000000000
+    p_sender_address = 0x6000000000000000000000000000000000000000
+[FAIL] proveFail_TransferFromZeroAddressForMSGSender(address,address,uint256) (paths: 6, time: 0.21s, bounds: [])
+Counterexample: 
+    p_spender_address = 0x0000000000000000000000000000000000000001
+    p_tokenSender_address = 0x0000000000000000000000000000000000000010
+[FAIL] proveFail_TransferFromZeroAmountToZeroAddressReverts(address,address) (paths: 7, time: 0.10s, bounds: [])
+Counterexample: 
+    p_amount_uint256 = 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff (115792089237316195423570985008687907853269984665640564039457584007913129639935)
+    p_sender_address = 0x8000000000000000000000000000000000000000
+[FAIL] proveFail_TransferToZeroAddress(address,uint256) (paths: 4, time: 0.05s, bounds: [])
+[PASS] proveFail_TransferUnderBalance(address,uint256) (paths: 5, time: 0.04s, bounds: [])
+[PASS] proveFail_TransferUnderBalancej(address,uint256) (paths: 4, time: 0.03s, bounds: [])
+Counterexample: 
+    p_sender_address = 0x8000000000000000000000000000000000000000
+[FAIL] proveFail_TransferZeroAmountToZeroAddressReverts(address) (paths: 3, time: 0.04s, bounds: [])
+[PASS] prove_AllowanceUpdatedAfterBurn(address,address,uint256) (paths: 8, time: 0.06s, bounds: [])
+[PASS] prove_Approve(address,uint256) (paths: 3, time: 0.03s, bounds: [])
+[PASS] prove_ApproveMaxAmount(address,address) (paths: 5, time: 0.04s, bounds: [])
+[PASS] prove_ApproveNonZeroAmount(address,address,uint256) (paths: 6, time: 0.04s, bounds: [])
+[PASS] prove_ApproveZeroAmount(address,address) (paths: 5, time: 0.04s, bounds: [])
+[PASS] prove_BalanceUpdatedAfterBurn(address,address,uint256) (paths: 8, time: 0.12s, bounds: [])
+[PASS] prove_BurnDifferentAccount(address,uint256,address,uint256) (paths: 8, time: 0.11s, bounds: [])
+[PASS] prove_BurnFromNonZeroAddress(address,uint256) (paths: 4, time: 0.05s, bounds: [])
+[PASS] prove_BurnSameAccount(address,uint256) (paths: 3, time: 0.06s, bounds: [])
+[PASS] prove_BurnZeroTokens(address) (paths: 3, time: 0.03s, bounds: [])
+[PASS] prove_ConsecutiveApprovePositiveToPositive(address,address,uint256,uint256) (paths: 5, time: 0.05s, bounds: [])
+[PASS] prove_DecreaseAllowance(address,uint256) (paths: 4, time: 0.08s, bounds: [])
+[PASS] prove_IncreaseAllowance(address,uint256) (paths: 3, time: 0.07s, bounds: [])
+[PASS] prove_Mint(address,uint256) (paths: 3, time: 0.05s, bounds: [])
+[PASS] prove_MintZeroTokens(address) (paths: 3, time: 0.03s, bounds: [])
+[PASS] prove_MsgSenderCanRetrieveOtherBalance(address,uint256) (paths: 5, time: 0.03s, bounds: [])
+[PASS] prove_MsgSenderCanRetrieveOwnBalance(uint256) (paths: 1, time: 0.02s, bounds: [])
+[PASS] prove_MsgSenderCanTransferTotalBalance(address,address,uint256) (paths: 9, time: 0.13s, bounds: [])
+[PASS] prove_MsgSenderCanTransferTotalBalanceZero(address,address) (paths: 6, time: 0.07s, bounds: [])
+[PASS] prove_MultipleTransferFromAllowed(address,address,address,uint256,uint256) (paths: 18, time: 0.29s, bounds: [])
+[PASS] prove_MultipleTransferFromsOfZeroAmountAllowed(address,address,address,uint8) (paths: 14, time: 0.24s, bounds: [])
+[PASS] prove_MultipleTransfersAllowed(address,address,uint256,uint256) (paths: 12, time: 0.19s, bounds: [])
+[PASS] prove_MultipleTransfersOfZeroAmountAllowed(address,address,uint8) (paths: 11, time: 0.13s, bounds: [])
+WARNING:halmos:prove_MultipleTransfersOfZeroAmountAllowed(address,address,uint8): paths have not been fully explored due to the loop unrolling bound: 2
+(see https://github.com/a16z/halmos/wiki/warnings#loop-bound)
+[PASS] prove_SelfApproveAndTransferFromOwnAccount(address,address,uint256) (paths: 11, time: 0.16s, bounds: [])
+[PASS] prove_SelfApproveAndTransferFromOwnAccountZeroAmountAllowed(address,address) (paths: 7, time: 0.10s, bounds: [])
+[PASS] prove_SelfApprovePositiveAmount(address,uint256) (paths: 4, time: 0.04s, bounds: [])
+[PASS] prove_SelfApproveZeroAmountAllowed(address) (paths: 3, time: 0.03s, bounds: [])
+[PASS] prove_SelfTransferPositiveAmountAllowed(address,uint256) (paths: 4, time: 0.05s, bounds: [])
+[PASS] prove_SelfTransferZeroAmountAllowed(address) (paths: 3, time: 0.04s, bounds: [])
+[PASS] prove_TokenReceiverCanTransferFromTotalBalance(address,address,uint256) (paths: 11, time: 0.17s, bounds: [])
+[PASS] prove_TokenReceiverCanTransferFromTotalBalanceZero(address,address,address) (paths: 11, time: 0.12s, bounds: [])
+[PASS] prove_Transfer(address,uint256,uint256) (paths: 7, time: 0.17s, bounds: [])
+[PASS] prove_TransferDoesNotUpdateOtherBalances(address,address,address,uint256) (paths: 7, time: 0.15s, bounds: [])
+[PASS] prove_TransferFrom(address,address,uint256,uint256) (paths: 7, time: 0.15s, bounds: [])
+[PASS] prove_TransferFromDecreasesAllowance(address,address,address,uint256) (paths: 4, time: 0.15s, bounds: [])
+[PASS] prove_TransferFromDoesNotUpdateOtherBalances(address,address,address,address,uint256) (paths: 20, time: 0.21s, bounds: [])
+[PASS] prove_TransferFromNoFees(address,address,address,uint256) (paths: 13, time: 0.19s, bounds: [])
+[PASS] prove_TransferFromZeroAmount(address,address,address) (paths: 9, time: 0.09s, bounds: [])
+[PASS] prove_TransferZeroAmount(address,address) (paths: 6, time: 0.08s, bounds: [])
+[PASS] prove_ZeroAddressHasNoToken() (paths: 1, time: 0.01s, bounds: [])
+Symbolic test result: 51 passed; 10 failed; time: 5.76s
+
+
+| Função | HEVM Status | Kontrol Status | Halmos Status |
+|--------|-------------|----------------|---------------|
+| proveFail_TransferUnderBalancej | PASS | N/A | PASS |
+| prove_ZeroAddressHasNoToken | PASS | N/A | PASS |
+| prove_TokenReceiverCanTransferFromTotalBalance | PASS | N/A | PASS |
+| prove_TransferFromNoFees | PASS | N/A | PASS |
+| prove_MintZeroTokens | PASS | N/A | PASS |
+| proveFail_TransferFromUnderBalancei | PASS | N/A | PASS |
+| prove_TransferZeroAmount | PASS | N/A | PASS |
+| prove_TokenReceiverCanTransferFromTotalBalanceZero | PASS | N/A | PASS |
+| prove_AllowanceUpdatedAfterBurn | PASS | N/A | PASS |
+| prove_Approve | PASS | N/A | PASS |
+| prove_SelfApproveAndTransferFromOwnAccount | PASS | N/A | PASS |
+| prove_SelfTransferZeroAmountAllowed | PASS | N/A | PASS |
+| prove_TransferFromDecreasesAllowance | PASS | N/A | PASS |
+| prove_BurnSameAccount | PASS | N/A | PASS |
+| prove_TransferFrom | PASS | N/A | PASS |
+| prove_TransferFromZeroAmount | PASS | N/A | PASS |
+| proveFail_TransferFromZeroAddress | PASS | N/A | PASS |
+| prove_SelfTransferPositiveAmountAllowed | PASS | N/A | PASS |
+| proveFail_BurnUnderBalance | PASS | N/A | PASS |
+| proveFail_TransferFromAllowanceReachesZero | PASS | N/A | PASS |
+| prove_MultipleTransfersAllowed | PASS | N/A | PASS |
+| proveFail_MintToZeroAddress | FAIL | N/A | FAIL |
+| prove_ApproveNonZeroAmount | PASS | N/A | PASS |
+| prove_SelfApprovePositiveAmount | PASS | N/A | PASS |
+| prove_TransferFromDoesNotUpdateOtherBalances | PASS | N/A | PASS |
+| proveFail_TransferFromZeroAddressForMSGSender | FAIL | N/A | FAIL |
+| prove_MsgSenderCanRetrieveOtherBalance | PASS | N/A | PASS |
+| prove_SelfApproveAndTransferFromOwnAccountZeroAmountAllowed | PASS | N/A | PASS |
+| prove_Mint | PASS | N/A | PASS |
+| proveFail_ApproveZeroAddress | FAIL | N/A | FAIL |
+| proveFail_TransferToZeroAddress | FAIL | N/A | FAIL |
+| proveFail_BurnUnderSupply | PASS | N/A | PASS |
+| proveFail_ApproveFromZeroAddress | FAIL | N/A | FAIL |
+| prove_MultipleTransfersOfZeroAmountAllowed | PASS | N/A | PASS |
+| proveFail_ApproveZeroAddressForMSGSender | FAIL | N/A | FAIL |
+| prove_TransferDoesNotUpdateOtherBalances | PASS | N/A | PASS |
+| prove_BurnZeroTokens | PASS | N/A | PASS |
+| prove_SelfApproveZeroAmountAllowed | PASS | N/A | PASS |
+| prove_MsgSenderCanRetrieveOwnBalance | PASS | N/A | PASS |
+| prove_MsgSenderCanTransferTotalBalance | PASS | N/A | PASS |
+| prove_BurnDifferentAccount | PASS | N/A | PASS |
+| prove_MsgSenderCanTransferTotalBalanceZero | PASS | N/A | PASS |
+| proveFail_TransferFromUnderBalance | PASS | N/A | PASS |
+| prove_ConsecutiveApprovePositiveToPositive | PASS | N/A | PASS |
+| proveFail_BurnFromZeroAddress | PASS | N/A | PASS |
+| prove_MultipleTransferFromAllowed | PASS | N/A | PASS |
+| proveFail_TransferUnderBalance | PASS | N/A | PASS |
+| prove_Transfer | PASS | N/A | PASS |
+| prove_IncreaseAllowance | PASS | N/A | PASS |
+| prove_BalanceUpdatedAfterBurn | PASS | N/A | PASS |
+| prove_ApproveZeroAmount | PASS | N/A | PASS |
+| proveFail_TransferZeroAmountToZeroAddressReverts | FAIL | N/A | FAIL |
+| proveFail_TransferFromToZeroAddress33 | FAIL | N/A | FAIL |
+| prove_DecreaseAllowance | PASS | N/A | PASS |
+| prove_ApproveMaxAmount | PASS | N/A | PASS |
+| prove_BurnFromNonZeroAddress | PASS | N/A | PASS |
+| proveFail_TransferFromZeroAmountToZeroAddressReverts | FAIL | N/A | FAIL |
+| prove_MultipleTransferFromsOfZeroAmountAllowed | PASS | N/A | PASS |
+| proveFail_MintOverflow | PASS | N/A | PASS |
+| proveFail_ApproveToZeroAddress | FAIL | N/A | FAIL |
+
+[RUNNING] proveFail_TransferUnderBalancej(address,uint256)
+   [PASS] proveFail_TransferUnderBalancej(address,uint256)
+[RUNNING] prove_ZeroAddressHasNoToken()
+   [PASS] prove_ZeroAddressHasNoToken()
+[RUNNING] prove_TokenReceiverCanTransferFromTotalBalance(address,address,uint256)
+   [PASS] prove_TokenReceiverCanTransferFromTotalBalance(address,address,uint256)
+[RUNNING] prove_TransferFromNoFees(address,address,address,uint256)
+   [PASS] prove_TransferFromNoFees(address,address,address,uint256)
+[RUNNING] prove_MintZeroTokens(address)
+   [PASS] prove_MintZeroTokens(address)
+[RUNNING] proveFail_TransferFromUnderBalancei(address,address,uint256)
+   [PASS] proveFail_TransferFromUnderBalancei(address,address,uint256)
+[RUNNING] prove_TransferZeroAmount(address,address)
+   [PASS] prove_TransferZeroAmount(address,address)
+[RUNNING] prove_TokenReceiverCanTransferFromTotalBalanceZero(address,address,address)
+   [PASS] prove_TokenReceiverCanTransferFromTotalBalanceZero(address,address,address)
+[RUNNING] prove_AllowanceUpdatedAfterBurn(address,address,uint256)
+   [PASS] prove_AllowanceUpdatedAfterBurn(address,address,uint256)
+[RUNNING] prove_Approve(address,uint256)
+   [PASS] prove_Approve(address,uint256)
+[RUNNING] prove_SelfApproveAndTransferFromOwnAccount(address,address,uint256)
+   [PASS] prove_SelfApproveAndTransferFromOwnAccount(address,address,uint256)
+[RUNNING] prove_SelfTransferZeroAmountAllowed(address)
+   [PASS] prove_SelfTransferZeroAmountAllowed(address)
+[RUNNING] prove_TransferFromDecreasesAllowance(address,address,address,uint256)
+   [PASS] prove_TransferFromDecreasesAllowance(address,address,address,uint256)
+[RUNNING] prove_BurnSameAccount(address,uint256)
+   [PASS] prove_BurnSameAccount(address,uint256)
+[RUNNING] prove_TransferFrom(address,address,uint256,uint256)
+   [PASS] prove_TransferFrom(address,address,uint256,uint256)
+[RUNNING] prove_TransferFromZeroAmount(address,address,address)
+   [PASS] prove_TransferFromZeroAmount(address,address,address)
+[RUNNING] proveFail_TransferFromZeroAddress(address,address,uint256)
+   [PASS] proveFail_TransferFromZeroAddress(address,address,uint256)
+[RUNNING] prove_SelfTransferPositiveAmountAllowed(address,uint256)
+   [PASS] prove_SelfTransferPositiveAmountAllowed(address,uint256)
+[RUNNING] proveFail_BurnUnderBalance(address,uint256)
+   [PASS] proveFail_BurnUnderBalance(address,uint256)
+[RUNNING] proveFail_TransferFromAllowanceReachesZero(address,address,address,uint256,uint256)
+   [PASS] proveFail_TransferFromAllowanceReachesZero(address,address,address,uint256,uint256)
+[RUNNING] prove_MultipleTransfersAllowed(address,address,uint256,uint256)
+   [PASS] prove_MultipleTransfersAllowed(address,address,uint256,uint256)
+[RUNNING] proveFail_MintToZeroAddress(uint256)
+   [FAIL] proveFail_MintToZeroAddress(uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_MintToZeroAddress(112777989180875142641012667662881322846184324395630932477102348584379903997143)
+[RUNNING] prove_ApproveNonZeroAmount(address,address,uint256)
+   [PASS] prove_ApproveNonZeroAmount(address,address,uint256)
+[RUNNING] prove_SelfApprovePositiveAmount(address,uint256)
+   [PASS] prove_SelfApprovePositiveAmount(address,uint256)
+[RUNNING] prove_TransferFromDoesNotUpdateOtherBalances(address,address,address,address,uint256)
+   [PASS] prove_TransferFromDoesNotUpdateOtherBalances(address,address,address,address,uint256)
+[RUNNING] proveFail_TransferFromZeroAddressForMSGSender(address,address,uint256)
+   [FAIL] proveFail_TransferFromZeroAddressForMSGSender(address,address,uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_TransferFromZeroAddressForMSGSender(0x1000000001000000000000000000000000004000,0x0000000000000000000000000000000000000040,0)
+[RUNNING] prove_MsgSenderCanRetrieveOtherBalance(address,uint256)
+   [PASS] prove_MsgSenderCanRetrieveOtherBalance(address,uint256)
+[RUNNING] prove_SelfApproveAndTransferFromOwnAccountZeroAmountAllowed(address,address)
+   [PASS] prove_SelfApproveAndTransferFromOwnAccountZeroAmountAllowed(address,address)
+[RUNNING] prove_Mint(address,uint256)
+   [PASS] prove_Mint(address,uint256)
+[RUNNING] proveFail_ApproveZeroAddress(address,uint256)
+   [FAIL] proveFail_ApproveZeroAddress(address,uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_ApproveZeroAddress(0x0000000000000000000000000000000000000000,0)
+[RUNNING] proveFail_TransferToZeroAddress(address,uint256)
+   [FAIL] proveFail_TransferToZeroAddress(address,uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_TransferToZeroAddress(0x8000000000000000000000000000000000000000,57896044618658097711785492504343953926634992332820282019728792003956564819968)
+[RUNNING] proveFail_BurnUnderSupply(address,uint256)
+   [PASS] proveFail_BurnUnderSupply(address,uint256)
+[RUNNING] proveFail_ApproveFromZeroAddress(address,uint256)
+   [FAIL] proveFail_ApproveFromZeroAddress(address,uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_ApproveFromZeroAddress(0x8000000000000000000000000000000000000000,57896044618658097711785492504343953926634992332820282019728792003956564819968)
+[RUNNING] prove_MultipleTransfersOfZeroAmountAllowed(address,address,uint8)
+   [PASS] prove_MultipleTransfersOfZeroAmountAllowed(address,address,uint8)
+[RUNNING] proveFail_ApproveZeroAddressForMSGSender(address,uint256)
+   [FAIL] proveFail_ApproveZeroAddressForMSGSender(address,uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_ApproveZeroAddressForMSGSender(0x8000000000000000000000000000000000000000,0)
+[RUNNING] prove_TransferDoesNotUpdateOtherBalances(address,address,address,uint256)
+   [PASS] prove_TransferDoesNotUpdateOtherBalances(address,address,address,uint256)
+[RUNNING] prove_BurnZeroTokens(address)
+   [PASS] prove_BurnZeroTokens(address)
+[RUNNING] prove_SelfApproveZeroAmountAllowed(address)
+   [PASS] prove_SelfApproveZeroAmountAllowed(address)
+[RUNNING] prove_MsgSenderCanRetrieveOwnBalance(uint256)
+   [PASS] prove_MsgSenderCanRetrieveOwnBalance(uint256)
+[RUNNING] prove_MsgSenderCanTransferTotalBalance(address,address,uint256)
+   [PASS] prove_MsgSenderCanTransferTotalBalance(address,address,uint256)
+[RUNNING] prove_BurnDifferentAccount(address,uint256,address,uint256)
+   [PASS] prove_BurnDifferentAccount(address,uint256,address,uint256)
+[RUNNING] prove_MsgSenderCanTransferTotalBalanceZero(address,address)
+   [PASS] prove_MsgSenderCanTransferTotalBalanceZero(address,address)
+[RUNNING] proveFail_TransferFromUnderBalance(address,address,uint256)
+   [PASS] proveFail_TransferFromUnderBalance(address,address,uint256)
+[RUNNING] prove_ConsecutiveApprovePositiveToPositive(address,address,uint256,uint256)
+   [PASS] prove_ConsecutiveApprovePositiveToPositive(address,address,uint256,uint256)
+[RUNNING] proveFail_BurnFromZeroAddress(uint256)
+   [PASS] proveFail_BurnFromZeroAddress(uint256)
+[RUNNING] prove_MultipleTransferFromAllowed(address,address,address,uint256,uint256)
+   [PASS] prove_MultipleTransferFromAllowed(address,address,address,uint256,uint256)
+[RUNNING] proveFail_TransferFromZeroAddress(address,uint256)
+   [PASS] proveFail_TransferFromZeroAddress(address,uint256)
+[RUNNING] proveFail_TransferUnderBalance(address,uint256)
+   [PASS] proveFail_TransferUnderBalance(address,uint256)
+[RUNNING] prove_Transfer(address,uint256,uint256)
+   [PASS] prove_Transfer(address,uint256,uint256)
+[RUNNING] prove_IncreaseAllowance(address,uint256)
+   [PASS] prove_IncreaseAllowance(address,uint256)
+[RUNNING] prove_BalanceUpdatedAfterBurn(address,address,uint256)
+   [PASS] prove_BalanceUpdatedAfterBurn(address,address,uint256)
+[RUNNING] prove_ApproveZeroAmount(address,address)
+   [PASS] prove_ApproveZeroAmount(address,address)
+[RUNNING] proveFail_TransferZeroAmountToZeroAddressReverts(address)
+   [FAIL] proveFail_TransferZeroAmountToZeroAddressReverts(address)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_TransferZeroAmountToZeroAddressReverts(0x8000000000000000000000000000000000000000)
+[RUNNING] proveFail_TransferFromToZeroAddress33(address,address,uint256)
+   [FAIL] proveFail_TransferFromToZeroAddress33(address,address,uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_TransferFromToZeroAddress33(0x000000000000000000000000000000000000ACAb,0x2000000000000000020002C02000000084000000,115792089237316195423570985008687907853269984665640564039457584007913129639935)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_TransferFromToZeroAddress33(0x000000000000000000000000000000000000ACAb,0x080000000100000000000000080000809E00649E,1809251394333065553493296640763603055933037797083688848518798347828176355328)
+[RUNNING] prove_DecreaseAllowance(address,uint256)
+   [PASS] prove_DecreaseAllowance(address,uint256)
+[RUNNING] prove_ApproveMaxAmount(address,address)
+   [PASS] prove_ApproveMaxAmount(address,address)
+[RUNNING] prove_BurnFromNonZeroAddress(address,uint256)
+   [PASS] prove_BurnFromNonZeroAddress(address,uint256)
+[RUNNING] proveFail_TransferFromZeroAmountToZeroAddressReverts(address,address)
+   [FAIL] proveFail_TransferFromZeroAmountToZeroAddressReverts(address,address)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_TransferFromZeroAmountToZeroAddressReverts(0x0208000080008000008000000200000000120000,0x0400FffF00Ff20A7200210Ff6f1B20FD11eC30C4)
+[RUNNING] prove_MultipleTransferFromsOfZeroAmountAllowed(address,address,address,uint8)
+   [PASS] prove_MultipleTransferFromsOfZeroAmountAllowed(address,address,address,uint8)
+[RUNNING] proveFail_MintOverflow(address)
+   [PASS] proveFail_MintOverflow(address)
+[RUNNING] proveFail_ApproveToZeroAddress(address,uint256)
+   [FAIL] proveFail_ApproveToZeroAddress(address,uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_ApproveToZeroAddress(0x8000000000000000000000000000000000000000,57896044618658097711785492504343953926634992332820282019728792003956564819968)
+
+real    21m38,592s
+user    25m45,521s
+sys     1m51,120s
+
+
+
+
+real    0m6,645s
+user    0m6,998s
+sys     0m0,351s
+
+real    0m6,601s
+user    0m7,061s
+sys     0m0,309s
+
+real    0m6,601s
+user    0m7,061s
+sys     0m0,309s
+
+real    0m6,519s
+user    0m6,968s
+sys     0m0,308s
+
+real    0m6,660s
+user    0m7,154s
+sys     0m0,295s
+
+real    0m7,007s
+user    0m7,460s
+sys     0m0,327s
+
+real    0m6,472s
+user    0m6,929s
+sys     0m0,283s
+
+real    0m6,553s
+user    0m6,993s
+sys     0m0,301s
+
+real    0m6,673s
+user    0m7,150s
+sys     0m0,324s
+
+real    0m6,487s
+user    0m6,918s
+sys     0m0,321s
+
+
+[RUNNING] proveFail_TransferUnderBalancej(address,uint256)
+   [PASS] proveFail_TransferUnderBalancej(address,uint256)
+[RUNNING] prove_ZeroAddressHasNoToken()
+   [PASS] prove_ZeroAddressHasNoToken()
+[RUNNING] prove_TokenReceiverCanTransferFromTotalBalance(address,address,uint256)
+   [PASS] prove_TokenReceiverCanTransferFromTotalBalance(address,address,uint256)
+[RUNNING] prove_TransferFromNoFees(address,address,address,uint256)
+   [PASS] prove_TransferFromNoFees(address,address,address,uint256)
+[RUNNING] prove_MintZeroTokens(address)
+   [PASS] prove_MintZeroTokens(address)
+[RUNNING] proveFail_TransferFromUnderBalancei(address,address,uint256)
+   [PASS] proveFail_TransferFromUnderBalancei(address,address,uint256)
+[RUNNING] prove_TransferZeroAmount(address,address)
+   [PASS] prove_TransferZeroAmount(address,address)
+[RUNNING] prove_TokenReceiverCanTransferFromTotalBalanceZero(address,address,address)
+   [PASS] prove_TokenReceiverCanTransferFromTotalBalanceZero(address,address,address)
+[RUNNING] prove_AllowanceUpdatedAfterBurn(address,address,uint256)
+   [PASS] prove_AllowanceUpdatedAfterBurn(address,address,uint256)
+[RUNNING] prove_Approve(address,uint256)
+   [PASS] prove_Approve(address,uint256)
+[RUNNING] prove_SelfApproveAndTransferFromOwnAccount(address,address,uint256)
+   [PASS] prove_SelfApproveAndTransferFromOwnAccount(address,address,uint256)
+[RUNNING] prove_SelfTransferZeroAmountAllowed(address)
+   [PASS] prove_SelfTransferZeroAmountAllowed(address)
+[RUNNING] prove_TransferFromDecreasesAllowance(address,address,address,uint256)
+   [PASS] prove_TransferFromDecreasesAllowance(address,address,address,uint256)
+[RUNNING] prove_BurnSameAccount(address,uint256)
+   [PASS] prove_BurnSameAccount(address,uint256)
+[RUNNING] prove_TransferFrom(address,address,uint256,uint256)
+   [PASS] prove_TransferFrom(address,address,uint256,uint256)
+[RUNNING] prove_TransferFromZeroAmount(address,address,address)
+   [PASS] prove_TransferFromZeroAmount(address,address,address)
+[RUNNING] proveFail_TransferFromZeroAddress(address,address,uint256)
+   [PASS] proveFail_TransferFromZeroAddress(address,address,uint256)
+[RUNNING] prove_SelfTransferPositiveAmountAllowed(address,uint256)
+   [PASS] prove_SelfTransferPositiveAmountAllowed(address,uint256)
+[RUNNING] proveFail_BurnUnderBalance(address,uint256)
+   [PASS] proveFail_BurnUnderBalance(address,uint256)
+[RUNNING] proveFail_TransferFromAllowanceReachesZero(address,address,address,uint256,uint256)
+   [PASS] proveFail_TransferFromAllowanceReachesZero(address,address,address,uint256,uint256)
+[RUNNING] prove_MultipleTransfersAllowed(address,address,uint256,uint256)
+   [PASS] prove_MultipleTransfersAllowed(address,address,uint256,uint256)
+[RUNNING] proveFail_MintToZeroAddress(uint256)
+   [FAIL] proveFail_MintToZeroAddress(uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_MintToZeroAddress(112777989180875142641012667662881322846184324395630932477102348584379903997143)
+[RUNNING] prove_ApproveNonZeroAmount(address,address,uint256)
+   [PASS] prove_ApproveNonZeroAmount(address,address,uint256)
+[RUNNING] prove_SelfApprovePositiveAmount(address,uint256)
+   [PASS] prove_SelfApprovePositiveAmount(address,uint256)
+[RUNNING] prove_TransferFromDoesNotUpdateOtherBalances(address,address,address,address,uint256)
+   [PASS] prove_TransferFromDoesNotUpdateOtherBalances(address,address,address,address,uint256)
+[RUNNING] proveFail_TransferFromZeroAddressForMSGSender(address,address,uint256)
+   [FAIL] proveFail_TransferFromZeroAddressForMSGSender(address,address,uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_TransferFromZeroAddressForMSGSender(0x1000000001000000000000000000000000004000,0x0000000000000000000000000000000000000040,0)
+[RUNNING] prove_MsgSenderCanRetrieveOtherBalance(address,uint256)
+   [PASS] prove_MsgSenderCanRetrieveOtherBalance(address,uint256)
+[RUNNING] prove_SelfApproveAndTransferFromOwnAccountZeroAmountAllowed(address,address)
+   [PASS] prove_SelfApproveAndTransferFromOwnAccountZeroAmountAllowed(address,address)
+[RUNNING] prove_Mint(address,uint256)
+   [PASS] prove_Mint(address,uint256)
+[RUNNING] proveFail_ApproveZeroAddress(address,uint256)
+   [FAIL] proveFail_ApproveZeroAddress(address,uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_ApproveZeroAddress(0x0000000000000000000000000000000000000000,0)
+[RUNNING] proveFail_TransferToZeroAddress(address,uint256)
+   [FAIL] proveFail_TransferToZeroAddress(address,uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_TransferToZeroAddress(0x8000000000000000000000000000000000000000,57896044618658097711785492504343953926634992332820282019728792003956564819968)
+[RUNNING] proveFail_BurnUnderSupply(address,uint256)
+   [PASS] proveFail_BurnUnderSupply(address,uint256)
+[RUNNING] proveFail_ApproveFromZeroAddress(address,uint256)
+   [FAIL] proveFail_ApproveFromZeroAddress(address,uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_ApproveFromZeroAddress(0x8000000000000000000000000000000000000000,57896044618658097711785492504343953926634992332820282019728792003956564819968)
+[RUNNING] prove_MultipleTransfersOfZeroAmountAllowed(address,address,uint8)
+   [PASS] prove_MultipleTransfersOfZeroAmountAllowed(address,address,uint8)
+[RUNNING] proveFail_ApproveZeroAddressForMSGSender(address,uint256)
+   [FAIL] proveFail_ApproveZeroAddressForMSGSender(address,uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_ApproveZeroAddressForMSGSender(0x8000000000000000000000000000000000000000,0)
+[RUNNING] prove_TransferDoesNotUpdateOtherBalances(address,address,address,uint256)
+   [PASS] prove_TransferDoesNotUpdateOtherBalances(address,address,address,uint256)
+[RUNNING] prove_BurnZeroTokens(address)
+   [PASS] prove_BurnZeroTokens(address)
+[RUNNING] prove_SelfApproveZeroAmountAllowed(address)
+   [PASS] prove_SelfApproveZeroAmountAllowed(address)
+[RUNNING] prove_MsgSenderCanRetrieveOwnBalance(uint256)
+   [PASS] prove_MsgSenderCanRetrieveOwnBalance(uint256)
+[RUNNING] prove_MsgSenderCanTransferTotalBalance(address,address,uint256)
+   [PASS] prove_MsgSenderCanTransferTotalBalance(address,address,uint256)
+[RUNNING] prove_BurnDifferentAccount(address,uint256,address,uint256)
+   [PASS] prove_BurnDifferentAccount(address,uint256,address,uint256)
+[RUNNING] prove_MsgSenderCanTransferTotalBalanceZero(address,address)
+   [PASS] prove_MsgSenderCanTransferTotalBalanceZero(address,address)
+[RUNNING] proveFail_TransferFromUnderBalance(address,address,uint256)
+   [PASS] proveFail_TransferFromUnderBalance(address,address,uint256)
+[RUNNING] prove_ConsecutiveApprovePositiveToPositive(address,address,uint256,uint256)
+   [PASS] prove_ConsecutiveApprovePositiveToPositive(address,address,uint256,uint256)
+[RUNNING] proveFail_BurnFromZeroAddress(uint256)
+   [PASS] proveFail_BurnFromZeroAddress(uint256)
+[RUNNING] prove_MultipleTransferFromAllowed(address,address,address,uint256,uint256)
+   [PASS] prove_MultipleTransferFromAllowed(address,address,address,uint256,uint256)
+[RUNNING] proveFail_TransferFromZeroAddress(address,uint256)
+   [PASS] proveFail_TransferFromZeroAddress(address,uint256)
+[RUNNING] proveFail_TransferUnderBalance(address,uint256)
+   [PASS] proveFail_TransferUnderBalance(address,uint256)
+[RUNNING] prove_Transfer(address,uint256,uint256)
+   [PASS] prove_Transfer(address,uint256,uint256)
+[RUNNING] prove_IncreaseAllowance(address,uint256)
+   [PASS] prove_IncreaseAllowance(address,uint256)
+[RUNNING] prove_BalanceUpdatedAfterBurn(address,address,uint256)
+   [PASS] prove_BalanceUpdatedAfterBurn(address,address,uint256)
+[RUNNING] prove_ApproveZeroAmount(address,address)
+   [PASS] prove_ApproveZeroAmount(address,address)
+[RUNNING] proveFail_TransferZeroAmountToZeroAddressReverts(address)
+   [FAIL] proveFail_TransferZeroAmountToZeroAddressReverts(address)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_TransferZeroAmountToZeroAddressReverts(0x8000000000000000000000000000000000000000)
+[RUNNING] proveFail_TransferFromToZeroAddress33(address,address,uint256)
+   [FAIL] proveFail_TransferFromToZeroAddress33(address,address,uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_TransferFromToZeroAddress33(0x000000000000000000000000000000000000ACAb,0x2000000000000000020002C02000000084000000,115792089237316195423570985008687907853269984665640564039457584007913129639935)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_TransferFromToZeroAddress33(0x000000000000000000000000000000000000ACAb,0x080000000100000000000000080000809E00649E,1809251394333065553493296640763603055933037797083688848518798347828176355328)
+[RUNNING] prove_DecreaseAllowance(address,uint256)
+   [PASS] prove_DecreaseAllowance(address,uint256)
+[RUNNING] prove_ApproveMaxAmount(address,address)
+   [PASS] prove_ApproveMaxAmount(address,address)
+[RUNNING] prove_BurnFromNonZeroAddress(address,uint256)
+   [PASS] prove_BurnFromNonZeroAddress(address,uint256)
+[RUNNING] proveFail_TransferFromZeroAmountToZeroAddressReverts(address,address)
+   [FAIL] proveFail_TransferFromZeroAmountToZeroAddressReverts(address,address)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_TransferFromZeroAmountToZeroAddressReverts(0x0208000080008000008000000200000000120000,0x0400FffF00Ff20A7200210Ff6f1B20FD11eC30C4)
+[RUNNING] prove_MultipleTransferFromsOfZeroAmountAllowed(address,address,address,uint8)
+   [PASS] prove_MultipleTransferFromsOfZeroAmountAllowed(address,address,address,uint8)
+[RUNNING] proveFail_MintOverflow(address)
+   [PASS] proveFail_MintOverflow(address)
+[RUNNING] proveFail_ApproveToZeroAddress(address,uint256)
+   [FAIL] proveFail_ApproveToZeroAddress(address,uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_ApproveToZeroAddress(0x8000000000000000000000000000000000000000,57896044618658097711785492504343953926634992332820282019728792003956564819968)
+
+real    21m38,592s
+user    25m45,521s
+sys     1m51,120s
+
+real    23m0,848s
+user    27m9,238s
+sys     1m53,997s
+
+real    22m8,266s
+user    26m31,884s
+sys     1m50,339s
+
+real    21m37,697s
+user    25m49,557s
+sys     1m55,508s
+
+real    21m34,877s
+user    25m35,977s
+sys     1m50,636s
+
+real    21m37,330s
+user    25m43,637s
+sys     1m47,435s
+
+real    21m42,767s
+user    25m51,187s
+sys     1m50,812s
+
+real    21m34,641s
+user    25m35,093s
+sys     1m47,138s
+
+real    21m34,435s
+user    25m39,768s
+sys     1m48,226s
+
+real    21m38,335s
+user    25m43,650s
+sys     1m48,253s
