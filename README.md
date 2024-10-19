@@ -659,7 +659,7 @@
 
 **ATENÇÂO**
 
-Após usar os contra-exemplos do halmos e hevm nos testes para verificar a confiabilidade das respostas, 9 dos 10 testes que falharam se demonstraram realmente errados. O teste que passou realmente tem a vulnerabilidade detectada pelas tools, porém, ao aplicar o teste, ocorre underflow e o teste reverte, o que passou batido.
+Após usar os contra-exemplos do halmos e hevm nos testes para verificar a confiabilidade das respostas, 9 dos 10 testes que falharam se demonstraram realmente errados. O teste que passou realmente tem a vulnerabilidade detectada pelas tools, porém, ao aplicar o teste, ocorre overflow e o teste reverte, o que passou batido.
 
 
     Encountered 9 failing tests in test/verifyresults.t.sol:ERC20SymbolicProperties
