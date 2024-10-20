@@ -679,6 +679,7 @@ Após usar os contra-exemplos do halmos e hevm nos testes para verificar a confi
 <br>
 
 <br>
+
 Ao comentar essa linha: `if (allowed != type(uint256).max) allowance[from][msg.sender] = allowed - amount`, os resultados se confirmam:
 
     [FAIL. Reason: call did not revert as expected; counterexample: calldata=0xe41cadce00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 args=[0x0000000000000000000000000000000000000000, 0]] testproveFail_ApproveFromZeroAddress(address,uint256) (runs: 0, μ: 0, ~: 0)
