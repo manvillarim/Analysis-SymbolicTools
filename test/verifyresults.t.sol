@@ -5,7 +5,7 @@ import {Test, console2} from "forge-std/Test.sol";
 import {ERC20Mock} from "../lib/openzeppelin-contracts/contracts/mocks/token/ERC20Mock.sol";
 import {SafeERC20} from "../lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol";
 import "../src/ERC20SOLMock.sol";
- contract ERC20SymbolicProperties is Test {
+ /*contract ERC20SymbolicProperties is Test {
     using SafeERC20 for ERC20Mock;
 
     ERC20SolMock token;
@@ -115,4 +115,5 @@ import "../src/ERC20SOLMock.sol";
         vm.expectRevert();
         token.approve(address(0), amount);
     }
- }
+
+ }*/

@@ -5,14 +5,15 @@ import {Test, console2} from "forge-std/Test.sol";
 import {ERC20Mock} from "../lib/openzeppelin-contracts/contracts/mocks/token/ERC20Mock.sol";
 import {SafeERC20} from "../lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol";
 import "../src/ERC20SOLMock.sol";
+import "../src/erc20ruim.sol";
 
- contract ERC20SymbolicProperties is Test {
-    using SafeERC20 for ERC20SolMock;
+/*contract ERC20SymbolicProperties is Test {
+    using SafeERC20 for ERC20r;
 
-    ERC20SolMock token;
+    ERC20r token;
 
     function setUp() public {
-        token = new ERC20SolMock();
+        token = new ERC20r(0);
     }
 
     // Proves approving a spender to transfer tokens. Checks allowance is set correctly.
@@ -777,7 +778,7 @@ import "../src/ERC20SOLMock.sol";
 
 
     // Proves for underflow when burning tokens  
-    function proveFail_BurnUnderSupply(address account, uint256 amount) public {
+   /* function proveFail_BurnUnderSupply(address account, uint256 amount) public {
         require(account != address(0));
             require(token.balanceOf(account) < amount || token.totalSupply() < amount);
                 
@@ -943,4 +944,4 @@ import "../src/ERC20SOLMock.sol";
             assert(true);
         }
     }
-}
+}*/

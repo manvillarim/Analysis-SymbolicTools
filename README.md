@@ -1,13 +1,13 @@
 # ERC20 OPPEN ZEPELIN
 <br>
 
-**CONFIGURAÇÕES: INTEL CORE I5 12500h 16gb RAM**
+**CONFIGURATION: INTEL CORE I5 12500h 16gb RAM**
 
 <br>
 
-# DESEMPENHO HALMOS
+## HALMOS
 
-| Função | Status | Tempo 1 | Tempo 2 | Tempo 3 | Tempo 4 | Tempo 5 | Tempo 6 | Tempo 7 | Tempo 8 | Tempo 9 | Tempo 10 | Média (s) | Desvio Padrão (s) |
+| Funtion | Status | Time 1 | Time 2 | Time 3 | Time 4 | Time 5 | Time 6 | Time 7 | Time 8 | Time 9 | Time 10 | Average (s) | Standard Deviation (s) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---  |
 | proveFail_ApproveFromZeroAddress | PASS | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.0 |
 | proveFail_ApproveToZeroAddress | PASS | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.03 | 0.02 | 0.02 | 0.02 | 0.02 | 0.0 |
@@ -70,14 +70,14 @@
 | prove_TransferZeroAmount | PASS | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.0 |
 | prove_ZeroAddressHasNoToken | PASS | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.0 |
 
-**Total de Testes Feitos:** 61
-**Total de Testes Passados:** 61
-**Total de Testes Reprovados** 0
+**Total Tests Done:** 61
+**Total Tests Passed:** 61
+**Total Failed Tests** 0
 
 
-**TEMPO GERAL**
+**TOTAL TIME**
 
-|             | Tempo 1 | Tempo 2 | Tempo 3 | Tempo 4 | Tempo 5 | Tempo 6 | Tempo 7 | Tempo 8 | Tempo 9 | Tempo 10 | Média | Desvio Padrão |
+|             | Time 1 | Time 2 | Time 3 | Time 4 | Time 5 | Time 6 | Time 7 | Time 8 | Time 9 | Time 10 | Average | Standard Deviation |
 |-------------|---------|---------|---------|---------|---------|---------|---------|---------|---------|----------|-------|---------------|
 | **Real**    | 9,409s   | 9,538s   | 9,110s   | 9,078s   | 9,429s   | 9,389s   | 9,169s   | 9,055s   | 9,063s   | 9,562s    | 9,280s | 0,203s         |
 | **User**    | 8,991s   | 9,189s   | 8,811s   | 8,732s   | 9,034s   | 8,997s   | 8,799s   | 8,741s   | 8,734s   | 9,179s    | 8,920s | 0,172s         |
@@ -87,10 +87,10 @@
 
 <br>
 
-# DESEMPENHO HEVM
+## HEVM
 
 
-| Função | Status |
+| Function | Status |
 |--------|--------|
 | proveFail_TransferUnderBalancej | PASS |
 | prove_ZeroAddressHasNoToken | PASS |
@@ -154,13 +154,13 @@
 | proveFail_MintOverflow | PASS |
 | proveFail_ApproveToZeroAddress | PASS |
 
-**Total de Testes Feitos:** 61
-**Total de Testes Passados:** 61
-**Total de Testes Reprovados** 0
+**Total Tests Done:** 61
+**Total Tests Passed:** 61
+**Total Failed Tests:** 0
 
-**TEMPO GERAL**
+**TOTAL TIME**
 
-|             | Tempo 1  | Tempo 2  | Tempo 3  | Tempo 4  | Tempo 5  | Tempo 6  | Tempo 7  | Tempo 8  | Tempo 9  | Tempo 10 | Média   | Desvio Padrão |
+|             | Time 1 | Time 2 | Time 3 | Time 4 | Time 5 | Time 6 | Time 7 | Time 8 | Time 9 | Time 10 | Average | Standard Deviation |
 |-------------|----------|----------|----------|----------|----------|----------|----------|----------|----------|----------|---------|---------------|
 | **Real**    | 21m56,452s | 21m14,008s | 21m38,340s | 21m30,129s | 21m17,406s | 21m15,757s | 21m7,386s | 21m7,321s | 21m6,827s | 21m7,269s | 21m27,289s | 0,314s     |
 | **User**    | 30m14,772s | 31m9,159s  | 30m7,216s  | 39m6,208s  | 25m44,806s | 38m50,550s | 35m58,286s | 30m31,676s | 37m39,034s | 30m23,078s | 32m45,979s | 4,53s     |
@@ -170,9 +170,9 @@
 
 <br>
 
-# DESEMPENHO KONTROL
+## KONTROL
 
-| Função | Status |
+| Function | Status |
 |--------|--------|
 | prove_TransferFrom | FAIL |
 | prove_Approve | FAIL |
@@ -236,13 +236,13 @@
 | proveFail_TransferFromUnderBalancei | FAIL |
 | proveFail_TransferFromZeroAddressForMSGSender | FAIL |
 
-**Total de Testes Feitos:** 61
-**Total de Testes Passados:** 2
-**Total de Testes Reprovados** 59
+**Total Tests Done:** 61
+**Total Tests Passed:** 2
+**Total Failed Tests:** 59
 
-**TEMPO GERAL**
+**TOTAL TIME**
 
-|             | Tempo 1      | Tempo 2     | Tempo 3     | Tempo 4     | Tempo 5     | Tempo 6     | Tempo 7     | Tempo 8     | Tempo 9      | Média   | Desvio Padrão |
+|             | Time 1 | Time 2 | Time 3 | Time 4 | Time 5 | Time 6 | Time 7 | Time 8 | Time 9 | Average | Standard Deviation |
 |-------------|--------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|--------------|---------|---------------|
 | **Real**    | 65m15,047s   | 49m51,999s  | 50m27,520s  | 51m52,399s  | 54m28,138s  | 56m53,043s  | 59m42,752s  | 55m3,567s   | 55m7,429s    | 55m29s | 5.22s         |
 | **User**    | 69m41,402s   | 53m6,263s   | 53m40,101s  | 55m16,569s  | 57m36,731s  | 61m3,788s   | 63m58,455s  | 58m47,940s  | 58m52,374s   | 58m43s | 4.76s         |
@@ -253,7 +253,7 @@
 
 <br>
 
-# COMPARATIVO GERAL
+## GENERAL COMPARISION
 
 | Função | HEVM Status | Kontrol Status | Halmos Status |
 |--------|-------------|----------------|---------------|
@@ -336,13 +336,13 @@
 # ERC20 SOLMATE
 <br>
 
-[Contrato](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC20.sol)
+[Contract](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC20.sol)
 
 <br>
 
-# DESEMPENHO HALMOS
+## HALMOS
 
-| Função | Status | Tempo 1 | Tempo 2 | Tempo 3 | Tempo 4 | Tempo 5 | Tempo 6 | Tempo 7 | Tempo 8 | Tempo 9 | Tempo 10 | Média (s) | Desvio Padrão (s) |
+| Funtion | Status | Time 1 | Time 2 | Time 3 | Time 4 | Time 5 | Time 6 | Time 7 | Time 8 | Time 9 | Time 10 | Average (s) | Standard Deviation (s) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | proveFail_ApproveFromZeroAddress | FAIL | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.06 | 0.05 | 0.06 | 0.05 | 0.0 |
 | proveFail_ApproveToZeroAddress | FAIL | 0.05 | 0.04 | 0.05 | 0.04 | 0.04 | 0.05 | 0.04 | 0.05 | 0.05 | 0.05 | 0.05 | 0.01 |
@@ -405,13 +405,14 @@
 | prove_TransferZeroAmount | PASS | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.0 |
 | prove_ZeroAddressHasNoToken | PASS | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.0 |
 
-**Total de Testes Feitos:** 61
-**Total de Testes Passados:** 51
-**Total de Testes Reprovados** 10
 
-**TEMPO GERAL**
+**Total Tests Done:** 61
+**Total Tests Passed:** 51
+**Total Failed Tests** 10
 
-|             | Tempo 1    | Tempo 2    | Tempo 3    | Tempo 4    | Tempo 5    | Tempo 6    | Tempo 7    | Tempo 8    | Tempo 9    | Tempo 10   | Média   | Desvio Padrão |
+**TOTAL TIME**
+
+|             | Time 1 | Time 2 | Time 3 | Time 4 | Time 5 | Time 6 | Time 7 | Time 8 | Time 9 | Time 10 | Average | Standard Deviation |
 |-------------|------------|------------|------------|------------|------------|------------|------------|------------|------------|------------|---------|---------------|
 | **Real**    | 0m6,645s   | 0m6,601s   | 0m6,601s   | 0m6,519s   | 0m6,660s   | 0m7,007s   | 0m6,472s   | 0m6,553s   | 0m6,673s   | 0m6,487s   | 6,652s  | 0,164s        |
 | **User**    | 0m6,998s   | 0m7,061s   | 0m7,061s   | 0m6,968s   | 0m7,154s   | 0m7,460s   | 0m6,929s   | 0m6,993s   | 0m7,150s   | 0m6,918s   | 7,069s  | 0,154s        |
@@ -422,9 +423,9 @@
 
 <br>
 
-# DESEMPENHO HEVM
+## HEVM
 
-| Função | Status |
+| Function | Status |
 |--------|--------|
 | proveFail_TransferUnderBalancej | PASS |
 | prove_ZeroAddressHasNoToken | PASS |
@@ -488,12 +489,13 @@
 | proveFail_MintOverflow | PASS |
 | proveFail_ApproveToZeroAddress | FAIL |
 
-**Total de Testes Feitos:** 61
-**Total de Testes Passados:** 51
-**Total de Testes Reprovados** 10
+**Total Tests Done:** 61
+**Total Tests Passed:** 51
+**Total Failed Tests** 10
 
-**TEMPO GERAL**
-|             | Tempo 1      | Tempo 2     | Tempo 3     | Tempo 4     | Tempo 5     | Tempo 6     | Tempo 7     | Tempo 8     | Tempo 9     | Tempo 10    | Média    | Desvio Padrão |
+
+**TOTAL TIME**
+|             | Time 1 | Time 2 | Time 3 | Time 4 | Time 5 | Time 6 | Time 7 | Time 8 | Time 9 | Time 10 | Average | Standard Deviation |
 |-------------|--------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|----------|---------------|
 | **Real**    | 21m38,592s   | 23m0,848s   | 22m8,266s   | 21m37,697s  | 21m34,877s  | 21m37,330s  | 21m42,767s  | 21m34,641s  | 21m34,435s  | 21m38,335s  | 21m47,079s | 0,611s        |
 | **User**    | 25m45,521s   | 27m9,238s   | 26m31,884s  | 25m49,557s  | 25m35,977s  | 25m43,637s  | 25m51,187s  | 25m35,093s  | 25m39,768s  | 25m43,650s  | 25m52,451s | 0,632s        |
@@ -503,10 +505,10 @@
 
 <br>
 
-# DESEMPENHO KONTROL
+## KONTROL
 
 
-| Função | Status |
+| Function | Status |
 |--------|--------|
 | prove_MultipleTransferFromsOfZeroAmountAllowed | FAIL |
 | prove_MsgSenderCanTransferTotalBalance | FAIL |
@@ -575,7 +577,7 @@
 **Total de Testes Reprovados** 50
 
 **TEMPO GERAL**
-|             | Tempo 1      | Tempo 2      | Tempo 3      | Tempo 4      | Tempo 5      | Tempo 6      | Tempo 7      | Tempo 8      | Tempo 9      | Média       | Desvio Padrão |
+|             | Time 1 | Time 2 | Time 3 | Time 4 | Time 5 | Time 6 | Time 7 | Time 8 | Time 9 | Average | Standard Deviation |
 |-------------|--------------|--------------|--------------|--------------|--------------|--------------|--------------|--------------|--------------|-------------|---------------|
 | **Real**    | 42m15,179s   | 43m0,117s    | 43m19,468s   | 44m53,700s   | 45m7,123s    | 46m24,987s   | 42m44,101s   | 46m11,672s   | 43m48,280s   | 44m5,625s   | 1m27,442s     |
 | **User**    | 45m15,201s   | 46m10,402s   | 46m10,077s   | 47m59,967s   | 48m15,282s   | 49m49,290s   | 45m44,038s   | 49m20,384s   | 46m41,195s   | 47m27,203s  | 1m43,523s     |
@@ -585,7 +587,7 @@
 
 <br>
 
-# COMPARATIVO GERAL
+## GENERAL COMPARISION
 
 | Função | HEVM Status | Kontrol Status | Halmos Status |
 |--------|-------------|----------------|---------------|
@@ -659,9 +661,9 @@
 
 <br>
 
-**ATENÇÂO**
+**ATTENTION**
 
-Após usar os contra-exemplos do halmos e hevm nos testes para verificar a confiabilidade das respostas, 9 dos 10 testes que falharam se demonstraram realmente errados. O teste que passou realmente tem a vulnerabilidade detectada pelas tools, porém, ao aplicar o teste, ocorre underflow e o teste reverte, o que passou batido.
+After using the halmos and hevm counterexamples in tests to check the reliability of the answers, 9 of the 10 failed tests turned out to be actually wrong. The test that passed actually has the vulnerability detected by the tools, however, when applying the test, underflow occurs and the test reverts, which was missed.
 
 
     Encountered 9 failing tests in test/verifyresults.t.sol:ERC20SymbolicProperties
@@ -680,7 +682,7 @@ Após usar os contra-exemplos do halmos e hevm nos testes para verificar a confi
 
 <br>
 
-Ao comentar essa linha: `if (allowed != type(uint256).max) allowance[from][msg.sender] = allowed - amount`, os resultados se confirmam:
+When commenting this line: `if (allowed != type(uint256).max) allowance[from][msg.sender] = allowed - amount`, the results are confirmed:
 
     [FAIL. Reason: call did not revert as expected; counterexample: calldata=0xe41cadce00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 args=[0x0000000000000000000000000000000000000000, 0]] testproveFail_ApproveFromZeroAddress(address,uint256) (runs: 0, μ: 0, ~: 0)
     [FAIL. Reason: call did not revert as expected; counterexample: calldata=0x0b609fcb00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 args=[0x0000000000000000000000000000000000000000, 0]] testproveFail_ApproveToZeroAddress(address,uint256) (runs: 0, μ: 0, ~: 0)
@@ -695,4 +697,5 @@ Ao comentar essa linha: `if (allowed != type(uint256).max) allowance[from][msg.s
 
     Encountered a total of 10 failing tests, 0 tests succeeded
 
-Isso demonstra a diferença de comportamento entre a Verificação Formal e o teste unitário/fuzzing.
+This demonstrates the difference in behavior between Formal Verification and unit testing/fuzzing.
+

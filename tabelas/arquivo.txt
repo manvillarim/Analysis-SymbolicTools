@@ -600,3 +600,165 @@ sys     1m48,226s
 real    21m38,335s
 user    25m43,650s
 sys     1m48,253s
+
+
+Counterexample: 
+    p_amount_uint256 = 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff (115792089237316195423570985008687907853269984665640564039457584007913129639935)
+    p_spender_address = 0x565c1fb1103af5fad17d8c7be2a37e8a250a514f
+[FAIL] proveFail_ApproveFromZeroAddress(address,uint256) (paths: 4, time: 0.05s, bounds: [])
+Counterexample: 
+    p_amount_uint256 = 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff (115792089237316195423570985008687907853269984665640564039457584007913129639935)
+    p_owner_address = 0x8000000000000000000000000000000000000000
+[FAIL] proveFail_ApproveToZeroAddress(address,uint256) (paths: 4, time: 0.04s, bounds: [])
+Counterexample: 
+    p_amount_uint256 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
+[FAIL] proveFail_ApproveZeroAddress(uint256) (paths: 1, time: 0.03s, bounds: [])
+Counterexample: 
+    p_amount_uint256 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
+    p_spender_address = 0x565c1fb1103af5fad17d8c7be2a37e8a250a514f
+[FAIL] proveFail_ApproveZeroAddressForMSGSender(address,uint256) (paths: 3, time: 0.04s, bounds: [])
+[PASS] proveFail_BurnFromZeroAddress(uint256) (paths: 2, time: 0.02s, bounds: [])
+[PASS] proveFail_BurnUnderBalance(address,uint256) (paths: 9, time: 0.68s, bounds: [])
+[PASS] proveFail_BurnUnderSupply(address,uint256) (paths: 4, time: 0.04s, bounds: [])
+WARNING:halmos:proveFail_MintOverflow(address): all paths have been reverted; the setup state or inputs may have been too restrictive.
+(see https://github.com/a16z/halmos/wiki/warnings#revert-all)
+[ERROR] proveFail_MintOverflow(address) (paths: 3, time: 0.02s, bounds: [])
+Counterexample: 
+    p_amount_uint256 = 0x000000000000001037cc0000000375966cb104b5fc33cab13aba84eab6aad085 (101801763160294991645231925481406873206302069564571160072325)
+[FAIL] proveFail_MintToZeroAddress(uint256) (paths: 3, time: 29.87s, bounds: [])
+[PASS] proveFail_TransferFromAllowanceReachesZero(address,address,address,uint256,uint256) (paths: 21, time: 0.67s, bounds: [])
+WARNING:halmos:Counterexample (potentially invalid): 
+    p_amount_uint256 = 0x000000000000000e9cf1b3890000000000000000000000000000000000000000 (91727683551575835100721532266329549552907472735810252439552)
+    p_owner_address = 0x00000000000000000000000000000000aaaa0001
+    p_spender_address = 0x0000000000000000000000000000000000020000
+(see https://github.com/a16z/halmos/wiki/warnings#counterexample-invalid)
+[FAIL] proveFail_TransferFromToZeroAddress33(address,address,uint256) (paths: 13, time: 22.88s, bounds: [])
+WARNING:halmos:Counterexample (potentially invalid): 
+    p_amount_uint256 = 0x0000000000000000001fffffff10200000000000000000000000000000000000 (3064991076382386462219160828224737946585952528120152064)
+    p_owner_address = 0x00000000000000000000000000000000aaaa0001
+    p_spender_address = 0x0000000000000000000000000200000000000000
+(see https://github.com/a16z/halmos/wiki/warnings#counterexample-invalid)
+[FAIL] proveFail_TransferFromUnderBalance(address,address,uint256) (paths: 14, time: 9.66s, bounds: [])
+[PASS] proveFail_TransferFromUnderBalancei(address,address,uint256) (paths: 6, time: 0.06s, bounds: [])
+[PASS] proveFail_TransferFromZeroAddress(address,address,uint256) (paths: 6, time: 0.03s, bounds: [])
+[PASS] proveFail_TransferFromZeroAddress(address,uint256) (paths: 4, time: 0.02s, bounds: [])
+Counterexample: 
+    p_amount_uint256 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
+    p_recipient_address = 0x00000000000000000000000000000000aaaa0001
+    p_sender_address = 0x00000000000000000000000000000000aaea0001
+[FAIL] proveFail_TransferFromZeroAddressForMSGSender(address,address,uint256) (paths: 6, time: 0.07s, bounds: [])
+Counterexample: 
+    p_spender_address = 0x808000f400bc00e0002000031000009e8d000302
+    p_tokenSender_address = 0x7f7fff03e543ff1fffdffffcefffff6172fff804
+[FAIL] proveFail_TransferFromZeroAmountToZeroAddressReverts(address,address) (paths: 6, time: 0.09s, bounds: [])
+WARNING:halmos:Counterexample (potentially invalid): 
+    p_amount_uint256 = 0x00000000000000093a00080aeb7e000c46f812a1561dc0000000000000000000 (57916074489518464091293196090201373726044755020451269312512)
+    p_sender_address = 0x0000000000000000010000000000000000000000
+(see https://github.com/a16z/halmos/wiki/warnings#counterexample-invalid)
+[FAIL] proveFail_TransferToZeroAddress(address,uint256) (paths: 9, time: 15.97s, bounds: [])
+WARNING:halmos:Counterexample (potentially invalid): 
+    p_amount_uint256 = 0x00000000000000000000000000000000004fbb7836e930c40000000000000000 (413993786793736492219557070160003072)
+    p_sender_address = 0x0000000000000080000000000000000000000000
+(see https://github.com/a16z/halmos/wiki/warnings#counterexample-invalid)
+[FAIL] proveFail_TransferUnderBalance(address,uint256) (paths: 10, time: 4.42s, bounds: [])
+[PASS] proveFail_TransferUnderBalancej(address,uint256) (paths: 4, time: 0.03s, bounds: [])
+Counterexample: 
+    p_sender_address = 0x8000000000000000000000000000000000000000
+[FAIL] proveFail_TransferZeroAmountToZeroAddressReverts(address) (paths: 3, time: 0.04s, bounds: [])
+[PASS] prove_AllowanceUpdatedAfterBurn(address,address,uint256) (paths: 11, time: 0.11s, bounds: [])
+[PASS] prove_Approve(address,uint256) (paths: 3, time: 0.03s, bounds: [])
+[PASS] prove_ApproveMaxAmount(address,address) (paths: 5, time: 0.04s, bounds: [])
+[PASS] prove_ApproveNonZeroAmount(address,address,uint256) (paths: 6, time: 0.04s, bounds: [])
+[PASS] prove_ApproveZeroAmount(address,address) (paths: 5, time: 0.04s, bounds: [])
+WARNING:halmos:Counterexample (potentially invalid): 
+    p_amount_uint256 = 0x0000000000000000000000000e40200cd8137a83800022078e98441f00461fc2 (81355910447992318201805720885479776100408500162)
+    p_tokenApprovee_address = 0x0000000040000000000000000000000000000000
+    p_tokenApprover_address = 0x0000010100000000000000000000000000800000
+(see https://github.com/a16z/halmos/wiki/warnings#counterexample-invalid)
+[FAIL] prove_BalanceUpdatedAfterBurn(address,address,uint256) (paths: 11, time: 12.81s, bounds: [])
+Counterexample: 
+    p_account1_address = 0x000002ff0008120057ffdfc1c233ffaff58017ff
+    p_account2_address = 0x0003f1000102017fa80020003dc40010001fe800
+    p_amount1_uint256 = 0x001f56b09e671b16cc4dc18b16a63300d2c614ece2fbf628aa0382724eb09fd9 (55370570826324677631408191350404203196413890875317558594604272464379813849)
+    p_amount2_uint256 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
+WARNING:halmos:Counterexample (potentially invalid): 
+    p_account1_address = 0x0000000000100000000000000000000000000000
+    p_account2_address = 0x0000000000000000004000000000000000000000
+    p_amount1_uint256 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
+    p_amount2_uint256 = 0x00000000002000000000000000000000000000000000000001b62f0000000000 (13164036458569648337239753460458804039861886925191976623634644992)
+(see https://github.com/a16z/halmos/wiki/warnings#counterexample-invalid)
+WARNING:halmos:Counterexample (potentially invalid): 
+    p_account1_address = 0x0000000000000000040000000000000000000000
+    p_account2_address = 0x0000000000000000000000000000000000000100
+    p_amount1_uint256 = 0x0000000000000000027091ac0000c10010558000000000000000000000000000 (59821828412845822200497604915209893928804094005978595328)
+    p_amount2_uint256 = 0x0000000000000000000000000020000000000000000000000000000000000000 (713623846352979940529142984724747568191373312)
+(see https://github.com/a16z/halmos/wiki/warnings#counterexample-invalid)
+WARNING:halmos:Counterexample (potentially invalid): 
+    p_account1_address = 0x0000000000000000000000020000000000000000
+    p_account2_address = 0x0000000001000000000000000000000000000000
+    p_amount1_uint256 = 0x00000000000000120cd6eb68446d1f3252292f14ef70bea860c9280000004045 (113302655584990902654109871456244080316819025206962229887045)
+    p_amount2_uint256 = 0x00000000000000084284bf48000088807a3675f5feab85f9dd8a0c51900002b4 (51847843829272157038837763084666364204514403524747045372596)
+(see https://github.com/a16z/halmos/wiki/warnings#counterexample-invalid)
+[FAIL] prove_BurnDifferentAccount(address,uint256,address,uint256) (paths: 17, time: 175.78s, bounds: [])
+WARNING:halmos:Counterexample (potentially invalid): 
+    p_account_address = 0x0100000000000000000000000000000000000000
+    p_amount_uint256 = 0x0000000000000006bc44821800aa006d80000000000e660208df460e32b00000 (42278918779147679128940124611076026346085624596352390397952)
+(see https://github.com/a16z/halmos/wiki/warnings#counterexample-invalid)
+[FAIL] prove_BurnFromNonZeroAddress(address,uint256) (paths: 9, time: 12.78s, bounds: [])
+WARNING:halmos:Counterexample (potentially invalid): 
+    p_account_address = 0x0000000100000000000000000000000000000000
+    p_amount_uint256 = 0x00000000000000101000b9cc000000400876c18280c504f68763555764cc37ee (100826016139512437797968090973118740118936475840548472371182)
+(see https://github.com/a16z/halmos/wiki/warnings#counterexample-invalid)
+Counterexample: 
+    p_account_address = 0x0000000000000000000000000000000000000002
+    p_amount_uint256 = 0x0000000000001aa7d71a22096abfc17bf7b250422e2e309a07ceeb3dae2bf25e (42833939428243828611776791314413157680333615968875459159781982)
+[FAIL] prove_BurnSameAccount(address,uint256) (paths: 8, time: 41.94s, bounds: [])
+[PASS] prove_BurnZeroTokens(address) (paths: 3, time: 0.05s, bounds: [])
+[PASS] prove_ConsecutiveApprovePositiveToPositive(address,address,uint256,uint256) (paths: 5, time: 0.05s, bounds: [])
+[PASS] prove_DecreaseAllowance(address,uint256) (paths: 4, time: 0.08s, bounds: [])
+[PASS] prove_IncreaseAllowance(address,uint256) (paths: 3, time: 0.07s, bounds: [])
+WARNING:halmos:Counterexample (potentially invalid): 
+    p_account_address = 0x0000000000020000000000000000000000000000
+    p_amount_uint256 = 0x0000000000000010bf900002138808800400061093d5c2c4427c2aab8809b127 (105130726601975349313355170816606505661560709220002844750119)
+(see https://github.com/a16z/halmos/wiki/warnings#counterexample-invalid)
+Counterexample: 
+    p_account_address = 0x0000000000000000000000000000000000020005
+    p_amount_uint256 = 0x0000000002040000000000000000000000000000000000000000000000000000 (212270087894435579437991024549898215142772926666731802371970564096)
+[FAIL] prove_Mint(address,uint256) (paths: 6, time: 270.62s, bounds: [])
+[PASS] prove_MintZeroTokens(address) (paths: 3, time: 0.04s, bounds: [])
+WARNING:halmos:Counterexample (potentially invalid): 
+    p_amount_uint256 = 0x00000000000000100400c210a64e82028500b3d13c84c2008b00000000000000 (100531780089153094959101310922992582873276161108921204867072)
+    p_otherAddress_address = 0x0400000000000000000000000000000000000000
+(see https://github.com/a16z/halmos/wiki/warnings#counterexample-invalid)
+[FAIL] prove_MsgSenderCanRetrieveOtherBalance(address,uint256) (paths: 8, time: 5.00s, bounds: [])
+Counterexample: 
+    p_amount_uint256 = 0x00000000000000113e0c3d9462a0703f33eba5e5a3a31fbc8d8b97cfb85c52f5 (108232137489443054026552600597204006363964214843922737550069)
+[FAIL] prove_MsgSenderCanRetrieveOwnBalance(uint256) (paths: 3, time: 29.03s, bounds: [])
+[PASS] prove_MsgSenderCanTransferTotalBalance(address,address,uint256) (paths: 14, time: 0.75s, bounds: [])
+[PASS] prove_MsgSenderCanTransferTotalBalanceZero(address,address) (paths: 6, time: 0.07s, bounds: [])
+[PASS] prove_MultipleTransferFromAllowed(address,address,address,uint256,uint256) (paths: 23, time: 109.76s, bounds: [])
+[PASS] prove_MultipleTransferFromsOfZeroAmountAllowed(address,address,address,uint8) (paths: 13, time: 0.18s, bounds: [])
+[PASS] prove_MultipleTransfersAllowed(address,address,uint256,uint256) (paths: 20, time: 154.81s, bounds: [])
+[PASS] prove_MultipleTransfersOfZeroAmountAllowed(address,address,uint8) (paths: 11, time: 0.17s, bounds: [])
+[PASS] prove_SelfApproveAndTransferFromOwnAccount(address,address,uint256) (paths: 14, time: 7.11s, bounds: [])
+[PASS] prove_SelfApproveAndTransferFromOwnAccountZeroAmountAllowed(address,address) (paths: 6, time: 0.10s, bounds: [])
+[PASS] prove_SelfApprovePositiveAmount(address,uint256) (paths: 4, time: 0.03s, bounds: [])
+[PASS] prove_SelfApproveZeroAmountAllowed(address) (paths: 3, time: 0.03s, bounds: [])
+[PASS] prove_SelfTransferPositiveAmountAllowed(address,uint256) (paths: 8, time: 0.11s, bounds: [])
+[PASS] prove_SelfTransferZeroAmountAllowed(address) (paths: 3, time: 0.04s, bounds: [])
+[PASS] prove_TokenReceiverCanTransferFromTotalBalance(address,address,uint256) (paths: 14, time: 14.76s, bounds: [])
+[PASS] prove_TokenReceiverCanTransferFromTotalBalanceZero(address,address,address) (paths: 10, time: 0.10s, bounds: [])
+[PASS] prove_Transfer(address,uint256,uint256) (paths: 8, time: 19.92s, bounds: [])
+[PASS] prove_TransferDoesNotUpdateOtherBalances(address,address,address,uint256) (paths: 11, time: 2.40s, bounds: [])
+[PASS] prove_TransferFrom(address,address,uint256,uint256) (paths: 8, time: 0.18s, bounds: [])
+[PASS] prove_TransferFromDecreasesAllowance(address,address,address,uint256) (paths: 9, time: 0.20s, bounds: [])
+[PASS] prove_TransferFromDoesNotUpdateOtherBalances(address,address,address,address,uint256) (paths: 24, time: 4.95s, bounds: [])
+[PASS] prove_TransferFromNoFees(address,address,address,uint256) (paths: 16, time: 4.72s, bounds: [])
+[PASS] prove_TransferFromZeroAmount(address,address,address) (paths: 8, time: 0.09s, bounds: [])
+[PASS] prove_TransferZeroAmount(address,address) (paths: 6, time: 0.08s, bounds: [])
+[PASS] prove_ZeroAddressHasNoToken() (paths: 1, time: 0.01s, bounds: [])
+Symbolic test result: 41 passed; 20 failed; time: 954.33s
+
+real    15m58,836s
+user    17m42,815s
+sys     0m10,061s
