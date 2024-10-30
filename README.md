@@ -574,9 +574,9 @@
 | prove_TransferZeroAmount | FAIL |
 | proveFail_ApproveToZeroAddress | PASS |
 
-**Total de Testes Feitos:** 61
-**Total de Testes Passados:** 11
-**Total de Testes Reprovados** 50
+**Total Tests Done:** 61
+**Total Tests Passed:** 11
+**Total Failed Tests:** 50
 
 **TEMPO GERAL**
 |             | Time 1 | Time 2 | Time 3 | Time 4 | Time 5 | Time 6 | Time 7 | Time 8 | Time 9 | Average | Standard Deviation |
