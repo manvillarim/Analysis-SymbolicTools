@@ -1,27 +1,84 @@
-//SPDX-License-Identifier:MIT
+// SPDX-License-Identifier: MIT
 pragma solidity >= 0.8.0;
 
 import {Test, console2} from "forge-std/Test.sol";
-import {ERC20Mock} from "../lib/openzeppelin-contracts/contracts/mocks/token/ERC20Mock.sol";
-import {SafeERC20} from "../lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol";
-import "../src/ERC20SOLMock.sol";
- /*contract ERC20SymbolicProperties is Test {
-    using SafeERC20 for ERC20Mock;
+import {MockERC721} from "forge-std/mocks/MockERC721.sol";
 
-    ERC20SolMock token;
+contract ERC721 is MockERC721 {
+    function mint(address to, uint256 id) public {
+         _mint(to, id);
+    }
+
+    function burn(uint256 id) public {
+        _burn(id);
+    }
+
+}
+
+contract ERC721ReveiverTest {
+    function onERC721Received() external pure returns(bytes4) {
+        // Just to enable safeTransferFrom conditions
+        return bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"));
+    }
+}
+
+contract ERC721SymbolicProperties is Test {
+
+    ERC721 token;
+    ERC721ReveiverTest rec;
 
     function setUp() public {
-        token = new ERC20SolMock();
-    }
-    
-    function testproveFail_MintToZeroAddress(uint256 amount) public {
-        amount = 112777989180875142641012667662881322846184324395630932477102348584379903997143;
-        require(amount > 0, "Invalid arguments");
-        vm.expectRevert();
-        token.mint(address(0), amount);
+        token = new ERC721();
+        token.initialize("ERC721Token", "ERC721Token");
+        rec = new ERC721ReveiverTest();
     }
 
-    function testproveFail_TransferFromZeroAddressForMSGSender(address sender, address recipient, uint256 amount) public {
+    function testprove_safeTransferFromFuzz(address from, uint256 tokenId) public {
+        /*from = 0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38;
+        tokenId = 7237447289098456910489210153605429003754138173869686222113041559658740842496;*/
+        vm.assume(from != address(0));
+        try token.mint(from, tokenId) {} catch {assert(false);}
+        address owner = token.ownerOf(tokenId);
+        vm.assume(owner != address(0) && owner == from);
+        vm.assume(msg.sender == owner || token.getApproved(tokenId) == msg.sender || token.isApprovedForAll(owner, msg.sender));
+        uint256 _balancesFrom = token.balanceOf(from);
+        uint256 _balancesTo = token.balanceOf(address(rec));
+
+        vm.prank(msg.sender);
+        try token.safeTransferFrom(from, address(rec), tokenId) {
+            assert(token.balanceOf(from) == _balancesFrom - 1);
+            assert(token.balanceOf(address(rec)) == _balancesTo + 1);
+            assert(token.ownerOf(tokenId) == address(rec));
+            assert(token.getApproved(tokenId) ==  address(0));
+        } catch {assert(false);}
+
+    }
+    
+    function testproveFail_ApproveWhenIdHasNotAnOwner(address spender, uint256 id) public { // OK hevm and halmos
+        spender = 0x0000000000000000000000000000000000001312;
+        id = 0;
+        vm.prank(msg.sender);
+        vm.expectRevert();
+        token.approve(spender, id);
+    }
+    function testproveFail_setApprovalForAllFuzz(address sender, address operator, bool approved) public {
+        sender = 0x0040000080000000800000010000200000000002;
+        operator = 0x1000000000000000200000000000000400000000;
+        approved = false;
+        vm.assume(sender != msg.sender);
+        vm.prank(sender);
+        vm.expectRevert();
+        token.setApprovalForAll(operator, approved);
+        assert(!token.isApprovedForAll(msg.sender, operator));
+    }
+
+    /*function testproveFail_MintToZeroAddressFuzz(uint256 amount) public {
+        vm.assume(amount > 0);
+        vm.expectRevert();
+        token.mint(address(0), amount);
+    }*/
+
+    /*function testproveFail_TransferFromZeroAddressForMSGSender(address sender, address recipient, uint256 amount) public {
         sender = 0x1000000001000000000000000000000000004000;
         recipient = 0x0000000000000000000000000000000000000040;
         amount = 0;
@@ -114,6 +171,6 @@ import "../src/ERC20SOLMock.sol";
         vm.prank(owner);
         vm.expectRevert();
         token.approve(address(0), amount);
-    }
+    }*/
 
- }*/
+ }

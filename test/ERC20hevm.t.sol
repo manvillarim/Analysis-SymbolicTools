@@ -4,15 +4,16 @@ pragma solidity >= 0.8.0;
 import {Test, console2} from "forge-std/Test.sol";
 import {ERC20Mock} from "../lib/openzeppelin-contracts/contracts/mocks/token/ERC20Mock.sol";
 import {SafeERC20} from "../lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol";
-import "../src/ERC20SOLMock.sol";
-import "../src/erc20ruim.sol";
-contract ERC20SymbolicProperties is Test {
-    using SafeERC20 for ERC20Mock;
+import "../src/solmate/ERC20SOLMock.sol";
+import "../src/ERCFoundry/ERCFMock.sol";
 
-    ERC20Mock token;
+ /*contract ERC20SymbolicProperties is Test {
+    using SafeERC20 for ERC20FMock;
+
+    ERC20FMock token;
 
     function setUp() public {
-        token = new ERC20Mock();
+        token = new ERC20FMock();
     }
 
     // Proves approving a spender to transfer tokens. Checks allowance is set correctly.
@@ -790,4 +791,4 @@ contract ERC20SymbolicProperties is Test {
         
         token.transferFrom(owner, address(0xdead), amount);
     }
-}
+}*/

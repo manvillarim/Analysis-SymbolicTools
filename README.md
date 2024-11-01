@@ -578,7 +578,7 @@
 **Total Tests Passed:** 11
 **Total Failed Tests:** 50
 
-**TEMPO GERAL**
+**TOTAL TIME**
 |             | Time 1 | Time 2 | Time 3 | Time 4 | Time 5 | Time 6 | Time 7 | Time 8 | Time 9 | Average | Standard Deviation |
 |-------------|--------------|--------------|--------------|--------------|--------------|--------------|--------------|--------------|--------------|-------------|---------------|
 | **Real**    | 42m15,179s   | 43m0,117s    | 43m19,468s   | 44m53,700s   | 45m7,123s    | 46m24,987s   | 42m44,101s   | 46m11,672s   | 43m48,280s   | 44m5,625s   | 1m27,442s     |
@@ -701,3 +701,102 @@ When commenting this line: `if (allowed != type(uint256).max) allowance[from][ms
 
 This demonstrates the difference in behavior between Formal Verification and unit testing/fuzzing.
 
+---
+<br>
+
+
+
+<br>
+
+# ERC721 FOUNDRY
+<br>
+
+
+
+<br>
+
+
+## HALMOS
+
+| Função | Status | Tempo 1 | Tempo 2 | Tempo 3 | Tempo 4 | Tempo 5 | Tempo 6 | Tempo 7 | Tempo 8 | Tempo 9 | Tempo 10 | Média (s) | Desvio Padrão (s) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| prove_ApproveWhenIdHasNotAnOwnerReverts | PASS | 0.04 | 0.04 | 0.05 | 0.04 | 0.03 | 0.03 | 0.04 | 0.04 | 0.04 | 0.03 | 0.04 | 0.01 |
+| prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender | PASS | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.0 |
+| prove_ApproveWhenIsNotApprovedForAllReverts | PASS | 0.07 | 0.07 | 0.08 | 0.07 | 0.07 | 0.07 | 0.08 | 0.07 | 0.07 | 0.07 | 0.07 | 0.0 |
+| prove_ApproveWhenOwnerEqualsMSGSender | PASS | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.0 |
+| prove_Burn | PASS | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.06 | 0.05 | 0.05 | 0.05 | 0.0 |
+| prove_BurnReverts | PASS | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.0 |
+| prove_Mint | PASS | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.0 |
+| prove_MintWhenToIsAddressZeroReverts | PASS | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.0 |
+| prove_safeTransferFrom | FAIL | 0.12 | 0.1 | 0.11 | 0.1 | 0.11 | 0.1 | 0.11 | 0.1 | 0.1 | 0.1 | 0.11 | 0.01 |
+| prove_setApprovalForAll | PASS | 0.02 | 0.03 | 0.03 | 0.03 | 0.02 | 0.02 | 0.02 | 0.03 | 0.02 | 0.03 | 0.03 | 0.01 |
+| prove_setApprovalForAllReverts | FAIL | 0.03 | 0.04 | 0.04 | 0.03 | 0.03 | 0.03 | 0.04 | 0.03 | 0.03 | 0.03 | 0.03 | 0.0 |
+| prove_transferFrom | PASS | 0.12 | 0.12 | 0.13 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.0 |
+| prove_transferFromWhenFromIsNotTheOwnerReverts | PASS | 0.02 | 0.03 | 0.03 | 0.03 | 0.02 | 0.02 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.0 |
+| prove_transferFromWhenToIsAddressZeroReverts | PASS | 0.06 | 0.06 | 0.07 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.0 |
+
+**Total Tests Done:** 13
+**Total Tests Passed:** 11
+**Total Failed Tests:** 2
+
+<br>
+
+<br>
+
+## HEVM
+
+| Function | Status |
+|--------|--------|
+| prove_safeTransferFrom | FAIL |
+| prove_MintWhenToIsAddressZeroReverts | PASS |
+| prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender | PASS |
+| prove_transferFromWhenToIsAddressZeroReverts | PASS |
+| prove_Burn | PASS |
+| prove_BurnReverts | PASS |
+| prove_Mint | PASS |
+| prove_ApproveWhenIdHasNotAnOwnerReverts | FAIL |
+| prove_setApprovalForAllReverts | FAIL |
+| prove_setApprovalForAll | PASS |
+| prove_ApproveWhenIsNotApprovedForAllReverts | PASS |
+| prove_transferFromWhenFromIsNotTheOwnerReverts | PASS |
+| prove_transferFrom | PASS |
+| prove_ApproveWhenOwnerEqualsMSGSender | PASS |
+
+**Total Tests Done:** 13
+**Total Tests Passed:** 10
+**Total Failed Tests:** 3
+
+<br>
+
+<br>
+
+## GENERAL COMPARISION
+
+| Function | HEVM Status | Halmos Status |
+|--------|-------------|---------------|
+| prove_safeTransferFrom | FAIL | FAIL |
+| prove_MintWhenToIsAddressZeroReverts | PASS | PASS |
+| prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender | PASS | PASS |
+| prove_transferFromWhenToIsAddressZeroReverts | PASS | PASS |
+| prove_Burn | PASS | PASS |
+| prove_BurnReverts | PASS | PASS |
+| prove_Mint | PASS | PASS |
+| prove_ApproveWhenIdHasNotAnOwnerReverts | FAIL | PASS |
+| prove_setApprovalForAllReverts | FAIL | FAIL |
+| prove_setApprovalForAll | PASS | PASS |
+| prove_ApproveWhenIsNotApprovedForAllReverts | PASS | PASS |
+| prove_transferFromWhenFromIsNotTheOwnerReverts | PASS | PASS |
+| prove_transferFrom | PASS | PASS |
+| prove_ApproveWhenOwnerEqualsMSGSender | PASS | PASS |
+<br>
+
+<br>
+
+**ATTENTION**
+
+By using the counterexamples of halmos and hevm on the failed tests, interesting results are obtained. Both tests that failed on both Hevm and Halmos actually demonstrate failure. However, Hevm failed to demonstrate an error in the `prove_ApproveWhenIdHasNotAnOwnerReverts` function, which, at least according to the counterexample, does not exist.
+
+    [PASS] testproveFail_ApproveWhenIdHasNotAnOwner(address,uint256) (runs: 267, μ: 13554, ~: 13554)
+    [FAIL. Reason: call did not revert as expected; counterexample: calldata=0x467c6291000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 args=[0x0000000000000000000000000000000000000000, 0x0000000000000000000000000000000000000000, false]] testproveFail_setApprovalForAllFuzz(address,address,bool) (runs: 0, μ: 0, ~: 0)
+    [FAIL. Reason: panic: assertion failed (0x01); counterexample: calldata=0x298636950000000000000000000000001804c8ab1f12e6bbf3894d4083f33e07309d1f380000000000000000000000000000000000000000000000000000000000001aaa args=[0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38, 6826]] testprove_safeTransferFromFuzz(address,uint256) (runs: 0, μ: 0, ~: 0)
+    Suite result: FAILED. 1 passed; 2 failed; 0 skipped; finished in 26.17ms (46.99ms CPU time)

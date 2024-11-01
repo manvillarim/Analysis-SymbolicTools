@@ -762,3 +762,71 @@ Symbolic test result: 41 passed; 20 failed; time: 954.33s
 real    15m58,836s
 user    17m42,815s
 sys     0m10,061s
+
+[PASS] proveFail_ApproveWhenIdHasNotAnOwner(address,uint256) (paths: 2, time: 0.02s, bounds: [])
+[PASS] proveFail_ApproveWhenIsNotApprovedForAll(address,address,uint256) (paths: 7, time: 0.07s, bounds: [])
+[PASS] proveFail_Burn(uint256) (paths: 1, time: 0.01s, bounds: [])
+[PASS] proveFail_MintWhenToIsAddressZero(address,uint256) (paths: 3, time: 0.01s, bounds: [])
+[PASS] proveFail_setApprovalForAll(address,address,bool) (paths: 6, time: 0.05s, bounds: [])
+[PASS] proveFail_transferFromWhenFromIsNotTheOwner(address,address,uint256) (paths: 5, time: 0.03s, bounds: [])
+[PASS] proveFail_transferFromWhenToIsAddressZero(address,address,uint256) (paths: 6, time: 0.06s, bounds: [])
+[PASS] prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender(address,uint256) (paths: 4, time: 0.07s, bounds: [])
+[PASS] prove_ApproveWhenOwnerEqualsMSGSender(address,uint256) (paths: 2, time: 0.04s, bounds: [])
+[PASS] prove_Burn(uint256) (paths: 1, time: 0.05s, bounds: [])
+[PASS] prove_Mint(address,uint256) (paths: 3, time: 0.04s, bounds: [])
+Counterexample: 
+    p_from_address_00 = 0x1804c8ab1f12e6bbf3894d4083f33e07309d1f38
+    p_tokenId_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
+[FAIL] prove_safeTransferFrom(address,uint256) (paths: 4, time: 0.10s, bounds: [])
+[PASS] prove_setApprovalForAll(address,bool) (paths: 3, time: 0.02s, bounds: [])
+[PASS] prove_transferFrom(address,address,uint256) (paths: 7, time: 0.12s, bounds: [])
+Symbolic test result: 13 passed; 1 failed; time: 0.74s
+
+real    0m2,456s
+user    0m2,272s
+sys     0m0,188s
+
+[RUNNING] prove_safeTransferFrom(address,uint256)
+   [FAIL] prove_safeTransferFrom(address,uint256)
+   Counterexample:
+     result:   Revert: 0x4e487b710000000000000000000000000000000000000000000000000000000000000001
+     calldata: prove_safeTransferFrom(0x1000000000000000000000000000000000000000,0)
+   Counterexample:
+     result:   Revert: 0x4e487b710000000000000000000000000000000000000000000000000000000000000001
+     calldata: prove_safeTransferFrom(0x0000020800000000000000401800000000001000,7237447289098456910489210153605429003754138173869686222113041559658740842496)
+[RUNNING] prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender(address,uint256)
+   [PASS] prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender(address,uint256)
+[RUNNING] proveFail_transferFromWhenFromIsNotTheOwner(address,address,uint256)
+   [PASS] proveFail_transferFromWhenFromIsNotTheOwner(address,address,uint256)
+[RUNNING] proveFail_ApproveWhenIdHasNotAnOwner(address,uint256)
+   [FAIL] proveFail_ApproveWhenIdHasNotAnOwner(address,uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_ApproveWhenIdHasNotAnOwner(0x0000000000000000000000000000000000001312,0)
+[RUNNING] prove_Burn(uint256)
+   [PASS] prove_Burn(uint256)
+[RUNNING] proveFail_ApproveWhenIsNotApprovedForAll(address,address,uint256)
+   [PASS] proveFail_ApproveWhenIsNotApprovedForAll(address,address,uint256)
+[RUNNING] proveFail_setApprovalForAll(address,address,bool)
+   [FAIL] proveFail_setApprovalForAll(address,address,bool)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_setApprovalForAll(0x0040000080000000800000010000200000000002,0x1000000000000000200000000000000400000000,false)
+[RUNNING] prove_Mint(address,uint256)
+   [PASS] prove_Mint(address,uint256)
+[RUNNING] proveFail_transferFromWhenToIsAddressZero(address,address,uint256)
+   [PASS] proveFail_transferFromWhenToIsAddressZero(address,address,uint256)
+[RUNNING] proveFail_MintWhenToIsAddressZero(address,uint256)
+   [PASS] proveFail_MintWhenToIsAddressZero(address,uint256)
+[RUNNING] proveFail_Burn(uint256)
+   [PASS] proveFail_Burn(uint256)
+[RUNNING] prove_setApprovalForAll(address,bool)
+   [PASS] prove_setApprovalForAll(address,bool)
+[RUNNING] prove_transferFrom(address,address,uint256)
+   [PASS] prove_transferFrom(address,address,uint256)
+[RUNNING] prove_ApproveWhenOwnerEqualsMSGSender(address,uint256)
+   [PASS] prove_ApproveWhenOwnerEqualsMSGSender(address,uint256)
+
+real    5m50,898s
+user    0m45,385s
+sys     0m4,751s

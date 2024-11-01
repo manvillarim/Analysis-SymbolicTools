@@ -4,16 +4,16 @@ pragma solidity >= 0.8.0;
 import {Test, console2} from "forge-std/Test.sol";
 import {ERC20Mock} from "../lib/openzeppelin-contracts/contracts/mocks/token/ERC20Mock.sol";
 import {SafeERC20} from "../lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol";
-import "../src/ERC20SOLMock.sol";
-import "../src/erc20ruim.sol";
+import "../src/solmate/ERC20SOLMock.sol";
+import "../src/ERCFoundry/ERCFMock.sol";
 
-/*contract ERC20SymbolicProperties is Test {
-    using SafeERC20 for ERC20r;
+ /*contract ERC20SymbolicProperties is Test {
+    using SafeERC20 for ERC20FMock;
 
-    ERC20r token;
+    ERC20FMock token;
 
     function setUp() public {
-        token = new ERC20r(0);
+        token = new ERC20FMock();
     }
 
     // Proves approving a spender to transfer tokens. Checks allowance is set correctly.
@@ -717,68 +717,9 @@ import "../src/erc20ruim.sol";
         }
     }
 
-    // Proves for overflow when increasing allowance
-    /*function proveFail_TransferFromNotEnoughAmount(address sender, address recipient, uint256 amount) public {
-        require(msg.sender != address(0) && sender != address(0));
-            require(token.balanceOf(sender) >= amount && token.allowance(sender, msg.sender) >= amount && recipient != address(0));
-                require(type(uint256).max - token.balanceOf(recipient) < amount);
-                    vm.prank(msg.sender);
-        try token.transferFrom(sender, recipient, amount) {
-            assert(false);
-        }
-        catch {
-            assert(true);
-        }
-    }*/
-
-    // Proves for overflow when increasing allowance
-    /*function proveFail_IncreaseAllowanceUnderAllowance(address spender, uint256 addedValue) public {
-        require(msg.sender != address(0) && spender != address(0));
-        uint256 _allowanceFromTo = token.allowance(msg.sender, spender);
-        require(_allowanceFromTo + addedValue < _allowanceFromTo || _allowanceFromTo + addedValue < addedValue);
-        vm.prank(msg.sender);
-        try token.approve(spender, _allowanceFromTo + addedValue) {
-            assert(false);
-        }
-        catch {
-            assert(true);
-        }
-    }*/
-
-    // Proves for underflow when decreasing allowance
-    /*function proveFail_DecreaseAllowanceUnderAllowance(address sender, address spender, uint256 subtractedValue, uint256 _allowanceFromTo) public {
-
-        require(sender != address(0) && spender != address(0), "Invalid arguments");
-
-        //vm.prank(sender);
-        //require(token.allowance(sender, spender) == _allowanceFromTo);
-        require(subtractedValue > _allowanceFromTo);
-
-        vm.prank(sender);
-        try token.approve(spender, _allowanceFromTo - subtractedValue) {
-            assert(false);
-        } catch {
-            assert(true); 
-        }
-    }*/
-
-
-
-    // Proves for overflow when minting tokens
-    /*function proveFail_MintUnderSupply(address account, uint256 amount) public {
-        require(account != address(0));
-        require(token.totalSupply() + amount < token.totalSupply() || token.totalSupply() + amount < amount);
-        try token.mint(account, amount) {
-            assert(false);
-        }
-        catch {
-            assert(true);
-        }
-    }*/
-
 
     // Proves for underflow when burning tokens  
-   /* function proveFail_BurnUnderSupply(address account, uint256 amount) public {
+   function proveFail_BurnUnderSupply(address account, uint256 amount) public {
         require(account != address(0));
             require(token.balanceOf(account) < amount || token.totalSupply() < amount);
                 
