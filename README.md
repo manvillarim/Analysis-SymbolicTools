@@ -794,7 +794,7 @@ This demonstrates the difference in behavior between Formal Verification and uni
 
 **ATTENTION**
 
-By using the counterexamples of halmos and hevm on the failed tests, interesting results are obtained. Both tests that failed on both Hevm and Halmos actually demonstrate failure. However, Hevm failed to demonstrate an error in the `prove_ApproveWhenIdHasNotAnOwnerReverts` function, which, at least according to the counterexample, does not exist.
+By using the counterexamples of halmos and hevm on the failed tests, interesting results are obtained. Both tests that failed on both Hevm and Halmos actually demonstrate failure. However, Hevm was wrong to demonstrate failure in the `prove_ApproveWhenIdHasNotAnOwnerReverts` test, which, at least by counterexample, the test does not revert.
 
     [PASS] testproveFail_ApproveWhenIdHasNotAnOwner(address,uint256) (runs: 267, μ: 13554, ~: 13554)
     [FAIL. Reason: call did not revert as expected; counterexample: calldata=0x467c6291000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 args=[0x0000000000000000000000000000000000000000, 0x0000000000000000000000000000000000000000, false]] testproveFail_setApprovalForAllFuzz(address,address,bool) (runs: 0, μ: 0, ~: 0)
