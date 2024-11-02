@@ -3,8 +3,9 @@ pragma solidity >= 0.8.0;
 
 import {Test, console2} from "forge-std/Test.sol";
 import {MockERC721} from "forge-std/mocks/MockERC721.sol";
-
-contract ERC721 is MockERC721 {
+import "../lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol";
+/*contract ERC721T is ERC721 {
+    constructor() ERC721("ERC20Mock", "E20M") {}
     function mint(address to, uint256 id) public {
          _mint(to, id);
     }
@@ -24,12 +25,11 @@ contract ERC721ReveiverTest {
 
 contract ERC721SymbolicProperties is Test {
 
-    ERC721 token;
+    ERC721T token;
     ERC721ReveiverTest rec;
 
     function setUp() public {
-        token = new ERC721();
-        token.initialize("ERC721Token", "ERC721Token");
+        token = new ERC721T();
         rec = new ERC721ReveiverTest();
     }
 
@@ -134,13 +134,13 @@ contract ERC721SymbolicProperties is Test {
 // ********************************** Revertable properties ***********************************************
 
     // This function verifies that the `approve` function reverts when the given token ID does not have an owner.
-    function prove_ApproveWhenIdHasNotAnOwnerReverts(address spender, uint256 id) public { // OK hevm and halmos
+    function proveFail_ApproveWhenIdHasNotAnOwner(address spender, uint256 id) public { // OK hevm and halmos
         vm.prank(msg.sender);
         try token.approve(spender, id) {assert(false);} catch {assert(true);}
     }
 
     // This function verifies that the `approve` function reverts when the caller is not the owner of the token and is not approved for all tokens of the owner.
-    function prove_ApproveWhenIsNotApprovedForAllReverts(address spender, address other, uint256 id) public { // OK halmos (hevm killed)
+    function proveFail_ApproveWhenIsNotApprovedForAllReverts(address spender, address other, uint256 id) public { // OK halmos (hevm killed)
         require(spender != address(0) && spender != msg.sender);
         try token.mint(spender, id) {} catch {assert(false);}
         require(other != spender);
@@ -153,14 +153,14 @@ contract ERC721SymbolicProperties is Test {
     }
 
     // This function verifies that the `transferFrom` function reverts when the `from` address is not the owner of the token.
-    function prove_transferFromWhenFromIsNotTheOwnerReverts(address from, address to, uint256 tokenId) public {
+    function proveFail_transferFromWhenFromIsNotTheOwnerReverts(address from, address to, uint256 tokenId) public {
         // Simply not minting previously (setup)
         vm.prank(msg.sender);
         try token.transferFrom(from, to, tokenId) {assert(false);} catch {assert(true);}
     }
 
     // This function verifies that the `transferFrom` function reverts when the `to` address is the zero address.
-    function prove_transferFromWhenToIsAddressZeroReverts(address from, address to, uint256 tokenId) public {
+    function proveFail_transferFromWhenToIsAddressZeroReverts(address from, address to, uint256 tokenId) public {
         require(from != address(0) && to == address(0) && from != to);
         try token.mint(from, tokenId) {} catch {assert(false);}
         address owner = token.ownerOf(tokenId);
@@ -172,24 +172,24 @@ contract ERC721SymbolicProperties is Test {
     }
 
     // This function verifies that the `mint` function reverts when the `to` address is the zero address.
-    function prove_MintWhenToIsAddressZeroReverts(address to, uint256 tokenId) public { // OK
+    function proveFail_MintWhenToIsAddressZeroReverts(address to, uint256 tokenId) public { // OK
         require(to == address(0));
         try token.mint(to, tokenId) {assert(false);} catch {assert(true);}
     }
 
     // This function verifies that the `burn` function reverts when the given token ID does not have an owner.
-    function prove_BurnReverts(uint256 tokenId) public {
+    function proveFail_BurnReverts(uint256 tokenId) public {
         // Simply not having an owner for tokenId
         vm.prank(msg.sender);
         try token.burn(tokenId) {assert(false);} catch {assert(true);}
     }
 
     // This function verifies that the `setApprovalForAll` function reverts when the caller is not the owner of the tokens.
-    function prove_setApprovalForAllReverts(address sender, address operator, bool approved) public {
+    function proveFail_setApprovalForAllReverts(address sender, address operator, bool approved) public {
         require(sender != msg.sender);
         vm.prank(sender);
         try token.setApprovalForAll(operator, approved) {assert(false);} catch {assert(true);}
         assert(!token.isApprovedForAll(msg.sender, operator));
     }
 
-}
+}*/

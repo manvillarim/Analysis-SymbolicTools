@@ -721,20 +721,20 @@ Foundry's standard implementation of ERC721
 
 | Função | Status | Tempo 1 | Tempo 2 | Tempo 3 | Tempo 4 | Tempo 5 | Tempo 6 | Tempo 7 | Tempo 8 | Tempo 9 | Tempo 10 | Média (s) | Desvio Padrão (s) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| prove_ApproveWhenIdHasNotAnOwnerReverts | PASS | 0.04 | 0.04 | 0.05 | 0.04 | 0.03 | 0.03 | 0.04 | 0.04 | 0.04 | 0.03 | 0.04 | 0.01 |
+| proveFail_ApproveWhenIdHasNotAnOwner | PASS | 0.04 | 0.04 | 0.05 | 0.04 | 0.03 | 0.03 | 0.04 | 0.04 | 0.04 | 0.03 | 0.04 | 0.01 |
 | prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender | PASS | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.0 |
-| prove_ApproveWhenIsNotApprovedForAllReverts | PASS | 0.07 | 0.07 | 0.08 | 0.07 | 0.07 | 0.07 | 0.08 | 0.07 | 0.07 | 0.07 | 0.07 | 0.0 |
+| proveFail_ApproveWhenIsNotApprovedForAll | PASS | 0.07 | 0.07 | 0.08 | 0.07 | 0.07 | 0.07 | 0.08 | 0.07 | 0.07 | 0.07 | 0.07 | 0.0 |
 | prove_ApproveWhenOwnerEqualsMSGSender | PASS | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.0 |
 | prove_Burn | PASS | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.06 | 0.05 | 0.05 | 0.05 | 0.0 |
-| prove_BurnReverts | PASS | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.0 |
+| proveFail_Burn | PASS | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.0 |
 | prove_Mint | PASS | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.0 |
-| prove_MintWhenToIsAddressZeroReverts | PASS | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.0 |
+| proveFail_MintWhenToIsAddressZero | PASS | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.0 |
 | prove_safeTransferFrom | FAIL | 0.12 | 0.1 | 0.11 | 0.1 | 0.11 | 0.1 | 0.11 | 0.1 | 0.1 | 0.1 | 0.11 | 0.01 |
 | prove_setApprovalForAll | PASS | 0.02 | 0.03 | 0.03 | 0.03 | 0.02 | 0.02 | 0.02 | 0.03 | 0.02 | 0.03 | 0.03 | 0.01 |
-| prove_setApprovalForAllReverts | FAIL | 0.03 | 0.04 | 0.04 | 0.03 | 0.03 | 0.03 | 0.04 | 0.03 | 0.03 | 0.03 | 0.03 | 0.0 |
+| proveFail_setApprovalForAll | FAIL | 0.03 | 0.04 | 0.04 | 0.03 | 0.03 | 0.03 | 0.04 | 0.03 | 0.03 | 0.03 | 0.03 | 0.0 |
 | prove_transferFrom | PASS | 0.12 | 0.12 | 0.13 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.0 |
-| prove_transferFromWhenFromIsNotTheOwnerReverts | PASS | 0.02 | 0.03 | 0.03 | 0.03 | 0.02 | 0.02 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.0 |
-| prove_transferFromWhenToIsAddressZeroReverts | PASS | 0.06 | 0.06 | 0.07 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.0 |
+| proveFail_transferFromWhenFromIsNotTheOwner | PASS | 0.02 | 0.03 | 0.03 | 0.03 | 0.02 | 0.02 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.0 |
+| proveFail_transferFromWhenToIsAddressZero | PASS | 0.06 | 0.06 | 0.07 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.0 |
 
 **Total Tests Done:** 13
 **Total Tests Passed:** 11
@@ -749,17 +749,17 @@ Foundry's standard implementation of ERC721
 | Function | Status |
 |--------|--------|
 | prove_safeTransferFrom | FAIL |
-| prove_MintWhenToIsAddressZeroReverts | PASS |
+| proveFail_MintWhenToIsAddressZero | PASS |
 | prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender | PASS |
-| prove_transferFromWhenToIsAddressZeroReverts | PASS |
+| proveFail_transferFromWhenToIsAddressZero | PASS |
 | prove_Burn | PASS |
-| prove_BurnReverts | PASS |
+| proveFail_Burn | PASS |
 | prove_Mint | PASS |
-| prove_ApproveWhenIdHasNotAnOwnerReverts | FAIL |
-| prove_setApprovalForAllReverts | FAIL |
+| proveFail_ApproveWhenIdHasNotAnOwner | FAIL |
+| proveFail_setApprovalForAll | FAIL |
 | prove_setApprovalForAll | PASS |
-| prove_ApproveWhenIsNotApprovedForAllReverts | PASS |
-| prove_transferFromWhenFromIsNotTheOwnerReverts | PASS |
+| proveFail_ApproveWhenIsNotApprovedForAll | PASS |
+| proveFail_transferFromWhenFromIsNotTheOwner | PASS |
 | prove_transferFrom | PASS |
 | prove_ApproveWhenOwnerEqualsMSGSender | PASS |
 
@@ -776,17 +776,17 @@ Foundry's standard implementation of ERC721
 | Function | HEVM Status | Halmos Status |
 |--------|-------------|---------------|
 | prove_safeTransferFrom | FAIL | FAIL |
-| prove_MintWhenToIsAddressZeroReverts | PASS | PASS |
+| proveFail_MintWhenToIsAddressZero | PASS | PASS |
 | prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender | PASS | PASS |
-| prove_transferFromWhenToIsAddressZeroReverts | PASS | PASS |
+| proveFail_transferFromWhenToIsAddressZero | PASS | PASS |
 | prove_Burn | PASS | PASS |
-| prove_BurnReverts | PASS | PASS |
+| proveFail_Burn | PASS | PASS |
 | prove_Mint | PASS | PASS |
-| prove_ApproveWhenIdHasNotAnOwnerReverts | FAIL | PASS |
-| prove_setApprovalForAllReverts | FAIL | FAIL |
+| proveFail_ApproveWhenIdHasNotAnOwner | FAIL | PASS |
+| proveFail_setApprovalForAll | FAIL | FAIL |
 | prove_setApprovalForAll | PASS | PASS |
-| prove_ApproveWhenIsNotApprovedForAllReverts | PASS | PASS |
-| prove_transferFromWhenFromIsNotTheOwnerReverts | PASS | PASS |
+| proveFail_ApproveWhenIsNotApprovedForAll | PASS | PASS |
+| proveFail_transferFromWhenFromIsNotTheOwner | PASS | PASS |
 | prove_transferFrom | PASS | PASS |
 | prove_ApproveWhenOwnerEqualsMSGSender | PASS | PASS |
 <br>
@@ -801,3 +801,10 @@ By using the counterexamples of halmos and hevm on the failed tests, interesting
     [FAIL. Reason: call did not revert as expected; counterexample: calldata=0x467c6291000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 args=[0x0000000000000000000000000000000000000000, 0x0000000000000000000000000000000000000000, false]] testproveFail_setApprovalForAllFuzz(address,address,bool) (runs: 0, μ: 0, ~: 0)
     [FAIL. Reason: panic: assertion failed (0x01); counterexample: calldata=0x298636950000000000000000000000001804c8ab1f12e6bbf3894d4083f33e07309d1f380000000000000000000000000000000000000000000000000000000000001aaa args=[0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38, 6826]] testprove_safeTransferFromFuzz(address,uint256) (runs: 0, μ: 0, ~: 0)
     Suite result: FAILED. 1 passed; 2 failed; 0 skipped; finished in 26.17ms (46.99ms CPU time)
+
+---
+<br>
+
+
+
+<br>
