@@ -219,7 +219,7 @@ abstract contract ERC721 {
 
 /// @notice A generic interface for a contract which properly accepts ERC721 tokens.
 /// @author Solmate (https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC721.sol)
-abstract contract ERC721TokenReceiver {
+contract ERC721TokenReceiver {
     function onERC721Received(
         address,
         address,
