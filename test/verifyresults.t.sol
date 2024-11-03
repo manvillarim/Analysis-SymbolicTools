@@ -2,41 +2,59 @@
 pragma solidity >= 0.8.0;
 
 import {Test, console2} from "forge-std/Test.sol";
-import {MockERC721} from "forge-std/mocks/MockERC721.sol";
+import {ERC1155} from "lib/openzeppelin-contracts/contracts/token/ERC1155/ERC1155.sol"; // A contract to be formally verified
 
-contract ERC721 is MockERC721 {
-    function mint(address to, uint256 id) public {
-         _mint(to, id);
+contract ERC1155C is ERC1155 {
+    constructor(string memory uri_) ERC1155(uri_) {}
+
+    function mint(address to, uint256 id, uint256 value, bytes memory data) public {
+        _mint(to, id, value, data);
     }
 
-    function burn(uint256 id) public {
-        _burn(id);
-    }
-
-}
-
-contract ERC721ReveiverTest {
-    function onERC721Received() external pure returns(bytes4) {
-        // Just to enable safeTransferFrom conditions
-        return bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"));
+    function burn(address from, uint256 id, uint256 value) public {
+        _burn(from, id, value);
     }
 }
 
-contract ERC721SymbolicProperties is Test {
+contract ERC1155RecTest {
+    
+    function onERC1155Received() public pure returns(bytes4) {
+        // Just to enable safe functions
+        return this.onERC1155Received.selector;
+    }
 
-    ERC721 token;
-    ERC721ReveiverTest rec;
+    function onERC1155BatchReceived() public pure returns (bytes4) {
+        // Just to enable safe functions
+        return this.onERC1155BatchReceived.selector;
+    }
+}
+
+contract ERC1155ymbolicProperties is Test {
+
+    ERC1155C token;
+    ERC1155RecTest from;
+    ERC1155RecTest to;
 
     function setUp() public {
-        token = new ERC721();
-        token.initialize("ERC721Token", "ERC721Token");
-        rec = new ERC721ReveiverTest();
+        token = new ERC1155C("ERC1155");
+        from = new ERC1155RecTest();
+        to = new ERC1155RecTest();
     }
 
-    function testprove_safeTransferFromFuzz(address from, uint256 tokenId) public {
+    function testproveFail_burnBalanceLessThanAmount(uint256 id, uint256 initAmount, uint256 amount) public {
+        id = 0x0000000000000000000000000000000000000000000000000000000000000000;
+        initAmount = 0x0000000000000000000000000000000000000000000000000000000000000000;
+        bytes memory data;
+        try token.mint(address(from), id, initAmount, data) {} catch{assert(false);}
+        uint256 balanceAcc = token.balanceOf(address(from), id);
+        require(balanceAcc < amount);
+        try token.burn(address(from), id, amount) {assert(false);} catch {assert(true);}
+    }
+
+    /*function testprove_safeTransferFromFuzz(address from, uint256 tokenId) public {
         /*from = 0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38;
         tokenId = 7237447289098456910489210153605429003754138173869686222113041559658740842496;*/
-        vm.assume(from != address(0));
+        /*vm.assume(from != address(0));
         try token.mint(from, tokenId) {} catch {assert(false);}
         address owner = token.ownerOf(tokenId);
         vm.assume(owner != address(0) && owner == from);
