@@ -3,7 +3,7 @@
 
 **CONFIGURATION: INTEL CORE I5 12500h 16gb RAM**
 
-**This work is part of a scientific initiation by Cin-UFPE on Formal Verification of Smart Contracts, where the performance of symbolic test tools in the main ERC protocols will be analyzed.**
+**This work is part of a scientific initiation at Cin-UFPE on Formal Verification of Smart Contracts, where the performance of symbolic testing tools in the main ERC protocols will be analyzed.**
 
 <br>
 
