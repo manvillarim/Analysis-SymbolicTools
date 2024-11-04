@@ -719,7 +719,7 @@ Foundry's standard implementation of ERC721
 
 ## HALMOS
 
-| Função | Status | Tempo 1 | Tempo 2 | Tempo 3 | Tempo 4 | Tempo 5 | Tempo 6 | Tempo 7 | Tempo 8 | Tempo 9 | Tempo 10 | Média (s) | Desvio Padrão (s) |
+| Função | Status | Tempo 1 | Tempo 2 | Tempo 3 | Tempo 4 | Tempo 5 | Tempo 6 | Tempo 7 | Tempo 8 | Tempo 9 | Tempo 10 | Média (s) | Standard Deviation (s) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | proveFail_ApproveWhenIdHasNotAnOwner | PASS | 0.04 | 0.04 | 0.05 | 0.04 | 0.03 | 0.03 | 0.04 | 0.04 | 0.04 | 0.03 | 0.04 | 0.01 |
 | prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender | PASS | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.0 |
@@ -808,3 +808,58 @@ By using the counterexamples of halmos and hevm on the failed tests, interesting
 
 
 <br>
+
+
+# ERC1155 OPEN ZEPPELIN
+
+<br>
+
+<br>
+
+## HALMOS
+
+| Function | Status | Time 1 | Time 2 | Time 3 | Time 4 | Time 5 | Time 6 | Time 7 | Time 8 | Time 9 | Time 10 | Time 11 | Time 12 | Time 13 | Average (s) | Standard Deviation (s) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| proveFail_burnBalanceLessThanAmount | PASS | 0.05 | 0.05 | 0.05 | 0.05 | 0.06 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.06 | 0.05 | 0.05 | 0.0 |
+| proveFail_burnZeroAddress | PASS | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.0 |
+| proveFail_mintZeroAddress | PASS | 0.01 | 0.01 | 0.02 | 0.02 | 0.01 | 0.02 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.0 |
+| proveFail_safeTransferFromBalanceLessThanAmount | PASS | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.07 | 0.07 | 0.06 | 0.06 | 0.06 | 0.0 |
+| proveFail_safeTransferFromWhenSenderIsNotApprovedForAll | FAIL | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.05 | 0.06 | 0.06 | 0.06 | 0.0 |
+| proveFail_safeTransferFromWhenSenderIsNotMSGSender | PASS | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.0 |
+| proveFail_safeTransferFromZeroAddressForFrom | PASS | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.0 |
+| proveFail_safeTransferFromZeroAddressForTo | PASS | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.0 |
+| proveFail_setApprovalForAllSenderEqualsOperator | PASS | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.0 |
+| prove_burn | PASS | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.0 |
+| prove_mint | PASS | 0.05 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.0 |
+| prove_safeBatchTransferFrom | PASS | 0.37 | 0.37 | 0.37 | 0.38 | 1.57 | 0.37 | 0.37 | 0.37 | 0.39 | 0.37 | 0.38 | 0.37 | 1.4 | 0.54 | 0.42 |
+| prove_safeTransferFrom | PASS | 0.11 | 0.11 | 0.1 | 0.11 | 0.11 | 0.1 | 0.11 | 0.11 | 0.11 | 0.11 | 0.11 | 0.11 | 0.11 | 0.11 | 0.0 |
+| prove_setApprovalForAll | PASS | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.0 |
+
+**Total Tests Done:** 14
+**Total Tests Passed:** 13
+**Total Failed Tests:** 1
+<br>
+
+<br>
+
+## HEVM
+
+Hevm was unable to complete the tests, the ram memory exceeded its limit during execution and the program crashed.
+<br>
+
+<br>
+
+## GENERAL COMPARISION
+
+**ATTENTION**
+
+Using the halmos counterexample in a unit test, the error was confirmed. The security impact of this error needs to be investigated to see if a vulnerability in open zeppelin really exists.
+
+    Ran 1 test suite in 24.80ms (13.87ms CPU time): 0 tests passed, 1 failed, 0 skipped (1 total tests)
+
+    Failing tests:
+    Encountered 1 failing test in test/verifyresults.t.sol:ERC1155ymbolicProperties
+    [FAIL. Reason: call did not revert as expected; counterexample: calldata=0xbdaefd1900000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 args=[0, 0]] testproveFail_safeTransferFromWhenSenderIsNotApprovedForAllFuzz(uint256,uint256) (runs: 7, μ: 17000, ~: 17000)
+
+    Encountered a total of 1 failing tests, 0 tests succeeded
+---
