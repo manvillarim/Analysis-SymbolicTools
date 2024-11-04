@@ -18,14 +18,24 @@ contract ERC1155C is ERC1155 {
 
 contract ERC1155RecTest {
     
-    function onERC1155Received() public pure returns(bytes4) {
-        // Just to enable safe functions
-        return this.onERC1155Received.selector;
+function onERC1155Received(
+        address,
+        address,
+        uint256,
+        uint256,
+        bytes calldata
+    ) external virtual returns (bytes4) {
+        return ERC1155RecTest.onERC1155Received.selector;
     }
 
-    function onERC1155BatchReceived() public pure returns (bytes4) {
-        // Just to enable safe functions
-        return this.onERC1155BatchReceived.selector;
+    function onERC1155BatchReceived(
+        address,
+        address,
+        uint256[] calldata,
+        uint256[] calldata,
+        bytes calldata
+    ) external virtual returns (bytes4) {
+        return ERC1155RecTest.onERC1155BatchReceived.selector;
     }
 }
 
@@ -39,6 +49,48 @@ contract ERC1155ymbolicProperties is Test {
         token = new ERC1155C("ERC1155");
         from = new ERC1155RecTest();
         to = new ERC1155RecTest();
+    }
+    function testproveFail_safeTransferFromWhenSenderIsNotApprovedForAllFuzz(uint256 id, uint256 amount) public {
+        /*vm.prank(address(from));
+        token.setApprovalForAll(address(from), true);*/
+        bytes memory data;
+        vm.prank(address(from));
+        vm.expectRevert();
+        token.safeTransferFrom(address(from), address(to), id, amount, data);
+    }
+
+    /*function testproveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256 id, uint256 amount) public {
+        id = 0;
+        amount = 0;
+        bytes memory data;
+        vm.prank(msg.sender);
+        vm.expectRevert();
+        token.safeTransferFrom(address(from), address(to), id, amount, data);
+    }
+    function testprove_mintFuzz(uint256 id, uint256 amount, bytes memory data) public {
+        require(address(from) != address(0));
+        uint256 _balanceAcc = token.balanceOf(address(from), id);
+        token.mint(address(from), id, amount, data);
+        assert(token.balanceOf(address(from), id) == _balanceAcc + amount);
+    }
+
+    function testprove_safeBatchTransferFromFuzz(uint256 initAmount, uint256[] memory ids, uint256[] memory values) public { // Require additional timeout
+        require(ids.length == values.length && ids.length == 2 && ids[0]!=ids[1]);
+        bytes memory data = new bytes(3);
+        uint256[] memory _balanceIdFrom = new uint256[](ids.length);
+        uint256[] memory _balanceIdTo = new uint256[](ids.length);
+        for(uint8 i=0; i<ids.length; i++) {
+            try token.mint(address(from), ids[i], initAmount, data) {} catch {assert(false);}
+            _balanceIdFrom[i] = token.balanceOf(address(from), ids[i]);
+            _balanceIdTo[i] = token.balanceOf(address(to), ids[i]);
+            require(_balanceIdFrom[i] >= values[i]);
+        }
+        vm.prank(address(from));
+        token.safeBatchTransferFrom(address(from), address(to), ids, values, data);
+        for(uint8 i=0; i<ids.length; i++) {
+            assert(token.balanceOf(address(from), ids[i]) == _balanceIdFrom[i] - values[i]);
+            assert(token.balanceOf(address(to), ids[i]) == _balanceIdTo[i] + values[i]);
+        }
     }
 
     function testproveFail_burnBalanceLessThanAmount(uint256 id, uint256 initAmount, uint256 amount) public {

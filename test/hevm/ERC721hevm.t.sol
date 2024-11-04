@@ -142,10 +142,10 @@ contract ERC721SymbolicProperties is Test {
     // This function verifies that the `approve` function reverts when the caller is not the owner of the token and is not approved for all tokens of the owner.
     function proveFail_ApproveWhenIsNotApprovedForAll(address spender, address other, uint256 id) public { // OK halmos (hevm killed)
         require(spender != address(0) && spender != msg.sender);
-        try token.mint(spender, id) {} catch {assert(false);}
+        token.mint(spender, id);
         require(other != spender);
         vm.prank(other);
-        try token.setApprovalForAll(msg.sender, true) {} catch {assert(false);}
+        token.setApprovalForAll(msg.sender, true);
         address owner = token.ownerOf(id);
         require(msg.sender != owner && !token.isApprovedForAll(owner, msg.sender));
         vm.prank(msg.sender);
@@ -162,7 +162,7 @@ contract ERC721SymbolicProperties is Test {
     // This function verifies that the `transferFrom` function reverts when the `to` address is the zero address.
     function proveFail_transferFromWhenToIsAddressZero(address from, address to, uint256 tokenId) public {
         require(from != address(0) && to == address(0) && from != to);
-        try token.mint(from, tokenId) {} catch {assert(false);}
+        token.mint(from, tokenId);
         address owner = token.ownerOf(tokenId);
         require(owner != address(0) && owner == from);
         require(msg.sender == owner || token.getApproved(tokenId) == msg.sender || token.isApprovedForAll(owner, msg.sender));
