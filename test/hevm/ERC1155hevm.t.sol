@@ -3,9 +3,10 @@ pragma solidity >= 0.8.0;
 
 import {Test, console2} from "forge-std/Test.sol";
 import {ERC1155} from "lib/openzeppelin-contracts/contracts/token/ERC1155/ERC1155.sol"; // A contract to be formally verified
+import "src/solmate/ERC1155.sol";
 
-/*contract ERC1155C is ERC1155 {
-    constructor(string memory uri_) ERC1155(uri_) {}
+/*contract ERC1155C is ERC1155S {
+    constructor() ERC1155S() {}
 
     function mint(address to, uint256 id, uint256 value, bytes memory data) public {
         _mint(to, id, value, data);
@@ -46,7 +47,7 @@ contract ERC1155ymbolicProperties is Test {
     ERC1155RecTest to;
 
     function setUp() public {
-        token = new ERC1155C("ERC1155");
+        token = new ERC1155C();
         from = new ERC1155RecTest();
         to = new ERC1155RecTest();
     }
@@ -93,15 +94,15 @@ contract ERC1155ymbolicProperties is Test {
     }
 
     // prove_mint: Mints new tokens for an account. Reverts if account is zero address.
-    /*function prove_mint(uint256 id, uint256 amount) public {
+    function prove_mint(uint256 id, uint256 amount) public {
         bytes memory data;
         uint256 _balanceAcc = token.balanceOf(address(from), id);
         token.mint(address(from), id, amount, data);
         assert(token.balanceOf(address(from), id) == _balanceAcc + amount);
-    }*/
+    }
 
     // prove_burn: Burns tokens of an account if balance allows. Reverts if account is zero address or balance less than amount.
-    /*function prove_burn(uint256 id, uint256 amount) public {
+    function prove_burn(uint256 id, uint256 amount) public {
         bytes memory data;
         token.mint(address(from), id, amount, data);
         uint256 _balanceAcc = token.balanceOf(address(from), id);
@@ -112,7 +113,7 @@ contract ERC1155ymbolicProperties is Test {
 // ********************************* Revertable properties **************************************
 
     // proveFail_setApprovalForAllSenderEqualsOperator: Negated case of setApprovalForAll. Expects revert if operator is caller.
-   /* function proveFail_setApprovalForAllSenderEqualsOperator(address operator, bool approved) public {
+   function proveFail_setApprovalForAllSenderEqualsOperator(address operator, bool approved) public {
         require(operator == address(0));
         vm.prank(msg.sender);
         token.setApprovalForAll(operator, approved);
