@@ -9,7 +9,7 @@
 
 ## HALMOS
 
-| Funtion | Status | Time 1 | Time 2 | Time 3 | Time 4 | Time 5 | Time 6 | Time 7 | Time 8 | Time 9 | Time 10 | Average (s) | Standard Deviation (s) |
+| Function | Status | Time 1 | Time 2 | Time 3 | Time 4 | Time 5 | Time 6 | Time 7 | Time 8 | Time 9 | Time 10 | Average (s) | Standard Deviation (s) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---  |
 | proveFail_ApproveFromZeroAddress | PASS | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.0 |
 | proveFail_ApproveToZeroAddress | PASS | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.03 | 0.02 | 0.02 | 0.02 | 0.02 | 0.0 |
@@ -257,7 +257,7 @@
 
 ## GENERAL COMPARISION
 
-| Função | HEVM Status | Kontrol Status | Halmos Status |
+| Function | HEVM Status | Kontrol Status | Halmos Status |
 |--------|-------------|----------------|---------------|
 | proveFail_TransferUnderBalancej | PASS | FAIL | PASS |
 | prove_ZeroAddressHasNoToken | PASS | PASS | PASS |
@@ -344,7 +344,7 @@
 
 ## HALMOS
 
-| Funtion | Status | Time 1 | Time 2 | Time 3 | Time 4 | Time 5 | Time 6 | Time 7 | Time 8 | Time 9 | Time 10 | Average (s) | Standard Deviation (s) |
+| Function | Status | Time 1 | Time 2 | Time 3 | Time 4 | Time 5 | Time 6 | Time 7 | Time 8 | Time 9 | Time 10 | Average (s) | Standard Deviation (s) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | proveFail_ApproveFromZeroAddress | FAIL | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.06 | 0.05 | 0.06 | 0.05 | 0.0 |
 | proveFail_ApproveToZeroAddress | FAIL | 0.05 | 0.04 | 0.05 | 0.04 | 0.04 | 0.05 | 0.04 | 0.05 | 0.05 | 0.05 | 0.05 | 0.01 |
@@ -591,7 +591,7 @@
 
 ## GENERAL COMPARISION
 
-| Função | HEVM Status | Kontrol Status | Halmos Status |
+| Function | HEVM Status | Kontrol Status | Halmos Status |
 |--------|-------------|----------------|---------------|
 | proveFail_TransferUnderBalancej | PASS | FAIL | PASS |
 | prove_ZeroAddressHasNoToken | PASS | PASS | PASS |
@@ -719,7 +719,7 @@ Foundry's standard implementation of ERC721
 
 ## HALMOS
 
-| Função | Status | Tempo 1 | Tempo 2 | Tempo 3 | Tempo 4 | Tempo 5 | Tempo 6 | Tempo 7 | Tempo 8 | Tempo 9 | Tempo 10 | Média (s) | Standard Deviation (s) |
+| Function | Status | Time 1 | Time 2 | Time 3 | Time 4 | Time 5 | Time 6 | Time 7 | Time 8 | Time 9 | Time 10 | Average (s) | Standard Deviation (s) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | proveFail_ApproveWhenIdHasNotAnOwner | PASS | 0.04 | 0.04 | 0.05 | 0.04 | 0.03 | 0.03 | 0.04 | 0.04 | 0.04 | 0.03 | 0.04 | 0.01 |
 | prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender | PASS | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.0 |
