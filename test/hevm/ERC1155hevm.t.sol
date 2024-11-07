@@ -5,7 +5,7 @@ import {Test, console2} from "forge-std/Test.sol";
 import {ERC1155} from "lib/openzeppelin-contracts/contracts/token/ERC1155/ERC1155.sol"; // A contract to be formally verified
 import "src/solmate/ERC1155.sol";
 
-/*contract ERC1155C is ERC1155S {
+contract ERC1155C is ERC1155S {
     constructor() ERC1155S() {}
 
     function mint(address to, uint256 id, uint256 value, bytes memory data) public {
@@ -179,4 +179,4 @@ contract ERC1155ymbolicProperties is Test {
         token.burn(address(from), id, amount);
     }
 
-}*/
+}

@@ -863,3 +863,49 @@ Using the halmos counterexample in a unit test, the error was confirmed. The sec
 
     Encountered a total of 1 failing tests, 0 tests succeeded
 ---
+<br>
+
+<br>
+
+# ERC1155 SOLMATE
+<br>
+
+[Contract](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC1155.sol)
+
+<br>
+
+## HALMOS
+
+| Function | Status | Time 1 | Time 2 | Time 3 | Time 4 | Time 5 | Time 6 | Time 7 | Time 8 | Time 9 | Time 10 | Average (s) | Standard Deviation (s) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| proveFail_burnBalanceLessThanAmount | PASS | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.0 |
+| proveFail_burnZeroAddress | FAIL | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.0 |
+| proveFail_mintZeroAddress | PASS | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.0 |
+| proveFail_safeTransferFromBalanceLessThanAmount | PASS | 0.19 | 0.18 | 0.18 | 0.18 | 0.18 | 0.19 | 0.18 | 0.18 | 0.18 | 0.18 | 0.18 | 0.0 |
+| proveFail_safeTransferFromWhenSenderIsNotApprovedForAll | FAIL | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.0 |
+| proveFail_safeTransferFromWhenSenderIsNotMSGSender | PASS | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.0 |
+| proveFail_safeTransferFromZeroAddressForFrom | PASS | 0.02 | 0.03 | 0.02 | 0.02 | 0.02 | 0.03 | 0.02 | 0.02 | 0.02 | 0.03 | 0.02 | 0.0 |
+| proveFail_safeTransferFromZeroAddressForTo | PASS | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.0 |
+| proveFail_setApprovalForAllSenderEqualsOperator | FAIL | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.0 |
+| prove_burn | PASS | 0.05 | 0.04 | 0.04 | 0.04 | 0.04 | 0.05 | 0.04 | 0.05 | 0.04 | 0.04 | 0.04 | 0.0 |
+| prove_mint | PASS | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.0 |
+| prove_safeBatchTransferFrom | PASS | 3.81 | 3.78 | 3.81 | 3.79 | 3.77 | 3.79 | 3.8 | 3.83 | 3.78 | 3.9 | 3.81 | 0.04 |
+| prove_safeTransferFrom | PASS | 0.17 | 0.17 | 0.17 | 0.17 | 0.17 | 0.17 | 0.17 | 0.18 | 0.17 | 0.18 | 0.17 | 0.0 |
+| prove_setApprovalForAll | PASS | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.0 |
+**Total Tests Done:** 14
+**Total Tests Passed:** 11
+**Total Failed Tests:** 3
+
+<br>
+
+<br>
+
+## HEVM
+
+Hevm was, unable to complete the tests the program crashed during `prove_safeBatchTransferFrom`test
+
+    hevm: Internal Error: TODO: symbolic abi encoding for uint256[] -- CallStack (from HasCallStack):
+    internalError, called at src/EVM/SymExec.hs:140:8 in hevm-0.53.0-BdoApfgEeNQEfgvlRGZ9gm:EVM.SymExec
+    CallStack (from HasCallStack):
+    error, called at src/EVM/Types.hs:1356:19 in hevm-0.53.0-BdoApfgEeNQEfgvlRGZ9gm:EVM.Types
+    internalError, called at src/EVM/SymExec.hs:140:8 in hevm-0.53.0-BdoApfgEeNQEfgvlRGZ9gm:EVM.SymExec
