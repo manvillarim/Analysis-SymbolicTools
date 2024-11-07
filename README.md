@@ -892,6 +892,7 @@ Using the halmos counterexample in a unit test, the error was confirmed. The sec
 | prove_safeBatchTransferFrom | PASS | 3.81 | 3.78 | 3.81 | 3.79 | 3.77 | 3.79 | 3.8 | 3.83 | 3.78 | 3.9 | 3.81 | 0.04 |
 | prove_safeTransferFrom | PASS | 0.17 | 0.17 | 0.17 | 0.17 | 0.17 | 0.17 | 0.17 | 0.18 | 0.17 | 0.18 | 0.17 | 0.0 |
 | prove_setApprovalForAll | PASS | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.0 |
+
 **Total Tests Done:** 14
 **Total Tests Passed:** 11
 **Total Failed Tests:** 3
@@ -902,7 +903,7 @@ Using the halmos counterexample in a unit test, the error was confirmed. The sec
 
 ## HEVM
 
-Hevm was, unable to complete the tests the program crashed during `prove_safeBatchTransferFrom`test
+Hevm was unable to complete the tests. The program crashed during `prove_safeBatchTransferFrom` test
 
     hevm: Internal Error: TODO: symbolic abi encoding for uint256[] -- CallStack (from HasCallStack):
     internalError, called at src/EVM/SymExec.hs:140:8 in hevm-0.53.0-BdoApfgEeNQEfgvlRGZ9gm:EVM.SymExec
