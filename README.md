@@ -910,3 +910,15 @@ Hevm was unable to complete the tests. The program crashed during `prove_safeBat
     CallStack (from HasCallStack):
     error, called at src/EVM/Types.hs:1356:19 in hevm-0.53.0-BdoApfgEeNQEfgvlRGZ9gm:EVM.Types
     internalError, called at src/EVM/SymExec.hs:140:8 in hevm-0.53.0-BdoApfgEeNQEfgvlRGZ9gm:EVM.SymExec
+
+---
+<br>
+
+<br>
+
+# ERC4626
+<br>
+
+In both solmate and open zeppelin contracts, neither tool was able to complete the tests. Probably due to non-linear arithmetic, which z3 is bad with.
+
+<br>
