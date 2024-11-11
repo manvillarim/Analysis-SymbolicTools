@@ -7,7 +7,7 @@ import {SafeERC20} from "lib/openzeppelin-contracts/contracts/token/ERC20/utils/
 import "src/solmate/token/ERC20SOLMock.sol";
 import "src/ERCFoundry/ERCFMock.sol";
 
- /*contract ERC20SymbolicProperties is Test {
+ contract ERC20SymbolicProperties is Test {
     using SafeERC20 for ERC20FMock;
 
     ERC20FMock token;
@@ -885,4 +885,4 @@ import "src/ERCFoundry/ERCFMock.sol";
             assert(true);
         }
     }
-}*/
+}

@@ -4,7 +4,7 @@ pragma solidity >= 0.8.0;
 import {Test, console2} from "forge-std/Test.sol";
 import {MockERC721} from "forge-std/mocks/MockERC721.sol";
 import "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol";
-/*contract ERC721T is ERC721 {
+contract ERC721T is ERC721 {
     constructor() ERC721("ERC20Mock", "E20M") {}
     function mint(address to, uint256 id) public {
          _mint(to, id);
@@ -192,4 +192,4 @@ contract ERC721SymbolicProperties is Test {
         assert(!token.isApprovedForAll(msg.sender, operator));
     }
 
-}*/
+}
