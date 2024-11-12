@@ -795,7 +795,7 @@ Foundry's standard implementation of ERC721
 
 **ATTENTION**
 
-By using the counterexamples of halmos and hevm on the failed tests, interesting results are obtained. Both tests that failed on both Hevm and Halmos actually demonstrate failure. However, Hevm was wrong to demonstrate failure in the `prove_ApproveWhenIdHasNotAnOwnerReverts` test, which, at least by counterexample, the test does not revert.
+By using the counterexamples of halmos and hevm on the failed tests, interesting results are obtained. Both tests that failed on both Hevm and Halmos actually demonstrate failure. However, Hevm was wrong to demonstrate failure in the `proveFail_ApproveWhenIdHasNotAnOwner` test, which, at least by counterexample, the test does not revert.
 
     [PASS] testproveFail_ApproveWhenIdHasNotAnOwner(address,uint256) (runs: 267, μ: 13554, ~: 13554)
     [FAIL. Reason: call did not revert as expected; counterexample: calldata=0x467c6291000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 args=[0x0000000000000000000000000000000000000000, 0x0000000000000000000000000000000000000000, false]] testproveFail_setApprovalForAllFuzz(address,address,bool) (runs: 0, μ: 0, ~: 0)
