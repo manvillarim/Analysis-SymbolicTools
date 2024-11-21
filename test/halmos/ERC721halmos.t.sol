@@ -23,7 +23,7 @@ contract ERC721ReveiverTest {
     }
 }
 
-contract ERC721SymbolicProperties is Test {
+contract ERC721SymbolicProperties2 is Test {
 
     ERC721T token;
     ERC721ReveiverTest rec;
