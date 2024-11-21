@@ -7,6 +7,14 @@
 
 **This work is part of a scientific initiation at Cin-UFPE on Formal Verification of Smart Contracts, where the performance of symbolic testing tools in the main ERC protocols will be analyzed.**
 
+**Versions**
+
+> Halmos: 0.2.0
+
+> Hevm: 0.53.0
+
+> Kontrol: 1.0.34
+
 <br>
 
 ## HALMOS
