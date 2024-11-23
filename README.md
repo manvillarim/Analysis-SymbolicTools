@@ -1,4 +1,7 @@
-# Analysis of symbolic testing tools
+# COMPARATIVE - SYMBOLIC TESTING TOOLS
+<br>
+
+<br>
 
 **CONFIGURATION: INTEL CORE I5 12500h 16gb RAM**
 
@@ -18,7 +21,7 @@
 
 <br>
 
-# ERC20 OPPEN ZEPELIN
+# ERC20 OPEN ZEPPELIN
 <br>
 
 <br>
