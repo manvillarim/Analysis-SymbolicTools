@@ -73,319 +73,338 @@ def process_terminal_output(output):
     return markdown_table
 
 
-terminal_output = """[PASS] proveFail_burnBalanceLessThanAmount(uint256,uint256,uint256) (paths: 3, time: 0.12s, bounds: [])
-Counterexample: 
-    p_amount_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-    p_id_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-[FAIL] proveFail_burnZeroAddress(uint256,uint256) (paths: 2, time: 0.03s, bounds: [])
-[PASS] proveFail_mintZeroAddress(uint256,uint256) (paths: 1, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromBalanceLessThanAmount(uint256,uint256,uint256) (paths: 3, time: 0.19s, bounds: [])
-Counterexample: 
-    p_amount_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-    p_id_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-[FAIL] proveFail_safeTransferFromWhenSenderIsNotApprovedForAll(uint256,uint256) (paths: 2, time: 0.05s, bounds: [])
-[PASS] proveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256,uint256) (paths: 1, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromZeroAddressForFrom(uint256,uint256) (paths: 2, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromZeroAddressForTo(uint256,uint256) (paths: 1, time: 0.01s, bounds: [])
+terminal_output = """[PASS] proveFail_ApproveWhenIdHasNotAnOwner(address,uint256) (paths: 2, time: 0.02s, bounds: [])
+[PASS] proveFail_ApproveWhenIsNotApprovedForAllReverts(address,address,uint256) (paths: 7, time: 0.07s, bounds: [])
+[PASS] proveFail_BurnReverts(uint256) (paths: 1, time: 0.01s, bounds: [])
+[PASS] proveFail_MintWhenToIsAddressZeroReverts(address,uint256) (paths: 3, time: 0.01s, bounds: [])
 Counterexample: 
     p_approved_bool_00 = false
     p_operator_address_00 = 0x0000000000000000000000000000000000000000
-[FAIL] proveFail_setApprovalForAllSenderEqualsOperator(address,bool) (paths: 4, time: 0.03s, bounds: [])
-[PASS] prove_burn(uint256,uint256) (paths: 1, time: 0.05s, bounds: [])
-[PASS] prove_mint(uint256,uint256) (paths: 1, time: 0.04s, bounds: [])
-[PASS] prove_safeBatchTransferFrom(uint256,uint256[],uint256[]) (paths: 9, time: 3.81s, bounds: [ids=[0, 1, 2], values=[0, 1, 2]])
-[PASS] prove_safeTransferFrom(uint256,uint256,uint256) (paths: 3, time: 0.17s, bounds: [])
-[PASS] prove_setApprovalForAll(address,bool) (paths: 5, time: 0.03s, bounds: [])
-Symbolic test result: 11 passed; 3 failed; time: 4.61s
-Running 14 tests for test/halmos/ERC1155halmos.t.sol:ERC1155ymbolicProperties
-[PASS] proveFail_burnBalanceLessThanAmount(uint256,uint256,uint256) (paths: 3, time: 0.12s, bounds: [])
+    p_sender_address_00 = 0x0000000000000000000000000000000000000000
+[FAIL] proveFail_setApprovalForAllReverts(address,address,bool) (paths: 5, time: 0.04s, bounds: [])
+[PASS] proveFail_transferFromWhenFromIsNotTheOwnerReverts(address,address,uint256) (paths: 5, time: 0.03s, bounds: [])
+[PASS] proveFail_transferFromWhenToIsAddressZeroReverts(address,address,uint256) (paths: 6, time: 0.06s, bounds: [])
+[PASS] prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender(address,uint256) (paths: 4, time: 0.07s, bounds: [])
+[PASS] prove_ApproveWhenOwnerEqualsMSGSender(address,uint256) (paths: 2, time: 0.04s, bounds: [])
+[PASS] prove_Burn(uint256) (paths: 1, time: 0.05s, bounds: [])
+[PASS] prove_Mint(address,uint256) (paths: 3, time: 0.04s, bounds: [])
 Counterexample: 
-    p_amount_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-    p_id_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-[FAIL] proveFail_burnZeroAddress(uint256,uint256) (paths: 2, time: 0.03s, bounds: [])
-[PASS] proveFail_mintZeroAddress(uint256,uint256) (paths: 1, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromBalanceLessThanAmount(uint256,uint256,uint256) (paths: 3, time: 0.18s, bounds: [])
-Counterexample: 
-    p_amount_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-    p_id_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-[FAIL] proveFail_safeTransferFromWhenSenderIsNotApprovedForAll(uint256,uint256) (paths: 2, time: 0.05s, bounds: [])
-[PASS] proveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256,uint256) (paths: 1, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromZeroAddressForFrom(uint256,uint256) (paths: 2, time: 0.03s, bounds: [])
-[PASS] proveFail_safeTransferFromZeroAddressForTo(uint256,uint256) (paths: 1, time: 0.01s, bounds: [])
-Counterexample: 
-    p_approved_bool_00 = false
-    p_operator_address_00 = 0x0000000000000000000000000000000000000000
-[FAIL] proveFail_setApprovalForAllSenderEqualsOperator(address,bool) (paths: 4, time: 0.03s, bounds: [])
-[PASS] prove_burn(uint256,uint256) (paths: 1, time: 0.04s, bounds: [])
-[PASS] prove_mint(uint256,uint256) (paths: 1, time: 0.04s, bounds: [])
-[PASS] prove_safeBatchTransferFrom(uint256,uint256[],uint256[]) (paths: 9, time: 3.78s, bounds: [ids=[0, 1, 2], values=[0, 1, 2]])
-[PASS] prove_safeTransferFrom(uint256,uint256,uint256) (paths: 3, time: 0.17s, bounds: [])
-[PASS] prove_setApprovalForAll(address,bool) (paths: 5, time: 0.03s, bounds: [])
-Symbolic test result: 11 passed; 3 failed; time: 4.58s
+    p_from_address_00 = 0x1804c8ab1f12e6bbf3894d4083f33e07309d1f38
+    p_tokenId_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
+[FAIL] prove_safeTransferFrom(address,uint256) (paths: 4, time: 0.10s, bounds: [])
+[PASS] prove_setApprovalForAll(address,bool) (paths: 3, time: 0.02s, bounds: [])
+[PASS] prove_transferFrom(address,address,uint256) (paths: 7, time: 0.12s, bounds: [])
+Symbolic test result: 12 passed; 2 failed; time: 0.71s
 
-real    0m5,423s
-user    0m8,639s
-sys     0m0,371s
-manoel@mirkwood-ii:~/hevm$ time halmos --function prove --solver-timeout-assertion 10000000 --smt-exp-by-const 2
+real    0m2,951s
+user    0m2,959s
+sys     0m0,471s
+manoel@mirkwood-ii:~/hevm$ time halmos --match-contract ERC721SymbolicPropertieshalmos --function prove
 [⠒] Compiling...
 No files changed, compilation skipped
 
-Running 14 tests for test/halmos/ERC1155halmos.t.sol:ERC1155ymbolicProperties
-[PASS] proveFail_burnBalanceLessThanAmount(uint256,uint256,uint256) (paths: 3, time: 0.12s, bounds: [])
-Counterexample: 
-    p_amount_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-    p_id_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-[FAIL] proveFail_burnZeroAddress(uint256,uint256) (paths: 2, time: 0.03s, bounds: [])
-[PASS] proveFail_mintZeroAddress(uint256,uint256) (paths: 1, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromBalanceLessThanAmount(uint256,uint256,uint256) (paths: 3, time: 0.18s, bounds: [])
-Counterexample: 
-    p_amount_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-    p_id_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-[FAIL] proveFail_safeTransferFromWhenSenderIsNotApprovedForAll(uint256,uint256) (paths: 2, time: 0.05s, bounds: [])
-[PASS] proveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256,uint256) (paths: 1, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromZeroAddressForFrom(uint256,uint256) (paths: 2, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromZeroAddressForTo(uint256,uint256) (paths: 1, time: 0.01s, bounds: [])
+Running 14 tests for test/halmos/ERC721halmos.t.sol:ERC721SymbolicPropertieshalmos
+[PASS] proveFail_ApproveWhenIdHasNotAnOwner(address,uint256) (paths: 2, time: 0.02s, bounds: [])
+[PASS] proveFail_ApproveWhenIsNotApprovedForAllReverts(address,address,uint256) (paths: 7, time: 0.07s, bounds: [])
+[PASS] proveFail_BurnReverts(uint256) (paths: 1, time: 0.01s, bounds: [])
+[PASS] proveFail_MintWhenToIsAddressZeroReverts(address,uint256) (paths: 3, time: 0.01s, bounds: [])
 Counterexample: 
     p_approved_bool_00 = false
     p_operator_address_00 = 0x0000000000000000000000000000000000000000
-[FAIL] proveFail_setApprovalForAllSenderEqualsOperator(address,bool) (paths: 4, time: 0.03s, bounds: [])
-[PASS] prove_burn(uint256,uint256) (paths: 1, time: 0.04s, bounds: [])
-[PASS] prove_mint(uint256,uint256) (paths: 1, time: 0.04s, bounds: [])
-[PASS] prove_safeBatchTransferFrom(uint256,uint256[],uint256[]) (paths: 9, time: 3.81s, bounds: [ids=[0, 1, 2], values=[0, 1, 2]])
-[PASS] prove_safeTransferFrom(uint256,uint256,uint256) (paths: 3, time: 0.17s, bounds: [])
-[PASS] prove_setApprovalForAll(address,bool) (paths: 5, time: 0.03s, bounds: [])
-Symbolic test result: 11 passed; 3 failed; time: 4.60s
+    p_sender_address_00 = 0x0000000000000000000000000000000000000000
+[FAIL] proveFail_setApprovalForAllReverts(address,address,bool) (paths: 5, time: 0.04s, bounds: [])
+[PASS] proveFail_transferFromWhenFromIsNotTheOwnerReverts(address,address,uint256) (paths: 5, time: 0.03s, bounds: [])
+[PASS] proveFail_transferFromWhenToIsAddressZeroReverts(address,address,uint256) (paths: 6, time: 0.06s, bounds: [])
+[PASS] prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender(address,uint256) (paths: 4, time: 0.07s, bounds: [])
+[PASS] prove_ApproveWhenOwnerEqualsMSGSender(address,uint256) (paths: 2, time: 0.04s, bounds: [])
+[PASS] prove_Burn(uint256) (paths: 1, time: 0.05s, bounds: [])
+[PASS] prove_Mint(address,uint256) (paths: 3, time: 0.04s, bounds: [])
+Counterexample: 
+    p_from_address_00 = 0x1804c8ab1f12e6bbf3894d4083f33e07309d1f38
+    p_tokenId_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
+[FAIL] prove_safeTransferFrom(address,uint256) (paths: 4, time: 0.10s, bounds: [])
+[PASS] prove_setApprovalForAll(address,bool) (paths: 3, time: 0.02s, bounds: [])
+[PASS] prove_transferFrom(address,address,uint256) (paths: 7, time: 0.12s, bounds: [])
+Symbolic test result: 12 passed; 2 failed; time: 0.69s
 
-real    0m5,442s
-user    0m8,613s
-sys     0m0,357s
-manoel@mirkwood-ii:~/hevm$ time halmos --function prove --solver-timeout-assertion 10000000 --smt-exp-by-const 2
+real    0m1,745s
+user    0m1,887s
+sys     0m0,333s
+manoel@mirkwood-ii:~/hevm$ time halmos --match-contract ERC721SymbolicPropertieshalmos --function prove
+[⠢] Compiling...
+No files changed, compilation skipped
+
+Running 14 tests for test/halmos/ERC721halmos.t.sol:ERC721SymbolicPropertieshalmos
+[PASS] proveFail_ApproveWhenIdHasNotAnOwner(address,uint256) (paths: 2, time: 0.02s, bounds: [])
+[PASS] proveFail_ApproveWhenIsNotApprovedForAllReverts(address,address,uint256) (paths: 7, time: 0.07s, bounds: [])
+[PASS] proveFail_BurnReverts(uint256) (paths: 1, time: 0.01s, bounds: [])
+[PASS] proveFail_MintWhenToIsAddressZeroReverts(address,uint256) (paths: 3, time: 0.01s, bounds: [])
+Counterexample: 
+    p_approved_bool_00 = false
+    p_operator_address_00 = 0x0000000000000000000000000000000000000000
+    p_sender_address_00 = 0x0000000000000000000000000000000000000000
+[FAIL] proveFail_setApprovalForAllReverts(address,address,bool) (paths: 5, time: 0.04s, bounds: [])
+[PASS] proveFail_transferFromWhenFromIsNotTheOwnerReverts(address,address,uint256) (paths: 5, time: 0.03s, bounds: [])
+[PASS] proveFail_transferFromWhenToIsAddressZeroReverts(address,address,uint256) (paths: 6, time: 0.06s, bounds: [])
+[PASS] prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender(address,uint256) (paths: 4, time: 0.07s, bounds: [])
+[PASS] prove_ApproveWhenOwnerEqualsMSGSender(address,uint256) (paths: 2, time: 0.04s, bounds: [])
+[PASS] prove_Burn(uint256) (paths: 1, time: 0.05s, bounds: [])
+[PASS] prove_Mint(address,uint256) (paths: 3, time: 0.04s, bounds: [])
+Counterexample: 
+    p_from_address_00 = 0x1804c8ab1f12e6bbf3894d4083f33e07309d1f38
+    p_tokenId_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
+[FAIL] prove_safeTransferFrom(address,uint256) (paths: 4, time: 0.10s, bounds: [])
+[PASS] prove_setApprovalForAll(address,bool) (paths: 3, time: 0.02s, bounds: [])
+[PASS] prove_transferFrom(address,address,uint256) (paths: 7, time: 0.12s, bounds: [])
+Symbolic test result: 12 passed; 2 failed; time: 0.71s
+
+real    0m1,866s
+user    0m1,914s
+sys     0m0,361s
+manoel@mirkwood-ii:~/hevm$ time halmos --match-contract ERC721SymbolicPropertieshalmos --function prove
+[⠢] Compiling...
+No files changed, compilation skipped
+
+Running 14 tests for test/halmos/ERC721halmos.t.sol:ERC721SymbolicPropertieshalmos
+[PASS] proveFail_ApproveWhenIdHasNotAnOwner(address,uint256) (paths: 2, time: 0.02s, bounds: [])
+[PASS] proveFail_ApproveWhenIsNotApprovedForAllReverts(address,address,uint256) (paths: 7, time: 0.07s, bounds: [])
+[PASS] proveFail_BurnReverts(uint256) (paths: 1, time: 0.01s, bounds: [])
+[PASS] proveFail_MintWhenToIsAddressZeroReverts(address,uint256) (paths: 3, time: 0.01s, bounds: [])
+Counterexample: 
+    p_approved_bool_00 = false
+    p_operator_address_00 = 0x0000000000000000000000000000000000000000
+    p_sender_address_00 = 0x0000000000000000000000000000000000000000
+[FAIL] proveFail_setApprovalForAllReverts(address,address,bool) (paths: 5, time: 0.04s, bounds: [])
+[PASS] proveFail_transferFromWhenFromIsNotTheOwnerReverts(address,address,uint256) (paths: 5, time: 0.03s, bounds: [])
+[PASS] proveFail_transferFromWhenToIsAddressZeroReverts(address,address,uint256) (paths: 6, time: 0.06s, bounds: [])
+[PASS] prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender(address,uint256) (paths: 4, time: 0.07s, bounds: [])
+[PASS] prove_ApproveWhenOwnerEqualsMSGSender(address,uint256) (paths: 2, time: 0.04s, bounds: [])
+[PASS] prove_Burn(uint256) (paths: 1, time: 0.05s, bounds: [])
+[PASS] prove_Mint(address,uint256) (paths: 3, time: 0.04s, bounds: [])
+Counterexample: 
+    p_from_address_00 = 0x1804c8ab1f12e6bbf3894d4083f33e07309d1f38
+    p_tokenId_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
+[FAIL] prove_safeTransferFrom(address,uint256) (paths: 4, time: 0.10s, bounds: [])
+[PASS] prove_setApprovalForAll(address,bool) (paths: 3, time: 0.02s, bounds: [])
+[PASS] prove_transferFrom(address,address,uint256) (paths: 7, time: 0.12s, bounds: [])
+Symbolic test result: 12 passed; 2 failed; time: 0.70s
+
+real    0m1,870s
+user    0m1,920s
+sys     0m0,323s
+manoel@mirkwood-ii:~/hevm$ time halmos --match-contract ERC721SymbolicPropertieshalmos --function prove
+[⠢] Compiling...
+No files changed, compilation skipped
+
+Running 14 tests for test/halmos/ERC721halmos.t.sol:ERC721SymbolicPropertieshalmos
+[PASS] proveFail_ApproveWhenIdHasNotAnOwner(address,uint256) (paths: 2, time: 0.02s, bounds: [])
+[PASS] proveFail_ApproveWhenIsNotApprovedForAllReverts(address,address,uint256) (paths: 7, time: 0.07s, bounds: [])
+[PASS] proveFail_BurnReverts(uint256) (paths: 1, time: 0.01s, bounds: [])
+[PASS] proveFail_MintWhenToIsAddressZeroReverts(address,uint256) (paths: 3, time: 0.01s, bounds: [])
+Counterexample: 
+    p_approved_bool_00 = false
+    p_operator_address_00 = 0x0000000000000000000000000000000000000000
+    p_sender_address_00 = 0x0000000000000000000000000000000000000000
+[FAIL] proveFail_setApprovalForAllReverts(address,address,bool) (paths: 5, time: 0.04s, bounds: [])
+[PASS] proveFail_transferFromWhenFromIsNotTheOwnerReverts(address,address,uint256) (paths: 5, time: 0.03s, bounds: [])
+[PASS] proveFail_transferFromWhenToIsAddressZeroReverts(address,address,uint256) (paths: 6, time: 0.06s, bounds: [])
+[PASS] prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender(address,uint256) (paths: 4, time: 0.07s, bounds: [])
+[PASS] prove_ApproveWhenOwnerEqualsMSGSender(address,uint256) (paths: 2, time: 0.04s, bounds: [])
+[PASS] prove_Burn(uint256) (paths: 1, time: 0.05s, bounds: [])
+[PASS] prove_Mint(address,uint256) (paths: 3, time: 0.04s, bounds: [])
+Counterexample: 
+    p_from_address_00 = 0x1804c8ab1f12e6bbf3894d4083f33e07309d1f38
+    p_tokenId_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
+[FAIL] prove_safeTransferFrom(address,uint256) (paths: 4, time: 0.10s, bounds: [])
+[PASS] prove_setApprovalForAll(address,bool) (paths: 3, time: 0.02s, bounds: [])
+[PASS] prove_transferFrom(address,address,uint256) (paths: 7, time: 0.12s, bounds: [])
+Symbolic test result: 12 passed; 2 failed; time: 0.70s
+
+real    0m1,861s
+user    0m1,877s
+sys     0m0,368s
+manoel@mirkwood-ii:~/hevm$ time halmos --match-contract ERC721SymbolicPropertieshalmos --function prove
 [⠒] Compiling...
 No files changed, compilation skipped
 
-Running 14 tests for test/halmos/ERC1155halmos.t.sol:ERC1155ymbolicProperties
-[PASS] proveFail_burnBalanceLessThanAmount(uint256,uint256,uint256) (paths: 3, time: 0.12s, bounds: [])
-Counterexample: 
-    p_amount_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-    p_id_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-[FAIL] proveFail_burnZeroAddress(uint256,uint256) (paths: 2, time: 0.03s, bounds: [])
-[PASS] proveFail_mintZeroAddress(uint256,uint256) (paths: 1, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromBalanceLessThanAmount(uint256,uint256,uint256) (paths: 3, time: 0.18s, bounds: [])
-Counterexample: 
-    p_amount_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-    p_id_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-[FAIL] proveFail_safeTransferFromWhenSenderIsNotApprovedForAll(uint256,uint256) (paths: 2, time: 0.05s, bounds: [])
-[PASS] proveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256,uint256) (paths: 1, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromZeroAddressForFrom(uint256,uint256) (paths: 2, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromZeroAddressForTo(uint256,uint256) (paths: 1, time: 0.01s, bounds: [])
+Running 14 tests for test/halmos/ERC721halmos.t.sol:ERC721SymbolicPropertieshalmos
+[PASS] proveFail_ApproveWhenIdHasNotAnOwner(address,uint256) (paths: 2, time: 0.02s, bounds: [])
+[PASS] proveFail_ApproveWhenIsNotApprovedForAllReverts(address,address,uint256) (paths: 7, time: 0.07s, bounds: [])
+[PASS] proveFail_BurnReverts(uint256) (paths: 1, time: 0.01s, bounds: [])
+[PASS] proveFail_MintWhenToIsAddressZeroReverts(address,uint256) (paths: 3, time: 0.01s, bounds: [])
 Counterexample: 
     p_approved_bool_00 = false
     p_operator_address_00 = 0x0000000000000000000000000000000000000000
-[FAIL] proveFail_setApprovalForAllSenderEqualsOperator(address,bool) (paths: 4, time: 0.03s, bounds: [])
-[PASS] prove_burn(uint256,uint256) (paths: 1, time: 0.04s, bounds: [])
-[PASS] prove_mint(uint256,uint256) (paths: 1, time: 0.04s, bounds: [])
-[PASS] prove_safeBatchTransferFrom(uint256,uint256[],uint256[]) (paths: 9, time: 3.79s, bounds: [ids=[0, 1, 2], values=[0, 1, 2]])
-[PASS] prove_safeTransferFrom(uint256,uint256,uint256) (paths: 3, time: 0.17s, bounds: [])
-[PASS] prove_setApprovalForAll(address,bool) (paths: 5, time: 0.03s, bounds: [])
-Symbolic test result: 11 passed; 3 failed; time: 4.59s
+    p_sender_address_00 = 0x0000000000000000000000000000000000000000
+[FAIL] proveFail_setApprovalForAllReverts(address,address,bool) (paths: 5, time: 0.04s, bounds: [])
+[PASS] proveFail_transferFromWhenFromIsNotTheOwnerReverts(address,address,uint256) (paths: 5, time: 0.03s, bounds: [])
+[PASS] proveFail_transferFromWhenToIsAddressZeroReverts(address,address,uint256) (paths: 6, time: 0.06s, bounds: [])
+[PASS] prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender(address,uint256) (paths: 4, time: 0.07s, bounds: [])
+[PASS] prove_ApproveWhenOwnerEqualsMSGSender(address,uint256) (paths: 2, time: 0.04s, bounds: [])
+[PASS] prove_Burn(uint256) (paths: 1, time: 0.05s, bounds: [])
+[PASS] prove_Mint(address,uint256) (paths: 3, time: 0.04s, bounds: [])
+Counterexample: 
+    p_from_address_00 = 0x1804c8ab1f12e6bbf3894d4083f33e07309d1f38
+    p_tokenId_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
+[FAIL] prove_safeTransferFrom(address,uint256) (paths: 4, time: 0.10s, bounds: [])
+[PASS] prove_setApprovalForAll(address,bool) (paths: 3, time: 0.02s, bounds: [])
+[PASS] prove_transferFrom(address,address,uint256) (paths: 7, time: 0.12s, bounds: [])
+Symbolic test result: 12 passed; 2 failed; time: 0.71s
 
-real    0m5,438s
-user    0m8,701s
-sys     0m0,337s
-manoel@mirkwood-ii:~/hevm$ time halmos --function prove --solver-timeout-assertion 10000000 --smt-exp-by-const 2
+real    0m1,757s
+user    0m1,890s
+sys     0m0,368s
+manoel@mirkwood-ii:~/hevm$ time halmos --match-contract ERC721SymbolicPropertieshalmos --function prove
+[⠢] Compiling...
+No files changed, compilation skipped
+
+Running 14 tests for test/halmos/ERC721halmos.t.sol:ERC721SymbolicPropertieshalmos
+[PASS] proveFail_ApproveWhenIdHasNotAnOwner(address,uint256) (paths: 2, time: 0.02s, bounds: [])
+[PASS] proveFail_ApproveWhenIsNotApprovedForAllReverts(address,address,uint256) (paths: 7, time: 0.08s, bounds: [])
+[PASS] proveFail_BurnReverts(uint256) (paths: 1, time: 0.01s, bounds: [])
+[PASS] proveFail_MintWhenToIsAddressZeroReverts(address,uint256) (paths: 3, time: 0.01s, bounds: [])
+Counterexample: 
+    p_approved_bool_00 = false
+    p_operator_address_00 = 0x0000000000000000000000000000000000000000
+    p_sender_address_00 = 0x0000000000000000000000000000000000000000
+[FAIL] proveFail_setApprovalForAllReverts(address,address,bool) (paths: 5, time: 0.04s, bounds: [])
+[PASS] proveFail_transferFromWhenFromIsNotTheOwnerReverts(address,address,uint256) (paths: 5, time: 0.03s, bounds: [])
+[PASS] proveFail_transferFromWhenToIsAddressZeroReverts(address,address,uint256) (paths: 6, time: 0.06s, bounds: [])
+[PASS] prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender(address,uint256) (paths: 4, time: 0.07s, bounds: [])
+[PASS] prove_ApproveWhenOwnerEqualsMSGSender(address,uint256) (paths: 2, time: 0.04s, bounds: [])
+[PASS] prove_Burn(uint256) (paths: 1, time: 0.05s, bounds: [])
+[PASS] prove_Mint(address,uint256) (paths: 3, time: 0.04s, bounds: [])
+Counterexample: 
+    p_from_address_00 = 0x1804c8ab1f12e6bbf3894d4083f33e07309d1f38
+    p_tokenId_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
+[FAIL] prove_safeTransferFrom(address,uint256) (paths: 4, time: 0.10s, bounds: [])
+[PASS] prove_setApprovalForAll(address,bool) (paths: 3, time: 0.02s, bounds: [])
+[PASS] prove_transferFrom(address,address,uint256) (paths: 7, time: 0.12s, bounds: [])
+Symbolic test result: 12 passed; 2 failed; time: 0.71s
+^[[A
+real    0m1,875s
+user    0m1,928s
+sys     0m0,358s
+manoel@mirkwood-ii:~/hevm$ time halmos --match-contract ERC721SymbolicPropertieshalmos --function prove
+[⠢] Compiling...
+No files changed, compilation skipped
+
+Running 14 tests for test/halmos/ERC721halmos.t.sol:ERC721SymbolicPropertieshalmos
+[PASS] proveFail_ApproveWhenIdHasNotAnOwner(address,uint256) (paths: 2, time: 0.02s, bounds: [])
+[PASS] proveFail_ApproveWhenIsNotApprovedForAllReverts(address,address,uint256) (paths: 7, time: 0.07s, bounds: [])
+[PASS] proveFail_BurnReverts(uint256) (paths: 1, time: 0.01s, bounds: [])
+[PASS] proveFail_MintWhenToIsAddressZeroReverts(address,uint256) (paths: 3, time: 0.01s, bounds: [])
+Counterexample: 
+    p_approved_bool_00 = false
+    p_operator_address_00 = 0x0000000000000000000000000000000000000000
+    p_sender_address_00 = 0x0000000000000000000000000000000000000000
+[FAIL] proveFail_setApprovalForAllReverts(address,address,bool) (paths: 5, time: 0.04s, bounds: [])
+[PASS] proveFail_transferFromWhenFromIsNotTheOwnerReverts(address,address,uint256) (paths: 5, time: 0.03s, bounds: [])
+[PASS] proveFail_transferFromWhenToIsAddressZeroReverts(address,address,uint256) (paths: 6, time: 0.06s, bounds: [])
+[PASS] prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender(address,uint256) (paths: 4, time: 0.07s, bounds: [])
+[PASS] prove_ApproveWhenOwnerEqualsMSGSender(address,uint256) (paths: 2, time: 0.04s, bounds: [])
+[PASS] prove_Burn(uint256) (paths: 1, time: 0.05s, bounds: [])
+[PASS] prove_Mint(address,uint256) (paths: 3, time: 0.04s, bounds: [])
+Counterexample: 
+    p_from_address_00 = 0x1804c8ab1f12e6bbf3894d4083f33e07309d1f38
+    p_tokenId_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
+[FAIL] prove_safeTransferFrom(address,uint256) (paths: 4, time: 0.10s, bounds: [])
+[PASS] prove_setApprovalForAll(address,bool) (paths: 3, time: 0.02s, bounds: [])
+[PASS] prove_transferFrom(address,address,uint256) (paths: 7, time: 0.12s, bounds: [])
+Symbolic test result: 12 passed; 2 failed; time: 0.70s
+
+real    0m1,849s
+user    0m1,885s
+sys     0m0,360s
+manoel@mirkwood-ii:~/hevm$ time halmos --match-contract ERC721SymbolicPropertieshalmos --function prove
+[⠢] Compiling...
+No files changed, compilation skipped
+
+Running 14 tests for test/halmos/ERC721halmos.t.sol:ERC721SymbolicPropertieshalmos
+[PASS] proveFail_ApproveWhenIdHasNotAnOwner(address,uint256) (paths: 2, time: 0.02s, bounds: [])
+[PASS] proveFail_ApproveWhenIsNotApprovedForAllReverts(address,address,uint256) (paths: 7, time: 0.07s, bounds: [])
+[PASS] proveFail_BurnReverts(uint256) (paths: 1, time: 0.01s, bounds: [])
+[PASS] proveFail_MintWhenToIsAddressZeroReverts(address,uint256) (paths: 3, time: 0.01s, bounds: [])
+Counterexample: 
+    p_approved_bool_00 = false
+    p_operator_address_00 = 0x0000000000000000000000000000000000000000
+    p_sender_address_00 = 0x0000000000000000000000000000000000000000
+[FAIL] proveFail_setApprovalForAllReverts(address,address,bool) (paths: 5, time: 0.04s, bounds: [])
+[PASS] proveFail_transferFromWhenFromIsNotTheOwnerReverts(address,address,uint256) (paths: 5, time: 0.03s, bounds: [])
+[PASS] proveFail_transferFromWhenToIsAddressZeroReverts(address,address,uint256) (paths: 6, time: 0.06s, bounds: [])
+[PASS] prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender(address,uint256) (paths: 4, time: 0.07s, bounds: [])
+[PASS] prove_ApproveWhenOwnerEqualsMSGSender(address,uint256) (paths: 2, time: 0.04s, bounds: [])
+[PASS] prove_Burn(uint256) (paths: 1, time: 0.05s, bounds: [])
+[PASS] prove_Mint(address,uint256) (paths: 3, time: 0.04s, bounds: [])
+Counterexample: 
+    p_from_address_00 = 0x1804c8ab1f12e6bbf3894d4083f33e07309d1f38
+    p_tokenId_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
+[FAIL] prove_safeTransferFrom(address,uint256) (paths: 4, time: 0.10s, bounds: [])
+[PASS] prove_setApprovalForAll(address,bool) (paths: 3, time: 0.02s, bounds: [])
+[PASS] prove_transferFrom(address,address,uint256) (paths: 7, time: 0.12s, bounds: [])
+Symbolic test result: 12 passed; 2 failed; time: 0.71s
+
+real    0m1,859s
+user    0m1,871s
+sys     0m0,444s
+manoel@mirkwood-ii:~/hevm$ time halmos --match-contract ERC721SymbolicPropertieshalmos --function prove
+[⠢] Compiling...
+No files changed, compilation skipped
+
+Running 14 tests for test/halmos/ERC721halmos.t.sol:ERC721SymbolicPropertieshalmos
+[PASS] proveFail_ApproveWhenIdHasNotAnOwner(address,uint256) (paths: 2, time: 0.02s, bounds: [])
+[PASS] proveFail_ApproveWhenIsNotApprovedForAllReverts(address,address,uint256) (paths: 7, time: 0.07s, bounds: [])
+[PASS] proveFail_BurnReverts(uint256) (paths: 1, time: 0.01s, bounds: [])
+[PASS] proveFail_MintWhenToIsAddressZeroReverts(address,uint256) (paths: 3, time: 0.01s, bounds: [])
+Counterexample: 
+    p_approved_bool_00 = false
+    p_operator_address_00 = 0x0000000000000000000000000000000000000000
+    p_sender_address_00 = 0x0000000000000000000000000000000000000000
+[FAIL] proveFail_setApprovalForAllReverts(address,address,bool) (paths: 5, time: 0.04s, bounds: [])
+[PASS] proveFail_transferFromWhenFromIsNotTheOwnerReverts(address,address,uint256) (paths: 5, time: 0.03s, bounds: [])
+[PASS] proveFail_transferFromWhenToIsAddressZeroReverts(address,address,uint256) (paths: 6, time: 0.06s, bounds: [])
+[PASS] prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender(address,uint256) (paths: 4, time: 0.07s, bounds: [])
+[PASS] prove_ApproveWhenOwnerEqualsMSGSender(address,uint256) (paths: 2, time: 0.04s, bounds: [])
+[PASS] prove_Burn(uint256) (paths: 1, time: 0.05s, bounds: [])
+[PASS] prove_Mint(address,uint256) (paths: 3, time: 0.04s, bounds: [])
+Counterexample: 
+    p_from_address_00 = 0x1804c8ab1f12e6bbf3894d4083f33e07309d1f38
+    p_tokenId_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
+[FAIL] prove_safeTransferFrom(address,uint256) (paths: 4, time: 0.10s, bounds: [])
+[PASS] prove_setApprovalForAll(address,bool) (paths: 3, time: 0.02s, bounds: [])
+[PASS] prove_transferFrom(address,address,uint256) (paths: 7, time: 0.12s, bounds: [])
+Symbolic test result: 12 passed; 2 failed; time: 0.71s
+
+real    0m1,853s
+user    0m1,854s
+sys     0m0,451s
+manoel@mirkwood-ii:~/hevm$ time halmos --match-contract ERC721SymbolicPropertieshalmos --function prove
 [⠒] Compiling...
 No files changed, compilation skipped
 
-Running 14 tests for test/halmos/ERC1155halmos.t.sol:ERC1155ymbolicProperties
-[PASS] proveFail_burnBalanceLessThanAmount(uint256,uint256,uint256) (paths: 3, time: 0.12s, bounds: [])
-Counterexample: 
-    p_amount_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-    p_id_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-[FAIL] proveFail_burnZeroAddress(uint256,uint256) (paths: 2, time: 0.03s, bounds: [])
-[PASS] proveFail_mintZeroAddress(uint256,uint256) (paths: 1, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromBalanceLessThanAmount(uint256,uint256,uint256) (paths: 3, time: 0.18s, bounds: [])
-Counterexample: 
-    p_amount_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-    p_id_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-[FAIL] proveFail_safeTransferFromWhenSenderIsNotApprovedForAll(uint256,uint256) (paths: 2, time: 0.05s, bounds: [])
-[PASS] proveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256,uint256) (paths: 1, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromZeroAddressForFrom(uint256,uint256) (paths: 2, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromZeroAddressForTo(uint256,uint256) (paths: 1, time: 0.01s, bounds: [])
+Running 14 tests for test/halmos/ERC721halmos.t.sol:ERC721SymbolicPropertieshalmos
+[PASS] proveFail_ApproveWhenIdHasNotAnOwner(address,uint256) (paths: 2, time: 0.02s, bounds: [])
+[PASS] proveFail_ApproveWhenIsNotApprovedForAllReverts(address,address,uint256) (paths: 7, time: 0.07s, bounds: [])
+[PASS] proveFail_BurnReverts(uint256) (paths: 1, time: 0.01s, bounds: [])
+[PASS] proveFail_MintWhenToIsAddressZeroReverts(address,uint256) (paths: 3, time: 0.01s, bounds: [])
 Counterexample: 
     p_approved_bool_00 = false
     p_operator_address_00 = 0x0000000000000000000000000000000000000000
-[FAIL] proveFail_setApprovalForAllSenderEqualsOperator(address,bool) (paths: 4, time: 0.03s, bounds: [])
-[PASS] prove_burn(uint256,uint256) (paths: 1, time: 0.04s, bounds: [])
-[PASS] prove_mint(uint256,uint256) (paths: 1, time: 0.04s, bounds: [])
-[PASS] prove_safeBatchTransferFrom(uint256,uint256[],uint256[]) (paths: 9, time: 3.77s, bounds: [ids=[0, 1, 2], values=[0, 1, 2]])
-[PASS] prove_safeTransferFrom(uint256,uint256,uint256) (paths: 3, time: 0.17s, bounds: [])
-[PASS] prove_setApprovalForAll(address,bool) (paths: 5, time: 0.03s, bounds: [])
-Symbolic test result: 11 passed; 3 failed; time: 4.56s
-
-real    0m5,407s
-user    0m8,642s
-sys     0m0,359s
-manoel@mirkwood-ii:~/hevm$ time halmos --function prove --solver-timeout-assertion 10000000 --smt-exp-by-const 2
-[⠒] Compiling...
-No files changed, compilation skipped
-
-Running 14 tests for test/halmos/ERC1155halmos.t.sol:ERC1155ymbolicProperties
-[PASS] proveFail_burnBalanceLessThanAmount(uint256,uint256,uint256) (paths: 3, time: 0.12s, bounds: [])
+    p_sender_address_00 = 0x0000000000000000000000000000000000000000
+[FAIL] proveFail_setApprovalForAllReverts(address,address,bool) (paths: 5, time: 0.04s, bounds: [])
+[PASS] proveFail_transferFromWhenFromIsNotTheOwnerReverts(address,address,uint256) (paths: 5, time: 0.03s, bounds: [])
+[PASS] proveFail_transferFromWhenToIsAddressZeroReverts(address,address,uint256) (paths: 6, time: 0.06s, bounds: [])
+[PASS] prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender(address,uint256) (paths: 4, time: 0.08s, bounds: [])
+[PASS] prove_ApproveWhenOwnerEqualsMSGSender(address,uint256) (paths: 2, time: 0.04s, bounds: [])
+[PASS] prove_Burn(uint256) (paths: 1, time: 0.05s, bounds: [])
+[PASS] prove_Mint(address,uint256) (paths: 3, time: 0.04s, bounds: [])
 Counterexample: 
-    p_amount_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-    p_id_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-[FAIL] proveFail_burnZeroAddress(uint256,uint256) (paths: 2, time: 0.03s, bounds: [])
-[PASS] proveFail_mintZeroAddress(uint256,uint256) (paths: 1, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromBalanceLessThanAmount(uint256,uint256,uint256) (paths: 3, time: 0.19s, bounds: [])
-Counterexample: 
-    p_amount_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-    p_id_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-[FAIL] proveFail_safeTransferFromWhenSenderIsNotApprovedForAll(uint256,uint256) (paths: 2, time: 0.05s, bounds: [])
-[PASS] proveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256,uint256) (paths: 1, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromZeroAddressForFrom(uint256,uint256) (paths: 2, time: 0.03s, bounds: [])
-[PASS] proveFail_safeTransferFromZeroAddressForTo(uint256,uint256) (paths: 1, time: 0.01s, bounds: [])
-Counterexample: 
-    p_approved_bool_00 = false
-    p_operator_address_00 = 0x0000000000000000000000000000000000000000
-[FAIL] proveFail_setApprovalForAllSenderEqualsOperator(address,bool) (paths: 4, time: 0.03s, bounds: [])
-[PASS] prove_burn(uint256,uint256) (paths: 1, time: 0.05s, bounds: [])
-[PASS] prove_mint(uint256,uint256) (paths: 1, time: 0.04s, bounds: [])
-[PASS] prove_safeBatchTransferFrom(uint256,uint256[],uint256[]) (paths: 9, time: 3.79s, bounds: [ids=[0, 1, 2], values=[0, 1, 2]])
-[PASS] prove_safeTransferFrom(uint256,uint256,uint256) (paths: 3, time: 0.17s, bounds: [])
-[PASS] prove_setApprovalForAll(address,bool) (paths: 5, time: 0.03s, bounds: [])
-Symbolic test result: 11 passed; 3 failed; time: 4.59s
-
-real    0m5,445s
-user    0m8,670s
-sys     0m0,364s
-manoel@mirkwood-ii:~/hevm$ time halmos --function prove --solver-timeout-assertion 10000000 --smt-exp-by-const 2
-[⠒] Compiling...
-No files changed, compilation skipped
-
-Running 14 tests for test/halmos/ERC1155halmos.t.sol:ERC1155ymbolicProperties
-[PASS] proveFail_burnBalanceLessThanAmount(uint256,uint256,uint256) (paths: 3, time: 0.12s, bounds: [])
-Counterexample: 
-    p_amount_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-    p_id_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-[FAIL] proveFail_burnZeroAddress(uint256,uint256) (paths: 2, time: 0.03s, bounds: [])
-[PASS] proveFail_mintZeroAddress(uint256,uint256) (paths: 1, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromBalanceLessThanAmount(uint256,uint256,uint256) (paths: 3, time: 0.18s, bounds: [])
-Counterexample: 
-    p_amount_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-    p_id_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-[FAIL] proveFail_safeTransferFromWhenSenderIsNotApprovedForAll(uint256,uint256) (paths: 2, time: 0.05s, bounds: [])
-[PASS] proveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256,uint256) (paths: 1, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromZeroAddressForFrom(uint256,uint256) (paths: 2, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromZeroAddressForTo(uint256,uint256) (paths: 1, time: 0.01s, bounds: [])
-Counterexample: 
-    p_approved_bool_00 = false
-    p_operator_address_00 = 0x0000000000000000000000000000000000000000
-[FAIL] proveFail_setApprovalForAllSenderEqualsOperator(address,bool) (paths: 4, time: 0.03s, bounds: [])
-[PASS] prove_burn(uint256,uint256) (paths: 1, time: 0.04s, bounds: [])
-[PASS] prove_mint(uint256,uint256) (paths: 1, time: 0.04s, bounds: [])
-[PASS] prove_safeBatchTransferFrom(uint256,uint256[],uint256[]) (paths: 9, time: 3.80s, bounds: [ids=[0, 1, 2], values=[0, 1, 2]])
-[PASS] prove_safeTransferFrom(uint256,uint256,uint256) (paths: 3, time: 0.17s, bounds: [])
-[PASS] prove_setApprovalForAll(address,bool) (paths: 5, time: 0.03s, bounds: [])
-Symbolic test result: 11 passed; 3 failed; time: 4.59s
-
-real    0m5,437s
-user    0m8,654s
-sys     0m0,336s
-manoel@mirkwood-ii:~/hevm$ time halmos --function prove --solver-timeout-assertion 10000000 --smt-exp-by-const 2
-[⠒] Compiling...
-No files changed, compilation skipped
-
-Running 14 tests for test/halmos/ERC1155halmos.t.sol:ERC1155ymbolicProperties
-[PASS] proveFail_burnBalanceLessThanAmount(uint256,uint256,uint256) (paths: 3, time: 0.12s, bounds: [])
-Counterexample: 
-    p_amount_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-    p_id_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-[FAIL] proveFail_burnZeroAddress(uint256,uint256) (paths: 2, time: 0.03s, bounds: [])
-[PASS] proveFail_mintZeroAddress(uint256,uint256) (paths: 1, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromBalanceLessThanAmount(uint256,uint256,uint256) (paths: 3, time: 0.18s, bounds: [])
-Counterexample: 
-    p_amount_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-    p_id_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-[FAIL] proveFail_safeTransferFromWhenSenderIsNotApprovedForAll(uint256,uint256) (paths: 2, time: 0.05s, bounds: [])
-[PASS] proveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256,uint256) (paths: 1, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromZeroAddressForFrom(uint256,uint256) (paths: 2, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromZeroAddressForTo(uint256,uint256) (paths: 1, time: 0.01s, bounds: [])
-Counterexample: 
-    p_approved_bool_00 = false
-    p_operator_address_00 = 0x0000000000000000000000000000000000000000
-[FAIL] proveFail_setApprovalForAllSenderEqualsOperator(address,bool) (paths: 4, time: 0.03s, bounds: [])
-[PASS] prove_burn(uint256,uint256) (paths: 1, time: 0.05s, bounds: [])
-[PASS] prove_mint(uint256,uint256) (paths: 1, time: 0.04s, bounds: [])
-[PASS] prove_safeBatchTransferFrom(uint256,uint256[],uint256[]) (paths: 9, time: 3.83s, bounds: [ids=[0, 1, 2], values=[0, 1, 2]])
-[PASS] prove_safeTransferFrom(uint256,uint256,uint256) (paths: 3, time: 0.18s, bounds: [])
-[PASS] prove_setApprovalForAll(address,bool) (paths: 5, time: 0.03s, bounds: [])
-Symbolic test result: 11 passed; 3 failed; time: 4.63s
-
-real    0m5,471s
-user    0m8,674s
-sys     0m0,380s
-manoel@mirkwood-ii:~/hevm$ time halmos --function prove --solver-timeout-assertion 10000000 --smt-exp-by-const 2
-[⠒] Compiling...
-No files changed, compilation skipped
-
-Running 14 tests for test/halmos/ERC1155halmos.t.sol:ERC1155ymbolicProperties
-[PASS] proveFail_burnBalanceLessThanAmount(uint256,uint256,uint256) (paths: 3, time: 0.12s, bounds: [])
-Counterexample: 
-    p_amount_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-    p_id_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-[FAIL] proveFail_burnZeroAddress(uint256,uint256) (paths: 2, time: 0.03s, bounds: [])
-[PASS] proveFail_mintZeroAddress(uint256,uint256) (paths: 1, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromBalanceLessThanAmount(uint256,uint256,uint256) (paths: 3, time: 0.18s, bounds: [])
-Counterexample: 
-    p_amount_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-    p_id_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-[FAIL] proveFail_safeTransferFromWhenSenderIsNotApprovedForAll(uint256,uint256) (paths: 2, time: 0.05s, bounds: [])
-[PASS] proveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256,uint256) (paths: 1, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromZeroAddressForFrom(uint256,uint256) (paths: 2, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromZeroAddressForTo(uint256,uint256) (paths: 1, time: 0.01s, bounds: [])
-Counterexample: 
-    p_approved_bool_00 = false
-    p_operator_address_00 = 0x0000000000000000000000000000000000000000
-[FAIL] proveFail_setApprovalForAllSenderEqualsOperator(address,bool) (paths: 4, time: 0.03s, bounds: [])
-[PASS] prove_burn(uint256,uint256) (paths: 1, time: 0.04s, bounds: [])
-[PASS] prove_mint(uint256,uint256) (paths: 1, time: 0.04s, bounds: [])
-[PASS] prove_safeBatchTransferFrom(uint256,uint256[],uint256[]) (paths: 9, time: 3.78s, bounds: [ids=[0, 1, 2], values=[0, 1, 2]])
-[PASS] prove_safeTransferFrom(uint256,uint256,uint256) (paths: 3, time: 0.17s, bounds: [])
-[PASS] prove_setApprovalForAll(address,bool) (paths: 5, time: 0.03s, bounds: [])
-Symbolic test result: 11 passed; 3 failed; time: 4.57s
-
-real    0m5,432s
-user    0m8,627s
-sys     0m0,379s
-manoel@mirkwood-ii:~/hevm$ time halmos --function prove --solver-timeout-assertion 10000000 --smt-exp-by-const 2
-[⠒] Compiling...
-No files changed, compilation skipped
-
-Running 14 tests for test/halmos/ERC1155halmos.t.sol:ERC1155ymbolicProperties
-[PASS] proveFail_burnBalanceLessThanAmount(uint256,uint256,uint256) (paths: 3, time: 0.12s, bounds: [])
-Counterexample: 
-    p_amount_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-    p_id_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-[FAIL] proveFail_burnZeroAddress(uint256,uint256) (paths: 2, time: 0.03s, bounds: [])
-[PASS] proveFail_mintZeroAddress(uint256,uint256) (paths: 1, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromBalanceLessThanAmount(uint256,uint256,uint256) (paths: 3, time: 0.18s, bounds: [])
-Counterexample: 
-    p_amount_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-    p_id_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
-[FAIL] proveFail_safeTransferFromWhenSenderIsNotApprovedForAll(uint256,uint256) (paths: 2, time: 0.05s, bounds: [])
-[PASS] proveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256,uint256) (paths: 1, time: 0.02s, bounds: [])
-[PASS] proveFail_safeTransferFromZeroAddressForFrom(uint256,uint256) (paths: 2, time: 0.03s, bounds: [])
-[PASS] proveFail_safeTransferFromZeroAddressForTo(uint256,uint256) (paths: 1, time: 0.01s, bounds: [])
-Counterexample: 
-    p_approved_bool_00 = false
-    p_operator_address_00 = 0x0000000000000000000000000000000000000000
-[FAIL] proveFail_setApprovalForAllSenderEqualsOperator(address,bool) (paths: 4, time: 0.03s, bounds: [])
-[PASS] prove_burn(uint256,uint256) (paths: 1, time: 0.04s, bounds: [])
-[PASS] prove_mint(uint256,uint256) (paths: 1, time: 0.04s, bounds: [])
-[PASS] prove_safeBatchTransferFrom(uint256,uint256[],uint256[]) (paths: 9, time: 3.90s, bounds: [ids=[0, 1, 2], values=[0, 1, 2]])
-[PASS] prove_safeTransferFrom(uint256,uint256,uint256) (paths: 3, time: 0.18s, bounds: [])
-[PASS] prove_setApprovalForAll(address,bool) (paths: 5, time: 0.03s, bounds: [])
-Symbolic test result: 11 passed; 3 failed; time: 4.70s
+    p_from_address_00 = 0x1804c8ab1f12e6bbf3894d4083f33e07309d1f38
+    p_tokenId_uint256_00 = 0x0000000000000000000000000000000000000000000000000000000000000000 (0)
+[FAIL] prove_safeTransferFrom(address,uint256) (paths: 4, time: 0.10s, bounds: [])
+[PASS] prove_setApprovalForAll(address,bool) (paths: 3, time: 0.02s, bounds: [])
+[PASS] prove_transferFrom(address,address,uint256) (paths: 7, time: 0.12s, bounds: [])
+Symbolic test result: 12 passed; 2 failed; time: 0.72s
 """
 
 markdown_result = process_terminal_output(terminal_output)

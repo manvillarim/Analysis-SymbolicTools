@@ -21,38 +21,41 @@ entrada = """[RUNNING] prove_safeTransferFrom(address,uint256)
    [FAIL] prove_safeTransferFrom(address,uint256)
    Counterexample:
      result:   Revert: 0x4e487b710000000000000000000000000000000000000000000000000000000000000001
-     calldata: prove_safeTransferFrom(0x1000000000000000000000000000000000000000,0)
+     calldata: prove_safeTransferFrom(0x8000000000000000000000000000000000000000,0)
    Counterexample:
      result:   Revert: 0x4e487b710000000000000000000000000000000000000000000000000000000000000001
-     calldata: prove_safeTransferFrom(0x0000020800000000000000401800000000001000,7237447289098456910489210153605429003754138173869686222113041559658740842496)
-[RUNNING] prove_MintWhenToIsAddressZeroReverts(address,uint256)
-   [PASS] prove_MintWhenToIsAddressZeroReverts(address,uint256)
+     calldata: prove_safeTransferFrom(0x4000000000000000000000000000001000000008,904625697587781949748551155407301487001297912094481461086239042680565792769)
 [RUNNING] prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender(address,uint256)
    [PASS] prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender(address,uint256)
-[RUNNING] prove_transferFromWhenToIsAddressZeroReverts(address,address,uint256)
-   [PASS] prove_transferFromWhenToIsAddressZeroReverts(address,address,uint256)
+[RUNNING] proveFail_transferFromWhenFromIsNotTheOwner(address,address,uint256)
+   [FAIL] proveFail_transferFromWhenFromIsNotTheOwner(address,address,uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_transferFromWhenFromIsNotTheOwner(0x0000000000000000000000000000000000000000,0x8000000000000000000000000000000000000000,0)
+[RUNNING] proveFail_ApproveWhenIdHasNotAnOwner(address,uint256)
+   [FAIL] proveFail_ApproveWhenIdHasNotAnOwner(address,uint256)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_ApproveWhenIdHasNotAnOwner(0x0000000000000000000000000000000000001312,0)
 [RUNNING] prove_Burn(uint256)
    [PASS] prove_Burn(uint256)
-[RUNNING] prove_BurnReverts(uint256)
-   [PASS] prove_BurnReverts(uint256)
+[RUNNING] proveFail_ApproveWhenIsNotApprovedForAll(address,address,uint256)
+   [PASS] proveFail_ApproveWhenIsNotApprovedForAll(address,address,uint256)
+[RUNNING] proveFail_setApprovalForAll(address,address,bool)
+   [FAIL] proveFail_setApprovalForAll(address,address,bool)
+   Counterexample:
+     result:   Successful execution
+     calldata: proveFail_setApprovalForAll(0x8040000000000000000080000000000000000002,0x0000000000000000000000000000000000000000,false)
 [RUNNING] prove_Mint(address,uint256)
    [PASS] prove_Mint(address,uint256)
-[RUNNING] prove_ApproveWhenIdHasNotAnOwnerReverts(address,uint256)
-   [FAIL] prove_ApproveWhenIdHasNotAnOwnerReverts(address,uint256)
-   Counterexample:
-     result:   Revert: 0x4e487b710000000000000000000000000000000000000000000000000000000000000001
-     calldata: prove_ApproveWhenIdHasNotAnOwnerReverts(0x0000000000000000000000000000000000001312,0)
-[RUNNING] prove_setApprovalForAllReverts(address,address,bool)
-   [FAIL] prove_setApprovalForAllReverts(address,address,bool)
-   Counterexample:
-     result:   Revert: 0x4e487b710000000000000000000000000000000000000000000000000000000000000001
-     calldata: prove_setApprovalForAllReverts(0xFFfFfFffFFfffFFfFFfFFFFFffFFFffffFfFFFfF,0x0000000000000000000000000000000000001312,false)
+[RUNNING] proveFail_transferFromWhenToIsAddressZero(address,address,uint256)
+   [PASS] proveFail_transferFromWhenToIsAddressZero(address,address,uint256)
+[RUNNING] proveFail_MintWhenToIsAddressZero(address,uint256)
+   [PASS] proveFail_MintWhenToIsAddressZero(address,uint256)
+[RUNNING] proveFail_Burn(uint256)
+   [PASS] proveFail_Burn(uint256)
 [RUNNING] prove_setApprovalForAll(address,bool)
    [PASS] prove_setApprovalForAll(address,bool)
-[RUNNING] prove_ApproveWhenIsNotApprovedForAllReverts(address,address,uint256)
-   [PASS] prove_ApproveWhenIsNotApprovedForAllReverts(address,address,uint256)
-[RUNNING] prove_transferFromWhenFromIsNotTheOwnerReverts(address,address,uint256)
-   [PASS] prove_transferFromWhenFromIsNotTheOwnerReverts(address,address,uint256)
 [RUNNING] prove_transferFrom(address,address,uint256)
    [PASS] prove_transferFrom(address,address,uint256)
 [RUNNING] prove_ApproveWhenOwnerEqualsMSGSender(address,uint256)

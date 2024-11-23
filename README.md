@@ -755,8 +755,8 @@ Foundry's standard implementation of ERC721
 | proveFail_transferFromWhenFromIsNotTheOwner | PASS | 0.02 | 0.03 | 0.03 | 0.03 | 0.02 | 0.02 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.0 |
 | proveFail_transferFromWhenToIsAddressZero | PASS | 0.06 | 0.06 | 0.07 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.0 |
 
-**Total Tests Done:** 13
-**Total Tests Passed:** 11
+**Total Tests Done:** 14
+**Total Tests Passed:** 12
 **Total Failed Tests:** 2
 
 <br>
@@ -782,8 +782,8 @@ Foundry's standard implementation of ERC721
 | prove_transferFrom | PASS |
 | prove_ApproveWhenOwnerEqualsMSGSender | PASS |
 
-**Total Tests Done:** 13
-**Total Tests Passed:** 10
+**Total Tests Done:** 14
+**Total Tests Passed:** 11
 **Total Failed Tests:** 3
 
 <br>
@@ -828,6 +828,90 @@ By using the counterexamples of halmos and hevm on the failed tests, interesting
 
 <br>
 
+# ERC721 SOLMATE
+
+<br>
+
+<br>
+
+## HALMOS
+
+| Function | Status | Time 1 | Time 2 | Time 3 | Time 4 | Time 5 | Time 6 | Time 7 | Time 8 | Time 9 | Time 10 | Time 11 | Average (s) | Standard Deviation (s) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| proveFail_ApproveWhenIdHasNotAnOwner | PASS | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.0 |
+| proveFail_ApproveWhenIsNotApprovedForAll | PASS | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.08 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.0 |
+| proveFail_BurnReverts | PASS | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.0 |
+| proveFail_MintWhenToIsAddressZero | PASS | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.0 |
+| proveFail_setApprovalForAll | FAIL | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.0 |
+| proveFail_transferFromWhenFromIsNotTheOwner | PASS | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.0 |
+| proveFail_transferFromWhenToIsAddressZero | PASS | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.0 |
+| prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender | PASS | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.08 | 0.07 | 0.0 |
+| prove_ApproveWhenOwnerEqualsMSGSender | PASS | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.0 |
+| prove_Burn | PASS | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.0 |
+| prove_Mint | PASS | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.0 |
+| prove_safeTransferFrom | FAIL | 0.1 | 0.1 | 0.1 | 0.1 | 0.1 | 0.1 | 0.1 | 0.1 | 0.1 | 0.1 | 0.1 | 0.1 | 0.0 |
+| prove_setApprovalForAll | PASS | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.0 |
+| prove_transferFrom | PASS | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.0 |
+
+**Total Tests Done:** 14
+**Total Tests Passed:** 12
+**Total Failed Tests:** 2
+
+<br>
+
+<br>
+
+## HEVM
+
+| Function | Status |
+|--------|--------|
+| prove_safeTransferFrom | FAIL |
+| prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender | PASS |
+| proveFail_transferFromWhenFromIsNotTheOwner | FAIL |
+| proveFail_ApproveWhenIdHasNotAnOwner | FAIL |
+| prove_Burn | PASS |
+| proveFail_ApproveWhenIsNotApprovedForAll | PASS |
+| proveFail_setApprovalForAll | FAIL |
+| prove_Mint | PASS |
+| proveFail_transferFromWhenToIsAddressZero | PASS |
+| proveFail_MintWhenToIsAddressZero | PASS |
+| proveFail_Burn | PASS |
+| prove_setApprovalForAll | PASS |
+| prove_transferFrom | PASS |
+| prove_ApproveWhenOwnerEqualsMSGSender | PASS |
+
+**Total Tests Done:** 14
+**Total Tests Passed:** 10
+**Total Failed Tests:** 4
+<br>
+
+<br>
+
+## GENERAL COMPARISION
+
+| Função | HEVM Status | Halmos Status |
+|--------|-------------|---------------|
+| prove_safeTransferFrom | FAIL | FAIL |
+| prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender | PASS | PASS |
+| proveFail_transferFromWhenFromIsNotTheOwner | FAIL | PASS |
+| proveFail_ApproveWhenIdHasNotAnOwner | FAIL | PASS |
+| prove_Burn | PASS | PASS |
+| proveFail_ApproveWhenIsNotApprovedForAll | PASS | PASS |
+| proveFail_setApprovalForAll | FAIL | FAIL |
+| prove_Mint | PASS | PASS |
+| proveFail_transferFromWhenToIsAddressZero | PASS | PASS |
+| proveFail_MintWhenToIsAddressZero | PASS | PASS |
+| proveFail_Burn | PASS | PASS |
+| prove_setApprovalForAll | PASS | PASS |
+| prove_transferFrom | PASS | PASS |
+| prove_ApproveWhenOwnerEqualsMSGSender | PASS | PASS |
+
+---
+<br>
+
+
+
+<br>
 
 # ERC1155 OPEN ZEPPELIN
 

@@ -3,8 +3,11 @@ pragma solidity >= 0.8.0;
 
 import {Test, console2} from "forge-std/Test.sol";
 import {MockERC721} from "forge-std/mocks/MockERC721.sol";
+import "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol";
+import "src/solmate/token/ERC721.sol";
 
- contract ERC721 is MockERC721 {
+contract ERC721T is ERC721S {
+    constructor() ERC721S("ERC20Mock", "E20M") {}
     function mint(address to, uint256 id) public {
          _mint(to, id);
     }
@@ -22,14 +25,13 @@ contract ERC721ReveiverTest {
     }
 }
 
-contract ERC721SymbolicProperties is Test {
+contract ERC721SymbolicPropertieshevm is Test {
 
-    ERC721 token;
+    ERC721T token;
     ERC721ReveiverTest rec;
 
     function setUp() public {
-        token = new ERC721();
-        token.initialize("ERC721Token", "ERC721Token");
+        token = new ERC721T();
         rec = new ERC721ReveiverTest();
     }
 
