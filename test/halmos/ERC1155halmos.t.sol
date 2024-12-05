@@ -5,8 +5,9 @@ import {Test, console2} from "forge-std/Test.sol";
 import {ERC1155} from "lib/openzeppelin-contracts/contracts/token/ERC1155/ERC1155.sol"; // A contract to be formally verified
 import "src/solmate/token/ERC1155.sol";
 
-contract ERC1155C is ERC1155S {
-    constructor() ERC1155S() {}
+contract ERC1155C is ERC1155 {
+    constructor(string memory uri_) ERC1155(uri_) {}
+
 
     function mint(address to, uint256 id, uint256 value, bytes memory data) public {
         _mint(to, id, value, data);
@@ -40,14 +41,14 @@ contract ERC1155RecTest {
     }
 }
 
-contract ERC1155ymbolicProperties is Test {
+contract ERC1155ymbolicPropertieshalmos is Test {
 
     ERC1155C token;
     ERC1155RecTest from;
     ERC1155RecTest to;
 
     function setUp() public {
-        token = new ERC1155C();
+        token = new ERC1155C("ERC1155");
         from = new ERC1155RecTest();
         to = new ERC1155RecTest();
     }
@@ -129,9 +130,9 @@ contract ERC1155ymbolicProperties is Test {
     // proveFail_safeTransferFromWhenSenderIsNotMSGSender: Negated case of safeTransferFrom. Expects revert when sende is not msg.sender.
     function proveFail_safeTransferFromWhenSenderIsNotApprovedForAll(uint256 id, uint256 amount) public {
         vm.prank(address(from));
-        token.setApprovalForAll(address(from), true);
+        token.setApprovalForAll(address(to), false);
         bytes memory data;
-        vm.prank(address(from));
+        vm.prank(address(to));
         try token.safeTransferFrom(address(from), address(to), id, amount, data) {assert(false);} catch {assert(true);}
     }
 
