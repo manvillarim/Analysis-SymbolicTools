@@ -47,40 +47,40 @@ def gerar_tabela_markdown(funcoes_status):
 
 # Exemplo de uso
 entrada = """
-| Função | Status |
+| Function | Status |
 |--------|--------|
-| prove_safeTransferFrom | FAIL |
-| prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender | PASS |
-| proveFail_transferFromWhenFromIsNotTheOwner | FAIL |
-| proveFail_ApproveWhenIdHasNotAnOwner | FAIL |
-| prove_Burn | PASS |
-| proveFail_ApproveWhenIsNotApprovedForAll | PASS |
-| proveFail_setApprovalForAll | FAIL |
-| prove_Mint | PASS |
-| proveFail_transferFromWhenToIsAddressZero | PASS |
-| proveFail_MintWhenToIsAddressZero | PASS |
-| proveFail_Burn | PASS |
+| proveFail_burnZeroAddress | FAIL |
+| proveFail_setApprovalForAllSenderEqualsOperator | FAIL |
+| proveFail_mintZeroAddress | PASS |
+| proveFail_burnBalanceLessThanAmount | PASS |
+| proveFail_safeTransferFromWhenSenderIsNotMSGSender | FAIL |
+| prove_mint | PASS |
+| proveFail_safeTransferFromWhenSenderIsNotApprovedForAll | PASS |
+| prove_safeBatchTransferFrom | ERROR |
+| prove_safeTransferFrom | PASS |
+| prove_burn | PASS |
+| proveFail_safeTransferFromBalanceLessThanAmount | PASS |
+| proveFail_safeTransferFromZeroAddressForTo | PASS |
 | prove_setApprovalForAll | PASS |
-| prove_transferFrom | PASS |
-| prove_ApproveWhenOwnerEqualsMSGSender | PASS |
+| proveFail_safeTransferFromZeroAddressForFrom | PASS |
 FIM
 FIM
-| Function | Status | Time 1 | Time 2 | Time 3 | Time 4 | Time 5 | Time 6 | Time 7 | Time 8 | Time 9 | Time 10 | Time 11 | Average (s) | Standard Deviation (s) |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| proveFail_ApproveWhenIdHasNotAnOwner | PASS | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.0 |
-| proveFail_ApproveWhenIsNotApprovedForAll | PASS | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.08 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.0 |
-| proveFail_Burn | PASS | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.0 |
-| proveFail_MintWhenToIsAddressZero | PASS | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.0 |
-| proveFail_setApprovalForAllReverts | FAIL | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.0 |
-| proveFail_transferFromWhenFromIsNotTheOwner | PASS | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.0 |
-| proveFail_transferFromWhenToIsAddressZero | PASS | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.06 | 0.0 |
-| prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender | PASS | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.07 | 0.08 | 0.07 | 0.0 |
-| prove_ApproveWhenOwnerEqualsMSGSender | PASS | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.0 |
-| prove_Burn | PASS | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.0 |
-| prove_Mint | PASS | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.0 |
-| prove_safeTransferFrom | FAIL | 0.1 | 0.1 | 0.1 | 0.1 | 0.1 | 0.1 | 0.1 | 0.1 | 0.1 | 0.1 | 0.1 | 0.1 | 0.0 |
-| prove_setApprovalForAll | PASS | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.0 |
-| prove_transferFrom | PASS | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.0 |
+| Function | Status | Time 1 | Time 2 | Time 3 | Time 4 | Time 5 | Time 6 | Time 7 | Time 8 | Time 9 | Time 10 | Average (s) | Standard Deviation (s) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| proveFail_burnBalanceLessThanAmount | PASS | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.12 | 0.0 |
+| proveFail_burnZeroAddress | FAIL | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.0 |
+| proveFail_mintZeroAddress | PASS | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.0 |
+| proveFail_safeTransferFromBalanceLessThanAmount | PASS | 0.19 | 0.18 | 0.18 | 0.18 | 0.18 | 0.19 | 0.18 | 0.18 | 0.18 | 0.18 | 0.18 | 0.0 |
+| proveFail_safeTransferFromWhenSenderIsNotApprovedForAll | PASS | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.05 | 0.0 |
+| proveFail_safeTransferFromWhenSenderIsNotMSGSender | PASS | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.02 | 0.0 |
+| proveFail_safeTransferFromZeroAddressForFrom | PASS | 0.02 | 0.03 | 0.02 | 0.02 | 0.02 | 0.03 | 0.02 | 0.02 | 0.02 | 0.03 | 0.02 | 0.0 |
+| proveFail_safeTransferFromZeroAddressForTo | PASS | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.01 | 0.0 |
+| proveFail_setApprovalForAllSenderEqualsOperator | FAIL | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.0 |
+| prove_burn | PASS | 0.05 | 0.04 | 0.04 | 0.04 | 0.04 | 0.05 | 0.04 | 0.05 | 0.04 | 0.04 | 0.04 | 0.0 |
+| prove_mint | PASS | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.04 | 0.0 |
+| prove_safeBatchTransferFrom | PASS | 3.81 | 3.78 | 3.81 | 3.79 | 3.77 | 3.79 | 3.8 | 3.83 | 3.78 | 3.9 | 3.81 | 0.04 |
+| prove_safeTransferFrom | PASS | 0.17 | 0.17 | 0.17 | 0.17 | 0.17 | 0.17 | 0.17 | 0.18 | 0.17 | 0.18 | 0.17 | 0.0 |
+| prove_setApprovalForAll | PASS | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.03 | 0.0 |
 FIM
 """
 

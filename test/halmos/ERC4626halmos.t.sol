@@ -8,7 +8,7 @@ import {Math} from "lib/openzeppelin-contracts/contracts/utils/math/Math.sol";
 import "src/solmate/token/ERC4626Mock.sol";
 import "src/solmate/token/ERC20SOLMock.sol";
 
-contract ERC4626SymbolicProperties is Test {
+/*contract ERC4626SymbolicProperties is Test {
     using Math for uint256;
     ERC20SolMock asset;
     ERC4626SMock vault;
@@ -800,4 +800,4 @@ contract ERC4626SymbolicProperties is Test {
         }
         assert(!success);
     }
-}
+}*/

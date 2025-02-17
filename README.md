@@ -989,13 +989,57 @@ Hevm was unable to complete the tests, the ram memory exceeded its limit during 
 
 ## HEVM
 
-Hevm was unable to complete the tests. The program crashed during `prove_safeBatchTransferFrom` test
+| Function | Status |
+|--------|--------|
+| proveFail_burnZeroAddress | FAIL |
+| proveFail_setApprovalForAllSenderEqualsOperator | FAIL |
+| proveFail_mintZeroAddress | PASS |
+| proveFail_burnBalanceLessThanAmount | PASS |
+| proveFail_safeTransferFromWhenSenderIsNotMSGSender | FAIL |
+| prove_mint | PASS |
+| proveFail_safeTransferFromWhenSenderIsNotApprovedForAll | PASS |
+| prove_safeBatchTransferFrom | ERROR |
+| prove_safeTransferFrom | PASS |
+| prove_burn | PASS |
+| proveFail_safeTransferFromBalanceLessThanAmount | PASS |
+| proveFail_safeTransferFromZeroAddressForTo | PASS |
+| prove_setApprovalForAll | PASS |
+| proveFail_safeTransferFromZeroAddressForFrom | PASS |
+
+**Total Tests Done:** 14
+**Total Tests Passed:** 10
+**Total Failed Tests:** 3
+
+Hevm was unable to complete all the tests. The program crashed during `prove_safeBatchTransferFrom` test
 
     hevm: Internal Error: TODO: symbolic abi encoding for uint256[] -- CallStack (from HasCallStack):
     internalError, called at src/EVM/SymExec.hs:140:8 in hevm-0.53.0-BdoApfgEeNQEfgvlRGZ9gm:EVM.SymExec
     CallStack (from HasCallStack):
     error, called at src/EVM/Types.hs:1356:19 in hevm-0.53.0-BdoApfgEeNQEfgvlRGZ9gm:EVM.Types
     internalError, called at src/EVM/SymExec.hs:140:8 in hevm-0.53.0-BdoApfgEeNQEfgvlRGZ9gm:EVM.SymExec
+
+<br>
+
+<br>
+
+## GENERAL COMPARISION
+
+| Function | HEVM Status | Halmos Status |
+|--------|-------------|---------------|
+| proveFail_burnZeroAddress | FAIL | FAIL |
+| proveFail_setApprovalForAllSenderEqualsOperator | FAIL | FAIL |
+| proveFail_mintZeroAddress | PASS | PASS |
+| proveFail_burnBalanceLessThanAmount | PASS | PASS |
+| proveFail_safeTransferFromWhenSenderIsNotMSGSender | FAIL | PASS |
+| prove_mint | PASS | PASS |
+| proveFail_safeTransferFromWhenSenderIsNotApprovedForAll | PASS | PASS |
+| prove_safeTransferFrom | PASS | PASS |
+| prove_burn | PASS | PASS |
+| proveFail_safeTransferFromBalanceLessThanAmount | PASS | PASS |
+| proveFail_safeTransferFromZeroAddressForTo | PASS | PASS |
+| prove_setApprovalForAll | PASS | PASS |
+| proveFail_safeTransferFromZeroAddressForFrom | PASS | PASS |
+| prove_safeBatchTransferFrom | ERROR | PASS |
 
 ---
 <br>
