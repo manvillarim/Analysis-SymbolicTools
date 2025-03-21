@@ -638,7 +638,7 @@ import "src/ERCFoundry/ERCFMock.sol";
     // Proves minting to zero address reverts.
     function proveFail_MintToZeroAddress(uint256 amount) public {
         require(amount > 0, "Invalid arguments");
-
+        vm.prank(address(0));
         token.mint(address(0), amount);
     }
 

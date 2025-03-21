@@ -7,8 +7,6 @@
 
 **OS: Fedora**
 
-**This work is part of a scientific initiation at Cin-UFPE on Formal Verification of Smart Contracts, where the performance of symbolic testing tools in the main ERC protocols will be analyzed.**
-
 **Versions**
 
 > Halmos: 0.2.0

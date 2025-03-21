@@ -5,7 +5,6 @@ import {Test, console2} from "forge-std/Test.sol";
 import {MockERC721} from "forge-std/mocks/MockERC721.sol";
 import "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol";
 import "src/solmate/token/ERC721.sol";
-
 contract ERC721T is ERC721S {
     constructor() ERC721S("ERC20Mock", "E20M") {}
     function mint(address to, uint256 id) public {

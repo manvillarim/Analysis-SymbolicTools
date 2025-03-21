@@ -6,7 +6,7 @@ pragma solidity >= 0.8.0;
 import {Test, console2} from "forge-std/Test.sol";
 import {ERC20Mock} from "../lib/openzeppelin-contracts/contracts/mocks/token/ERC20Mock.sol";
 import {SafeERC20} from "../lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol";
- /*contract ERC20SymbolicProperties is Test {
+ contract ERC20SymbolicProperties is Test {
     using SafeERC20 for ERC20Mock;
 
     ERC20Mock token;
@@ -14,9 +14,14 @@ import {SafeERC20} from "../lib/openzeppelin-contracts/contracts/token/ERC20/uti
     function setUp() public {
         token = new ERC20Mock();
     }
+    function testFailproveFail_MintToZeroAddress(uint256 amount) public {
+        vm.assume(amount > 0);
+        vm.prank(address(0));
+        token.mint(address(0), 112777989180875142641012667662881322846184324395630932477102348584379903997143);
+    }
 
     // Proves approving a spender to transfer tokens. Checks allowance is set correctly.
-    function testprove_ApproveFuzz(address spender, uint256 amount) public { 
+    /*function testprove_ApproveFuzz(address spender, uint256 amount) public { 
         vm.assume(msg.sender != address(0) && spender != address(0));
         vm.prank(msg.sender);
         try token.approve(spender, amount) returns (bool success) { assert(success); } catch { assert(false); } 
@@ -839,6 +844,6 @@ import {SafeERC20} from "../lib/openzeppelin-contracts/contracts/token/ERC20/uti
         vm.prank(spender);
         vm.expectRevert();
         token.transferFrom(owner, address(0xdead), amount);
-    }
-}*/
+    }*/
+}
 
