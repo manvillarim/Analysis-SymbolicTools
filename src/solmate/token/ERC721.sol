@@ -1,12 +1,8 @@
 // SPDX-License-Identifier: AGPL-3.0-only
 pragma solidity >=0.8.0;
 
-/// @notice Modern, minimalist, and gas efficient ERC-721 implementation.
-/// @author Solmate (https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC721.sol)
 abstract contract ERC721S {
-    /*//////////////////////////////////////////////////////////////
-                                 EVENTS
-    //////////////////////////////////////////////////////////////*/
+
 
     event Transfer(address indexed from, address indexed to, uint256 indexed id);
 
@@ -14,19 +10,9 @@ abstract contract ERC721S {
 
     event ApprovalForAll(address indexed owner, address indexed operator, bool approved);
 
-    /*//////////////////////////////////////////////////////////////
-                         METADATA STORAGE/LOGIC
-    //////////////////////////////////////////////////////////////*/
-
     string public name;
 
     string public symbol;
-
-    //function tokenURI(uint256 id) public view virtual returns (string memory);
-
-    /*//////////////////////////////////////////////////////////////
-                      ERC721 BALANCE/OWNER STORAGE
-    //////////////////////////////////////////////////////////////*/
 
     mapping(uint256 => address) internal _ownerOf;
 
@@ -42,26 +28,15 @@ abstract contract ERC721S {
         return _balanceOf[owner];
     }
 
-    /*//////////////////////////////////////////////////////////////
-                         ERC721 APPROVAL STORAGE
-    //////////////////////////////////////////////////////////////*/
-
     mapping(uint256 => address) public getApproved;
 
     mapping(address => mapping(address => bool)) public isApprovedForAll;
 
-    /*//////////////////////////////////////////////////////////////
-                               CONSTRUCTOR
-    //////////////////////////////////////////////////////////////*/
 
     constructor(string memory _name, string memory _symbol) {
         name = _name;
         symbol = _symbol;
     }
-
-    /*//////////////////////////////////////////////////////////////
-                              ERC721 LOGIC
-    //////////////////////////////////////////////////////////////*/
 
     function approve(address spender, uint256 id) public virtual {
         address owner = _ownerOf[id];
@@ -92,9 +67,6 @@ abstract contract ERC721S {
             msg.sender == from || isApprovedForAll[from][msg.sender] || msg.sender == getApproved[id],
             "NOT_AUTHORIZED"
         );
-
-        // Underflow of the sender's balance is impossible because we check for
-        // ownership above and the recipient's balance can't realistically overflow.
         unchecked {
             _balanceOf[from]--;
 
@@ -139,9 +111,6 @@ abstract contract ERC721S {
         );
     }
 
-    /*//////////////////////////////////////////////////////////////
-                              ERC165 LOGIC
-    //////////////////////////////////////////////////////////////*/
 
     function supportsInterface(bytes4 interfaceId) public view virtual returns (bool) {
         return
@@ -150,9 +119,6 @@ abstract contract ERC721S {
             interfaceId == 0x5b5e139f; // ERC165 Interface ID for ERC721Metadata
     }
 
-    /*//////////////////////////////////////////////////////////////
-                        INTERNAL MINT/BURN LOGIC
-    //////////////////////////////////////////////////////////////*/
 
     function _mint(address to, uint256 id) internal virtual {
         require(to != address(0), "INVALID_RECIPIENT");
@@ -217,8 +183,6 @@ abstract contract ERC721S {
     }
 }
 
-/// @notice A generic interface for a contract which properly accepts ERC721 tokens.
-/// @author Solmate (https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC721.sol)
 abstract contract ERC721TokenReceiver {
     function onERC721Received(
         address,

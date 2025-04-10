@@ -692,9 +692,9 @@ import "src/ERCFoundry/ERCFMock.sol";
     }
 
     // Proves that transferring more tokens than the sender has reverts
-    function proveFail_TransferUnderBalancej(address recipient, uint256 amount) public {
-        require(msg.sender != address(0) && recipient != address(0) && token.balanceOf(msg.sender) < amount);
-            vm.prank(msg.sender);
+    function proveFail_TransferUnderBalancej(address sender, address recipient, uint256 amount) public {
+        require(sender != address(0) && recipient != address(0) && token.balanceOf(msg.sender) < amount);
+            vm.prank(sender);
         try token.transfer(recipient, amount) {
             assert(false);
         }

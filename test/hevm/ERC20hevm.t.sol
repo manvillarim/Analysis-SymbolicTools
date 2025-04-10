@@ -623,15 +623,15 @@ import "src/ERCFoundry/ERCFMock.sol";
 
     // Proves approve reverts on zero address for msg.sender.
     function proveFail_ApproveZeroAddressForMSGSender(address spender, uint256 amount) public { // Only hevm
-        require(msg.sender == address(0) && spender != address(0));
-        vm.prank(msg.sender);
+        require(spender != address(0));
+        vm.prank(address(0));
         token.approve(spender, amount);
     }
 
     // Proves approve reverts on zero address for spender.
-    function proveFail_ApproveZeroAddress(address spender, uint256 amount) public {
-        require(msg.sender != address(0) && spender == address(0));
-        vm.prank(msg.sender);
+    function proveFail_ApproveZeroAddress(address sender, address spender, uint256 amount) public {
+        require(sender != address(0) && spender == address(0));
+        vm.prank(sender);
         token.approve(spender, amount);
     }
 
@@ -654,9 +654,9 @@ import "src/ERCFoundry/ERCFMock.sol";
 
 
     // Proves transferFrom reverts on zero address for msg.sender.
-    function proveFail_TransferFromZeroAddressForMSGSender(address sender, address recipient, uint256 amount) public {
-        require(msg.sender == address(0) && recipient != address(0) && sender != address(0));
-            vm.prank(msg.sender);
+    function proveFail_TransferFromZeroAddressForMSGSender(address sender1, address sender, address recipient, uint256 amount) public {
+        require(sender1 == address(0) && recipient != address(0) && sender != address(0));
+            vm.prank(sender1);
             
             token.transferFrom(sender, recipient, amount);
     }

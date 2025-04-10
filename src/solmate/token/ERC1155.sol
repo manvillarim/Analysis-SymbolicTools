@@ -4,9 +4,7 @@ pragma solidity >=0.8.0;
 /// @notice Minimalist and gas efficient standard ERC1155 implementation.
 /// @author Solmate (https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC1155.sol)
 contract ERC1155S {
-    /*//////////////////////////////////////////////////////////////
-                                 EVENTS
-    //////////////////////////////////////////////////////////////*/
+
 
     event TransferSingle(
         address indexed operator,
@@ -28,23 +26,11 @@ contract ERC1155S {
 
     event URI(string value, uint256 indexed id);
 
-    /*//////////////////////////////////////////////////////////////
-                             ERC1155 STORAGE
-    //////////////////////////////////////////////////////////////*/
 
     mapping(address => mapping(uint256 => uint256)) public balanceOf;
 
     mapping(address => mapping(address => bool)) public isApprovedForAll;
 
-    /*//////////////////////////////////////////////////////////////
-                             METADATA LOGIC
-    //////////////////////////////////////////////////////////////*/
-
-    //function uri(uint256 id) public view virtual returns (string memory);
-
-    /*//////////////////////////////////////////////////////////////
-                              ERC1155 LOGIC
-    //////////////////////////////////////////////////////////////*/
 
     function setApprovalForAll(address operator, bool approved) public virtual {
         isApprovedForAll[msg.sender][operator] = approved;
@@ -86,7 +72,6 @@ contract ERC1155S {
 
         require(msg.sender == from || isApprovedForAll[from][msg.sender], "NOT_AUTHORIZED");
 
-        // Storing these outside the loop saves ~15 gas per iteration.
         uint256 id;
         uint256 amount;
 
@@ -97,8 +82,6 @@ contract ERC1155S {
             balanceOf[from][id] -= amount;
             balanceOf[to][id] += amount;
 
-            // An array can't have a total length
-            // larger than the max uint256 value.
             unchecked {
                 ++i;
             }
@@ -124,9 +107,6 @@ contract ERC1155S {
         require(owners.length == ids.length, "LENGTH_MISMATCH");
 
         balances = new uint256[](owners.length);
-
-        // Unchecked because the only math done is incrementing
-        // the array index counter which cannot possibly overflow.
         unchecked {
             for (uint256 i = 0; i < owners.length; ++i) {
                 balances[i] = balanceOf[owners[i]][ids[i]];
@@ -134,9 +114,7 @@ contract ERC1155S {
         }
     }
 
-    /*//////////////////////////////////////////////////////////////
-                              ERC165 LOGIC
-    //////////////////////////////////////////////////////////////*/
+
 
     function supportsInterface(bytes4 interfaceId) public view virtual returns (bool) {
         return
@@ -145,9 +123,6 @@ contract ERC1155S {
             interfaceId == 0x0e89341c; // ERC165 Interface ID for ERC1155MetadataURI
     }
 
-    /*//////////////////////////////////////////////////////////////
-                        INTERNAL MINT/BURN LOGIC
-    //////////////////////////////////////////////////////////////*/
 
     function _mint(
         address to,
@@ -181,8 +156,6 @@ contract ERC1155S {
         for (uint256 i = 0; i < idsLength; ) {
             balanceOf[to][ids[i]] += amounts[i];
 
-            // An array can't have a total length
-            // larger than the max uint256 value.
             unchecked {
                 ++i;
             }
@@ -211,8 +184,6 @@ contract ERC1155S {
         for (uint256 i = 0; i < idsLength; ) {
             balanceOf[from][ids[i]] -= amounts[i];
 
-            // An array can't have a total length
-            // larger than the max uint256 value.
             unchecked {
                 ++i;
             }
@@ -232,8 +203,6 @@ contract ERC1155S {
     }
 }
 
-/// @notice A generic interface for a contract which properly accepts ERC1155 tokens.
-/// @author Solmate (https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC1155.sol)
 abstract contract ERC1155TokenReceiver {
     function onERC1155Received(
         address,
