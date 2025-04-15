@@ -75,7 +75,7 @@ contract ERC1155ymbolicProperties is Test {
     }
 
     // prove_safeBatchTransferFrom: Transfers token from one account to another if conditions like approval and balances are met. Reverts otherwise.
-    function prove_safeBatchTransferFrom(uint256 initAmount, uint256[] memory ids, uint256[] memory values) public { // Require additional timeout
+    /*function prove_safeBatchTransferFrom(uint256 initAmount, uint256[] memory ids, uint256[] memory values) public { // Require additional timeout
         require(ids.length == values.length && ids.length == 2 && ids[0]!=ids[1]);
         bytes memory data = new bytes(3);
         uint256[] memory _balanceIdFrom = new uint256[](ids.length);
@@ -92,7 +92,7 @@ contract ERC1155ymbolicProperties is Test {
             assert(token.balanceOf(address(from), ids[i]) == _balanceIdFrom[i] - values[i]);
             assert(token.balanceOf(address(to), ids[i]) == _balanceIdTo[i] + values[i]);
         }
-    }
+    }*/
 
     // prove_mint: Mints new tokens for an account. Reverts if account is zero address.
    function prove_mint(uint256 id, uint256 amount) public {

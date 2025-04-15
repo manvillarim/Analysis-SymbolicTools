@@ -944,8 +944,28 @@ By using the counterexamples of halmos and hevm on the failed tests, interesting
 <br>
 
 ## HEVM
+| Function | Status |
+|--------|--------|
+| proveFail_burnZeroAddress | PASS |
+| proveFail_setApprovalForAllSenderEqualsOperator | PASS |
+| proveFail_mintZeroAddress | PASS |
+| proveFail_burnBalanceLessThanAmount | ERROR |
+| proveFail_safeTransferFromWhenSenderIsNotMSGSender | FAIL |
+| prove_mint | ERROR |
+| proveFail_safeTransferFromWhenSenderIsNotApprovedForAll | PASS |
+| prove_safeBatchTransferFrom | ERROR |
+| prove_safeTransferFrom | PASS |
+| prove_burn | PASS |
+| proveFail_safeTransferFromBalanceLessThanAmount | ERROR |
+| proveFail_safeTransferFromZeroAddressForTo | PASS |
+| prove_setApprovalForAll | PASS |
+| proveFail_safeTransferFromZeroAddressForFrom | PASS |
 
-Hevm was unable to complete the tests, the ram memory exceeded its limit during execution and the program crashed.
+**Total Tests Done:** 14
+**Total Tests Passed:** 9
+**Total Failed Tests:** 1
+
+Hevm was unable to complete some tests, the ram memory exceeded its limit during execution and the program crashed.
 
 <br>
 
