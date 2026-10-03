@@ -1,0 +1,7 @@
+Checking 1 function(s) in contract test/hevm/subjects/ERC4626_Solmate_Hevm.t.sol:ERC4626_Solmate_Hevm
+[96m[RUNNING][0m proveFail_mintWithMSGSenderEqualsThis(uint256,address)
+   Counterexample:   [90m[validated][0m
+     calldata: proveFail_mintWithMSGSenderEqualsThis(115792089237316195423570985008687907853269984665640564039457584007913129639935,0x0000000000000000000000000000000001000000)
+     result:   Successful execution
+   [31m[FAIL][0m proveFail_mintWithMSGSenderEqualsThis
+

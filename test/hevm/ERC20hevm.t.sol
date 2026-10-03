@@ -1,20 +1,19 @@
-//SPDX-License-Identifier:MIT
+// SPDX-License-Identifier: MIT
 pragma solidity >= 0.8.0;
 
 import {Test, console2} from "forge-std/Test.sol";
-import {ERC20Mock} from "lib/openzeppelin-contracts/contracts/mocks/token/ERC20Mock.sol";
-import {SafeERC20} from "lib/openzeppelin-contracts/contracts/token/ERC20/utils/SafeERC20.sol";
-import "src/solmate/token/ERC20SOLMock.sol";
-import "src/ERCFoundry/ERCFMock.sol";
+import "src/mocks/Interfaces.sol";
+import "src/mocks/Mocks.sol";
 
- contract ERC20SymbolicProperties is Test {
-    using SafeERC20 for ERC20FMock;
+abstract contract ERC20SymbolicProperties is Test {
 
-    ERC20FMock token;
+    ITokenERC20 token;
 
     function setUp() public {
-        token = new ERC20FMock();
+        token = ITokenERC20(_deployToken());
     }
+
+    function _deployToken() internal virtual returns (address);
 
     // Proves approving a spender to transfer tokens. Checks allowance is set correctly.
     function prove_Approve(address spender, uint256 amount) public { 
@@ -629,16 +628,15 @@ import "src/ERCFoundry/ERCFMock.sol";
     }
 
     // Proves approve reverts on zero address for spender.
-    function proveFail_ApproveZeroAddress(address sender, address spender, uint256 amount) public {
-        require(sender != address(0) && spender == address(0));
-        vm.prank(sender);
+    function proveFail_ApproveZeroAddress(address spender, uint256 amount) public {
+        require(msg.sender != address(0) && spender == address(0));
+        vm.prank(msg.sender);
         token.approve(spender, amount);
     }
 
     // Proves minting to zero address reverts.
     function proveFail_MintToZeroAddress(uint256 amount) public {
         require(amount > 0, "Invalid arguments");
-        vm.prank(address(0));
         token.mint(address(0), amount);
     }
 
@@ -654,11 +652,10 @@ import "src/ERCFoundry/ERCFMock.sol";
 
 
     // Proves transferFrom reverts on zero address for msg.sender.
-    function proveFail_TransferFromZeroAddressForMSGSender(address sender1, address sender, address recipient, uint256 amount) public {
-        require(sender1 == address(0) && recipient != address(0) && sender != address(0));
-            vm.prank(sender1);
-            
-            token.transferFrom(sender, recipient, amount);
+    function proveFail_TransferFromZeroAddressForMSGSender(address sender, address recipient, uint256 amount) public {
+        require(recipient != address(0) && sender != address(0));
+            vm.prank(address(0));
+        token.transferFrom(sender, recipient, amount);
     }
 
     // Proves that transferring more tokens than the sender has reverts
@@ -678,6 +675,45 @@ import "src/ERCFoundry/ERCFMock.sol";
                 token.transferFrom(sender, recipient, amount);
     }
 
+
+    // Proves for overflow when increasing allowance
+    function proveFail_TransferFromNotEnoughAmount(address sender, address recipient, uint256 amount) public {
+        require(msg.sender != address(0) && sender != address(0));
+            require(token.balanceOf(sender) >= amount && token.allowance(sender, msg.sender) >= amount && recipient != address(0));
+                require(type(uint256).max - token.balanceOf(recipient) < amount);
+                    vm.prank(msg.sender);
+                    
+                    token.transferFrom(sender, recipient, amount);
+    }
+
+    // Proves for overflow when increasing allowance
+    function proveFail_IncreaseAllowanceUnderAllowance(address spender, uint256 addedValue) public {
+        require(msg.sender != address(0) && spender != address(0));
+            uint256 _allowanceFromTo = token.allowance(msg.sender, spender);
+            require(_allowanceFromTo + addedValue < _allowanceFromTo || _allowanceFromTo + addedValue < addedValue);
+                vm.prank(msg.sender);
+                
+                token.approve(spender, _allowanceFromTo + addedValue);
+    }
+
+    // Proves for underflow when decreasing allowance
+    function proveFail_DecreaseAllowanceUnderAllowance(address spender, uint256 subtractedValue) public {
+        require(msg.sender != address(0) && spender != address(0));
+            vm.prank(msg.sender);
+            uint256 _allowanceFromTo = token.allowance(msg.sender, spender);
+            require(_allowanceFromTo < subtractedValue);
+                vm.prank(msg.sender);
+                
+                token.approve(spender, _allowanceFromTo - subtractedValue);
+    }
+
+    // Proves for overflow when minting tokens
+    function proveFail_MintUnderSupply(address account, uint256 amount) public {
+        require(account != address(0));
+            require(token.totalSupply() + amount < token.totalSupply() || token.totalSupply() + amount < amount);
+                
+                token.mint(account, amount);
+    }
 
     // Proves for underflow when burning tokens  
     function proveFail_BurnUnderSupply(address account, uint256 amount) public {

@@ -1,0 +1,17 @@
+\begin{table}[htb]
+\centering
+\begin{scriptsize}
+\begin{tabular}{llccccc}
+\toprule
+\textbf{Tool} & \textbf{Impl.} & \textbf{Pass} & \textbf{Bugs} & \textbf{FP} & \textbf{FN} & \textbf{Inc} \\
+\midrule
+\textbf{Halmos} & OpenZeppelin & 10 & 3 & 0 & 0 & 1 \\
+ & Solmate & 12 & 2 & 0 & 0 & 0 \\
+\textbf{Hevm} & OpenZeppelin & 9 & 1 & 1 & 0 & 3 \\
+ & Solmate & 9 & 1 & 1 & 0 & 3 \\
+\bottomrule
+\end{tabular}
+\end{scriptsize}
+\caption{ERC-721 test results (Pass/Bugs/FP/FN/Inc) for OpenZeppelin and Solmate implementations.}
+\label{tab:test_results_erc721}
+\end{table}

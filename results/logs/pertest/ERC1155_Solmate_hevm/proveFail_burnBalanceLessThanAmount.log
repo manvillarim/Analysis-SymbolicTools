@@ -1,0 +1,4 @@
+Checking 1 function(s) in contract test/hevm/subjects/ERC1155_Solmate_Hevm.t.sol:ERC1155_Solmate_Hevm
+[96m[RUNNING][0m proveFail_burnBalanceLessThanAmount(uint256,uint256,uint256)
+   [32m[PASS][0m proveFail_burnBalanceLessThanAmount
+

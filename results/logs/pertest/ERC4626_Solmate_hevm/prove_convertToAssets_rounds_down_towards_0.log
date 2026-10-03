@@ -1,0 +1,8 @@
+Checking 1 function(s) in contract test/hevm/subjects/ERC4626_Solmate_Hevm.t.sol:ERC4626_Solmate_Hevm
+[96m[RUNNING][0m prove_convertToAssets_rounds_down_towards_0(uint256)
+   [31m[FAIL][0m prove_convertToAssets_rounds_down_towards_0
+   [33m[WARNING][0m prove_convertToAssets_rounds_down_towards_0 all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_convertToAssets_rounds_down_towards_0 due to: 
+      4x -> Max iterations reached at addr: LitAddr 0xD95322745865822719164b1fC167930754c248DE at pc: 3854
+

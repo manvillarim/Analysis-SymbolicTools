@@ -1,0 +1,23 @@
+\begin{table}[!htbp]
+\centering
+\footnotesize
+\begin{tabular}{@{}llrr@{}}
+\toprule
+\textbf{Standard} & \textbf{Impl.} & \textbf{Halmos} & \textbf{Hevm} \\
+\midrule
+ERC-20   & OZ & 93.8\% & 67.7\% \\
+         & SM & 93.8\% & 66.2\% \\
+ERC-721  & OZ & 92.9\% & 71.4\% \\
+         & SM & 100.0\% & 71.4\% \\
+ERC-1155 & OZ & 100.0\% & 78.6\% \\
+         & SM & 100.0\% & 78.6\% \\
+ERC-4626 & OZ & 91.3\% & 47.8\% \\
+         & SM & 84.8\% & 54.3\% \\
+\midrule
+\multicolumn{2}{@{}l}{$P$ (all subjects)}      & 0.95 & 0.67 \\
+\multicolumn{2}{@{}l}{$P$ (without ERC-4626)}  & 0.97 & 0.72 \\
+\bottomrule
+\end{tabular}
+\caption{Accuracy per subject and overall reliability score $P$ (mean accuracy). OZ: OpenZeppelin; SM: Solmate.}
+\label{tab:accuracy}
+\end{table}

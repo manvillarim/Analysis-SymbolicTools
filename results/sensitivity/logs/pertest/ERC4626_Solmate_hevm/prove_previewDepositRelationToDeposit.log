@@ -1,0 +1,4 @@
+Checking 1 function(s) in contract test/hevm/subjects/ERC4626_Solmate_Hevm.t.sol:ERC4626_Solmate_Hevm
+[96m[RUNNING][0m prove_previewDepositRelationToDeposit(uint256,address)
+   [32m[PASS][0m prove_previewDepositRelationToDeposit
+

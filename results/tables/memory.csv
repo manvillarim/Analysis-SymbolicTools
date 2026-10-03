@@ -1,0 +1,17 @@
+subject,tool,mem_mean_mb,mem_max_mb
+ERC20_OpenZeppelin,halmos,502.9,515.9
+ERC20_OpenZeppelin,hevm,1035.5,1037.6
+ERC20_Solmate,halmos,488.3,488.8
+ERC20_Solmate,hevm,1324.7,1326.9
+ERC721_OpenZeppelin,halmos,490.7,502.5
+ERC721_OpenZeppelin,hevm,1013.3,1111.7
+ERC721_Solmate,halmos,486.9,501.8
+ERC721_Solmate,hevm,1014.7,1234.1
+ERC1155_OpenZeppelin,halmos,483.7,502.3
+ERC1155_OpenZeppelin,hevm,1658.8,1661.9
+ERC1155_Solmate,halmos,499.9,503.6
+ERC1155_Solmate,hevm,874.6,896.1
+ERC4626_OpenZeppelin,halmos,2010.0,2189.4
+ERC4626_OpenZeppelin,hevm,6325.4,6413.5
+ERC4626_Solmate,halmos,5995.6,6101.4
+ERC4626_Solmate,hevm,4245.5,4349.1

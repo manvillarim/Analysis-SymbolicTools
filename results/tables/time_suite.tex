@@ -1,0 +1,21 @@
+\begin{table}[htb]
+\centering
+\begin{scriptsize}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Subject} & \textbf{Halmos Real} & \textbf{Halmos User} & \textbf{Halmos Sys} & \textbf{Hevm Real} & \textbf{Hevm User} & \textbf{Hevm Sys} \\
+\midrule
+ERC-20 OpenZeppelin & 8.14s ($\pm$0.17s) & 6.92s & 0.64s & 14m39.1s ($\pm$1.51s) & 14m45.7s & 2.05s \\
+ERC-20 Solmate & 8.64s ($\pm$0.14s) & 6.90s & 0.65s & 6m23.7s ($\pm$0.24s) & 10m14.7s & 1.86s \\
+ERC-721 OpenZeppelin & 3.92s ($\pm$0.09s) & 3.32s & 0.39s & 1m10.8s ($\pm$0.11s) & 1m14.3s & 1.35s \\
+ERC-721 Solmate & 3.87s ($\pm$0.00s) & 3.25s & 0.38s & 33.04s ($\pm$0.21s) & 36.08s & 1.15s \\
+ERC-1155 OpenZeppelin & 3.69s ($\pm$0.06s) & 3.28s & 0.35s & 5m48.5s ($\pm$0.51s)$^{\dagger1}$ & 5m58.2s & 1.29s \\
+ERC-1155 Solmate & 4.55s ($\pm$0.20s) & 4.24s & 0.46s & 3.72s ($\pm$0.09s)$^{\dagger1}$ & 5.61s & 0.56s \\
+ERC-4626 OpenZeppelin & 41.24s ($\pm$0.72s)$^{\dagger2}$ & 56.34s & 4.28s & 6m14.4s ($\pm$0.25s) & 9m57.0s & 28.59s \\
+ERC-4626 Solmate & 1m08.6s ($\pm$0.11s)$^{\dagger2}$ & 1m03.9s & 3.00s & 38m23.4s ($\pm$1.61s)$^{\dagger1}$ & 42m53.1s & 22.02s \\
+\bottomrule
+\end{tabular}
+\end{scriptsize}
+\caption{Average suite execution time over 10 runs (mean $\pm$ standard deviation). $\dagger n$: $n$ test cases excluded because they did not terminate (timeout, out of memory or tool crash).}
+\label{tab:time_all}
+\end{table}

@@ -1,0 +1,2 @@
+halmos: --solver z3
+hevm: 

@@ -1,0 +1,26 @@
+\begin{table}[htbp]
+\centering
+\begin{scriptsize}
+\begin{tabular}{llrrrrrr}
+\toprule
+ & & \multicolumn{3}{c}{\textbf{Halmos}} & \multicolumn{3}{c}{\textbf{Hevm}} \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-8}
+\textbf{Standard} & \textbf{Impl.} & Inc & Inc$\rightarrow$Pass & New fail & Inc & Inc$\rightarrow$Pass & New fail \\
+\midrule
+ERC-20 & OpenZeppelin & 4 $\rightarrow$ 4 & 0 & 0 & 21 $\rightarrow$ 1 & 20 & 0 \\
+ & Solmate & 4 $\rightarrow$ 4 & 0 & 0 & 21 $\rightarrow$ 0 & 21 & 0 \\
+\addlinespace
+ERC-721 & OpenZeppelin & 1 $\rightarrow$ 1 & 0 & 0 & 3 $\rightarrow$ 1 & 2 & 0 \\
+ & Solmate & 0 $\rightarrow$ 0 & 0 & 0 & 3 $\rightarrow$ 0 & 3 & 0 \\
+\addlinespace
+ERC-1155 & OpenZeppelin & 0 $\rightarrow$ 0 & 0 & 0 & 3 $\rightarrow$ 2 & 1 & 0 \\
+ & Solmate & 0 $\rightarrow$ 0 & 0 & 0 & 2 $\rightarrow$ 1 & 1 & 0 \\
+\addlinespace
+ERC-4626 & OpenZeppelin & 4 $\rightarrow$ 4 & 0 & 0 & 24 $\rightarrow$ 18 & 6 & 0 \\
+ & Solmate & 7 $\rightarrow$ 7 & 0 & 0 & 21 $\rightarrow$ 16 & 5 & 0 \\
+\bottomrule
+\end{tabular}
+\end{scriptsize}
+\caption{Inconclusive verdicts reported with the default configuration $\rightarrow$ with larger exploration bounds (Halmos: \texttt{--loop 4 --solver-timeout-assertion 600s}; Hevm: \texttt{--max-iterations 20 --smt-timeout 600}), inconclusive verdicts that became Pass, and new failures. Inconclusive verdicts as defined in Section~\ref{sec:methodology}.}
+\label{tab:sensitivity}
+\end{table}

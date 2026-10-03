@@ -1,0 +1,9 @@
+Checking 1 function(s) in contract test/hevm/subjects/ERC4626_Solmate_Hevm.t.sol:ERC4626_Solmate_Hevm
+[96m[RUNNING][0m proveFail_withdrawWithMSGSenderEqualsOwner(address,address,uint256,uint256,address,address)
+   Counterexample:   [33m[error attempting to reproduce: AbstractBuf "txdata" --- cannot flatten buffer: Comp Base {byte = 0, length = 0x8000000000000001}][0m
+     calldata: proveFail_withdrawWithMSGSenderEqualsOwner(AbstractBuf "txdata" --- cannot flatten buffer: Comp Base {byte = 0, length = 0x8000000000000001})
+     result:   Successful execution
+   [31m[FAIL][0m proveFail_withdrawWithMSGSenderEqualsOwner
+   [33m[WARNING][0m hevm was only able to partially explore the test proveFail_withdrawWithMSGSenderEqualsOwner due to: 
+      2x -> SMT solver says: Unable to parse SMT solver output (maybe it got killed?): (error "out of memory")
+

@@ -1,22 +1,23 @@
-// SPDX-License-Identifier: AGPL-3.0-only
-pragma solidity ^0.8.17;
+// SPDX-License-Identifier: MIT
+pragma solidity >= 0.8.0;
 
 import {Test, console2} from "forge-std/Test.sol";
-import {ERC20Mock} from "lib/openzeppelin-contracts/contracts/mocks/token/ERC20Mock.sol";
-import {ERC4626Mock} from "lib/openzeppelin-contracts/contracts/mocks/token/ERC4626Mock.sol";
+import "src/mocks/Interfaces.sol";
+import "src/mocks/Mocks.sol";
 import {Math} from "lib/openzeppelin-contracts/contracts/utils/math/Math.sol";
-import "src/solmate/token/ERC4626Mock.sol";
-import "src/solmate/token/ERC20SOLMock.sol";
 
-contract ERC4626SymbolicProperties is Test {
+abstract contract ERC4626SymbolicProperties is Test {
     using Math for uint256;
-    ERC20SolMock asset;
-    ERC4626SMock vault;
+    ITokenERC20 asset;
+    IVaultERC4626 vault;
 
     function setUp() public {
-        asset = new ERC20SolMock();
-        vault = new ERC4626SMock(asset);
+        asset = ITokenERC20(_deployAsset());
+        vault = IVaultERC4626(_deployVault(address(asset)));
     }
+
+    function _deployAsset() internal virtual returns (address);
+    function _deployVault(address underlying) internal virtual returns (address);
 
     // Proves that minting tokens increases the balance of the recipient
     function prove_mint_increases_balance(address recipient, uint256 amount) public {

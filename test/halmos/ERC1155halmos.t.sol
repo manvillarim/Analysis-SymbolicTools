@@ -2,21 +2,8 @@
 pragma solidity >= 0.8.0;
 
 import {Test, console2} from "forge-std/Test.sol";
-import {ERC1155} from "lib/openzeppelin-contracts/contracts/token/ERC1155/ERC1155.sol"; // A contract to be formally verified
-import "src/solmate/token/ERC1155.sol";
-
-contract ERC1155C is ERC1155 {
-    constructor(string memory uri_) ERC1155(uri_) {}
-
-
-    function mint(address to, uint256 id, uint256 value, bytes memory data) public {
-        _mint(to, id, value, data);
-    }
-
-    function burn(address from, uint256 id, uint256 value) public {
-        _burn(from, id, value);
-    }
-}
+import "src/mocks/Interfaces.sol";
+import "src/mocks/Mocks.sol";
 
 contract ERC1155RecTest {
     
@@ -40,18 +27,19 @@ contract ERC1155RecTest {
         return ERC1155RecTest.onERC1155BatchReceived.selector;
     }
 }
+abstract contract ERC1155ymbolicPropertieshalmos is Test {
 
-contract ERC1155ymbolicPropertieshalmos is Test {
-
-    ERC1155C token;
+    ITokenERC1155 token;
     ERC1155RecTest from;
     ERC1155RecTest to;
 
     function setUp() public {
-        token = new ERC1155C("ERC1155");
+        token = ITokenERC1155(_deployToken());
         from = new ERC1155RecTest();
         to = new ERC1155RecTest();
     }
+
+    function _deployToken() internal virtual returns (address);
 
     // prove_setApprovalForAll: Sets approval for operator to manage caller's tokens. Reverts if operator is caller.    
     function prove_setApprovalForAll(address operator, bool approved) public {

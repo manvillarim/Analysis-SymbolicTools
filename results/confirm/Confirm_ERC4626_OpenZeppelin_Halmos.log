@@ -1,0 +1,69 @@
+Unable to resolve imports:
+      "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol" in "/home/manoel/projeto/hevm/src/mocks/Mocks.sol"
+      "lib/solmate/src/tokens/ERC1155.sol" in "/home/manoel/projeto/hevm/src/mocks/Mocks.sol"
+      "lib/openzeppelin-contracts/contracts/mocks/token/ERC4626Mock.sol" in "/home/manoel/projeto/hevm/src/mocks/Mocks.sol"
+      "lib/solmate/src/tokens/ERC4626.sol" in "/home/manoel/projeto/hevm/src/mocks/Mocks.sol"
+      "lib/openzeppelin-contracts/contracts/mocks/token/ERC20Mock.sol" in "/home/manoel/projeto/hevm/src/mocks/Mocks.sol"
+      "lib/solmate/src/tokens/ERC20.sol" in "/home/manoel/projeto/hevm/src/mocks/Mocks.sol"
+      "lib/openzeppelin-contracts/contracts/token/ERC1155/ERC1155.sol" in "/home/manoel/projeto/hevm/src/mocks/Mocks.sol"
+      "lib/solmate/src/tokens/ERC721.sol" in "/home/manoel/projeto/hevm/src/mocks/Mocks.sol"
+with remappings:
+      @openzeppelin/contracts/=/home/manoel/projeto/hevm/lib/openzeppelin-contracts/contracts/
+      ds-test/=/home/manoel/projeto/hevm/lib/solmate/lib/ds-test/src/
+      erc4626-tests/=/home/manoel/projeto/hevm/lib/openzeppelin-contracts/lib/erc4626-tests/
+      forge-std/=/home/manoel/projeto/hevm/lib/forge-std/src/
+      halmos-cheatcodes/=/home/manoel/projeto/hevm/lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/
+      openzeppelin-contracts/=/home/manoel/projeto/hevm/lib/openzeppelin-contracts/contracts/
+      solmate/=/home/manoel/projeto/hevm/lib/solmate/src/
+Compiling 68 files with Solc 0.8.30
+Solc 0.8.30 finished in 924.53ms
+Compiler run successful!
+
+Ran 11 tests for test/confirm/Confirm_ERC4626_OpenZeppelin_Halmos.t.sol:Confirm_ERC4626_OpenZeppelin_Halmos
+[PASS] test_cex_0() (gas: 83178)
+Logs:
+  OUTCOME 0 panic:1
+
+[PASS] test_cex_1() (gas: 77644)
+Logs:
+  OUTCOME 1 panic:1
+
+[PASS] test_cex_10() (gas: 91727)
+Logs:
+  OUTCOME 10 panic:1
+
+[PASS] test_cex_2() (gas: 80517)
+Logs:
+  OUTCOME 2 panic:1
+
+[PASS] test_cex_3() (gas: 77681)
+Logs:
+  OUTCOME 3 panic:1
+
+[PASS] test_cex_4() (gas: 80511)
+Logs:
+  OUTCOME 4 panic:1
+
+[PASS] test_cex_5() (gas: 91749)
+Logs:
+  OUTCOME 5 panic:1
+
+[PASS] test_cex_6() (gas: 88874)
+Logs:
+  OUTCOME 6 panic:1
+
+[PASS] test_cex_7() (gas: 91834)
+Logs:
+  OUTCOME 7 panic:1
+
+[PASS] test_cex_8() (gas: 91748)
+Logs:
+  OUTCOME 8 panic:1
+
+[PASS] test_cex_9() (gas: 91684)
+Logs:
+  OUTCOME 9 panic:1
+
+Suite result: ok. 11 passed; 0 failed; 0 skipped; finished in 1.82ms (4.30ms CPU time)
+
+Ran 1 test suite in 8.66ms (1.82ms CPU time): 11 tests passed, 0 failed, 0 skipped (11 total tests)

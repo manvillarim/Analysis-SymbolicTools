@@ -1,0 +1,21 @@
+\begin{table}[!htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}llrrrrrr@{}}
+\toprule
+\textbf{Std.} & \textbf{Impl.} & $t$ & df & $p_{\mathrm{W}}$ & $U$ & $p_{\mathrm{MW}}$ & $\hat{A}_{12}$ \\
+\midrule
+ERC-20   & OZ & 1806.2 & 9.2 & $6.0{\cdot}10^{-27}$ & 100 & $1.1{\cdot}10^{-5}$ & 1.00 \\
+         & SM & 4331.6 & 14.4 & $1.5{\cdot}10^{-45}$ & 100 & $1.1{\cdot}10^{-5}$ & 1.00 \\
+ERC-721  & OZ & 1496.7 & 16.8 & $1.6{\cdot}10^{-44}$ & 100 & $1.1{\cdot}10^{-5}$ & 1.00 \\
+         & SM & 445.2 & 9.0 & $7.3{\cdot}10^{-21}$ & 100 & $1.1{\cdot}10^{-5}$ & 1.00 \\
+ERC-1155 & OZ & 2128.0 & 9.3 & $1.0{\cdot}10^{-27}$ & 100 & $1.1{\cdot}10^{-5}$ & 1.00 \\
+         & SM & $-12.2$ & 12.4 & $2.8{\cdot}10^{-8}$ & 0 & $1.1{\cdot}10^{-5}$ & 0.00 \\
+ERC-4626 & OZ & 1379.8 & 11.1 & $1.6{\cdot}10^{-30}$ & 100 & $1.1{\cdot}10^{-5}$ & 1.00 \\
+         & SM & 4385.5 & 9.1 & $4.9{\cdot}10^{-30}$ & 100 & $1.1{\cdot}10^{-5}$ & 1.00 \\
+\bottomrule
+\end{tabular}
+\caption{Welch's two-sample $t$-test ($p_{\mathrm{W}}$) and exact Mann-Whitney $U$ test ($p_{\mathrm{MW}}$) on the real execution time of the complete suite (10 runs per tool), and Vargha-Delaney effect size $\hat{A}_{12}$ (probability that a Hevm run is slower than a Halmos run). OZ: OpenZeppelin; SM: Solmate.}
+\label{tab:stats}
+\end{table}

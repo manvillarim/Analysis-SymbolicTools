@@ -2,20 +2,8 @@
 pragma solidity >= 0.8.0;
 
 import {Test, console2} from "forge-std/Test.sol";
-import {ERC1155} from "lib/openzeppelin-contracts/contracts/token/ERC1155/ERC1155.sol"; // A contract to be formally verified
-import "src/solmate/token/ERC1155.sol";
-
-contract ERC1155C is ERC1155 {
-    constructor() ERC1155("oi") {}
-
-    function mint(address to, uint256 id, uint256 value, bytes memory data) public {
-        _mint(to, id, value, data);
-    }
-
-    function burn(address from, uint256 id, uint256 value) public {
-        _burn(from, id, value);
-    }
-}
+import "src/mocks/Interfaces.sol";
+import "src/mocks/Mocks.sol";
 
 contract ERC1155RecTest {
     
@@ -39,75 +27,75 @@ contract ERC1155RecTest {
         return ERC1155RecTest.onERC1155BatchReceived.selector;
     }
 }
+abstract contract ERC1155ymbolicProperties is Test {
 
-
-contract ERC1155ymbolicProperties is Test {
-
-    ERC1155C token;
+    ITokenERC1155 token;
     ERC1155RecTest from;
     ERC1155RecTest to;
 
     function setUp() public {
-        token = new ERC1155C();
+        token = ITokenERC1155(_deployToken());
         from = new ERC1155RecTest();
         to = new ERC1155RecTest();
     }
+
+    function _deployToken() internal virtual returns (address);
 
     // prove_setApprovalForAll: Sets approval for operator to manage caller's tokens. Reverts if operator is caller.    
     function prove_setApprovalForAll(address operator, bool approved) public {
         require(msg.sender != operator && operator != address(0));
         vm.prank(msg.sender);
-        token.setApprovalForAll(operator, approved);
+        try token.setApprovalForAll(operator, approved) {} catch{assert(false);}
         assert(token.isApprovedForAll(msg.sender, operator)==approved);
     }
 
     // prove_safeTransferFrom: Transfers token from one account to another if conditions like approval and balances are met. Reverts otherwise.
     function prove_safeTransferFrom(uint256 id, uint256 initAmount, uint256 amount) public { // Not OK
         bytes memory data = new bytes(3);
-        token.mint(address(from), id, initAmount, data);
+        try token.mint(address(from), id, initAmount, data) {} catch {assert(false);}
         uint256 _balanceIdFrom = token.balanceOf(address(from), id);
         uint256 _balanceIdTo = token.balanceOf(address(to), id);
         require(_balanceIdFrom >= amount);
         vm.prank(address(from));
-        token.safeTransferFrom(address(from), address(to), id, amount, data);
+        try token.safeTransferFrom(address(from), address(to), id, amount, data) {} catch {assert(false);}
         assert(token.balanceOf(address(from), id) == _balanceIdFrom - amount);
         assert(token.balanceOf(address(to), id) == _balanceIdTo + amount);
     }
 
     // prove_safeBatchTransferFrom: Transfers token from one account to another if conditions like approval and balances are met. Reverts otherwise.
-    /*function prove_safeBatchTransferFrom(uint256 initAmount, uint256[] memory ids, uint256[] memory values) public { // Require additional timeout
+    function prove_safeBatchTransferFrom(uint256 initAmount, uint256[] memory ids, uint256[] memory values) public { // Require additional timeout
         require(ids.length == values.length && ids.length == 2 && ids[0]!=ids[1]);
         bytes memory data = new bytes(3);
         uint256[] memory _balanceIdFrom = new uint256[](ids.length);
         uint256[] memory _balanceIdTo = new uint256[](ids.length);
         for(uint8 i=0; i<ids.length; i++) {
-            token.mint(address(from), ids[i], initAmount, data);
+            try token.mint(address(from), ids[i], initAmount, data) {} catch {assert(false);}
             _balanceIdFrom[i] = token.balanceOf(address(from), ids[i]);
             _balanceIdTo[i] = token.balanceOf(address(to), ids[i]);
             require(_balanceIdFrom[i] >= values[i]);
         }
         vm.prank(address(from));
-        token.safeBatchTransferFrom(address(from), address(to), ids, values, data);
+        try token.safeBatchTransferFrom(address(from), address(to), ids, values, data) {} catch {assert(false);}
         for(uint8 i=0; i<ids.length; i++) {
             assert(token.balanceOf(address(from), ids[i]) == _balanceIdFrom[i] - values[i]);
             assert(token.balanceOf(address(to), ids[i]) == _balanceIdTo[i] + values[i]);
         }
-    }*/
+    }
 
     // prove_mint: Mints new tokens for an account. Reverts if account is zero address.
-   function prove_mint(uint256 id, uint256 amount) public {
+    function prove_mint(uint256 id, uint256 amount) public {
         bytes memory data;
         uint256 _balanceAcc = token.balanceOf(address(from), id);
-        token.mint(address(from), id, amount, data);
+        try token.mint(address(from), id, amount, data) {} catch{assert(false);}
         assert(token.balanceOf(address(from), id) == _balanceAcc + amount);
     }
 
     // prove_burn: Burns tokens of an account if balance allows. Reverts if account is zero address or balance less than amount.
     function prove_burn(uint256 id, uint256 amount) public {
         bytes memory data;
-        token.mint(address(from), id, amount, data);
+        try token.mint(address(from), id, amount, data) {} catch{assert(false);}
         uint256 _balanceAcc = token.balanceOf(address(from), id);
-        token.burn(address(from), id, amount);
+        try token.burn(address(from), id, amount) {} catch {assert(false);}
         assert(token.balanceOf(address(from), id) == _balanceAcc - amount);
     }
 

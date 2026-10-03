@@ -1,0 +1,7 @@
+Checking 1 function(s) in contract test/hevm/subjects/ERC20_Solmate_Hevm.t.sol:ERC20_Solmate_Hevm
+[96m[RUNNING][0m proveFail_TransferFromZeroAddressForMSGSender(address,address,uint256)
+   Counterexample:   [90m[validated][0m
+     calldata: proveFail_TransferFromZeroAddressForMSGSender(0x0000040000000100000000000800010000000000,0x0000000000000000000000000000400000000000,0)
+     result:   Successful execution
+   [31m[FAIL][0m proveFail_TransferFromZeroAddressForMSGSender
+

@@ -1,0 +1,8 @@
+Checking 1 function(s) in contract test/hevm/subjects/ERC4626_OpenZeppelin_Hevm.t.sol:ERC4626_OpenZeppelin_Hevm
+[96m[RUNNING][0m prove_share_price_maintained_after_mint(uint256,address)
+   [31m[FAIL][0m prove_share_price_maintained_after_mint
+   [33m[WARNING][0m prove_share_price_maintained_after_mint all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_share_price_maintained_after_mint due to: 
+      8x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 20 : "contract OpenZeppelinERC20 is OZERC20Mock {}"
+

@@ -1,0 +1,71 @@
+halmos ERC1155_Solmate      proveFail_burnZeroAddress(uint256,uint256)                             panic:1                                                      confirmed
+halmos ERC1155_Solmate      proveFail_setApprovalForAllSenderEqualsOperator(address,bool)          panic:1                                                      confirmed
+halmos ERC20_Solmate        proveFail_ApproveFromZeroAddress(address,uint256)                      panic:1                                                      confirmed
+halmos ERC20_Solmate        proveFail_ApproveToZeroAddress(address,uint256)                        panic:1                                                      confirmed
+halmos ERC20_Solmate        proveFail_ApproveZeroAddress(address,uint256)                          panic:1                                                      confirmed
+halmos ERC20_Solmate        proveFail_ApproveZeroAddressForMSGSender(address,uint256)              panic:1                                                      confirmed
+halmos ERC20_Solmate        proveFail_MintToZeroAddress(uint256)                                   panic:1                                                      confirmed
+halmos ERC20_Solmate        proveFail_TransferFromToZeroAddress33(address,address,uint256)         panic:1                                                      confirmed
+halmos ERC20_Solmate        proveFail_TransferFromToZeroAddress33(address,address,uint256)         panic:1                                                      confirmed
+halmos ERC20_Solmate        proveFail_TransferFromZeroAddressForMSGSender(address,address,uint256) panic:1                                                      confirmed
+halmos ERC20_Solmate        proveFail_TransferFromZeroAmountToZeroAddressReverts(address,address)  panic:1                                                      confirmed
+halmos ERC20_Solmate        proveFail_TransferToZeroAddress(address,uint256)                       panic:1                                                      confirmed
+halmos ERC20_Solmate        proveFail_TransferZeroAmountToZeroAddressReverts(address)              panic:1                                                      confirmed
+halmos ERC4626_OpenZeppelin proveFail_mintWithReceiverAsThis(address,address,uint256,uint256,address) panic:1                                                      confirmed
+halmos ERC4626_OpenZeppelin proveFail_redeemWithMSGSenderEqualsThis(address,address,uint256,uint256,address,address) panic:1                                                      confirmed
+halmos ERC4626_OpenZeppelin proveFail_redeemWithMSGSenderEqualsThis(address,address,uint256,uint256,address,address) panic:1                                                      confirmed
+halmos ERC4626_OpenZeppelin proveFail_redeemWithReceiverEqualsThis(address,address,uint256,uint256,address,address) panic:1                                                      confirmed
+halmos ERC4626_OpenZeppelin proveFail_redeemWithReceiverEqualsThis(address,address,uint256,uint256,address,address) panic:1                                                      confirmed
+halmos ERC4626_OpenZeppelin proveFail_withdrawWithAmountLessThanAssets(address,address,uint256,uint256,address,address) panic:1                                                      confirmed
+halmos ERC4626_OpenZeppelin proveFail_withdrawWithMSGSenderEqualsOwner(address,address,uint256,uint256,address,address) panic:1                                                      confirmed
+halmos ERC4626_OpenZeppelin proveFail_withdrawWithMSGSenderEqualsThis(address,address,uint256,uint256,address,address) panic:1                                                      confirmed
+halmos ERC4626_OpenZeppelin proveFail_withdrawWithOwnerEqualsReceiver(address,address,uint256,uint256,address,address) panic:1                                                      confirmed
+halmos ERC4626_OpenZeppelin proveFail_withdrawWithOwnerEqualsThis(address,address,uint256,uint256,address,address) panic:1                                                      confirmed
+halmos ERC4626_OpenZeppelin proveFail_withdrawWithReceiverEqualsThis(address,address,uint256,uint256,address,address) panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_approvefrom_zero_address_reverts(address,uint256)            panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_approvezero_address_reverts(address,uint256)                 panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_burn_from_zero_address_reverts(uint256)                      panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_mintWithReceiverAsThis(address,address,uint256,uint256,address) panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_mint_to_zero_address_reverts(uint256)                        panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_transferFrom_from_zero_address_reverts(address,address,uint256) panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_transferFrom_to_zero_address_reverts(address,address,uint256) panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_transferFrom_to_zero_address_reverts(address,address,uint256) panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_transfer_from_zero_address_reverts(address,uint256)          panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_transfer_to_zero_address_reverts(address,uint256)            panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_withdrawWithAmountLessThanAssets(address,address,uint256,uint256,address,address) panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_withdrawWithMSGSenderEqualsOwner(address,address,uint256,uint256,address,address) panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_withdrawWithMSGSenderEqualsThis(address,address,uint256,uint256,address,address) panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_withdrawWithOwnerEqualsReceiver(address,address,uint256,uint256,address,address) panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_withdrawWithOwnerEqualsThis(address,address,uint256,uint256,address,address) panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_withdrawWithReceiverEqualsThis(address,address,uint256,uint256,address,address) panic:1                                                      confirmed
+halmos ERC721_OpenZeppelin  proveFail_ApproveWhenIsNotApprovedForAll(address,address,uint256)      panic:1                                                      confirmed
+halmos ERC721_OpenZeppelin  proveFail_setApprovalForAll(address,address,bool)                      panic:1                                                      confirmed
+halmos ERC721_OpenZeppelin  prove_safeTransferFrom(address,uint256)                                panic:1                                                      confirmed
+halmos ERC721_Solmate       proveFail_setApprovalForAll(address,address,bool)                      panic:1                                                      confirmed
+halmos ERC721_Solmate       prove_safeTransferFrom(address,uint256)                                panic:1                                                      confirmed
+hevm   ERC1155_OpenZeppelin proveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256,uint256)    hevm:validated; foundry-replay:revert:0xe237d922000000000000 confirmed
+hevm   ERC1155_Solmate      proveFail_burnZeroAddress(uint256,uint256)                             hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC1155_Solmate      proveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256,uint256)    hevm:validated; foundry-replay:revert:0x08c379a0000000000000 confirmed
+hevm   ERC20_Solmate        proveFail_ApproveFromZeroAddress(address,uint256)                      hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC20_Solmate        proveFail_ApproveToZeroAddress(address,uint256)                        hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC20_Solmate        proveFail_ApproveZeroAddressForMSGSender(address,uint256)              hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC20_Solmate        proveFail_MintToZeroAddress(uint256)                                   hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC20_Solmate        proveFail_TransferFromToZeroAddress33(address,address,uint256)         hevm:validated; foundry-replay:panic:17                      confirmed
+hevm   ERC20_Solmate        proveFail_TransferFromZeroAddressForMSGSender(address,address,uint256) hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC20_Solmate        proveFail_TransferFromZeroAmountToZeroAddressReverts(address,address)  hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC20_Solmate        proveFail_TransferToZeroAddress(address,uint256)                       hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC20_Solmate        proveFail_TransferZeroAmountToZeroAddressReverts(address)              hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC4626_OpenZeppelin proveFail_mintWithMSGSenderEqualsThis(uint256,address)                 hevm:validated; foundry-replay:revert:0x08c379a0000000000000 confirmed
+hevm   ERC4626_Solmate      proveFail_approvefrom_zero_address_reverts(address,uint256)            hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC4626_Solmate      proveFail_approvezero_address_reverts(address,uint256)                 hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC4626_Solmate      proveFail_burn_from_zero_address_reverts(uint256)                      hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC4626_Solmate      proveFail_mintWithMSGSenderEqualsThis(uint256,address)                 hevm:validated; foundry-replay:revert:0x08c379a0000000000000 confirmed
+hevm   ERC4626_Solmate      proveFail_mint_to_zero_address_reverts(uint256)                        hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC4626_Solmate      proveFail_transferFrom_from_zero_address_reverts(address,address,uint256) hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC4626_Solmate      proveFail_transferFrom_to_zero_address_reverts(address,address,uint256) hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC4626_Solmate      proveFail_transfer_from_zero_address_reverts(address,uint256)          hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC4626_Solmate      proveFail_transfer_to_zero_address_reverts(address,uint256)            hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC721_OpenZeppelin  proveFail_setApprovalForAll(address,address,bool)                      hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC721_OpenZeppelin  prove_safeTransferFrom(address,uint256)                                hevm:not reproducible; foundry-replay:revert:0x              refuted
+hevm   ERC721_Solmate       proveFail_setApprovalForAll(address,address,bool)                      hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC721_Solmate       prove_safeTransferFrom(address,uint256)                                hevm:not reproducible; foundry-replay:revert:0x              refuted

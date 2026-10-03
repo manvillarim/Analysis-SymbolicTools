@@ -1,0 +1,3 @@
+tool,P_all,P_without_ERC4626,n_subjects
+halmos,0.9458,0.9676,8
+hevm,0.67,0.7231,8

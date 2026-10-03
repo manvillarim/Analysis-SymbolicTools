@@ -1,0 +1,17 @@
+\begin{table}[htb]
+\centering
+\begin{scriptsize}
+\begin{tabular}{llccccc}
+\toprule
+\textbf{Tool} & \textbf{Impl.} & \textbf{Pass} & \textbf{Bugs} & \textbf{FP} & \textbf{FN} & \textbf{Inc} \\
+\midrule
+\textbf{Halmos} & OpenZeppelin & 33 & 9 & 0 & 0 & 4 \\
+ & Solmate & 24 & 15 & 0 & 0 & 7 \\
+\textbf{Hevm} & OpenZeppelin & 21 & 1 & 0 & 0 & 24 \\
+ & Solmate & 16 & 9 & 0 & 0 & 21 \\
+\bottomrule
+\end{tabular}
+\end{scriptsize}
+\caption{ERC-4626 test results (Pass/Bugs/FP/FN/Inc) for OpenZeppelin and Solmate implementations.}
+\label{tab:test_results_erc4626}
+\end{table}

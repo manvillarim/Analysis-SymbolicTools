@@ -1,0 +1,4 @@
+Checking 1 function(s) in contract test/hevm/subjects/ERC20_OpenZeppelin_Hevm.t.sol:ERC20_OpenZeppelin_Hevm
+[96m[RUNNING][0m prove_TokenReceiverCanTransferFromTotalBalanceZero(address,address,address)
+   [32m[PASS][0m prove_TokenReceiverCanTransferFromTotalBalanceZero
+

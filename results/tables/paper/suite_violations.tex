@@ -1,0 +1,29 @@
+\begin{table}[htbp]
+\centering
+\begin{scriptsize}
+\begin{tabular}{@{}l l l >{\raggedright\arraybackslash}p{0.34\textwidth} l l@{}}
+\toprule
+\textbf{Subject} & \textbf{Function} & \textbf{Zero address as} & \textbf{Test cases} & \textbf{Halmos} & \textbf{Hevm} \\
+\midrule
+ERC-20 Solmate & \texttt{approve} & caller & \tn{proveFail_ApproveFromZeroAddress}, \tn{proveFail_ApproveZeroAddressForMSGSender} & Viol., Viol. & Viol., Viol. \\
+ERC-20 Solmate & \texttt{approve} & spender & \tn{proveFail_ApproveToZeroAddress}, \tn{proveFail_ApproveZeroAddress} & Viol., Viol. & Viol., Pass \\
+ERC-20 Solmate & \texttt{mint} & recipient & \tn{proveFail_MintToZeroAddress} & Viol. & Viol. \\
+ERC-20 Solmate & \texttt{transfer} & recipient & \tn{proveFail_TransferToZeroAddress}, \tn{proveFail_TransferZeroAmountToZeroAddressReverts} & Viol., Viol. & Viol., Viol. \\
+ERC-20 Solmate & \texttt{transferFrom} & caller & \tn{proveFail_TransferFromZeroAddressForMSGSender} & Viol. & Viol. \\
+ERC-20 Solmate & \texttt{transferFrom} & recipient & \tn{proveFail_TransferFromToZeroAddress33}, \tn{proveFail_TransferFromZeroAmountToZeroAddressReverts} & Viol., Viol. & Viol., Viol. \\
+ERC-1155 Solmate & \texttt{burn} & holder & \tn{proveFail_burnZeroAddress} & Viol. & Viol. \\
+ERC-1155 Solmate & \texttt{setApprovalForAll} & operator & \tn{proveFail_setApprovalForAllSenderEqualsOperator} & Viol. & Pass \\
+ERC-4626 Solmate & \texttt{approve} & caller & \tn{proveFail_approvefrom_zero_address_reverts} & Viol. & Viol. \\
+ERC-4626 Solmate & \texttt{approve} & spender & \tn{proveFail_approvezero_address_reverts} & Viol. & Viol. \\
+ERC-4626 Solmate & \texttt{burn} & holder & \tn{proveFail_burn_from_zero_address_reverts} & Viol. & Viol. \\
+ERC-4626 Solmate & \texttt{mint} & recipient & \tn{proveFail_mint_to_zero_address_reverts} & Viol. & Viol. \\
+ERC-4626 Solmate & \texttt{transfer} & caller & \tn{proveFail_transfer_from_zero_address_reverts} & Viol. & Viol. \\
+ERC-4626 Solmate & \texttt{transfer} & recipient & \tn{proveFail_transfer_to_zero_address_reverts} & Viol. & Viol. \\
+ERC-4626 Solmate & \texttt{transferFrom} & owner & \tn{proveFail_transferFrom_from_zero_address_reverts} & Viol. & Viol. \\
+ERC-4626 Solmate & \texttt{transferFrom} & recipient & \tn{proveFail_transferFrom_to_zero_address_reverts} & Viol. & Viol. \\
+\bottomrule
+\end{tabular}
+\end{scriptsize}
+\caption{Defects behind the suite-property violations: one row per function and role of the zero address, with the test cases that expose it and the verdict of each tool on each of them (Viol.: confirmed violation; every confirmed violation was replayed concretely).}
+\label{tab:suite_violations}
+\end{table}

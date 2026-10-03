@@ -1,0 +1,44 @@
+[suite] run  1 halmos ERC4626_OpenZeppelin exited       42.27s     1952MB
+[suite] run  1 halmos ERC4626_Solmate      exited       68.53s     5954MB
+[suite] run  2 halmos ERC4626_OpenZeppelin exited       41.08s     2078MB
+[suite] run  2 halmos ERC4626_Solmate      exited       68.78s     5837MB
+[suite] run  3 halmos ERC4626_OpenZeppelin exited       40.48s     2134MB
+[suite] run  3 halmos ERC4626_Solmate      exited       68.72s     6084MB
+[suite] run  4 halmos ERC4626_OpenZeppelin exited       41.51s     2189MB
+[suite] run  4 halmos ERC4626_Solmate      exited       68.73s     6101MB
+[suite] run  5 halmos ERC4626_OpenZeppelin exited       41.69s     1951MB
+[suite] run  5 halmos ERC4626_Solmate      exited       68.50s     6085MB
+[suite] run  6 halmos ERC4626_OpenZeppelin exited       40.05s     1959MB
+[suite] run  6 halmos ERC4626_Solmate      exited       68.52s     6084MB
+[suite] run  7 halmos ERC4626_OpenZeppelin exited       42.06s     1957MB
+[suite] run  7 halmos ERC4626_Solmate      exited       68.50s     5898MB
+[suite] run  8 halmos ERC4626_OpenZeppelin exited       41.29s     1950MB
+[suite] run  8 halmos ERC4626_Solmate      exited       68.52s     5853MB
+[suite] run  9 halmos ERC4626_OpenZeppelin exited       40.46s     1978MB
+[suite] run  9 halmos ERC4626_Solmate      exited       68.54s     6084MB
+[suite] run 10 halmos ERC4626_OpenZeppelin exited       41.47s     1950MB
+[suite] run 10 halmos ERC4626_Solmate      exited       68.54s     5973MB
+[suite] run  1 halmos ERC4626_OpenZeppelin exited       35.91s     1102MB
+[suite] run  1 halmos ERC4626_Solmate      exited      153.04s     8982MB
+[suite] run  2 halmos ERC4626_OpenZeppelin exited       36.31s     1102MB
+[suite] run  2 halmos ERC4626_Solmate      exited      153.47s     8982MB
+[suite] run  3 halmos ERC4626_OpenZeppelin exited       36.30s     1102MB
+[suite] run  3 halmos ERC4626_Solmate      exited      153.42s     8983MB
+[suite] run  4 halmos ERC4626_OpenZeppelin exited       36.52s     1102MB
+[suite] run  4 halmos ERC4626_Solmate      exited      153.41s     8986MB
+[suite] run  5 halmos ERC4626_OpenZeppelin exited       36.31s     1102MB
+[suite] run  5 halmos ERC4626_Solmate      exited      153.03s     8982MB
+[suite] run  6 halmos ERC4626_OpenZeppelin exited       36.31s     1102MB
+[suite] run  6 halmos ERC4626_Solmate      exited      153.49s     8982MB
+[suite] run  7 halmos ERC4626_OpenZeppelin exited       36.32s     1103MB
+[suite] run  7 halmos ERC4626_Solmate      exited      153.26s     8986MB
+[suite] run  8 halmos ERC4626_OpenZeppelin exited       36.74s     1102MB
+[suite] run  8 halmos ERC4626_Solmate      exited      153.48s     8983MB
+[suite] run  9 halmos ERC4626_OpenZeppelin exited       36.30s     1102MB
+[suite] run  9 halmos ERC4626_Solmate      exited      153.46s     8983MB
+[suite] run 10 halmos ERC4626_OpenZeppelin exited       36.30s     1104MB
+[suite] run 10 halmos ERC4626_Solmate      exited      153.23s     8982MB
+Halmos: P = 0.946 (all 8 subjects), 0.968 without ERC-4626
+Hevm: P = 0.670 (all 8 subjects), 0.723 without ERC-4626
+tables written to results/tables
+REDO4626_DONE

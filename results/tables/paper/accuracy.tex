@@ -1,0 +1,27 @@
+\begin{table}[htbp]
+\centering
+\begin{scriptsize}
+\begin{tabular}{llrr}
+\toprule
+\textbf{Standard} & \textbf{Impl.} & \textbf{Halmos} & \textbf{Hevm} \\
+\midrule
+ERC-20 & OpenZeppelin & 93.8\% & 67.7\% \\
+ & Solmate & 93.8\% & 66.2\% \\
+\addlinespace
+ERC-721 & OpenZeppelin & 92.9\% & 71.4\% \\
+ & Solmate & 100.0\% & 71.4\% \\
+\addlinespace
+ERC-1155 & OpenZeppelin & 100.0\% & 78.6\% \\
+ & Solmate & 100.0\% & 78.6\% \\
+\addlinespace
+ERC-4626 & OpenZeppelin & 91.3\% & 47.8\% \\
+ & Solmate & 84.8\% & 54.3\% \\
+\midrule
+\multicolumn{2}{l}{Reliability $P$ (all subjects)} & 0.95 & 0.67 \\
+\multicolumn{2}{l}{Reliability $P$ (without ERC-4626)} & 0.97 & 0.72 \\
+\bottomrule
+\end{tabular}
+\end{scriptsize}
+\caption{Accuracy per subject and overall reliability score $P$ (mean accuracy).}
+\label{tab:accuracy}
+\end{table}

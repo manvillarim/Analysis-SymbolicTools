@@ -1,0 +1,11 @@
+Checking 1 function(s) in contract test/hevm/subjects/ERC721_Solmate_Hevm.t.sol:ERC721_Solmate_Hevm
+[96m[RUNNING][0m prove_safeTransferFrom(address,uint256)
+   Counterexample:   [31m[not reproducible][0m
+     calldata: prove_safeTransferFrom(0x000000000000000000000000000000000000000A,0)
+     result:   Revert: 0x4e487b710000000000000000000000000000000000000000000000000000000000000001
+   [31m[FAIL][0m prove_safeTransferFrom
+   [33m[WARNING][0m prove_safeTransferFrom all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_safeTransferFrom due to: 
+      6x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 48 : "contract SolmateERC721Mock is SolmateERC721 {\n    constructor() SolmateERC721(\"ERC721Mock\", \"E721M\") {}\n\n    function tokenURI(uint256) public pure override returns (string memory) {\n        return \"\";\n    }\n\n    function mint(address to, uint256 id) public {\n        _mint(to, id);\n    }\n\n    function burn(uint256 id) public {\n        _burn(id);\n    }\n}"
+

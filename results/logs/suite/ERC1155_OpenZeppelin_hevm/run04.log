@@ -1,0 +1,49 @@
+Checking 13 function(s) in contract test/hevm/subjects/ERC1155_OpenZeppelin_Hevm.t.sol:ERC1155_OpenZeppelin_Hevm
+[96m[RUNNING][0m proveFail_burnZeroAddress(uint256,uint256)
+   [32m[PASS][0m proveFail_burnZeroAddress
+
+[96m[RUNNING][0m proveFail_setApprovalForAllSenderEqualsOperator(address,bool)
+   [32m[PASS][0m proveFail_setApprovalForAllSenderEqualsOperator
+
+[96m[RUNNING][0m proveFail_mintZeroAddress(uint256,uint256)
+   [32m[PASS][0m proveFail_mintZeroAddress
+
+[96m[RUNNING][0m proveFail_burnBalanceLessThanAmount(uint256,uint256,uint256)
+   [31m[FAIL][0m proveFail_burnBalanceLessThanAmount
+   [33m[WARNING][0m hevm was only able to partially explore the test proveFail_burnBalanceLessThanAmount due to: 
+      1x -> SMT solver says: Result unknown by SMT solver
+
+[96m[RUNNING][0m proveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256,uint256)
+   Counterexample:   [90m[validated][0m
+     calldata: proveFail_safeTransferFromWhenSenderIsNotMSGSender(7237005577332262213973186563042994240829374041602535252466099000494570602496,0)
+     result:   Successful execution
+   [31m[FAIL][0m proveFail_safeTransferFromWhenSenderIsNotMSGSender
+
+[96m[RUNNING][0m prove_mint(uint256,uint256)
+   [32m[PASS][0m prove_mint
+
+[96m[RUNNING][0m proveFail_safeTransferFromWhenSenderIsNotApprovedForAll(uint256,uint256)
+   [32m[PASS][0m proveFail_safeTransferFromWhenSenderIsNotApprovedForAll
+
+[96m[RUNNING][0m prove_safeTransferFrom(uint256,uint256,uint256)
+   [31m[FAIL][0m prove_safeTransferFrom
+   [33m[WARNING][0m prove_safeTransferFrom all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_safeTransferFrom due to: 
+      2x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 66 : "contract OpenZeppelinERC1155 is OZERC1155 {\n    constructor() OZERC1155(\"ERC1155\") {}\n\n    function mint(address to, uint256 id, uint256 value, bytes memory data) public {\n        _mint(to, id, value, data);\n    }\n\n    function burn(address from, uint256 id, uint256 value) public {\n        _burn(from, id, value);\n    }\n}"
+
+[96m[RUNNING][0m prove_burn(uint256,uint256)
+   [32m[PASS][0m prove_burn
+
+[96m[RUNNING][0m proveFail_safeTransferFromBalanceLessThanAmount(uint256,uint256,uint256)
+   [32m[PASS][0m proveFail_safeTransferFromBalanceLessThanAmount
+
+[96m[RUNNING][0m proveFail_safeTransferFromZeroAddressForTo(uint256,uint256)
+   [32m[PASS][0m proveFail_safeTransferFromZeroAddressForTo
+
+[96m[RUNNING][0m prove_setApprovalForAll(address,bool)
+   [32m[PASS][0m prove_setApprovalForAll
+
+[96m[RUNNING][0m proveFail_safeTransferFromZeroAddressForFrom(uint256,uint256)
+   [32m[PASS][0m proveFail_safeTransferFromZeroAddressForFrom
+

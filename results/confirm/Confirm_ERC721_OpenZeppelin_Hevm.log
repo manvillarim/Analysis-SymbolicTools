@@ -1,0 +1,33 @@
+Unable to resolve imports:
+      "lib/solmate/src/tokens/ERC1155.sol" in "/home/manoel/projeto/hevm/src/mocks/Mocks.sol"
+      "lib/solmate/src/tokens/ERC721.sol" in "/home/manoel/projeto/hevm/src/mocks/Mocks.sol"
+      "lib/openzeppelin-contracts/contracts/token/ERC1155/ERC1155.sol" in "/home/manoel/projeto/hevm/src/mocks/Mocks.sol"
+      "lib/openzeppelin-contracts/contracts/mocks/token/ERC20Mock.sol" in "/home/manoel/projeto/hevm/src/mocks/Mocks.sol"
+      "lib/solmate/src/tokens/ERC20.sol" in "/home/manoel/projeto/hevm/src/mocks/Mocks.sol"
+      "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol" in "/home/manoel/projeto/hevm/src/mocks/Mocks.sol"
+      "lib/openzeppelin-contracts/contracts/mocks/token/ERC4626Mock.sol" in "/home/manoel/projeto/hevm/src/mocks/Mocks.sol"
+      "lib/solmate/src/tokens/ERC4626.sol" in "/home/manoel/projeto/hevm/src/mocks/Mocks.sol"
+with remappings:
+      @openzeppelin/contracts/=/home/manoel/projeto/hevm/lib/openzeppelin-contracts/contracts/
+      ds-test/=/home/manoel/projeto/hevm/lib/solmate/lib/ds-test/src/
+      erc4626-tests/=/home/manoel/projeto/hevm/lib/openzeppelin-contracts/lib/erc4626-tests/
+      forge-std/=/home/manoel/projeto/hevm/lib/forge-std/src/
+      halmos-cheatcodes/=/home/manoel/projeto/hevm/lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/
+      openzeppelin-contracts/=/home/manoel/projeto/hevm/lib/openzeppelin-contracts/contracts/
+      solmate/=/home/manoel/projeto/hevm/lib/solmate/src/
+Compiling 68 files with Solc 0.8.30
+Solc 0.8.30 finished in 789.18ms
+Compiler run successful!
+
+Ran 2 tests for test/confirm/Confirm_ERC721_OpenZeppelin_Hevm.t.sol:Confirm_ERC721_OpenZeppelin_Hevm
+[PASS] test_cex_0() (gas: 24511)
+Logs:
+  OUTCOME 0 success
+
+[PASS] test_cex_1() (gas: 74058)
+Logs:
+  OUTCOME 1 revert:0x
+
+Suite result: ok. 2 passed; 0 failed; 0 skipped; finished in 591.50µs (307.83µs CPU time)
+
+Ran 1 test suite in 8.19ms (591.50µs CPU time): 2 tests passed, 0 failed, 0 skipped (2 total tests)

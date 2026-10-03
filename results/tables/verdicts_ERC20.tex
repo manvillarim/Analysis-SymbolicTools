@@ -1,0 +1,17 @@
+\begin{table}[htb]
+\centering
+\begin{scriptsize}
+\begin{tabular}{llccccc}
+\toprule
+\textbf{Tool} & \textbf{Impl.} & \textbf{Pass} & \textbf{Bugs} & \textbf{FP} & \textbf{FN} & \textbf{Inc} \\
+\midrule
+\textbf{Halmos} & OpenZeppelin & 61 & 0 & 0 & 0 & 4 \\
+ & Solmate & 51 & 10 & 0 & 0 & 4 \\
+\textbf{Hevm} & OpenZeppelin & 44 & 0 & 0 & 0 & 21 \\
+ & Solmate & 35 & 9 & 0 & 1 & 21 \\
+\bottomrule
+\end{tabular}
+\end{scriptsize}
+\caption{ERC-20 test results (Pass/Bugs/FP/FN/Inc) for OpenZeppelin and Solmate implementations.}
+\label{tab:test_results_erc20}
+\end{table}

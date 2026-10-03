@@ -1,0 +1,5 @@
+Checking 1 function(s) in contract test/hevm/subjects/ERC721_OpenZeppelin_Hevm.t.sol:ERC721_OpenZeppelin_Hevm
+[96m[RUNNING][0m prove_Burn(uint256)
+   [31m[FAIL][0m prove_Burn
+   No reachable assertion violations, but all branches reverted
+

@@ -1,0 +1,26 @@
+\begin{table}[htbp]
+\centering
+\begin{scriptsize}
+\begin{tabular}{llrrrrrr}
+\toprule
+ & & \multicolumn{3}{c}{\textbf{Halmos}} & \multicolumn{3}{c}{\textbf{Hevm}} \\
+\cmidrule(lr){3-5}\cmidrule(lr){6-8}
+\textbf{Standard} & \textbf{Impl.} & Real & User & Sys & Real & User & Sys \\
+\midrule
+ERC-20 & OpenZeppelin & 8.14 $\pm$ 0.17 & 6.92 & 0.64 & 879.09 $\pm$ 1.51 & 885.72 & 2.05 \\
+ & Solmate & 8.64 $\pm$ 0.14 & 6.90 & 0.65 & 383.68 $\pm$ 0.24 & 614.68 & 1.86 \\
+\addlinespace
+ERC-721 & OpenZeppelin & 3.92 $\pm$ 0.09 & 3.32 & 0.39 & 70.84 $\pm$ 0.11 & 74.26 & 1.35 \\
+ & Solmate & 3.87 $\pm$ 0.00 & 3.25 & 0.38 & 33.04 $\pm$ 0.21 & 36.08 & 1.15 \\
+\addlinespace
+ERC-1155 & OpenZeppelin & 3.69 $\pm$ 0.06 & 3.28 & 0.35 & 348.47 $\pm$ 0.51$^{\dagger}$ & 358.17 & 1.29 \\
+ & Solmate & 4.55 $\pm$ 0.20 & 4.24 & 0.46 & 3.72 $\pm$ 0.09$^{\dagger}$ & 5.61 & 0.56 \\
+\addlinespace
+ERC-4626 & OpenZeppelin & 41.24 $\pm$ 0.72$^{\dagger}$ & 56.34 & 4.28 & 374.35 $\pm$ 0.25 & 596.95 & 28.59 \\
+ & Solmate & 68.59 $\pm$ 0.11$^{\dagger}$ & 63.94 & 3.00 & 2303.35 $\pm$ 1.61$^{\dagger}$ & 2573.14 & 22.02 \\
+\bottomrule
+\end{tabular}
+\end{scriptsize}
+\caption{Execution time of the complete suite in seconds: mean over 10 runs (real time: mean $\pm$ standard deviation). $^{\dagger}$: one test case excluded because it did not terminate (timeout, memory limit or tool crash).}
+\label{tab:time_all}
+\end{table}

@@ -1,0 +1,8 @@
+Checking 1 function(s) in contract test/hevm/subjects/ERC20_OpenZeppelin_Hevm.t.sol:ERC20_OpenZeppelin_Hevm
+[96m[RUNNING][0m prove_SelfApproveAndTransferFromOwnAccount(address,address,uint256)
+   [31m[FAIL][0m prove_SelfApproveAndTransferFromOwnAccount
+   [33m[WARNING][0m prove_SelfApproveAndTransferFromOwnAccount all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_SelfApproveAndTransferFromOwnAccount due to: 
+      4x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 20 : "contract OpenZeppelinERC20 is OZERC20Mock {}"
+

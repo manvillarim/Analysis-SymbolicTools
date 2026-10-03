@@ -1,0 +1,24 @@
+\begin{table}[htbp]
+\centering
+\begin{scriptsize}
+\begin{tabular}{llrr}
+\toprule
+\textbf{Standard} & \textbf{Impl.} & \textbf{Halmos} & \textbf{Hevm} \\
+\midrule
+ERC-20 & OpenZeppelin & 0.49 & 1.01 \\
+ & Solmate & 0.48 & 1.29 \\
+\addlinespace
+ERC-721 & OpenZeppelin & 0.48 & 0.99 \\
+ & Solmate & 0.48 & 0.99 \\
+\addlinespace
+ERC-1155 & OpenZeppelin & 0.47 & 1.62 \\
+ & Solmate & 0.49 & 0.85 \\
+\addlinespace
+ERC-4626 & OpenZeppelin & 1.96 & 6.18 \\
+ & Solmate & 5.86 & 4.15 \\
+\bottomrule
+\end{tabular}
+\end{scriptsize}
+\caption{Peak resident memory (GB) of the tool process tree, including solver processes, during the complete suite: mean over 10 runs (the standard deviation is at most 0.1\,GB).}
+\label{tab:memory}
+\end{table}

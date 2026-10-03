@@ -1,0 +1,26 @@
+\begin{table}[htbp]
+\centering
+\begin{scriptsize}
+\begin{tabular}{llrrrrrrrrrr}
+\toprule
+ & & \multicolumn{5}{c}{\textbf{Halmos}} & \multicolumn{5}{c}{\textbf{Hevm}} \\
+\cmidrule(lr){3-7}\cmidrule(lr){8-12}
+\textbf{Standard} & \textbf{Impl.} & Pass & Viol. & FP & FN & Inc & Pass & Viol. & FP & FN & Inc \\
+\midrule
+ERC-20 & OpenZeppelin & 61 & 0 & 0 & 0 & 4 & 44 & 0 & 0 & 0 & 21 \\
+ & Solmate & 51 & 10 & 0 & 0 & 4 & 35 & 9 & 0 & 1 & 21 \\
+\addlinespace
+ERC-721 & OpenZeppelin & 10 & 3 & 0 & 0 & 1 & 9 & 1 & 1 & 0 & 3 \\
+ & Solmate & 12 & 2 & 0 & 0 & 0 & 9 & 1 & 1 & 0 & 3 \\
+\addlinespace
+ERC-1155 & OpenZeppelin & 14 & 0 & 0 & 0 & 0 & 10 & 1 & 0 & 0 & 3 \\
+ & Solmate & 12 & 2 & 0 & 0 & 0 & 10 & 2 & 0 & 1 & 2 \\
+\addlinespace
+ERC-4626 & OpenZeppelin & 33 & 9 & 0 & 0 & 4 & 21 & 1 & 0 & 0 & 24 \\
+ & Solmate & 24 & 15 & 0 & 0 & 7 & 16 & 9 & 0 & 0 & 21 \\
+\bottomrule
+\end{tabular}
+\end{scriptsize}
+\caption{Verdicts per tool and subject (61 ERC-20, 14 ERC-721, 14 ERC-1155 and 46 ERC-4626 test cases). Viol.: confirmed property violations; FP: false positives; FN: false negatives (test cases that passed while the other tool found a confirmed violation, also counted in Pass); Inc: inconclusive verdicts.}
+\label{tab:test_results}
+\end{table}

@@ -1,0 +1,34 @@
+\begin{table}[!htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+\textbf{Standard} & \textbf{Impl.} & \textbf{Normative} & \textbf{Suite} & \textbf{Defect} \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{Halmos}} \\
+ERC-20   & OZ & 0 & 0 & 0 \\
+         & SM & 0 & 10 & 0 \\
+ERC-721  & OZ & 0 & 0 & 3 \\
+         & SM & 0 & 0 & 2 \\
+ERC-1155 & OZ & 0 & 0 & 0 \\
+         & SM & 0 & 2 & 0 \\
+ERC-4626 & OZ & 0 & 0 & 9 \\
+         & SM & 0 & 8 & 7 \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{Hevm}} \\
+ERC-20   & OZ & 0 & 0 & 0 \\
+         & SM & 0 & 9 & 0 \\
+ERC-721  & OZ & 0 & 0 & 1 \\
+         & SM & 0 & 0 & 1 \\
+ERC-1155 & OZ & 0 & 0 & 1 \\
+         & SM & 0 & 1 & 1 \\
+ERC-4626 & OZ & 0 & 0 & 1 \\
+         & SM & 0 & 8 & 1 \\
+\midrule
+\multicolumn{2}{@{}l}{Distinct (both tools)} & 0 & 20 & 25 \\
+\bottomrule
+\end{tabular}
+\caption{Classification of the confirmed property violations. Normative: violation of a MUST requirement of the EIP; Suite: property required by the test suite but not by the EIP (all are zero-address checks); Defect: the property fails for a correct implementation. Distinct: number of different (subject, test case) pairs. OZ: OpenZeppelin; SM: Solmate.}
+\label{tab:classification}
+\end{table}

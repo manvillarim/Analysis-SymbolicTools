@@ -1,0 +1,63 @@
+Checking 14 function(s) in contract test/hevm/subjects/ERC721_OpenZeppelin_Hevm.t.sol:ERC721_OpenZeppelin_Hevm
+[96m[RUNNING][0m prove_safeTransferFrom(address,uint256)
+   Counterexample:   [31m[not reproducible][0m
+     calldata: prove_safeTransferFrom(0x000000000000000000000000000000000000000A,0)
+     result:   Revert: 0x4e487b710000000000000000000000000000000000000000000000000000000000000001
+   [31m[FAIL][0m prove_safeTransferFrom
+   [33m[WARNING][0m prove_safeTransferFrom all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_safeTransferFrom due to: 
+      6x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 36 : "contract OpenZeppelinERC721 is OZERC721 {\n    constructor() OZERC721(\"ERC721Mock\", \"E721M\") {}\n\n    function mint(address to, uint256 id) public {\n        _mint(to, id);\n    }\n\n    function burn(uint256 id) public {\n        _burn(id);\n    }\n}"
+
+[96m[RUNNING][0m prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender(address,uint256)
+   [31m[FAIL][0m prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender due to: 
+      4x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 36 : "contract OpenZeppelinERC721 is OZERC721 {\n    constructor() OZERC721(\"ERC721Mock\", \"E721M\") {}\n\n    function mint(address to, uint256 id) public {\n        _mint(to, id);\n    }\n\n    function burn(uint256 id) public {\n        _burn(id);\n    }\n}"
+
+[96m[RUNNING][0m proveFail_transferFromWhenFromIsNotTheOwner(address,address,uint256)
+   [32m[PASS][0m proveFail_transferFromWhenFromIsNotTheOwner
+
+[96m[RUNNING][0m proveFail_ApproveWhenIdHasNotAnOwner(address,uint256)
+   [32m[PASS][0m proveFail_ApproveWhenIdHasNotAnOwner
+
+[96m[RUNNING][0m prove_Burn(uint256)
+   [31m[FAIL][0m prove_Burn
+   [33m[WARNING][0m prove_Burn all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_Burn due to: 
+      2x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 36 : "contract OpenZeppelinERC721 is OZERC721 {\n    constructor() OZERC721(\"ERC721Mock\", \"E721M\") {}\n\n    function mint(address to, uint256 id) public {\n        _mint(to, id);\n    }\n\n    function burn(uint256 id) public {\n        _burn(id);\n    }\n}"
+
+[96m[RUNNING][0m proveFail_ApproveWhenIsNotApprovedForAll(address,address,uint256)
+   [32m[PASS][0m proveFail_ApproveWhenIsNotApprovedForAll
+
+[96m[RUNNING][0m proveFail_setApprovalForAll(address,address,bool)
+   Counterexample:   [90m[validated][0m
+     calldata: proveFail_setApprovalForAll(0x00800008080040000000001000800000C0044000,0x000000000000000000a00000000000000001000c,false)
+     result:   Successful execution
+   [31m[FAIL][0m proveFail_setApprovalForAll
+
+[96m[RUNNING][0m prove_Mint(address,uint256)
+   [32m[PASS][0m prove_Mint
+
+[96m[RUNNING][0m proveFail_transferFromWhenToIsAddressZero(address,address,uint256)
+   [32m[PASS][0m proveFail_transferFromWhenToIsAddressZero
+
+[96m[RUNNING][0m proveFail_MintWhenToIsAddressZero(address,uint256)
+   [32m[PASS][0m proveFail_MintWhenToIsAddressZero
+
+[96m[RUNNING][0m proveFail_Burn(uint256)
+   [32m[PASS][0m proveFail_Burn
+
+[96m[RUNNING][0m prove_setApprovalForAll(address,bool)
+   [32m[PASS][0m prove_setApprovalForAll
+
+[96m[RUNNING][0m prove_transferFrom(address,address,uint256)
+   [31m[FAIL][0m prove_transferFrom
+   [33m[WARNING][0m prove_transferFrom all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_transferFrom due to: 
+      12x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 36 : "contract OpenZeppelinERC721 is OZERC721 {\n    constructor() OZERC721(\"ERC721Mock\", \"E721M\") {}\n\n    function mint(address to, uint256 id) public {\n        _mint(to, id);\n    }\n\n    function burn(uint256 id) public {\n        _burn(id);\n    }\n}"
+
+[96m[RUNNING][0m prove_ApproveWhenOwnerEqualsMSGSender(address,uint256)
+   [32m[PASS][0m prove_ApproveWhenOwnerEqualsMSGSender
+

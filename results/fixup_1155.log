@@ -1,0 +1,25 @@
+removed 20 ERC-1155 Hevm suite rows
+[suite] run  1 hevm   ERC1155_OpenZeppelin exited      349.92s     1655MB
+[suite] run  1 hevm   ERC1155_Solmate      exited        3.68s      868MB
+[suite] run  2 hevm   ERC1155_OpenZeppelin exited      351.43s     1658MB
+[suite] run  2 hevm   ERC1155_Solmate      exited        3.48s      863MB
+[suite] run  3 hevm   ERC1155_OpenZeppelin exited      349.66s     1655MB
+[suite] run  3 hevm   ERC1155_Solmate      exited        3.49s      868MB
+[suite] run  4 hevm   ERC1155_OpenZeppelin exited      349.58s     1660MB
+[suite] run  4 hevm   ERC1155_Solmate      exited        3.48s      879MB
+[suite] run  5 hevm   ERC1155_OpenZeppelin exited      349.74s     1655MB
+[suite] run  5 hevm   ERC1155_Solmate      exited        3.49s      865MB
+[suite] run  6 hevm   ERC1155_OpenZeppelin exited      349.58s     1655MB
+[suite] run  6 hevm   ERC1155_Solmate      exited        3.48s      864MB
+[suite] run  7 hevm   ERC1155_OpenZeppelin exited      349.73s     1657MB
+[suite] run  7 hevm   ERC1155_Solmate      exited        3.49s      866MB
+[suite] run  8 hevm   ERC1155_OpenZeppelin exited      349.61s     1657MB
+[suite] run  8 hevm   ERC1155_Solmate      exited        3.49s      867MB
+[suite] run  9 hevm   ERC1155_OpenZeppelin exited      349.36s     1655MB
+[suite] run  9 hevm   ERC1155_Solmate      exited        3.49s      866MB
+[suite] run 10 hevm   ERC1155_OpenZeppelin exited      349.41s     1659MB
+[suite] run 10 hevm   ERC1155_Solmate      exited        3.49s      875MB
+Halmos: P = 0.943 (all 8 subjects), 0.964 without ERC-4626
+Hevm: P = 0.658 (all 8 subjects), 0.707 without ERC-4626
+tables written to results/tables
+FIXUP_DONE

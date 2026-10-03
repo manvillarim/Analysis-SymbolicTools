@@ -1,0 +1,7 @@
+Checking 1 function(s) in contract test/hevm/subjects/ERC4626_Solmate_Hevm.t.sol:ERC4626_Solmate_Hevm
+[96m[RUNNING][0m proveFail_approvefrom_zero_address_reverts(address,uint256)
+   Counterexample:   [90m[validated][0m
+     calldata: proveFail_approvefrom_zero_address_reverts(0x000000000000000020000000000000000000000C,0)
+     result:   Successful execution
+   [31m[FAIL][0m proveFail_approvefrom_zero_address_reverts
+

@@ -1,0 +1,8 @@
+Checking 1 function(s) in contract test/hevm/subjects/ERC4626_OpenZeppelin_Hevm.t.sol:ERC4626_OpenZeppelin_Hevm
+[96m[RUNNING][0m prove_convertToShares_gte_previewDeposit(uint256,uint256)
+   [31m[FAIL][0m prove_convertToShares_gte_previewDeposit
+   [33m[WARNING][0m prove_convertToShares_gte_previewDeposit all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_convertToShares_gte_previewDeposit due to: 
+      8x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 20 : "contract OpenZeppelinERC20 is OZERC20Mock {}"
+

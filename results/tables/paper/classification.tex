@@ -1,0 +1,28 @@
+\begin{table}[htbp]
+\centering
+\begin{scriptsize}
+\begin{tabular}{llrrrrrr}
+\toprule
+ & & \multicolumn{2}{c}{\textbf{Normative EIP}} & \multicolumn{2}{c}{\textbf{Suite property}} & \multicolumn{2}{c}{\textbf{Test defect}} \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(lr){7-8}
+\textbf{Standard} & \textbf{Impl.} & Halmos & Hevm & Halmos & Hevm & Halmos & Hevm \\
+\midrule
+ERC-20 & OpenZeppelin & 0 & 0 & 0 & 0 & 0 & 0 \\
+ & Solmate & 0 & 0 & 10 & 9 & 0 & 0 \\
+\addlinespace
+ERC-721 & OpenZeppelin & 0 & 0 & 0 & 0 & 3 & 1 \\
+ & Solmate & 0 & 0 & 0 & 0 & 2 & 1 \\
+\addlinespace
+ERC-1155 & OpenZeppelin & 0 & 0 & 0 & 0 & 0 & 1 \\
+ & Solmate & 0 & 0 & 2 & 1 & 0 & 1 \\
+\addlinespace
+ERC-4626 & OpenZeppelin & 0 & 0 & 0 & 0 & 9 & 1 \\
+ & Solmate & 0 & 0 & 8 & 8 & 7 & 1 \\
+\midrule
+\multicolumn{2}{l}{Distinct (both tools)} & \multicolumn{2}{c}{0} & \multicolumn{2}{c}{20} & \multicolumn{2}{c}{25} \\
+\bottomrule
+\end{tabular}
+\end{scriptsize}
+\caption{Classification of the confirmed property violations. Normative EIP: violation of a MUST requirement of the standard; suite property: required by the test suite but not by the EIP (all are zero-address checks); test defect: the property fails for a correct implementation. Distinct: number of different (subject, test case) pairs.}
+\label{tab:classification}
+\end{table}

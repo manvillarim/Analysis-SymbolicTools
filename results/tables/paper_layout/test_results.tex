@@ -1,0 +1,32 @@
+\begin{table}[!htbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{@{}llrrrrr@{}}
+\toprule
+\textbf{Standard} & \textbf{Impl.} & \textbf{Pass} & \textbf{Viol.} & \textbf{FP} & \textbf{FN} & \textbf{Inc} \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Halmos}} \\
+ERC-20   & OZ & 61 & 0 & 0 & 0 & 4 \\
+         & SM & 51 & 10 & 0 & 0 & 4 \\
+ERC-721  & OZ & 10 & 3 & 0 & 0 & 1 \\
+         & SM & 12 & 2 & 0 & 0 & 0 \\
+ERC-1155 & OZ & 14 & 0 & 0 & 0 & 0 \\
+         & SM & 12 & 2 & 0 & 0 & 0 \\
+ERC-4626 & OZ & 33 & 9 & 0 & 0 & 4 \\
+         & SM & 24 & 15 & 0 & 0 & 7 \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Hevm}} \\
+ERC-20   & OZ & 44 & 0 & 0 & 0 & 21 \\
+         & SM & 35 & 9 & 0 & 1 & 21 \\
+ERC-721  & OZ & 9 & 1 & 1 & 0 & 3 \\
+         & SM & 9 & 1 & 1 & 0 & 3 \\
+ERC-1155 & OZ & 10 & 1 & 0 & 0 & 3 \\
+         & SM & 10 & 2 & 0 & 1 & 2 \\
+ERC-4626 & OZ & 21 & 1 & 0 & 0 & 24 \\
+         & SM & 16 & 9 & 0 & 0 & 21 \\
+\bottomrule
+\end{tabular}
+\caption{Verdicts per tool and subject (65 ERC-20, 14 ERC-721, 14 ERC-1155 and 46 ERC-4626 test cases). OZ: OpenZeppelin; SM: Solmate. Viol.: confirmed property violations; FP: false positives; FN: false negatives (test cases that passed while the other tool found a confirmed violation of a property of the contract, also counted in Pass); Inc: inconclusive verdicts.}
+\label{tab:test_results}
+\end{table}

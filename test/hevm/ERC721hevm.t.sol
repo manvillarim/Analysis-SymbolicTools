@@ -2,21 +2,8 @@
 pragma solidity >= 0.8.0;
 
 import {Test, console2} from "forge-std/Test.sol";
-import {MockERC721} from "forge-std/mocks/MockERC721.sol";
-import "lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol";
-import "src/solmate/token/ERC721.sol";
-
-contract ERC721T is ERC721S {
-    constructor() ERC721S("ERC20Mock", "E20M") {}
-    function mint(address to, uint256 id) public {
-         _mint(to, id);
-    }
-
-    function burn(uint256 id) public {
-        _burn(id);
-    }
-
-}
+import "src/mocks/Interfaces.sol";
+import "src/mocks/Mocks.sol";
 
 contract ERC721ReveiverTest {
     function onERC721Received() external pure returns(bytes4) {
@@ -24,16 +11,17 @@ contract ERC721ReveiverTest {
         return bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"));
     }
 }
+abstract contract ERC721SymbolicPropertieshevm is Test {
 
-contract ERC721SymbolicPropertieshevm is Test {
-
-    ERC721T token;
+    ITokenERC721 token;
     ERC721ReveiverTest rec;
 
     function setUp() public {
-        token = new ERC721T();
+        token = ITokenERC721(_deployToken());
         rec = new ERC721ReveiverTest();
     }
+
+    function _deployToken() internal virtual returns (address);
 
     // This function verifies the `setApprovalForAll` function of the ERC721 contract. It sets the approval for an operator and checks if the `isApprovedForAll` function returns the correct value.
     function prove_setApprovalForAll(address operator, bool approved) public {

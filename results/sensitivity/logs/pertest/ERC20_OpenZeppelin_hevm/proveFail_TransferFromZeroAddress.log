@@ -1,0 +1,7 @@
+Checking 2 function(s) in contract test/hevm/subjects/ERC20_OpenZeppelin_Hevm.t.sol:ERC20_OpenZeppelin_Hevm
+[96m[RUNNING][0m proveFail_TransferFromZeroAddress(address,address,uint256)
+   [32m[PASS][0m proveFail_TransferFromZeroAddress
+
+[96m[RUNNING][0m proveFail_TransferFromZeroAddress(address,uint256)
+   [32m[PASS][0m proveFail_TransferFromZeroAddress
+

@@ -1,0 +1,21 @@
+\begin{table}[htb]
+\centering
+\begin{scriptsize}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Subject} & \textbf{$t$} & \textbf{df} & \textbf{$p$ (Welch)} & \textbf{$U$} & \textbf{$p$ (M-W)} & \textbf{$\hat{A}_{12}$} \\
+\midrule
+ERC-20 OpenZeppelin & 1806.2 & 9.2 & 6.0e-27 & 100 & 1.1e-05 & 1.00 (large) \\
+ERC-20 Solmate & 4331.6 & 14.4 & 1.5e-45 & 100 & 1.1e-05 & 1.00 (large) \\
+ERC-721 OpenZeppelin & 1496.7 & 16.8 & 1.6e-44 & 100 & 1.1e-05 & 1.00 (large) \\
+ERC-721 Solmate & 445.2 & 9.0 & 7.3e-21 & 100 & 1.1e-05 & 1.00 (large) \\
+ERC-1155 OpenZeppelin$^{*}$ & 2128.0 & 9.3 & 1.0e-27 & 100 & 1.1e-05 & 1.00 (large) \\
+ERC-1155 Solmate$^{*}$ & -12.2 & 12.4 & 2.8e-08 & 0 & 1.1e-05 & 0.00 (large) \\
+ERC-4626 OpenZeppelin$^{*}$ & 1379.8 & 11.1 & 1.6e-30 & 100 & 1.1e-05 & 1.00 (large) \\
+ERC-4626 Solmate$^{*}$ & 4385.5 & 9.1 & 4.9e-30 & 100 & 1.1e-05 & 1.00 (large) \\
+\bottomrule
+\end{tabular}
+\end{scriptsize}
+\caption{Welch's two-sample $t$-test and Mann-Whitney $U$ test on the real execution time of the suite (10 runs per tool), with the Vargha-Delaney $\hat{A}_{12}$ effect size (probability that a Hevm run is slower than a Halmos run). $^{*}$: the tools ran different test sets because of censored test cases.}
+\label{tab:stats}
+\end{table}

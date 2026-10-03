@@ -1,0 +1,6 @@
+Checking 1 function(s) in contract test/hevm/subjects/ERC20_OpenZeppelin_Hevm.t.sol:ERC20_OpenZeppelin_Hevm
+[96m[RUNNING][0m prove_MultipleTransfersOfZeroAmountAllowed(address,address,uint8)
+   [31m[FAIL][0m prove_MultipleTransfersOfZeroAmountAllowed
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_MultipleTransfersOfZeroAmountAllowed due to: 
+      4x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 20 : "contract OpenZeppelinERC20 is OZERC20Mock {}"
+

@@ -1,0 +1,7 @@
+Checking 1 function(s) in contract test/hevm/subjects/ERC721_OpenZeppelin_Hevm.t.sol:ERC721_OpenZeppelin_Hevm
+[96m[RUNNING][0m proveFail_setApprovalForAll(address,address,bool)
+   Counterexample:   [90m[validated][0m
+     calldata: proveFail_setApprovalForAll(0x00800008080040000000001000800000C0044000,0x000000000000000000a00000000000000001000c,false)
+     result:   Successful execution
+   [31m[FAIL][0m proveFail_setApprovalForAll
+

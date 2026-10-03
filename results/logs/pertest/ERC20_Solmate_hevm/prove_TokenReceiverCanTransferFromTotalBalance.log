@@ -1,0 +1,8 @@
+Checking 1 function(s) in contract test/hevm/subjects/ERC20_Solmate_Hevm.t.sol:ERC20_Solmate_Hevm
+[96m[RUNNING][0m prove_TokenReceiverCanTransferFromTotalBalance(address,address,uint256)
+   [31m[FAIL][0m prove_TokenReceiverCanTransferFromTotalBalance
+   [33m[WARNING][0m prove_TokenReceiverCanTransferFromTotalBalance all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_TokenReceiverCanTransferFromTotalBalance due to: 
+      4x -> Max iterations reached at addr: LitAddr 0xD95322745865822719164b1fC167930754c248DE at pc: 11
+

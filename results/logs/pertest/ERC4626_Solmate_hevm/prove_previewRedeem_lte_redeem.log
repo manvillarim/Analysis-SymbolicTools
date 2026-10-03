@@ -1,0 +1,5 @@
+Checking 1 function(s) in contract test/hevm/subjects/ERC4626_Solmate_Hevm.t.sol:ERC4626_Solmate_Hevm
+[96m[RUNNING][0m prove_previewRedeem_lte_redeem(address,uint256)
+   [31m[FAIL][0m prove_previewRedeem_lte_redeem
+   No reachable assertion violations, but all branches reverted
+

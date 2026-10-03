@@ -1,0 +1,7 @@
+Checking 1 function(s) in contract test/hevm/subjects/ERC4626_Solmate_Hevm.t.sol:ERC4626_Solmate_Hevm
+[96m[RUNNING][0m proveFail_withdrawWithAmountLessThanAssets(address,address,uint256,uint256,address,address)
+   [31m[FAIL][0m proveFail_withdrawWithAmountLessThanAssets
+   [33m[WARNING][0m hevm was only able to partially explore the test proveFail_withdrawWithAmountLessThanAssets due to: 
+      1x -> SMT solver says: Result unknown by SMT solver
+      4x -> SMT solver says: Unable to parse SMT solver output (maybe it got killed?): (error "out of memory")
+

@@ -1,0 +1,1278 @@
+results/pertest.csv: moved 270 rows to results/halmos_yices/pertest.csv
+results/suite.csv: moved 80 rows to results/halmos_yices/suite.csv
+results/sensitivity/pertest.csv: removed 270 Halmos/Yices sensitivity rows
+results/halmos_yices/pertest.csv: removed 122 Halmos/Yices ERC-20 per-test rows
+results/halmos_yices/suite.csv: removed 20 Halmos/Yices ERC-20 suite rows
+results/pertest.csv: removed 150 Hevm ERC-20/ERC-1155 rows
+results/suite.csv: removed 40 Hevm ERC-20/ERC-1155 rows
+results/sensitivity/pertest.csv: removed 150 Hevm ERC-20/ERC-1155 rows
+date:        2026-10-02T19:57:02-03:00
+host cpu:    12th Gen Intel(R) Core(TM) i5-12450H
+cores:       12
+memory:      15Gi
+os:          Fedora Linux 44 (Workstation Edition) / kernel 7.2.8-200.fc44.x86_64
+forge:       forge Version: 1.7.1
+solc:        0.8.30
+halmos:      halmos 0.3.3 (solver: z3)
+hevm:        0.58.0 [no git revision present]
+z3:          Z3 version 4.12.6 - 64 bit
+cvc5:        cvc5 1.3.4
+openzeppelin-contracts: v5.7.0 cab19933c33c2ad1d4c7a84864a3601dddfd16f3
+solmate:     v6-207-g89365b8 89365b880c4f3c786bdd453d4b8e8fe410344a69
+forge-std:   v1.17.0 f3dae6e6ee381f25eb6a246f7da9b85c91a68219
+[pertest] halmos ERC20_OpenZeppelin   proveFail_ApproveFromZeroAddress(address,uint256)                      ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_ApproveToZeroAddress(address,uint256)                        ERROR         3.47s      489MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_ApproveZeroAddress(address,uint256)                          ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_ApproveZeroAddressForMSGSender(address,uint256)              ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_BurnFromZeroAddress(uint256)                                 ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_BurnUnderBalance(address,uint256)                            ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_BurnUnderSupply(address,uint256)                             ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_DecreaseAllowanceUnderAllowance(address,uint256)             ERROR         3.48s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_IncreaseAllowanceUnderAllowance(address,uint256)             ERROR         3.47s      490MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_MintOverflow(address)                                        ERROR         3.48s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_MintToZeroAddress(uint256)                                   ERROR         3.48s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_MintUnderSupply(address,uint256)                             ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromAllowanceReachesZero(address,address,address,uint256,uint256) ERROR         3.68s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromNotEnoughAmount(address,address,uint256)         ERROR         3.48s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromToZeroAddress33(address,address,uint256)         ERROR         3.48s      489MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromUnderBalance(address,address,uint256)            ERROR         3.89s      490MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromUnderBalancei(address,address,uint256)           ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromZeroAddress(address,address,uint256)             ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromZeroAddress(address,uint256)                     ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromZeroAddressForMSGSender(address,address,uint256) ERROR         3.48s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromZeroAmountToZeroAddressReverts(address,address)  ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferToZeroAddress(address,uint256)                       ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferUnderBalance(address,uint256)                        ERROR         3.68s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferUnderBalancej(address,uint256)                       ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferZeroAmountToZeroAddressReverts(address)              ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_AllowanceUpdatedAfterBurn(address,address,uint256)               ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_Approve(address,uint256)                                         ERROR         3.48s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_ApproveMaxAmount(address,address)                                ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_ApproveNonZeroAmount(address,address,uint256)                    ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_ApproveZeroAmount(address,address)                               ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_BalanceUpdatedAfterBurn(address,address,uint256)                 ERROR         3.68s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_BurnDifferentAccount(address,uint256,address,uint256)            ERROR         3.48s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_BurnFromNonZeroAddress(address,uint256)                          ERROR         3.48s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_BurnSameAccount(address,uint256)                                 ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_BurnZeroTokens(address)                                          ERROR         3.48s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_ConsecutiveApprovePositiveToPositive(address,address,uint256,uint256) ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_DecreaseAllowance(address,uint256)                               ERROR         3.48s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_IncreaseAllowance(address,uint256)                               ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_Mint(address,uint256)                                            ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MintZeroTokens(address)                                          ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MsgSenderCanRetrieveOtherBalance(address,uint256)                ERROR         3.48s      490MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MsgSenderCanRetrieveOwnBalance(uint256)                          ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MsgSenderCanTransferTotalBalance(address,address,uint256)        ERROR         3.68s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MsgSenderCanTransferTotalBalanceZero(address,address)            ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MultipleTransferFromAllowed(address,address,address,uint256,uint256) ERROR         3.68s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MultipleTransferFromsOfZeroAmountAllowed(address,address,address,uint8) ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MultipleTransfersAllowed(address,address,uint256,uint256)        ERROR         3.67s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MultipleTransfersOfZeroAmountAllowed(address,address,uint8)      ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_SelfApproveAndTransferFromOwnAccount(address,address,uint256)    ERROR         3.68s      489MB
+[pertest] halmos ERC20_OpenZeppelin   prove_SelfApproveAndTransferFromOwnAccountZeroAmountAllowed(address,address) ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_SelfApprovePositiveAmount(address,uint256)                       ERROR         3.47s      495MB
+[pertest] halmos ERC20_OpenZeppelin   prove_SelfApproveZeroAmountAllowed(address)                            ERROR         3.47s      489MB
+[pertest] halmos ERC20_OpenZeppelin   prove_SelfTransferPositiveAmountAllowed(address,uint256)               ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_SelfTransferZeroAmountAllowed(address)                           ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TokenReceiverCanTransferFromTotalBalance(address,address,uint256) ERROR         3.68s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TokenReceiverCanTransferFromTotalBalanceZero(address,address,address) ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_Transfer(address,uint256,uint256)                                ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TransferDoesNotUpdateOtherBalances(address,address,address,uint256) ERROR         3.67s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TransferFrom(address,address,uint256,uint256)                    ERROR         3.47s      495MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TransferFromDecreasesAllowance(address,address,address,uint256)  ERROR         3.47s      494MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TransferFromDoesNotUpdateOtherBalances(address,address,address,address,uint256) ERROR         3.68s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TransferFromNoFees(address,address,address,uint256)              ERROR         3.67s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TransferFromZeroAmount(address,address,address)                  ERROR         3.48s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TransferZeroAmount(address,address)                              ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_ZeroAddressHasNoToken()                                          ERROR         3.27s      500MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_ApproveFromZeroAddress(address,uint256)                      PASS          4.50s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_ApproveToZeroAddress(address,uint256)                        PASS          4.71s      774MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_ApproveZeroAddress(address,uint256)                          PASS          4.70s      789MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_ApproveZeroAddressForMSGSender(address,uint256)              PASS          1.64s      768MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_BurnFromZeroAddress(uint256)                                 PASS          1.65s      768MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_BurnUnderBalance(address,uint256)                            PASS          1.64s      767MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_BurnUnderSupply(address,uint256)                             PASS          1.63s      768MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_DecreaseAllowanceUnderAllowance(address,uint256)             PASS          4.49s      774MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_IncreaseAllowanceUnderAllowance(address,uint256)             PASS          5.10s      825MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_MintOverflow(address)                                        PASS          1.85s      767MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_MintToZeroAddress(uint256)                                   PASS          1.64s      767MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_MintUnderSupply(address,uint256)                             PASS          1.64s      767MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferFromAllowanceReachesZero(address,address,address,uint256,uint256) ERROR         4.70s      778MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferFromNotEnoughAmount(address,address,uint256)         PASS          4.90s      904MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferFromToZeroAddress33(address,address,uint256)         PASS          4.49s      774MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferFromUnderBalance(address,address,uint256)            PASS          5.72s      990MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferFromUnderBalancei(address,address,uint256)           PASS          5.11s      877MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferFromZeroAddress(address,address,uint256)             PASS          4.49s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferFromZeroAddress(address,uint256)                     PASS          4.49s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferFromZeroAddressForMSGSender(address,address,uint256) PASS          4.71s      774MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferFromZeroAmountToZeroAddressReverts(address,address)  PASS          4.70s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferToZeroAddress(address,uint256)                       PASS          4.50s      774MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferUnderBalance(address,uint256)                        PASS          4.70s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferUnderBalancej(address,uint256)                       PASS          4.49s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferZeroAmountToZeroAddressReverts(address)              PASS          1.64s      767MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_AllowanceUpdatedAfterBurn(address,address,uint256)               PASS         10.01s      923MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_Approve(address,uint256)                                         PASS          4.70s      772MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_ApproveMaxAmount(address,address)                                PASS          4.70s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_ApproveNonZeroAmount(address,address,uint256)                    PASS          4.70s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_ApproveZeroAmount(address,address)                               PASS          4.70s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_BalanceUpdatedAfterBurn(address,address,uint256)                 ERROR         4.70s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_BurnDifferentAccount(address,uint256,address,uint256)            ERROR         4.91s      807MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_BurnFromNonZeroAddress(address,uint256)                          PASS          4.50s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_BurnSameAccount(address,uint256)                                 ERROR         5.53s      817MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_BurnZeroTokens(address)                                          PASS          1.64s      768MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_ConsecutiveApprovePositiveToPositive(address,address,uint256,uint256) PASS          4.91s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_DecreaseAllowance(address,uint256)                               ERROR         4.70s      779MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_IncreaseAllowance(address,uint256)                               ERROR         4.69s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_Mint(address,uint256)                                            PASS          5.52s      781MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_MintZeroTokens(address)                                          PASS          1.64s      768MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_MsgSenderCanRetrieveOtherBalance(address,uint256)                PASS          4.71s      776MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_MsgSenderCanRetrieveOwnBalance(uint256)                          PASS          1.64s      768MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_MsgSenderCanTransferTotalBalance(address,address,uint256)        ERROR         4.50s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_MsgSenderCanTransferTotalBalanceZero(address,address)            PASS          4.70s      774MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_MultipleTransferFromAllowed(address,address,address,uint256,uint256) ERROR         4.70s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_MultipleTransferFromsOfZeroAmountAllowed(address,address,address,uint8) ERROR       848.57s     1005MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_MultipleTransfersAllowed(address,address,uint256,uint256)        ERROR         5.71s      832MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_MultipleTransfersOfZeroAmountAllowed(address,address,uint8)      ERROR         5.31s      837MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_SelfApproveAndTransferFromOwnAccount(address,address,uint256)    ERROR         4.50s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_SelfApproveAndTransferFromOwnAccountZeroAmountAllowed(address,address) ERROR         4.69s      822MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_SelfApprovePositiveAmount(address,uint256)                       PASS          4.70s      774MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_SelfApproveZeroAmountAllowed(address)                            PASS          1.64s      768MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_SelfTransferPositiveAmountAllowed(address,uint256)               PASS          4.49s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_SelfTransferZeroAmountAllowed(address)                           PASS          1.64s      768MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_TokenReceiverCanTransferFromTotalBalance(address,address,uint256) ERROR         4.70s      776MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_TokenReceiverCanTransferFromTotalBalanceZero(address,address,address) ERROR         4.90s      786MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_Transfer(address,uint256,uint256)                                ERROR         5.31s      778MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_TransferDoesNotUpdateOtherBalances(address,address,address,uint256) ERROR         4.70s      774MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_TransferFrom(address,address,uint256,uint256)                    ERROR         4.49s      777MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_TransferFromDecreasesAllowance(address,address,address,uint256)  PASS         23.66s      948MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_TransferFromDoesNotUpdateOtherBalances(address,address,address,address,uint256) ERROR         4.70s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_TransferFromNoFees(address,address,address,uint256)              ERROR         4.70s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_TransferFromZeroAmount(address,address,address)                  ERROR         4.70s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_TransferZeroAmount(address,address)                              PASS          4.70s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_ZeroAddressHasNoToken()                                          PASS          1.65s      768MB
+[pertest] halmos ERC20_Solmate        proveFail_ApproveFromZeroAddress(address,uint256)                      ERROR         3.46s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_ApproveToZeroAddress(address,uint256)                        ERROR         3.47s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_ApproveZeroAddress(address,uint256)                          ERROR         3.47s      507MB
+[pertest] halmos ERC20_Solmate        proveFail_ApproveZeroAddressForMSGSender(address,uint256)              ERROR         3.47s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_BurnFromZeroAddress(uint256)                                 ERROR         3.47s      499MB
+[pertest] halmos ERC20_Solmate        proveFail_BurnUnderBalance(address,uint256)                            ERROR         3.47s      494MB
+[pertest] halmos ERC20_Solmate        proveFail_BurnUnderSupply(address,uint256)                             ERROR         3.47s      515MB
+[pertest] halmos ERC20_Solmate        proveFail_DecreaseAllowanceUnderAllowance(address,uint256)             ERROR         3.47s      503MB
+[pertest] halmos ERC20_Solmate        proveFail_IncreaseAllowanceUnderAllowance(address,uint256)             ERROR         3.47s      489MB
+[pertest] halmos ERC20_Solmate        proveFail_MintOverflow(address)                                        ERROR         3.48s      515MB
+[pertest] halmos ERC20_Solmate        proveFail_MintToZeroAddress(uint256)                                   ERROR         3.48s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_MintUnderSupply(address,uint256)                             ERROR         3.47s      510MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromAllowanceReachesZero(address,address,address,uint256,uint256) ERROR         3.68s      491MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromNotEnoughAmount(address,address,uint256)         ERROR         3.47s      489MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromToZeroAddress33(address,address,uint256)         ERROR         3.68s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromUnderBalance(address,address,uint256)            ERROR         3.47s      497MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromUnderBalancei(address,address,uint256)           ERROR         3.47s      493MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromZeroAddress(address,address,uint256)             ERROR         3.47s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromZeroAddress(address,uint256)                     ERROR         3.47s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromZeroAddressForMSGSender(address,address,uint256) ERROR         3.48s      515MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromZeroAmountToZeroAddressReverts(address,address)  ERROR         3.47s      494MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferToZeroAddress(address,uint256)                       ERROR         3.47s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferUnderBalance(address,uint256)                        ERROR         3.47s      515MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferUnderBalancej(address,uint256)                       ERROR         3.47s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferZeroAmountToZeroAddressReverts(address)              ERROR         3.48s      488MB
+[pertest] halmos ERC20_Solmate        prove_AllowanceUpdatedAfterBurn(address,address,uint256)               ERROR         3.47s      515MB
+[pertest] halmos ERC20_Solmate        prove_Approve(address,uint256)                                         ERROR         3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_ApproveMaxAmount(address,address)                                ERROR         3.48s      500MB
+[pertest] halmos ERC20_Solmate        prove_ApproveNonZeroAmount(address,address,uint256)                    ERROR         3.48s      501MB
+[pertest] halmos ERC20_Solmate        prove_ApproveZeroAmount(address,address)                               ERROR         3.47s      515MB
+[pertest] halmos ERC20_Solmate        prove_BalanceUpdatedAfterBurn(address,address,uint256)                 ERROR         3.68s      488MB
+[pertest] halmos ERC20_Solmate        prove_BurnDifferentAccount(address,uint256,address,uint256)            ERROR         3.47s      494MB
+[pertest] halmos ERC20_Solmate        prove_BurnFromNonZeroAddress(address,uint256)                          ERROR         3.48s      507MB
+[pertest] halmos ERC20_Solmate        prove_BurnSameAccount(address,uint256)                                 ERROR         3.48s      515MB
+[pertest] halmos ERC20_Solmate        prove_BurnZeroTokens(address)                                          ERROR         3.47s      501MB
+[pertest] halmos ERC20_Solmate        prove_ConsecutiveApprovePositiveToPositive(address,address,uint256,uint256) ERROR         3.47s      499MB
+[pertest] halmos ERC20_Solmate        prove_DecreaseAllowance(address,uint256)                               ERROR         3.47s      494MB
+[pertest] halmos ERC20_Solmate        prove_IncreaseAllowance(address,uint256)                               ERROR         3.48s      488MB
+[pertest] halmos ERC20_Solmate        prove_Mint(address,uint256)                                            ERROR         3.47s      502MB
+[pertest] halmos ERC20_Solmate        prove_MintZeroTokens(address)                                          ERROR         3.47s      490MB
+[pertest] halmos ERC20_Solmate        prove_MsgSenderCanRetrieveOtherBalance(address,uint256)                ERROR         3.47s      489MB
+[pertest] halmos ERC20_Solmate        prove_MsgSenderCanRetrieveOwnBalance(uint256)                          ERROR         3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_MsgSenderCanTransferTotalBalance(address,address,uint256)        ERROR         3.48s      496MB
+[pertest] halmos ERC20_Solmate        prove_MsgSenderCanTransferTotalBalanceZero(address,address)            ERROR         3.47s      500MB
+[pertest] halmos ERC20_Solmate        prove_MultipleTransferFromAllowed(address,address,address,uint256,uint256) ERROR         3.67s      489MB
+[pertest] halmos ERC20_Solmate        prove_MultipleTransferFromsOfZeroAmountAllowed(address,address,address,uint8) ERROR         3.68s      488MB
+[pertest] halmos ERC20_Solmate        prove_MultipleTransfersAllowed(address,address,uint256,uint256)        ERROR         3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_MultipleTransfersOfZeroAmountAllowed(address,address,uint8)      ERROR         3.47s      495MB
+[pertest] halmos ERC20_Solmate        prove_SelfApproveAndTransferFromOwnAccount(address,address,uint256)    ERROR         3.68s      488MB
+[pertest] halmos ERC20_Solmate        prove_SelfApproveAndTransferFromOwnAccountZeroAmountAllowed(address,address) ERROR         3.48s      489MB
+[pertest] halmos ERC20_Solmate        prove_SelfApprovePositiveAmount(address,uint256)                       ERROR         3.48s      489MB
+[pertest] halmos ERC20_Solmate        prove_SelfApproveZeroAmountAllowed(address)                            ERROR         3.47s      497MB
+[pertest] halmos ERC20_Solmate        prove_SelfTransferPositiveAmountAllowed(address,uint256)               ERROR         3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_SelfTransferZeroAmountAllowed(address)                           ERROR         3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_TokenReceiverCanTransferFromTotalBalance(address,address,uint256) ERROR         3.68s      493MB
+[pertest] halmos ERC20_Solmate        prove_TokenReceiverCanTransferFromTotalBalanceZero(address,address,address) ERROR         3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_Transfer(address,uint256,uint256)                                ERROR         3.47s      511MB
+[pertest] halmos ERC20_Solmate        prove_TransferDoesNotUpdateOtherBalances(address,address,address,uint256) ERROR         3.67s      488MB
+[pertest] halmos ERC20_Solmate        prove_TransferFrom(address,address,uint256,uint256)                    ERROR         3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_TransferFromDecreasesAllowance(address,address,address,uint256)  ERROR         3.48s      488MB
+[pertest] halmos ERC20_Solmate        prove_TransferFromDoesNotUpdateOtherBalances(address,address,address,address,uint256) ERROR         3.68s      488MB
+[pertest] halmos ERC20_Solmate        prove_TransferFromNoFees(address,address,address,uint256)              ERROR         3.68s      505MB
+[pertest] halmos ERC20_Solmate        prove_TransferFromZeroAmount(address,address,address)                  ERROR         3.47s      510MB
+[pertest] halmos ERC20_Solmate        prove_TransferZeroAmount(address,address)                              ERROR         3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_ZeroAddressHasNoToken()                                          ERROR         3.47s      493MB
+[pertest] hevm   ERC20_Solmate        proveFail_ApproveFromZeroAddress(address,uint256)                      FAIL          4.90s      828MB
+[pertest] hevm   ERC20_Solmate        proveFail_ApproveToZeroAddress(address,uint256)                        FAIL          4.90s      829MB
+[pertest] hevm   ERC20_Solmate        proveFail_ApproveZeroAddress(address,uint256)                          PASS          4.91s      776MB
+[pertest] hevm   ERC20_Solmate        proveFail_ApproveZeroAddressForMSGSender(address,uint256)              FAIL          1.84s      828MB
+[pertest] hevm   ERC20_Solmate        proveFail_BurnFromZeroAddress(uint256)                                 PASS          1.64s      768MB
+[pertest] hevm   ERC20_Solmate        proveFail_BurnUnderBalance(address,uint256)                            PASS          1.84s      767MB
+[pertest] hevm   ERC20_Solmate        proveFail_BurnUnderSupply(address,uint256)                             PASS          1.64s      768MB
+[pertest] hevm   ERC20_Solmate        proveFail_DecreaseAllowanceUnderAllowance(address,uint256)             PASS          4.91s      773MB
+[pertest] hevm   ERC20_Solmate        proveFail_IncreaseAllowanceUnderAllowance(address,uint256)             PASS          5.11s      831MB
+[pertest] hevm   ERC20_Solmate        proveFail_MintOverflow(address)                                        PASS          1.64s      767MB
+[pertest] hevm   ERC20_Solmate        proveFail_MintToZeroAddress(uint256)                                   FAIL          5.52s      906MB
+[pertest] hevm   ERC20_Solmate        proveFail_MintUnderSupply(address,uint256)                             PASS          1.64s      768MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferFromAllowanceReachesZero(address,address,address,uint256,uint256) ERROR         4.91s      774MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferFromNotEnoughAmount(address,address,uint256)         PASS          5.11s      932MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferFromToZeroAddress33(address,address,uint256)         FAIL        305.67s     1280MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferFromUnderBalance(address,address,uint256)            PASS          7.35s      976MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferFromUnderBalancei(address,address,uint256)           PASS          5.11s      876MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferFromZeroAddress(address,address,uint256)             PASS          4.91s      784MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferFromZeroAddress(address,uint256)                     PASS          4.91s      784MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferFromZeroAddressForMSGSender(address,address,uint256) FAIL         40.16s      949MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferFromZeroAmountToZeroAddressReverts(address,address)  FAIL          9.40s      921MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferToZeroAddress(address,uint256)                       FAIL          5.11s      849MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferUnderBalance(address,uint256)                        PASS          4.90s      773MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferUnderBalancej(address,uint256)                       PASS          4.90s      773MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferZeroAmountToZeroAddressReverts(address)              FAIL          1.84s      828MB
+[pertest] hevm   ERC20_Solmate        prove_AllowanceUpdatedAfterBurn(address,address,uint256)               PASS         10.61s      935MB
+[pertest] hevm   ERC20_Solmate        prove_Approve(address,uint256)                                         PASS          4.70s      774MB
+[pertest] hevm   ERC20_Solmate        prove_ApproveMaxAmount(address,address)                                PASS          4.91s      774MB
+[pertest] hevm   ERC20_Solmate        prove_ApproveNonZeroAmount(address,address,uint256)                    PASS          4.70s      773MB
+[pertest] hevm   ERC20_Solmate        prove_ApproveZeroAmount(address,address)                               PASS          5.10s      780MB
+[pertest] hevm   ERC20_Solmate        prove_BalanceUpdatedAfterBurn(address,address,uint256)                 ERROR         4.90s      773MB
+[pertest] hevm   ERC20_Solmate        prove_BurnDifferentAccount(address,uint256,address,uint256)            ERROR         4.90s      816MB
+[pertest] hevm   ERC20_Solmate        prove_BurnFromNonZeroAddress(address,uint256)                          PASS          4.90s      773MB
+[pertest] hevm   ERC20_Solmate        prove_BurnSameAccount(address,uint256)                                 ERROR         4.90s      772MB
+[pertest] hevm   ERC20_Solmate        prove_BurnZeroTokens(address)                                          PASS          1.64s      767MB
+[pertest] hevm   ERC20_Solmate        prove_ConsecutiveApprovePositiveToPositive(address,address,uint256,uint256) PASS          4.90s      773MB
+[pertest] hevm   ERC20_Solmate        prove_DecreaseAllowance(address,uint256)                               ERROR         4.90s      772MB
+[pertest] hevm   ERC20_Solmate        prove_IncreaseAllowance(address,uint256)                               ERROR         4.90s      774MB
+[pertest] hevm   ERC20_Solmate        prove_Mint(address,uint256)                                            PASS          4.90s      773MB
+[pertest] hevm   ERC20_Solmate        prove_MintZeroTokens(address)                                          PASS          1.64s      768MB
+[pertest] hevm   ERC20_Solmate        prove_MsgSenderCanRetrieveOtherBalance(address,uint256)                PASS          4.89s      780MB
+[pertest] hevm   ERC20_Solmate        prove_MsgSenderCanRetrieveOwnBalance(uint256)                          PASS          1.64s      767MB
+[pertest] hevm   ERC20_Solmate        prove_MsgSenderCanTransferTotalBalance(address,address,uint256)        ERROR         4.90s      777MB
+[pertest] hevm   ERC20_Solmate        prove_MsgSenderCanTransferTotalBalanceZero(address,address)            PASS          4.90s      773MB
+[pertest] hevm   ERC20_Solmate        prove_MultipleTransferFromAllowed(address,address,address,uint256,uint256) ERROR         4.90s      773MB
+[pertest] hevm   ERC20_Solmate        prove_MultipleTransferFromsOfZeroAmountAllowed(address,address,address,uint8) ERROR         5.10s      854MB
+[pertest] hevm   ERC20_Solmate        prove_MultipleTransfersAllowed(address,address,uint256,uint256)        ERROR         5.10s      822MB
+[pertest] hevm   ERC20_Solmate        prove_MultipleTransfersOfZeroAmountAllowed(address,address,uint8)      ERROR         5.10s      876MB
+[pertest] hevm   ERC20_Solmate        prove_SelfApproveAndTransferFromOwnAccount(address,address,uint256)    ERROR         4.90s      774MB
+[pertest] hevm   ERC20_Solmate        prove_SelfApproveAndTransferFromOwnAccountZeroAmountAllowed(address,address) ERROR         4.90s      774MB
+[pertest] hevm   ERC20_Solmate        prove_SelfApprovePositiveAmount(address,uint256)                       PASS          4.69s      773MB
+[pertest] hevm   ERC20_Solmate        prove_SelfApproveZeroAmountAllowed(address)                            PASS          1.63s      767MB
+[pertest] hevm   ERC20_Solmate        prove_SelfTransferPositiveAmountAllowed(address,uint256)               PASS          4.70s      773MB
+[pertest] hevm   ERC20_Solmate        prove_SelfTransferZeroAmountAllowed(address)                           PASS          1.63s      768MB
+[pertest] hevm   ERC20_Solmate        prove_TokenReceiverCanTransferFromTotalBalance(address,address,uint256) ERROR         4.90s      774MB
+[pertest] hevm   ERC20_Solmate        prove_TokenReceiverCanTransferFromTotalBalanceZero(address,address,address) ERROR         5.11s      830MB
+[pertest] hevm   ERC20_Solmate        prove_Transfer(address,uint256,uint256)                                ERROR         4.91s      816MB
+[pertest] hevm   ERC20_Solmate        prove_TransferDoesNotUpdateOtherBalances(address,address,address,uint256) ERROR         4.70s      773MB
+[pertest] hevm   ERC20_Solmate        prove_TransferFrom(address,address,uint256,uint256)                    ERROR         4.70s      774MB
+[pertest] hevm   ERC20_Solmate        prove_TransferFromDecreasesAllowance(address,address,address,uint256)  PASS         25.68s      916MB
+[pertest] hevm   ERC20_Solmate        prove_TransferFromDoesNotUpdateOtherBalances(address,address,address,address,uint256) ERROR         4.91s      773MB
+[pertest] hevm   ERC20_Solmate        prove_TransferFromNoFees(address,address,address,uint256)              ERROR         4.90s      774MB
+[pertest] hevm   ERC20_Solmate        prove_TransferFromZeroAmount(address,address,address)                  ERROR         4.69s      774MB
+[pertest] hevm   ERC20_Solmate        prove_TransferZeroAmount(address,address)                              PASS          4.90s      773MB
+[pertest] hevm   ERC20_Solmate        prove_ZeroAddressHasNoToken()                                          PASS          1.64s      768MB
+[pertest] halmos ERC721_OpenZeppelin  proveFail_ApproveWhenIdHasNotAnOwner(address,uint256)                  ERROR         3.27s      468MB
+[pertest] halmos ERC721_OpenZeppelin  proveFail_ApproveWhenIsNotApprovedForAll(address,address,uint256)      ERROR         3.26s      479MB
+[pertest] halmos ERC721_OpenZeppelin  proveFail_Burn(uint256)                                                ERROR         3.26s      504MB
+[pertest] halmos ERC721_OpenZeppelin  proveFail_MintWhenToIsAddressZero(address,uint256)                     ERROR         3.27s      469MB
+[pertest] halmos ERC721_OpenZeppelin  proveFail_setApprovalForAll(address,address,bool)                      ERROR         3.47s      478MB
+[pertest] halmos ERC721_OpenZeppelin  proveFail_transferFromWhenFromIsNotTheOwner(address,address,uint256)   ERROR         3.27s      496MB
+[pertest] halmos ERC721_OpenZeppelin  proveFail_transferFromWhenToIsAddressZero(address,address,uint256)     ERROR         3.27s      479MB
+[pertest] halmos ERC721_OpenZeppelin  prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender(address,uint256) ERROR         3.27s      503MB
+[pertest] halmos ERC721_OpenZeppelin  prove_ApproveWhenOwnerEqualsMSGSender(address,uint256)                 ERROR         3.27s      473MB
+[pertest] halmos ERC721_OpenZeppelin  prove_Burn(uint256)                                                    ERROR         3.26s      480MB
+[pertest] halmos ERC721_OpenZeppelin  prove_Mint(address,uint256)                                            ERROR         3.27s      486MB
+[pertest] halmos ERC721_OpenZeppelin  prove_safeTransferFrom(address,uint256)                                ERROR         3.47s      479MB
+[pertest] halmos ERC721_OpenZeppelin  prove_setApprovalForAll(address,bool)                                  ERROR         3.27s      469MB
+[pertest] halmos ERC721_OpenZeppelin  prove_transferFrom(address,address,uint256)                            ERROR         3.47s      502MB
+[pertest] halmos ERC721_Solmate       proveFail_ApproveWhenIdHasNotAnOwner(address,uint256)                  ERROR         3.26s      486MB
+[pertest] halmos ERC721_Solmate       proveFail_ApproveWhenIsNotApprovedForAll(address,address,uint256)      ERROR         3.26s      469MB
+[pertest] halmos ERC721_Solmate       proveFail_Burn(uint256)                                                ERROR         3.27s      491MB
+[pertest] halmos ERC721_Solmate       proveFail_MintWhenToIsAddressZero(address,uint256)                     ERROR         3.27s      469MB
+[pertest] halmos ERC721_Solmate       proveFail_setApprovalForAll(address,address,bool)                      ERROR         3.27s      469MB
+[pertest] halmos ERC721_Solmate       proveFail_transferFromWhenFromIsNotTheOwner(address,address,uint256)   ERROR         3.27s      488MB
+[pertest] halmos ERC721_Solmate       proveFail_transferFromWhenToIsAddressZero(address,address,uint256)     ERROR         3.26s      477MB
+[pertest] halmos ERC721_Solmate       prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender(address,uint256) ERROR         3.27s      487MB
+[pertest] halmos ERC721_Solmate       prove_ApproveWhenOwnerEqualsMSGSender(address,uint256)                 ERROR         3.27s      487MB
+[pertest] halmos ERC721_Solmate       prove_Burn(uint256)                                                    ERROR         3.27s      487MB
+[pertest] halmos ERC721_Solmate       prove_Mint(address,uint256)                                            ERROR         3.27s      469MB
+[pertest] halmos ERC721_Solmate       prove_safeTransferFrom(address,uint256)                                ERROR         3.47s      487MB
+[pertest] halmos ERC721_Solmate       prove_setApprovalForAll(address,bool)                                  ERROR         3.27s      487MB
+[pertest] halmos ERC721_Solmate       prove_transferFrom(address,address,uint256)                            ERROR         3.27s      487MB
+[pertest] halmos ERC1155_OpenZeppelin proveFail_burnBalanceLessThanAmount(uint256,uint256,uint256)           ERROR         3.27s      468MB
+[pertest] halmos ERC1155_OpenZeppelin proveFail_burnZeroAddress(uint256,uint256)                             ERROR         3.26s      504MB
+[pertest] halmos ERC1155_OpenZeppelin proveFail_mintZeroAddress(uint256,uint256)                             ERROR         3.27s      494MB
+[pertest] halmos ERC1155_OpenZeppelin proveFail_safeTransferFromBalanceLessThanAmount(uint256,uint256,uint256) ERROR         3.27s      469MB
+[pertest] halmos ERC1155_OpenZeppelin proveFail_safeTransferFromWhenSenderIsNotApprovedForAll(uint256,uint256) ERROR         3.27s      494MB
+[pertest] halmos ERC1155_OpenZeppelin proveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256,uint256)    ERROR         3.27s      484MB
+[pertest] halmos ERC1155_OpenZeppelin proveFail_safeTransferFromZeroAddressForFrom(uint256,uint256)          ERROR         3.27s      483MB
+[pertest] halmos ERC1155_OpenZeppelin proveFail_safeTransferFromZeroAddressForTo(uint256,uint256)            ERROR         3.27s      484MB
+[pertest] halmos ERC1155_OpenZeppelin proveFail_setApprovalForAllSenderEqualsOperator(address,bool)          ERROR         3.27s      494MB
+[pertest] halmos ERC1155_OpenZeppelin prove_burn(uint256,uint256)                                            ERROR         3.27s      468MB
+[pertest] halmos ERC1155_OpenZeppelin prove_mint(uint256,uint256)                                            ERROR         3.27s      484MB
+[pertest] halmos ERC1155_OpenZeppelin prove_safeBatchTransferFrom(uint256,uint256[],uint256[])               ERROR         3.47s      468MB
+[pertest] halmos ERC1155_OpenZeppelin prove_safeTransferFrom(uint256,uint256,uint256)                        ERROR         3.27s      469MB
+[pertest] halmos ERC1155_OpenZeppelin prove_setApprovalForAll(address,bool)                                  ERROR         3.27s      502MB
+[pertest] hevm   ERC1155_OpenZeppelin proveFail_burnBalanceLessThanAmount(uint256,uint256,uint256)           ERROR       302.66s     1656MB
+[pertest] hevm   ERC1155_OpenZeppelin proveFail_burnZeroAddress(uint256,uint256)                             PASS          1.63s      658MB
+[pertest] hevm   ERC1155_OpenZeppelin proveFail_mintZeroAddress(uint256,uint256)                             PASS          1.63s      792MB
+[pertest] hevm   ERC1155_OpenZeppelin proveFail_safeTransferFromBalanceLessThanAmount(uint256,uint256,uint256) PASS          8.79s      880MB
+[pertest] hevm   ERC1155_OpenZeppelin proveFail_safeTransferFromWhenSenderIsNotApprovedForAll(uint256,uint256) PASS          1.64s      727MB
+[pertest] hevm   ERC1155_OpenZeppelin proveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256,uint256)    FAIL          4.70s      888MB
+[pertest] hevm   ERC1155_OpenZeppelin proveFail_safeTransferFromZeroAddressForFrom(uint256,uint256)          PASS          1.64s      660MB
+[pertest] hevm   ERC1155_OpenZeppelin proveFail_safeTransferFromZeroAddressForTo(uint256,uint256)            PASS          1.64s      660MB
+[pertest] hevm   ERC1155_OpenZeppelin proveFail_setApprovalForAllSenderEqualsOperator(address,bool)          PASS          1.64s      705MB
+[pertest] hevm   ERC1155_OpenZeppelin prove_burn(uint256,uint256)                                            PASS          3.06s      876MB
+[pertest] hevm   ERC1155_OpenZeppelin prove_mint(uint256,uint256)                                            PASS          7.56s      891MB
+[pertest] hevm   ERC1155_OpenZeppelin prove_safeBatchTransferFrom(uint256,uint256[],uint256[])               ERROR         2.05s      794MB
+[pertest] hevm   ERC1155_OpenZeppelin prove_safeTransferFrom(uint256,uint256,uint256)                        ERROR        30.00s      998MB
+[pertest] hevm   ERC1155_OpenZeppelin prove_setApprovalForAll(address,bool)                                  PASS          1.84s      798MB
+[pertest] halmos ERC1155_Solmate      proveFail_burnBalanceLessThanAmount(uint256,uint256,uint256)           ERROR         3.47s      468MB
+[pertest] halmos ERC1155_Solmate      proveFail_burnZeroAddress(uint256,uint256)                             ERROR         3.27s      494MB
+[pertest] halmos ERC1155_Solmate      proveFail_mintZeroAddress(uint256,uint256)                             ERROR         3.27s      483MB
+[pertest] halmos ERC1155_Solmate      proveFail_safeTransferFromBalanceLessThanAmount(uint256,uint256,uint256) ERROR         3.47s      491MB
+[pertest] halmos ERC1155_Solmate      proveFail_safeTransferFromWhenSenderIsNotApprovedForAll(uint256,uint256) ERROR         3.27s      468MB
+[pertest] halmos ERC1155_Solmate      proveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256,uint256)    ERROR         3.27s      494MB
+[pertest] halmos ERC1155_Solmate      proveFail_safeTransferFromZeroAddressForFrom(uint256,uint256)          ERROR         3.27s      483MB
+[pertest] halmos ERC1155_Solmate      proveFail_safeTransferFromZeroAddressForTo(uint256,uint256)            ERROR         3.27s      483MB
+[pertest] halmos ERC1155_Solmate      proveFail_setApprovalForAllSenderEqualsOperator(address,bool)          ERROR         3.49s      501MB
+[pertest] halmos ERC1155_Solmate      prove_burn(uint256,uint256)                                            ERROR         3.27s      483MB
+[pertest] halmos ERC1155_Solmate      prove_mint(uint256,uint256)                                            ERROR         3.27s      469MB
+[pertest] halmos ERC1155_Solmate      prove_safeBatchTransferFrom(uint256,uint256[],uint256[])               ERROR         3.68s      503MB
+[pertest] halmos ERC1155_Solmate      prove_safeTransferFrom(uint256,uint256,uint256)                        ERROR         3.47s      468MB
+[pertest] halmos ERC1155_Solmate      prove_setApprovalForAll(address,bool)                                  ERROR         3.27s      494MB
+[pertest] hevm   ERC1155_Solmate      proveFail_burnBalanceLessThanAmount(uint256,uint256,uint256)           PASS          1.64s      741MB
+[pertest] hevm   ERC1155_Solmate      proveFail_burnZeroAddress(uint256,uint256)                             FAIL          1.84s      800MB
+[pertest] hevm   ERC1155_Solmate      proveFail_mintZeroAddress(uint256,uint256)                             PASS          1.64s      754MB
+[pertest] hevm   ERC1155_Solmate      proveFail_safeTransferFromBalanceLessThanAmount(uint256,uint256,uint256) PASS          1.64s      791MB
+[pertest] hevm   ERC1155_Solmate      proveFail_safeTransferFromWhenSenderIsNotApprovedForAll(uint256,uint256) PASS          1.64s      747MB
+[pertest] hevm   ERC1155_Solmate      proveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256,uint256)    FAIL          2.87s      864MB
+[pertest] hevm   ERC1155_Solmate      proveFail_safeTransferFromZeroAddressForFrom(uint256,uint256)          PASS          1.64s      732MB
+[pertest] hevm   ERC1155_Solmate      proveFail_safeTransferFromZeroAddressForTo(uint256,uint256)            PASS          1.64s      658MB
+[pertest] hevm   ERC1155_Solmate      proveFail_setApprovalForAllSenderEqualsOperator(address,bool)          PASS          1.64s      686MB
+[pertest] hevm   ERC1155_Solmate      prove_burn(uint256,uint256)                                            PASS          1.85s      801MB
+[pertest] hevm   ERC1155_Solmate      prove_mint(uint256,uint256)                                            PASS          1.84s      801MB
+[pertest] hevm   ERC1155_Solmate      prove_safeBatchTransferFrom(uint256,uint256[],uint256[])               ERROR         2.06s      794MB
+[pertest] hevm   ERC1155_Solmate      prove_safeTransferFrom(uint256,uint256,uint256)                        ERROR         2.05s      863MB
+[pertest] hevm   ERC1155_Solmate      prove_setApprovalForAll(address,bool)                                  PASS          1.84s      834MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_approvefrom_zero_address_reverts(address,uint256)            ERROR         3.47s      509MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_approvezero_address_reverts(address,uint256)                 ERROR         3.47s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_burn_exceeds_balance_reverts(address,uint256)                ERROR         3.48s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_burn_from_zero_address_reverts(uint256)                      ERROR         3.47s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_depositWithAmountLessThanAssets(address,address,uint256,uint256,address) ERROR         3.48s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_depositWithMSGSenderEqualsThis(address,uint256,uint256,address) ERROR         3.47s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_depositWithReceiverEqualsThis(address,address,uint256,uint256,address) ERROR         3.48s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_mintWithAmountLessThanShares(address,address,uint256,uint256,address) ERROR         3.68s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_mintWithMSGSenderEqualsThis(uint256,address)                 ERROR         3.47s      509MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_mintWithReceiverAsThis(address,address,uint256,uint256,address) ERROR         4.91s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_mint_overflow_reverts(address)                               ERROR         3.47s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_mint_to_zero_address_reverts(uint256)                        ERROR         3.27s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_redeemWithAmountLessThanShares(address,address,uint256,uint256,address,address) ERROR         3.47s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_redeemWithMSGSenderEqualsThis(address,address,uint256,uint256,address,address) ERROR         5.31s      518MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_redeemWithReceiverEqualsThis(address,address,uint256,uint256,address,address) ERROR         4.49s      506MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_transferFrom_from_zero_address_reverts(address,address,uint256) ERROR         3.47s      506MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_transferFrom_insufficient_allowance_reverts(address,address,address,uint256) ERROR         3.48s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_transferFrom_insufficient_balance_reverts(address,address,address,uint256,uint256) ERROR         3.47s      507MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_transferFrom_to_zero_address_reverts(address,address,uint256) ERROR         3.47s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_transfer_from_zero_address_reverts(address,uint256)          ERROR         3.27s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_transfer_insufficient_balance_reverts(address,address,uint256,uint256) ERROR         3.47s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_transfer_to_zero_address_reverts(address,uint256)            ERROR         3.26s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_withdrawWithAmountLessThanAssets(address,address,uint256,uint256,address,address) ERROR         7.15s     1244MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_withdrawWithMSGSenderEqualsOwner(address,address,uint256,uint256,address,address) ERROR         7.15s     1228MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_withdrawWithMSGSenderEqualsThis(address,address,uint256,uint256,address,address) ERROR         5.11s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_withdrawWithOwnerEqualsReceiver(address,address,uint256,uint256,address,address) ERROR         7.16s     1212MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_withdrawWithOwnerEqualsThis(address,address,uint256,uint256,address,address) ERROR         7.15s     1274MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_withdrawWithReceiverEqualsThis(address,address,uint256,uint256,address,address) ERROR         7.16s     1256MB
+[pertest] halmos ERC4626_OpenZeppelin prove_approveoverwrites_allowance(address,address,uint256,uint256)     ERROR         3.47s      509MB
+[pertest] halmos ERC4626_OpenZeppelin prove_approvesets_allowance(address,address,uint256)                   ERROR         3.47s      509MB
+[pertest] halmos ERC4626_OpenZeppelin prove_burn_decreases_balance(address,uint256)                          ERROR         3.47s      501MB
+[pertest] halmos ERC4626_OpenZeppelin prove_convertToAssets_lte_previewMint(uint256)                         ERROR         3.67s      508MB
+[pertest] halmos ERC4626_OpenZeppelin prove_convertToAssets_rounds_down_towards_0(uint256)                   ERROR        17.06s    10184MB
+[pertest] halmos ERC4626_OpenZeppelin prove_convertToShares_gte_previewDeposit(uint256,uint256)              ERROR         4.09s      479MB
+[pertest] halmos ERC4626_OpenZeppelin prove_convertToShares_rounds_down_towards_0(uint256,uint256)           ERROR        15.38s    10266MB
+[pertest] halmos ERC4626_OpenZeppelin prove_integrity_of_deposit(uint256,address)                            ERROR         4.09s      506MB
+[pertest] halmos ERC4626_OpenZeppelin prove_integrity_of_redeem()                                            ERROR         3.47s      508MB
+[pertest] halmos ERC4626_OpenZeppelin prove_integrity_of_withdraw()                                          ERROR         3.47s      508MB
+[pertest] halmos ERC4626_OpenZeppelin prove_maxDeposit_returns_correct_value(address)                        ERROR         3.27s      508MB
+[pertest] halmos ERC4626_OpenZeppelin prove_maxMint_returns_correct_value(address)                           ERROR         3.26s      506MB
+[pertest] halmos ERC4626_OpenZeppelin prove_mint_increases_balance(address,uint256)                          ERROR         3.27s      508MB
+[pertest] halmos ERC4626_OpenZeppelin prove_previewDepositRelationToDeposit(uint256,address)                 ERROR         3.47s      508MB
+[pertest] halmos ERC4626_OpenZeppelin prove_previewRedeem_lte_redeem(address,uint256)                        ERROR         3.48s      506MB
+[pertest] halmos ERC4626_OpenZeppelin prove_share_price_maintained_after_mint(uint256,address)               ERROR        13.66s     2066MB
+[pertest] halmos ERC4626_OpenZeppelin prove_transferFrom_updates_balances(address,address,address,uint256)   ERROR         3.68s      508MB
+[pertest] halmos ERC4626_OpenZeppelin prove_transfer_updates_balances(address,address,uint256)               ERROR         3.47s      507MB
+[pertest] halmos ERC4626_Solmate      proveFail_approvefrom_zero_address_reverts(address,uint256)            ERROR         3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_approvezero_address_reverts(address,uint256)                 ERROR         3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_burn_exceeds_balance_reverts(address,uint256)                ERROR         3.48s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_burn_from_zero_address_reverts(uint256)                      ERROR         3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_depositWithAmountLessThanAssets(address,address,uint256,uint256,address) ERROR         3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_depositWithMSGSenderEqualsThis(address,uint256,uint256,address) ERROR         3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_depositWithReceiverEqualsThis(address,address,uint256,uint256,address) ERROR         3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_mintWithAmountLessThanShares(address,address,uint256,uint256,address) ERROR         3.67s      493MB
+[pertest] halmos ERC4626_Solmate      proveFail_mintWithMSGSenderEqualsThis(uint256,address)                 ERROR         3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_mintWithReceiverAsThis(address,address,uint256,uint256,address) ERROR         3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_mint_overflow_reverts(address)                               ERROR         3.47s      505MB
+[pertest] halmos ERC4626_Solmate      proveFail_mint_to_zero_address_reverts(uint256)                        ERROR         3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_redeemWithAmountLessThanShares(address,address,uint256,uint256,address,address) ERROR         3.67s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_redeemWithMSGSenderEqualsThis(address,address,uint256,uint256,address,address) ERROR         3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_redeemWithReceiverEqualsThis(address,address,uint256,uint256,address,address) ERROR         3.47s      494MB
+[pertest] halmos ERC4626_Solmate      proveFail_transferFrom_from_zero_address_reverts(address,address,uint256) ERROR         3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_transferFrom_insufficient_allowance_reverts(address,address,address,uint256) ERROR         3.47s      509MB
+[pertest] halmos ERC4626_Solmate      proveFail_transferFrom_insufficient_balance_reverts(address,address,address,uint256,uint256) ERROR         3.67s      479MB
+[pertest] halmos ERC4626_Solmate      proveFail_transferFrom_to_zero_address_reverts(address,address,uint256) ERROR         3.48s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_transfer_from_zero_address_reverts(address,uint256)          ERROR         3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_transfer_insufficient_balance_reverts(address,address,uint256,uint256) ERROR         3.67s      503MB
+[pertest] halmos ERC4626_Solmate      proveFail_transfer_to_zero_address_reverts(address,uint256)            ERROR         3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_withdrawWithAmountLessThanAssets(address,address,uint256,uint256,address,address) ERROR         3.67s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_withdrawWithMSGSenderEqualsOwner(address,address,uint256,uint256,address,address) ERROR         3.67s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_withdrawWithMSGSenderEqualsThis(address,address,uint256,uint256,address,address) ERROR         3.67s      480MB
+[pertest] halmos ERC4626_Solmate      proveFail_withdrawWithOwnerEqualsReceiver(address,address,uint256,uint256,address,address) ERROR         3.67s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_withdrawWithOwnerEqualsThis(address,address,uint256,uint256,address,address) ERROR         3.67s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_withdrawWithReceiverEqualsThis(address,address,uint256,uint256,address,address) ERROR         3.68s      508MB
+[pertest] halmos ERC4626_Solmate      prove_approveoverwrites_allowance(address,address,uint256,uint256)     ERROR         3.47s      509MB
+[pertest] halmos ERC4626_Solmate      prove_approvesets_allowance(address,address,uint256)                   ERROR         3.47s      508MB
+[pertest] halmos ERC4626_Solmate      prove_burn_decreases_balance(address,uint256)                          ERROR         3.47s      508MB
+[pertest] halmos ERC4626_Solmate      prove_convertToAssets_lte_previewMint(uint256)                         ERROR        63.83s     6046MB
+[pertest] halmos ERC4626_Solmate      prove_convertToAssets_rounds_down_towards_0(uint256)                   ERROR        14.91s     9844MB
+[pertest] halmos ERC4626_Solmate      prove_convertToShares_gte_previewDeposit(uint256,uint256)              ERROR         3.88s      506MB
+[pertest] halmos ERC4626_Solmate      prove_convertToShares_rounds_down_towards_0(uint256,uint256)           ERROR        25.50s    10000MB
+[pertest] halmos ERC4626_Solmate      prove_integrity_of_deposit(uint256,address)                            ERROR         3.88s      479MB
+[pertest] halmos ERC4626_Solmate      prove_integrity_of_redeem()                                            ERROR         3.47s      509MB
+[pertest] halmos ERC4626_Solmate      prove_integrity_of_withdraw()                                          ERROR         3.47s      508MB
+[pertest] halmos ERC4626_Solmate      prove_maxDeposit_returns_correct_value(address)                        ERROR         3.27s      508MB
+[pertest] halmos ERC4626_Solmate      prove_maxMint_returns_correct_value(address)                           ERROR         3.26s      508MB
+[pertest] halmos ERC4626_Solmate      prove_mint_increases_balance(address,uint256)                          ERROR         3.47s      508MB
+[pertest] halmos ERC4626_Solmate      prove_previewDepositRelationToDeposit(uint256,address)                 ERROR         3.47s      508MB
+[pertest] halmos ERC4626_Solmate      prove_previewRedeem_lte_redeem(address,uint256)                        ERROR         3.46s      508MB
+[pertest] halmos ERC4626_Solmate      prove_share_price_maintained_after_mint(uint256,address)               ERROR         3.47s      508MB
+[pertest] halmos ERC4626_Solmate      prove_transferFrom_updates_balances(address,address,address,uint256)   ERROR         3.67s      508MB
+[pertest] halmos ERC4626_Solmate      prove_transfer_updates_balances(address,address,uint256)               ERROR         3.47s      508MB
+halmos ERC1155_Solmate      proveFail_burnZeroAddress(uint256,uint256)                             panic:1                                                      confirmed
+halmos ERC1155_Solmate      proveFail_setApprovalForAllSenderEqualsOperator(address,bool)          panic:1                                                      confirmed
+halmos ERC20_Solmate        proveFail_ApproveFromZeroAddress(address,uint256)                      panic:1                                                      confirmed
+halmos ERC20_Solmate        proveFail_ApproveToZeroAddress(address,uint256)                        panic:1                                                      confirmed
+halmos ERC20_Solmate        proveFail_ApproveZeroAddress(address,uint256)                          panic:1                                                      confirmed
+halmos ERC20_Solmate        proveFail_ApproveZeroAddressForMSGSender(address,uint256)              panic:1                                                      confirmed
+halmos ERC20_Solmate        proveFail_MintToZeroAddress(uint256)                                   panic:1                                                      confirmed
+halmos ERC20_Solmate        proveFail_TransferFromToZeroAddress33(address,address,uint256)         panic:1                                                      confirmed
+halmos ERC20_Solmate        proveFail_TransferFromToZeroAddress33(address,address,uint256)         panic:1                                                      confirmed
+halmos ERC20_Solmate        proveFail_TransferFromZeroAddressForMSGSender(address,address,uint256) panic:1                                                      confirmed
+halmos ERC20_Solmate        proveFail_TransferFromZeroAmountToZeroAddressReverts(address,address)  panic:1                                                      confirmed
+halmos ERC20_Solmate        proveFail_TransferToZeroAddress(address,uint256)                       panic:1                                                      confirmed
+halmos ERC20_Solmate        proveFail_TransferZeroAmountToZeroAddressReverts(address)              panic:1                                                      confirmed
+halmos ERC4626_OpenZeppelin proveFail_mintWithReceiverAsThis(address,address,uint256,uint256,address) panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_approvefrom_zero_address_reverts(address,uint256)            panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_approvezero_address_reverts(address,uint256)                 panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_burn_from_zero_address_reverts(uint256)                      panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_mintWithReceiverAsThis(address,address,uint256,uint256,address) panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_mint_to_zero_address_reverts(uint256)                        panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_transferFrom_from_zero_address_reverts(address,address,uint256) panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_transferFrom_to_zero_address_reverts(address,address,uint256) panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_transferFrom_to_zero_address_reverts(address,address,uint256) panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_transfer_from_zero_address_reverts(address,uint256)          panic:1                                                      confirmed
+halmos ERC4626_Solmate      proveFail_transfer_to_zero_address_reverts(address,uint256)            panic:1                                                      confirmed
+halmos ERC721_OpenZeppelin  proveFail_ApproveWhenIsNotApprovedForAll(address,address,uint256)      panic:1                                                      confirmed
+halmos ERC721_OpenZeppelin  proveFail_setApprovalForAll(address,address,bool)                      panic:1                                                      confirmed
+halmos ERC721_OpenZeppelin  prove_safeTransferFrom(address,uint256)                                panic:1                                                      confirmed
+halmos ERC721_Solmate       proveFail_setApprovalForAll(address,address,bool)                      panic:1                                                      confirmed
+halmos ERC721_Solmate       prove_safeTransferFrom(address,uint256)                                panic:1                                                      confirmed
+hevm   ERC1155_OpenZeppelin proveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256,uint256)    hevm:validated; foundry-replay:revert:0xe237d922000000000000 confirmed
+hevm   ERC1155_Solmate      proveFail_burnZeroAddress(uint256,uint256)                             hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC1155_Solmate      proveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256,uint256)    hevm:validated; foundry-replay:revert:0x08c379a0000000000000 confirmed
+hevm   ERC20_Solmate        proveFail_ApproveFromZeroAddress(address,uint256)                      hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC20_Solmate        proveFail_ApproveToZeroAddress(address,uint256)                        hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC20_Solmate        proveFail_ApproveZeroAddressForMSGSender(address,uint256)              hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC20_Solmate        proveFail_MintToZeroAddress(uint256)                                   hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC20_Solmate        proveFail_TransferFromToZeroAddress33(address,address,uint256)         hevm:validated; foundry-replay:panic:17                      confirmed
+hevm   ERC20_Solmate        proveFail_TransferFromZeroAddressForMSGSender(address,address,uint256) hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC20_Solmate        proveFail_TransferFromZeroAmountToZeroAddressReverts(address,address)  hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC20_Solmate        proveFail_TransferToZeroAddress(address,uint256)                       hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC20_Solmate        proveFail_TransferZeroAmountToZeroAddressReverts(address)              hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC4626_OpenZeppelin proveFail_mintWithMSGSenderEqualsThis(uint256,address)                 hevm:validated; foundry-replay:revert:0x08c379a0000000000000 confirmed
+hevm   ERC4626_Solmate      proveFail_approvefrom_zero_address_reverts(address,uint256)            hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC4626_Solmate      proveFail_approvezero_address_reverts(address,uint256)                 hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC4626_Solmate      proveFail_burn_from_zero_address_reverts(uint256)                      hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC4626_Solmate      proveFail_mintWithMSGSenderEqualsThis(uint256,address)                 hevm:validated; foundry-replay:revert:0x08c379a0000000000000 confirmed
+hevm   ERC4626_Solmate      proveFail_mint_to_zero_address_reverts(uint256)                        hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC4626_Solmate      proveFail_transferFrom_from_zero_address_reverts(address,address,uint256) hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC4626_Solmate      proveFail_transferFrom_to_zero_address_reverts(address,address,uint256) hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC4626_Solmate      proveFail_transfer_from_zero_address_reverts(address,uint256)          hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC4626_Solmate      proveFail_transfer_to_zero_address_reverts(address,uint256)            hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC721_OpenZeppelin  proveFail_setApprovalForAll(address,address,bool)                      hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC721_OpenZeppelin  prove_safeTransferFrom(address,uint256)                                hevm:not reproducible; foundry-replay:revert:0x              refuted
+hevm   ERC721_Solmate       proveFail_setApprovalForAll(address,address,bool)                      hevm:validated; foundry-replay:success                       confirmed
+hevm   ERC721_Solmate       prove_safeTransferFrom(address,uint256)                                hevm:not reproducible; foundry-replay:revert:0x              refuted
+halmos ERC1155_Solmate      proveFail_burnZeroAddress(uint256,uint256)                   SolmateERC1155Mock::burn(0x0000000000000000000000000000000000000000, 0 Stop
+halmos ERC1155_Solmate      proveFail_setApprovalForAllSenderEqualsOperator(address,bool SolmateERC1155Mock::setApprovalForAll(0x000000000000000000000000000000 Stop
+halmos ERC20_Solmate        proveFail_ApproveFromZeroAddress(address,uint256)            SolmateERC20Mock::approve(0x8000000000000000000000000000000000000000,  Return true
+halmos ERC20_Solmate        proveFail_ApproveToZeroAddress(address,uint256)              SolmateERC20Mock::approve(0x0000000000000000000000000000000000000000,  Return true
+halmos ERC20_Solmate        proveFail_ApproveZeroAddress(address,uint256)                SolmateERC20Mock::approve(0x0000000000000000000000000000000000000000,  Return true
+halmos ERC20_Solmate        proveFail_ApproveZeroAddressForMSGSender(address,uint256)    SolmateERC20Mock::approve(0x8000000000000000000000000000000000000000,  Return true
+halmos ERC20_Solmate        proveFail_MintToZeroAddress(uint256)                         SolmateERC20Mock::mint(0x0000000000000000000000000000000000000000, 115 Stop
+halmos ERC20_Solmate        proveFail_TransferFromToZeroAddress33(address,address,uint25 SolmateERC20Mock::transferFrom(Confirm_ERC20_Solmate_Halmos: [0x7FA938 Return true
+halmos ERC20_Solmate        proveFail_TransferFromZeroAddressForMSGSender(address,addres SolmateERC20Mock::transferFrom(0xD819178246D25fdC31560c952d0fAF1e79B50 Return true
+halmos ERC20_Solmate        proveFail_TransferFromZeroAmountToZeroAddressReverts(address SolmateERC20Mock::transferFrom(ECRecover: [0x0000000000000000000000000 Return true
+halmos ERC20_Solmate        proveFail_TransferToZeroAddress(address,uint256)             SolmateERC20Mock::transfer(0x0000000000000000000000000000000000000000, Return true
+halmos ERC20_Solmate        proveFail_TransferZeroAmountToZeroAddressReverts(address)    SolmateERC20Mock::transfer(0x0000000000000000000000000000000000000000, Return true
+halmos ERC4626_OpenZeppelin proveFail_mintWithReceiverAsThis(address,address,uint256,uin OpenZeppelinERC20::transferFrom(Confirm_ERC4626_OpenZeppelin_Halmos: [ Return true
+halmos ERC4626_Solmate      proveFail_approvefrom_zero_address_reverts(address,uint256)  SolmateERC4626Mock::approve(0x8000000000000000000000000000000000000000 Return true
+halmos ERC4626_Solmate      proveFail_approvezero_address_reverts(address,uint256)       SolmateERC4626Mock::approve(0x0000000000000000000000000000000000000000 Return true
+halmos ERC4626_Solmate      proveFail_burn_from_zero_address_reverts(uint256)            SolmateERC4626Mock::burn(0x0000000000000000000000000000000000000000, 0 Stop
+halmos ERC4626_Solmate      proveFail_mintWithReceiverAsThis(address,address,uint256,uin SolmateERC20Mock::transferFrom(Confirm_ERC4626_Solmate_Halmos: [0x7FA9 Return true
+halmos ERC4626_Solmate      proveFail_mint_to_zero_address_reverts(uint256)              SolmateERC4626Mock::mint(0x0000000000000000000000000000000000000000, 0 Stop
+halmos ERC4626_Solmate      proveFail_transferFrom_from_zero_address_reverts(address,add SolmateERC4626Mock::transferFrom(0x00000000000000000000000000000000000 Return true
+halmos ERC4626_Solmate      proveFail_transferFrom_to_zero_address_reverts(address,addre SolmateERC4626Mock::transferFrom(0x80000000000000000000000000000000000 Return true
+halmos ERC4626_Solmate      proveFail_transfer_from_zero_address_reverts(address,uint256 SolmateERC4626Mock::transfer(0x800000000000000000000000000000000000000 Return true
+halmos ERC4626_Solmate      proveFail_transfer_to_zero_address_reverts(address,uint256)  SolmateERC4626Mock::transfer(0x000000000000000000000000000000000000000 Return true
+halmos ERC721_OpenZeppelin  proveFail_ApproveWhenIsNotApprovedForAll(address,address,uin OpenZeppelinERC721::setApprovalForAll(DefaultSender: [0x1804c8AB1F12E6 Revert ERC721InvalidApprover(0x0000000000000000000000000000000000000000)
+halmos ERC721_OpenZeppelin  proveFail_setApprovalForAll(address,address,bool)            OpenZeppelinERC721::setApprovalForAll(0x800000000000000000000000000000 Stop
+halmos ERC721_OpenZeppelin  prove_safeTransferFrom(address,uint256)                      OpenZeppelinERC721::safeTransferFrom(DefaultSender: [0x1804c8AB1F12E6b Revert ERC721InvalidReceiver(0x2e234DAe75C793f67A35089C9d99245E1C58470b)
+halmos ERC721_Solmate       proveFail_setApprovalForAll(address,address,bool)            SolmateERC721Mock::setApprovalForAll(0x0000000000000000000000000000000 Stop
+halmos ERC721_Solmate       prove_safeTransferFrom(address,uint256)                      SolmateERC721Mock::safeTransferFrom(DefaultSender: [0x1804c8AB1F12E6bb Revert EvmError: Revert
+hevm   ERC1155_OpenZeppelin proveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256,u OpenZeppelinERC1155::safeTransferFrom(ERC1155RecTest: [0x2e234DAe75C79 Revert ERC1155MissingApprovalForAll(0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38, 0x2e234DAe75C793f67A35089C9d99245E1C58470b)
+hevm   ERC1155_Solmate      proveFail_burnZeroAddress(uint256,uint256)                   SolmateERC1155Mock::burn(0x0000000000000000000000000000000000000000, 0 Stop
+hevm   ERC1155_Solmate      proveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256,u SolmateERC1155Mock::safeTransferFrom(ERC1155RecTest: [0x2e234DAe75C793 Revert NOT_AUTHORIZED
+hevm   ERC20_Solmate        proveFail_ApproveFromZeroAddress(address,uint256)            SolmateERC20Mock::approve(0x000000000000000000000000000000000000001a,  Return true
+hevm   ERC20_Solmate        proveFail_ApproveToZeroAddress(address,uint256)              SolmateERC20Mock::approve(0x0000000000000000000000000000000000000000,  Return true
+hevm   ERC20_Solmate        proveFail_ApproveZeroAddressForMSGSender(address,uint256)    SolmateERC20Mock::approve(0x000000000000000000000000000000000000001a,  Return true
+hevm   ERC20_Solmate        proveFail_MintToZeroAddress(uint256)                         SolmateERC20Mock::mint(0x0000000000000000000000000000000000000000, 1)  Stop
+hevm   ERC20_Solmate        proveFail_TransferFromToZeroAddress33(address,address,uint25 SolmateERC20Mock::transferFrom(0x000000000000000000000000000000000000A Revert panic: arithmetic underflow or overflow (0x11)
+hevm   ERC20_Solmate        proveFail_TransferFromZeroAddressForMSGSender(address,addres SolmateERC20Mock::transferFrom(0x0000040000000100000000000800010000000 Return true
+hevm   ERC20_Solmate        proveFail_TransferFromZeroAmountToZeroAddressReverts(address SolmateERC20Mock::transferFrom(0x0000000084000000000000000000002500800 Return true
+hevm   ERC20_Solmate        proveFail_TransferToZeroAddress(address,uint256)             SolmateERC20Mock::transfer(0x0000000000000000000000000000000000000000, Return true
+hevm   ERC20_Solmate        proveFail_TransferZeroAmountToZeroAddressReverts(address)    SolmateERC20Mock::transfer(0x0000000000000000000000000000000000000000, Return true
+hevm   ERC4626_OpenZeppelin proveFail_mintWithMSGSenderEqualsThis(uint256,address)                                                                              
+hevm   ERC4626_Solmate      proveFail_approvefrom_zero_address_reverts(address,uint256)  SolmateERC4626Mock::approve(0x000000000000000020000000000000000000000C Return true
+hevm   ERC4626_Solmate      proveFail_approvezero_address_reverts(address,uint256)       SolmateERC4626Mock::approve(0x0000000000000000000000000000000000000000 Return true
+hevm   ERC4626_Solmate      proveFail_burn_from_zero_address_reverts(uint256)            SolmateERC4626Mock::burn(0x0000000000000000000000000000000000000000, 0 Stop
+hevm   ERC4626_Solmate      proveFail_mintWithMSGSenderEqualsThis(uint256,address)                                                                              
+hevm   ERC4626_Solmate      proveFail_mint_to_zero_address_reverts(uint256)              SolmateERC4626Mock::mint(0x0000000000000000000000000000000000000000, 0 Stop
+hevm   ERC4626_Solmate      proveFail_transferFrom_from_zero_address_reverts(address,add SolmateERC4626Mock::transferFrom(0x00000000000000000000000000000000000 Return true
+hevm   ERC4626_Solmate      proveFail_transferFrom_to_zero_address_reverts(address,addre SolmateERC4626Mock::transferFrom(0x04000008000000000000000000000000000 Return true
+hevm   ERC4626_Solmate      proveFail_transfer_from_zero_address_reverts(address,uint256 SolmateERC4626Mock::transfer(0x000000000000000020000000000000000000000 Return true
+hevm   ERC4626_Solmate      proveFail_transfer_to_zero_address_reverts(address,uint256)  SolmateERC4626Mock::transfer(0x000000000000000000000000000000000000000 Return true
+hevm   ERC721_OpenZeppelin  proveFail_setApprovalForAll(address,address,bool)            OpenZeppelinERC721::setApprovalForAll(0x000000000000000000a00000000000 Stop
+hevm   ERC721_Solmate       proveFail_setApprovalForAll(address,address,bool)            SolmateERC721Mock::setApprovalForAll(0x0000000000000000000000000000000 Stop
+needs attention: hevm ERC721_OpenZeppelin prove_safeTransferFrom(address,uint256) fp 
+needs attention: hevm ERC721_Solmate prove_safeTransferFrom(address,uint256) fp 
+needs attention: hevm ERC4626_Solmate proveFail_withdrawWithMSGSenderEqualsOwner(address,address,uint256,uint256,address,address) inc 
+54 failing verdicts classified
+[suite] run  1 halmos ERC20_OpenZeppelin   exited        7.76s      488MB
+[suite] run  1 hevm   ERC20_OpenZeppelin   exited      881.11s     1035MB
+[suite] run  1 halmos ERC20_Solmate        exited        8.59s      488MB
+[suite] run  1 hevm   ERC20_Solmate        exited      383.57s     1327MB
+[suite] run  1 halmos ERC721_OpenZeppelin  exited        3.88s      487MB
+[suite] run  1 halmos ERC721_Solmate       exited        3.88s      468MB
+[suite] run  1 halmos ERC1155_OpenZeppelin exited        3.87s      469MB
+[suite] run  1 hevm   ERC1155_OpenZeppelin exited      349.13s     1660MB
+[suite] run  1 halmos ERC1155_Solmate      exited        4.91s      503MB
+[suite] run  1 hevm   ERC1155_Solmate      exited        3.88s      869MB
+[suite] run  1 halmos ERC4626_OpenZeppelin exited       42.34s    10178MB
+[suite] run  1 halmos ERC4626_Solmate      exited       77.73s    10133MB
+[suite] run  2 halmos ERC20_OpenZeppelin   exited        8.16s      488MB
+[suite] run  2 hevm   ERC20_OpenZeppelin   exited      878.48s     1037MB
+[suite] run  2 halmos ERC20_Solmate        exited        8.58s      488MB
+[suite] run  2 hevm   ERC20_Solmate        exited      383.46s     1324MB
+[suite] run  2 halmos ERC721_OpenZeppelin  exited        3.87s      479MB
+[suite] run  2 halmos ERC721_Solmate       exited        3.87s      495MB
+[suite] run  2 halmos ERC1155_OpenZeppelin exited        3.67s      469MB
+[suite] run  2 hevm   ERC1155_OpenZeppelin exited      348.45s     1659MB
+[suite] run  2 halmos ERC1155_Solmate      exited        4.69s      503MB
+[suite] run  2 hevm   ERC1155_Solmate      exited        3.67s      867MB
+[suite] run  2 halmos ERC4626_OpenZeppelin exited       42.60s     9983MB
+[suite] run  2 halmos ERC4626_Solmate      exited       76.92s     9605MB
+[suite] run  3 halmos ERC20_OpenZeppelin   exited        8.17s      511MB
+[suite] run  3 hevm   ERC20_OpenZeppelin   exited      878.37s     1035MB
+[suite] run  3 halmos ERC20_Solmate        exited        8.57s      489MB
+[suite] run  3 hevm   ERC20_Solmate        exited      383.64s     1324MB
+[suite] run  3 halmos ERC721_OpenZeppelin  exited        4.08s      502MB
+[suite] run  3 halmos ERC721_Solmate       exited        3.87s      487MB
+[suite] run  3 halmos ERC1155_OpenZeppelin exited        3.67s      502MB
+[suite] run  3 hevm   ERC1155_OpenZeppelin exited      348.37s     1660MB
+[suite] run  3 halmos ERC1155_Solmate      exited        4.70s      504MB
+[suite] run  3 hevm   ERC1155_Solmate      exited        3.68s      896MB
+[suite] run  3 halmos ERC4626_OpenZeppelin exited       41.09s    10252MB
+[suite] run  3 halmos ERC4626_Solmate      exited       78.57s     9980MB
+[suite] run  4 halmos ERC20_OpenZeppelin   exited        8.16s      487MB
+[suite] run  4 hevm   ERC20_OpenZeppelin   exited      879.62s     1035MB
+[suite] run  4 halmos ERC20_Solmate        exited        8.79s      488MB
+[suite] run  4 hevm   ERC20_Solmate        exited      383.68s     1327MB
+[suite] run  4 halmos ERC721_OpenZeppelin  exited        3.88s      487MB
+[suite] run  4 halmos ERC721_Solmate       exited        3.88s      495MB
+[suite] run  4 halmos ERC1155_OpenZeppelin exited        3.68s      484MB
+[suite] run  4 hevm   ERC1155_OpenZeppelin exited      349.62s     1660MB
+[suite] run  4 halmos ERC1155_Solmate      exited        4.49s      501MB
+[suite] run  4 hevm   ERC1155_Solmate      exited        3.67s      869MB
+[suite] run  4 halmos ERC4626_OpenZeppelin exited       39.09s     9706MB
+[suite] run  4 halmos ERC4626_Solmate      exited       78.55s     9887MB
+[suite] run  5 halmos ERC20_OpenZeppelin   exited        8.37s      487MB
+[suite] run  5 hevm   ERC20_OpenZeppelin   exited      879.20s     1035MB
+[suite] run  5 halmos ERC20_Solmate        exited        8.58s      488MB
+[suite] run  5 hevm   ERC20_Solmate        exited      383.91s     1325MB
+[suite] run  5 halmos ERC721_OpenZeppelin  exited        3.88s      496MB
+[suite] run  5 halmos ERC721_Solmate       exited        3.88s      486MB
+[suite] run  5 halmos ERC1155_OpenZeppelin exited        3.67s      494MB
+[suite] run  5 hevm   ERC1155_OpenZeppelin exited      348.41s     1658MB
+[suite] run  5 halmos ERC1155_Solmate      exited        4.28s      494MB
+[suite] run  5 hevm   ERC1155_Solmate      exited        3.67s      867MB
+[suite] run  5 halmos ERC4626_OpenZeppelin exited       41.54s     9941MB
+[suite] run  5 halmos ERC4626_Solmate      exited       78.73s    10198MB
+[suite] run  6 halmos ERC20_OpenZeppelin   exited        8.17s      511MB
+[suite] run  6 hevm   ERC20_OpenZeppelin   exited      878.16s     1038MB
+[suite] run  6 halmos ERC20_Solmate        exited        8.58s      488MB
+[suite] run  6 hevm   ERC20_Solmate        exited      383.61s     1326MB
+[suite] run  6 halmos ERC721_OpenZeppelin  exited        3.87s      492MB
+[suite] run  6 halmos ERC721_Solmate       exited        3.87s      494MB
+[suite] run  6 halmos ERC1155_OpenZeppelin exited        3.67s      481MB
+[suite] run  6 hevm   ERC1155_OpenZeppelin exited      348.04s     1660MB
+[suite] run  6 halmos ERC1155_Solmate      exited        4.48s      502MB
+[suite] run  6 hevm   ERC1155_Solmate      exited        3.89s      882MB
+[suite] run  6 halmos ERC4626_OpenZeppelin exited       40.90s    10196MB
+[suite] run  6 halmos ERC4626_Solmate      exited       78.95s    10265MB
+[suite] run  7 halmos ERC20_OpenZeppelin   exited        8.16s      515MB
+[suite] run  7 hevm   ERC20_OpenZeppelin   exited      879.46s     1036MB
+[suite] run  7 halmos ERC20_Solmate        exited        8.78s      488MB
+[suite] run  7 hevm   ERC20_Solmate        exited      384.22s     1324MB
+[suite] run  7 halmos ERC721_OpenZeppelin  exited        4.08s      501MB
+[suite] run  7 halmos ERC721_Solmate       exited        3.88s      502MB
+[suite] run  7 halmos ERC1155_OpenZeppelin exited        3.67s      470MB
+[suite] run  7 hevm   ERC1155_OpenZeppelin exited      348.27s     1657MB
+[suite] run  7 halmos ERC1155_Solmate      exited        4.48s      494MB
+[suite] run  7 hevm   ERC1155_Solmate      exited        3.68s      894MB
+[suite] run  7 halmos ERC4626_OpenZeppelin exited       41.31s     9805MB
+[suite] run  7 halmos ERC4626_Solmate      exited       78.34s     9737MB
+[suite] run  8 halmos ERC20_OpenZeppelin   exited        8.36s      516MB
+[suite] run  8 hevm   ERC20_OpenZeppelin   exited      877.82s     1036MB
+[suite] run  8 halmos ERC20_Solmate        exited        8.78s      488MB
+[suite] run  8 hevm   ERC20_Solmate        exited      383.75s     1326MB
+[suite] run  8 halmos ERC721_OpenZeppelin  exited        3.88s      487MB
+[suite] run  8 halmos ERC721_Solmate       exited        3.87s      487MB
+[suite] run  8 halmos ERC1155_OpenZeppelin exited        3.67s      493MB
+[suite] run  8 hevm   ERC1155_OpenZeppelin exited      348.09s     1662MB
+[suite] run  8 halmos ERC1155_Solmate      exited        4.49s      501MB
+[suite] run  8 hevm   ERC1155_Solmate      exited        3.67s      866MB
+[suite] run  8 halmos ERC4626_OpenZeppelin exited       40.04s     9771MB
+[suite] run  8 halmos ERC4626_Solmate      exited       78.11s     9757MB
+[suite] run  9 halmos ERC20_OpenZeppelin   exited        8.17s      511MB
+[suite] run  9 hevm   ERC20_OpenZeppelin   exited      881.86s     1035MB
+[suite] run  9 halmos ERC20_Solmate        exited        8.78s      488MB
+[suite] run  9 hevm   ERC20_Solmate        exited      383.50s     1325MB
+[suite] run  9 halmos ERC721_OpenZeppelin  exited        3.87s      479MB
+[suite] run  9 halmos ERC721_Solmate       exited        3.87s      469MB
+[suite] run  9 halmos ERC1155_OpenZeppelin exited        3.67s      484MB
+[suite] run  9 hevm   ERC1155_OpenZeppelin exited      348.13s     1657MB
+[suite] run  9 halmos ERC1155_Solmate      exited        4.28s      503MB
+[suite] run  9 hevm   ERC1155_Solmate      exited        3.67s      868MB
+[suite] run  9 halmos ERC4626_OpenZeppelin exited       42.95s     9703MB
+[suite] run  9 halmos ERC4626_Solmate      exited       78.73s    10135MB
+[suite] run 10 halmos ERC20_OpenZeppelin   exited        7.97s      516MB
+[suite] run 10 hevm   ERC20_OpenZeppelin   exited      876.84s     1034MB
+[suite] run 10 halmos ERC20_Solmate        exited        8.37s      488MB
+[suite] run 10 hevm   ERC20_Solmate        exited      383.43s     1321MB
+[suite] run 10 halmos ERC721_OpenZeppelin  exited        3.88s      497MB
+[suite] run 10 halmos ERC721_Solmate       exited        3.87s      486MB
+[suite] run 10 halmos ERC1155_OpenZeppelin exited        3.67s      492MB
+[suite] run 10 hevm   ERC1155_OpenZeppelin exited      348.22s     1657MB
+[suite] run 10 halmos ERC1155_Solmate      exited        4.70s      494MB
+[suite] run 10 hevm   ERC1155_Solmate      exited        3.67s      868MB
+[suite] run 10 halmos ERC4626_OpenZeppelin exited       40.52s    10191MB
+[suite] run 10 halmos ERC4626_Solmate      exited       77.91s     9550MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_ApproveFromZeroAddress(address,uint256)                      PASS          3.67s      511MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_ApproveToZeroAddress(address,uint256)                        PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_ApproveZeroAddress(address,uint256)                          PASS          3.47s      498MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_ApproveZeroAddressForMSGSender(address,uint256)              PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_BurnFromZeroAddress(uint256)                                 PASS          3.47s      489MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_BurnUnderBalance(address,uint256)                            PASS          3.47s      487MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_BurnUnderSupply(address,uint256)                             PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_DecreaseAllowanceUnderAllowance(address,uint256)             ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_IncreaseAllowanceUnderAllowance(address,uint256)             ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_MintOverflow(address)                                        PASS          3.47s      489MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_MintToZeroAddress(uint256)                                   PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_MintUnderSupply(address,uint256)                             ERROR         3.47s      489MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromAllowanceReachesZero(address,address,address,uint256,uint256) ERROR         3.68s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromNotEnoughAmount(address,address,uint256)         ERROR         3.48s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromToZeroAddress33(address,address,uint256)         PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromUnderBalance(address,address,uint256)            PASS          3.68s      489MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromUnderBalancei(address,address,uint256)           PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromZeroAddress(address,address,uint256)             PASS          3.47s      510MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromZeroAddress(address,uint256)                     PASS          3.47s      510MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromZeroAddressForMSGSender(address,address,uint256) PASS          3.27s      508MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromZeroAmountToZeroAddressReverts(address,address)  PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferToZeroAddress(address,uint256)                       PASS          3.47s      498MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferUnderBalance(address,uint256)                        PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferUnderBalancej(address,uint256)                       PASS          3.47s      489MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferZeroAmountToZeroAddressReverts(address)              PASS          3.48s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_AllowanceUpdatedAfterBurn(address,address,uint256)               PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_Approve(address,uint256)                                         PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_ApproveMaxAmount(address,address)                                PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_ApproveNonZeroAmount(address,address,uint256)                    PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_ApproveZeroAmount(address,address)                               PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_BalanceUpdatedAfterBurn(address,address,uint256)                 PASS          3.68s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_BurnDifferentAccount(address,uint256,address,uint256)            PASS          3.47s      510MB
+[pertest] halmos ERC20_OpenZeppelin   prove_BurnFromNonZeroAddress(address,uint256)                          PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_BurnSameAccount(address,uint256)                                 PASS          3.47s      494MB
+[pertest] halmos ERC20_OpenZeppelin   prove_BurnZeroTokens(address)                                          PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_ConsecutiveApprovePositiveToPositive(address,address,uint256,uint256) PASS          3.48s      511MB
+[pertest] halmos ERC20_OpenZeppelin   prove_DecreaseAllowance(address,uint256)                               PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_IncreaseAllowance(address,uint256)                               PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_Mint(address,uint256)                                            PASS          3.47s      506MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MintZeroTokens(address)                                          PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MsgSenderCanRetrieveOtherBalance(address,uint256)                PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MsgSenderCanRetrieveOwnBalance(uint256)                          PASS          3.47s      507MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MsgSenderCanTransferTotalBalance(address,address,uint256)        PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MsgSenderCanTransferTotalBalanceZero(address,address)            PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MultipleTransferFromAllowed(address,address,address,uint256,uint256) PASS          3.88s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MultipleTransferFromsOfZeroAmountAllowed(address,address,address,uint8) PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MultipleTransfersAllowed(address,address,uint256,uint256)        PASS          3.68s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MultipleTransfersOfZeroAmountAllowed(address,address,uint8)      PASS          3.47s      498MB
+[pertest] halmos ERC20_OpenZeppelin   prove_SelfApproveAndTransferFromOwnAccount(address,address,uint256)    PASS          3.67s      502MB
+[pertest] halmos ERC20_OpenZeppelin   prove_SelfApproveAndTransferFromOwnAccountZeroAmountAllowed(address,address) PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_SelfApprovePositiveAmount(address,uint256)                       PASS          3.47s      489MB
+[pertest] halmos ERC20_OpenZeppelin   prove_SelfApproveZeroAmountAllowed(address)                            PASS          3.47s      515MB
+[pertest] halmos ERC20_OpenZeppelin   prove_SelfTransferPositiveAmountAllowed(address,uint256)               PASS          3.47s      489MB
+[pertest] halmos ERC20_OpenZeppelin   prove_SelfTransferZeroAmountAllowed(address)                           PASS          3.48s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TokenReceiverCanTransferFromTotalBalance(address,address,uint256) PASS          3.67s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TokenReceiverCanTransferFromTotalBalanceZero(address,address,address) PASS          3.47s      514MB
+[pertest] halmos ERC20_OpenZeppelin   prove_Transfer(address,uint256,uint256)                                PASS          3.48s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TransferDoesNotUpdateOtherBalances(address,address,address,uint256) PASS          3.67s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TransferFrom(address,address,uint256,uint256)                    PASS          3.47s      500MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TransferFromDecreasesAllowance(address,address,address,uint256)  PASS          3.47s      506MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TransferFromDoesNotUpdateOtherBalances(address,address,address,address,uint256) ERROR         3.68s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TransferFromNoFees(address,address,address,uint256)              PASS          3.68s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TransferFromZeroAmount(address,address,address)                  PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TransferZeroAmount(address,address)                              PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_ZeroAddressHasNoToken()                                          PASS          3.47s      508MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_ApproveFromZeroAddress(address,uint256)                      PASS          4.70s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_ApproveToZeroAddress(address,uint256)                        PASS          4.49s      774MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_ApproveZeroAddress(address,uint256)                          PASS          4.70s      809MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_ApproveZeroAddressForMSGSender(address,uint256)              PASS          1.65s      768MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_BurnFromZeroAddress(uint256)                                 PASS          1.64s      768MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_BurnUnderBalance(address,uint256)                            PASS          1.64s      768MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_BurnUnderSupply(address,uint256)                             PASS          1.64s      767MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_DecreaseAllowanceUnderAllowance(address,uint256)             PASS          4.69s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_IncreaseAllowanceUnderAllowance(address,uint256)             PASS          5.11s      824MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_MintOverflow(address)                                        PASS          1.64s      768MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_MintToZeroAddress(uint256)                                   PASS          1.64s      768MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_MintUnderSupply(address,uint256)                             PASS          1.64s      767MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferFromAllowanceReachesZero(address,address,address,uint256,uint256) PASS          5.52s      937MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferFromNotEnoughAmount(address,address,uint256)         PASS          4.70s      906MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferFromToZeroAddress33(address,address,uint256)         PASS          4.70s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferFromUnderBalance(address,address,uint256)            PASS          5.54s      988MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferFromUnderBalancei(address,address,uint256)           PASS          4.90s      864MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferFromZeroAddress(address,address,uint256)             PASS          4.49s      774MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferFromZeroAddress(address,uint256)                     PASS          4.49s      774MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferFromZeroAddressForMSGSender(address,address,uint256) PASS          4.69s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferFromZeroAmountToZeroAddressReverts(address,address)  PASS          4.70s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferToZeroAddress(address,uint256)                       PASS          4.70s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferUnderBalance(address,uint256)                        PASS          4.71s      820MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferUnderBalancej(address,uint256)                       PASS          4.70s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   proveFail_TransferZeroAmountToZeroAddressReverts(address)              PASS          1.64s      767MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_AllowanceUpdatedAfterBurn(address,address,uint256)               PASS         10.00s      922MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_Approve(address,uint256)                                         PASS          4.71s      776MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_ApproveMaxAmount(address,address)                                PASS          4.70s      774MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_ApproveNonZeroAmount(address,address,uint256)                    PASS          4.49s      774MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_ApproveZeroAmount(address,address)                               PASS          4.49s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_BalanceUpdatedAfterBurn(address,address,uint256)                 PASS         12.85s      921MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_BurnDifferentAccount(address,uint256,address,uint256)            PASS          7.96s      942MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_BurnFromNonZeroAddress(address,uint256)                          PASS          4.70s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_BurnSameAccount(address,uint256)                                 PASS          5.33s      788MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_BurnZeroTokens(address)                                          PASS          1.64s      767MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_ConsecutiveApprovePositiveToPositive(address,address,uint256,uint256) PASS          4.90s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_DecreaseAllowance(address,uint256)                               PASS          4.70s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_IncreaseAllowance(address,uint256)                               PASS          6.73s      937MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_Mint(address,uint256)                                            PASS          5.53s      779MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_MintZeroTokens(address)                                          PASS          1.64s      768MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_MsgSenderCanRetrieveOtherBalance(address,uint256)                PASS          4.69s      772MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_MsgSenderCanRetrieveOwnBalance(uint256)                          PASS          1.64s      768MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_MsgSenderCanTransferTotalBalance(address,address,uint256)        PASS          4.70s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_MsgSenderCanTransferTotalBalanceZero(address,address)            PASS          4.70s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_MultipleTransferFromAllowed(address,address,address,uint256,uint256) PASS        413.58s     1110MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_MultipleTransferFromsOfZeroAmountAllowed(address,address,address,uint8) TIMEOUT    1800.10s     1054MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_MultipleTransfersAllowed(address,address,uint256,uint256)        PASS          6.32s      922MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_MultipleTransfersOfZeroAmountAllowed(address,address,uint8)      PASS          5.31s      837MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_SelfApproveAndTransferFromOwnAccount(address,address,uint256)    PASS         15.52s     1084MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_SelfApproveAndTransferFromOwnAccountZeroAmountAllowed(address,address) PASS          4.90s      861MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_SelfApprovePositiveAmount(address,uint256)                       PASS          4.70s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_SelfApproveZeroAmountAllowed(address)                            PASS          1.64s      768MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_SelfTransferPositiveAmountAllowed(address,uint256)               PASS          4.70s      774MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_SelfTransferZeroAmountAllowed(address)                           PASS          1.64s      768MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_TokenReceiverCanTransferFromTotalBalance(address,address,uint256) PASS         15.73s     1063MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_TokenReceiverCanTransferFromTotalBalanceZero(address,address,address) PASS          4.90s      924MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_Transfer(address,uint256,uint256)                                PASS          5.32s      860MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_TransferDoesNotUpdateOtherBalances(address,address,address,uint256) PASS          4.70s      880MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_TransferFrom(address,address,uint256,uint256)                    PASS         27.31s     1371MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_TransferFromDecreasesAllowance(address,address,address,uint256)  PASS         23.44s      949MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_TransferFromDoesNotUpdateOtherBalances(address,address,address,address,uint256) PASS         34.69s     1093MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_TransferFromNoFees(address,address,address,uint256)              PASS         17.36s     1099MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_TransferFromZeroAmount(address,address,address)                  PASS          4.70s      773MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_TransferZeroAmount(address,address)                              PASS          4.69s      772MB
+[pertest] hevm   ERC20_OpenZeppelin   prove_ZeroAddressHasNoToken()                                          PASS          1.64s      767MB
+[pertest] halmos ERC20_Solmate        proveFail_ApproveFromZeroAddress(address,uint256)                      FAIL          3.46s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_ApproveToZeroAddress(address,uint256)                        FAIL          3.47s      508MB
+[pertest] halmos ERC20_Solmate        proveFail_ApproveZeroAddress(address,uint256)                          FAIL          3.47s      502MB
+[pertest] halmos ERC20_Solmate        proveFail_ApproveZeroAddressForMSGSender(address,uint256)              FAIL          3.47s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_BurnFromZeroAddress(uint256)                                 PASS          3.47s      489MB
+[pertest] halmos ERC20_Solmate        proveFail_BurnUnderBalance(address,uint256)                            PASS          3.67s      489MB
+[pertest] halmos ERC20_Solmate        proveFail_BurnUnderSupply(address,uint256)                             PASS          3.47s      498MB
+[pertest] halmos ERC20_Solmate        proveFail_DecreaseAllowanceUnderAllowance(address,uint256)             ERROR         3.47s      489MB
+[pertest] halmos ERC20_Solmate        proveFail_IncreaseAllowanceUnderAllowance(address,uint256)             ERROR         3.47s      515MB
+[pertest] halmos ERC20_Solmate        proveFail_MintOverflow(address)                                        PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_MintToZeroAddress(uint256)                                   FAIL          3.47s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_MintUnderSupply(address,uint256)                             ERROR         3.47s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromAllowanceReachesZero(address,address,address,uint256,uint256) ERROR         3.67s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromNotEnoughAmount(address,address,uint256)         ERROR         3.47s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromToZeroAddress33(address,address,uint256)         FAIL          3.67s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromUnderBalance(address,address,uint256)            PASS          3.47s      510MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromUnderBalancei(address,address,uint256)           PASS          3.47s      511MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromZeroAddress(address,address,uint256)             PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromZeroAddress(address,uint256)                     PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromZeroAddressForMSGSender(address,address,uint256) FAIL          3.68s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromZeroAmountToZeroAddressReverts(address,address)  FAIL          3.47s      514MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferToZeroAddress(address,uint256)                       FAIL          3.48s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferUnderBalance(address,uint256)                        PASS          3.47s      498MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferUnderBalancej(address,uint256)                       PASS          3.47s      506MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferZeroAmountToZeroAddressReverts(address)              FAIL          3.48s      488MB
+[pertest] halmos ERC20_Solmate        prove_AllowanceUpdatedAfterBurn(address,address,uint256)               PASS          3.47s      492MB
+[pertest] halmos ERC20_Solmate        prove_Approve(address,uint256)                                         PASS          3.47s      502MB
+[pertest] halmos ERC20_Solmate        prove_ApproveMaxAmount(address,address)                                PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_ApproveNonZeroAmount(address,address,uint256)                    PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_ApproveZeroAmount(address,address)                               PASS          3.47s      511MB
+[pertest] halmos ERC20_Solmate        prove_BalanceUpdatedAfterBurn(address,address,uint256)                 PASS          3.48s      515MB
+[pertest] halmos ERC20_Solmate        prove_BurnDifferentAccount(address,uint256,address,uint256)            PASS          3.47s      508MB
+[pertest] halmos ERC20_Solmate        prove_BurnFromNonZeroAddress(address,uint256)                          PASS          3.47s      498MB
+[pertest] halmos ERC20_Solmate        prove_BurnSameAccount(address,uint256)                                 PASS          3.47s      513MB
+[pertest] halmos ERC20_Solmate        prove_BurnZeroTokens(address)                                          PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_ConsecutiveApprovePositiveToPositive(address,address,uint256,uint256) PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_DecreaseAllowance(address,uint256)                               PASS          3.47s      515MB
+[pertest] halmos ERC20_Solmate        prove_IncreaseAllowance(address,uint256)                               PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_Mint(address,uint256)                                            PASS          3.48s      488MB
+[pertest] halmos ERC20_Solmate        prove_MintZeroTokens(address)                                          PASS          3.47s      495MB
+[pertest] halmos ERC20_Solmate        prove_MsgSenderCanRetrieveOtherBalance(address,uint256)                PASS          3.47s      500MB
+[pertest] halmos ERC20_Solmate        prove_MsgSenderCanRetrieveOwnBalance(uint256)                          PASS          3.47s      504MB
+[pertest] halmos ERC20_Solmate        prove_MsgSenderCanTransferTotalBalance(address,address,uint256)        PASS          3.48s      515MB
+[pertest] halmos ERC20_Solmate        prove_MsgSenderCanTransferTotalBalanceZero(address,address)            PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_MultipleTransferFromAllowed(address,address,address,uint256,uint256) PASS          3.68s      488MB
+[pertest] halmos ERC20_Solmate        prove_MultipleTransferFromsOfZeroAmountAllowed(address,address,address,uint8) PASS          3.47s      502MB
+[pertest] halmos ERC20_Solmate        prove_MultipleTransfersAllowed(address,address,uint256,uint256)        PASS          3.67s      506MB
+[pertest] halmos ERC20_Solmate        prove_MultipleTransfersOfZeroAmountAllowed(address,address,uint8)      PASS          3.47s      489MB
+[pertest] halmos ERC20_Solmate        prove_SelfApproveAndTransferFromOwnAccount(address,address,uint256)    PASS          3.67s      492MB
+[pertest] halmos ERC20_Solmate        prove_SelfApproveAndTransferFromOwnAccountZeroAmountAllowed(address,address) PASS          3.47s      508MB
+[pertest] halmos ERC20_Solmate        prove_SelfApprovePositiveAmount(address,uint256)                       PASS          3.47s      505MB
+[pertest] halmos ERC20_Solmate        prove_SelfApproveZeroAmountAllowed(address)                            PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_SelfTransferPositiveAmountAllowed(address,uint256)               PASS          3.47s      509MB
+[pertest] halmos ERC20_Solmate        prove_SelfTransferZeroAmountAllowed(address)                           PASS          3.47s      489MB
+[pertest] halmos ERC20_Solmate        prove_TokenReceiverCanTransferFromTotalBalance(address,address,uint256) PASS          3.68s      488MB
+[pertest] halmos ERC20_Solmate        prove_TokenReceiverCanTransferFromTotalBalanceZero(address,address,address) PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_Transfer(address,uint256,uint256)                                PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_TransferDoesNotUpdateOtherBalances(address,address,address,uint256) PASS          3.67s      488MB
+[pertest] halmos ERC20_Solmate        prove_TransferFrom(address,address,uint256,uint256)                    PASS          3.47s      499MB
+[pertest] halmos ERC20_Solmate        prove_TransferFromDecreasesAllowance(address,address,address,uint256)  PASS          3.47s      515MB
+[pertest] halmos ERC20_Solmate        prove_TransferFromDoesNotUpdateOtherBalances(address,address,address,address,uint256) ERROR         3.68s      488MB
+[pertest] halmos ERC20_Solmate        prove_TransferFromNoFees(address,address,address,uint256)              PASS          3.67s      488MB
+[pertest] halmos ERC20_Solmate        prove_TransferFromZeroAmount(address,address,address)                  PASS          3.47s      490MB
+[pertest] halmos ERC20_Solmate        prove_TransferZeroAmount(address,address)                              PASS          3.48s      496MB
+[pertest] halmos ERC20_Solmate        prove_ZeroAddressHasNoToken()                                          PASS          3.47s      488MB
+[pertest] hevm   ERC20_Solmate        proveFail_ApproveFromZeroAddress(address,uint256)                      FAIL          4.90s      819MB
+[pertest] hevm   ERC20_Solmate        proveFail_ApproveToZeroAddress(address,uint256)                        FAIL          4.91s      828MB
+[pertest] hevm   ERC20_Solmate        proveFail_ApproveZeroAddress(address,uint256)                          PASS          4.69s      773MB
+[pertest] hevm   ERC20_Solmate        proveFail_ApproveZeroAddressForMSGSender(address,uint256)              FAIL          1.85s      825MB
+[pertest] hevm   ERC20_Solmate        proveFail_BurnFromZeroAddress(uint256)                                 PASS          1.64s      767MB
+[pertest] hevm   ERC20_Solmate        proveFail_BurnUnderBalance(address,uint256)                            PASS          1.64s      768MB
+[pertest] hevm   ERC20_Solmate        proveFail_BurnUnderSupply(address,uint256)                             PASS          1.63s      767MB
+[pertest] hevm   ERC20_Solmate        proveFail_DecreaseAllowanceUnderAllowance(address,uint256)             PASS          4.70s      774MB
+[pertest] hevm   ERC20_Solmate        proveFail_IncreaseAllowanceUnderAllowance(address,uint256)             PASS          5.10s      833MB
+[pertest] hevm   ERC20_Solmate        proveFail_MintOverflow(address)                                        PASS          1.64s      768MB
+[pertest] hevm   ERC20_Solmate        proveFail_MintToZeroAddress(uint256)                                   FAIL          5.51s      905MB
+[pertest] hevm   ERC20_Solmate        proveFail_MintUnderSupply(address,uint256)                             PASS          1.64s      768MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferFromAllowanceReachesZero(address,address,address,uint256,uint256) PASS          5.31s      859MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferFromNotEnoughAmount(address,address,uint256)         PASS          4.90s      910MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferFromToZeroAddress33(address,address,uint256)         FAIL        334.97s     1281MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferFromUnderBalance(address,address,uint256)            PASS          7.35s      976MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferFromUnderBalancei(address,address,uint256)           PASS          5.10s      906MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferFromZeroAddress(address,address,uint256)             PASS          4.90s      851MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferFromZeroAddress(address,uint256)                     PASS          4.90s      851MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferFromZeroAddressForMSGSender(address,address,uint256) FAIL         40.15s      944MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferFromZeroAmountToZeroAddressReverts(address,address)  FAIL          9.58s      921MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferToZeroAddress(address,uint256)                       FAIL          4.90s      811MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferUnderBalance(address,uint256)                        PASS          4.90s      815MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferUnderBalancej(address,uint256)                       PASS          4.69s      773MB
+[pertest] hevm   ERC20_Solmate        proveFail_TransferZeroAmountToZeroAddressReverts(address)              FAIL          1.84s      821MB
+[pertest] hevm   ERC20_Solmate        prove_AllowanceUpdatedAfterBurn(address,address,uint256)               PASS         10.80s      935MB
+[pertest] hevm   ERC20_Solmate        prove_Approve(address,uint256)                                         PASS          4.69s      773MB
+[pertest] hevm   ERC20_Solmate        prove_ApproveMaxAmount(address,address)                                PASS          4.90s      773MB
+[pertest] hevm   ERC20_Solmate        prove_ApproveNonZeroAmount(address,address,uint256)                    PASS          4.90s      773MB
+[pertest] hevm   ERC20_Solmate        prove_ApproveZeroAmount(address,address)                               PASS          4.90s      773MB
+[pertest] hevm   ERC20_Solmate        prove_BalanceUpdatedAfterBurn(address,address,uint256)                 PASS         11.42s      939MB
+[pertest] hevm   ERC20_Solmate        prove_BurnDifferentAccount(address,uint256,address,uint256)            PASS          8.37s      942MB
+[pertest] hevm   ERC20_Solmate        prove_BurnFromNonZeroAddress(address,uint256)                          PASS          4.70s      773MB
+[pertest] hevm   ERC20_Solmate        prove_BurnSameAccount(address,uint256)                                 PASS          4.70s      773MB
+[pertest] hevm   ERC20_Solmate        prove_BurnZeroTokens(address)                                          PASS          1.64s      768MB
+[pertest] hevm   ERC20_Solmate        prove_ConsecutiveApprovePositiveToPositive(address,address,uint256,uint256) PASS          4.91s      773MB
+[pertest] hevm   ERC20_Solmate        prove_DecreaseAllowance(address,uint256)                               PASS          4.90s      818MB
+[pertest] hevm   ERC20_Solmate        prove_IncreaseAllowance(address,uint256)                               PASS          6.74s      946MB
+[pertest] hevm   ERC20_Solmate        prove_Mint(address,uint256)                                            PASS          4.91s      775MB
+[pertest] hevm   ERC20_Solmate        prove_MintZeroTokens(address)                                          PASS          1.64s      768MB
+[pertest] hevm   ERC20_Solmate        prove_MsgSenderCanRetrieveOtherBalance(address,uint256)                PASS          4.90s      773MB
+[pertest] hevm   ERC20_Solmate        prove_MsgSenderCanRetrieveOwnBalance(uint256)                          PASS          1.64s      768MB
+[pertest] hevm   ERC20_Solmate        prove_MsgSenderCanTransferTotalBalance(address,address,uint256)        PASS          4.90s      773MB
+[pertest] hevm   ERC20_Solmate        prove_MsgSenderCanTransferTotalBalanceZero(address,address)            PASS          4.90s      773MB
+[pertest] hevm   ERC20_Solmate        prove_MultipleTransferFromAllowed(address,address,address,uint256,uint256) PASS         88.21s     1250MB
+[pertest] hevm   ERC20_Solmate        prove_MultipleTransferFromsOfZeroAmountAllowed(address,address,address,uint8) PASS        678.58s     1514MB
+[pertest] hevm   ERC20_Solmate        prove_MultipleTransfersAllowed(address,address,uint256,uint256)        PASS          6.54s      922MB
+[pertest] hevm   ERC20_Solmate        prove_MultipleTransfersOfZeroAmountAllowed(address,address,uint8)      PASS          5.11s      924MB
+[pertest] hevm   ERC20_Solmate        prove_SelfApproveAndTransferFromOwnAccount(address,address,uint256)    PASS         17.16s     1053MB
+[pertest] hevm   ERC20_Solmate        prove_SelfApproveAndTransferFromOwnAccountZeroAmountAllowed(address,address) PASS          4.91s      940MB
+[pertest] hevm   ERC20_Solmate        prove_SelfApprovePositiveAmount(address,uint256)                       PASS          4.69s      773MB
+[pertest] hevm   ERC20_Solmate        prove_SelfApproveZeroAmountAllowed(address)                            PASS          1.64s      768MB
+[pertest] hevm   ERC20_Solmate        prove_SelfTransferPositiveAmountAllowed(address,uint256)               PASS          4.70s      774MB
+[pertest] hevm   ERC20_Solmate        prove_SelfTransferZeroAmountAllowed(address)                           PASS          1.64s      768MB
+[pertest] hevm   ERC20_Solmate        prove_TokenReceiverCanTransferFromTotalBalance(address,address,uint256) PASS         17.56s     1109MB
+[pertest] hevm   ERC20_Solmate        prove_TokenReceiverCanTransferFromTotalBalanceZero(address,address,address) PASS          5.11s     1013MB
+[pertest] hevm   ERC20_Solmate        prove_Transfer(address,uint256,uint256)                                PASS          5.11s      869MB
+[pertest] hevm   ERC20_Solmate        prove_TransferDoesNotUpdateOtherBalances(address,address,address,uint256) PASS          4.90s      773MB
+[pertest] hevm   ERC20_Solmate        prove_TransferFrom(address,address,uint256,uint256)                    PASS         36.29s     1493MB
+[pertest] hevm   ERC20_Solmate        prove_TransferFromDecreasesAllowance(address,address,address,uint256)  PASS         25.89s      922MB
+[pertest] hevm   ERC20_Solmate        prove_TransferFromDoesNotUpdateOtherBalances(address,address,address,address,uint256) PASS         39.18s     1131MB
+[pertest] hevm   ERC20_Solmate        prove_TransferFromNoFees(address,address,address,uint256)              PASS         19.20s     1106MB
+[pertest] hevm   ERC20_Solmate        prove_TransferFromZeroAmount(address,address,address)                  PASS          4.70s      924MB
+[pertest] hevm   ERC20_Solmate        prove_TransferZeroAmount(address,address)                              PASS          4.91s      773MB
+[pertest] hevm   ERC20_Solmate        prove_ZeroAddressHasNoToken()                                          PASS          1.64s      767MB
+[pertest] halmos ERC721_OpenZeppelin  proveFail_ApproveWhenIdHasNotAnOwner(address,uint256)                  PASS          3.26s      504MB
+[pertest] halmos ERC721_OpenZeppelin  proveFail_ApproveWhenIsNotApprovedForAll(address,address,uint256)      FAIL          3.27s      470MB
+[pertest] halmos ERC721_OpenZeppelin  proveFail_Burn(uint256)                                                PASS          3.27s      502MB
+[pertest] halmos ERC721_OpenZeppelin  proveFail_MintWhenToIsAddressZero(address,uint256)                     PASS          3.27s      504MB
+[pertest] halmos ERC721_OpenZeppelin  proveFail_setApprovalForAll(address,address,bool)                      FAIL          3.47s      495MB
+[pertest] halmos ERC721_OpenZeppelin  proveFail_transferFromWhenFromIsNotTheOwner(address,address,uint256)   PASS          3.27s      470MB
+[pertest] halmos ERC721_OpenZeppelin  proveFail_transferFromWhenToIsAddressZero(address,address,uint256)     PASS          3.27s      498MB
+[pertest] halmos ERC721_OpenZeppelin  prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender(address,uint256) PASS          3.27s      487MB
+[pertest] halmos ERC721_OpenZeppelin  prove_ApproveWhenOwnerEqualsMSGSender(address,uint256)                 PASS          3.26s      479MB
+[pertest] halmos ERC721_OpenZeppelin  prove_Burn(uint256)                                                    ERROR         3.27s      468MB
+[pertest] halmos ERC721_OpenZeppelin  prove_Mint(address,uint256)                                            PASS          3.27s      469MB
+[pertest] halmos ERC721_OpenZeppelin  prove_safeTransferFrom(address,uint256)                                FAIL          3.47s      479MB
+[pertest] halmos ERC721_OpenZeppelin  prove_setApprovalForAll(address,bool)                                  PASS          3.26s      479MB
+[pertest] halmos ERC721_OpenZeppelin  prove_transferFrom(address,address,uint256)                            PASS          3.27s      470MB
+[pertest] halmos ERC721_Solmate       proveFail_ApproveWhenIdHasNotAnOwner(address,uint256)                  PASS          3.27s      469MB
+[pertest] halmos ERC721_Solmate       proveFail_ApproveWhenIsNotApprovedForAll(address,address,uint256)      PASS          3.28s      486MB
+[pertest] halmos ERC721_Solmate       proveFail_Burn(uint256)                                                PASS          3.27s      468MB
+[pertest] halmos ERC721_Solmate       proveFail_MintWhenToIsAddressZero(address,uint256)                     PASS          3.26s      496MB
+[pertest] halmos ERC721_Solmate       proveFail_setApprovalForAll(address,address,bool)                      FAIL          3.28s      504MB
+[pertest] halmos ERC721_Solmate       proveFail_transferFromWhenFromIsNotTheOwner(address,address,uint256)   PASS          3.26s      468MB
+[pertest] halmos ERC721_Solmate       proveFail_transferFromWhenToIsAddressZero(address,address,uint256)     PASS          3.27s      469MB
+[pertest] halmos ERC721_Solmate       prove_ApproveWhenIsApprovedForAllOnwerDifferentFromMSGSender(address,uint256) PASS          3.27s      486MB
+[pertest] halmos ERC721_Solmate       prove_ApproveWhenOwnerEqualsMSGSender(address,uint256)                 PASS          3.27s      469MB
+[pertest] halmos ERC721_Solmate       prove_Burn(uint256)                                                    PASS          3.27s      495MB
+[pertest] halmos ERC721_Solmate       prove_Mint(address,uint256)                                            PASS          3.27s      495MB
+[pertest] halmos ERC721_Solmate       prove_safeTransferFrom(address,uint256)                                FAIL          3.47s      487MB
+[pertest] halmos ERC721_Solmate       prove_setApprovalForAll(address,bool)                                  PASS          3.27s      504MB
+[pertest] halmos ERC721_Solmate       prove_transferFrom(address,address,uint256)                            PASS          3.26s      487MB
+[pertest] halmos ERC1155_OpenZeppelin proveFail_burnBalanceLessThanAmount(uint256,uint256,uint256)           PASS          3.27s      484MB
+[pertest] halmos ERC1155_OpenZeppelin proveFail_burnZeroAddress(uint256,uint256)                             PASS          3.28s      483MB
+[pertest] halmos ERC1155_OpenZeppelin proveFail_mintZeroAddress(uint256,uint256)                             PASS          3.27s      468MB
+[pertest] halmos ERC1155_OpenZeppelin proveFail_safeTransferFromBalanceLessThanAmount(uint256,uint256,uint256) PASS          3.26s      484MB
+[pertest] halmos ERC1155_OpenZeppelin proveFail_safeTransferFromWhenSenderIsNotApprovedForAll(uint256,uint256) PASS          3.27s      480MB
+[pertest] halmos ERC1155_OpenZeppelin proveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256,uint256)    PASS          3.27s      484MB
+[pertest] halmos ERC1155_OpenZeppelin proveFail_safeTransferFromZeroAddressForFrom(uint256,uint256)          PASS          3.27s      469MB
+[pertest] halmos ERC1155_OpenZeppelin proveFail_safeTransferFromZeroAddressForTo(uint256,uint256)            PASS          3.26s      501MB
+[pertest] halmos ERC1155_OpenZeppelin proveFail_setApprovalForAllSenderEqualsOperator(address,bool)          PASS          3.27s      469MB
+[pertest] halmos ERC1155_OpenZeppelin prove_burn(uint256,uint256)                                            PASS          3.27s      468MB
+[pertest] halmos ERC1155_OpenZeppelin prove_mint(uint256,uint256)                                            PASS          3.27s      493MB
+[pertest] halmos ERC1155_OpenZeppelin prove_safeBatchTransferFrom(uint256,uint256[],uint256[])               PASS          3.48s      483MB
+[pertest] halmos ERC1155_OpenZeppelin prove_safeTransferFrom(uint256,uint256,uint256)                        PASS          3.27s      494MB
+[pertest] halmos ERC1155_OpenZeppelin prove_setApprovalForAll(address,bool)                                  PASS          3.26s      468MB
+[pertest] hevm   ERC1155_OpenZeppelin proveFail_burnBalanceLessThanAmount(uint256,uint256,uint256)           ERROR       603.89s     1722MB
+[pertest] hevm   ERC1155_OpenZeppelin proveFail_burnZeroAddress(uint256,uint256)                             PASS          1.63s      659MB
+[pertest] hevm   ERC1155_OpenZeppelin proveFail_mintZeroAddress(uint256,uint256)                             PASS          1.64s      660MB
+[pertest] hevm   ERC1155_OpenZeppelin proveFail_safeTransferFromBalanceLessThanAmount(uint256,uint256,uint256) PASS          8.79s      877MB
+[pertest] hevm   ERC1155_OpenZeppelin proveFail_safeTransferFromWhenSenderIsNotApprovedForAll(uint256,uint256) PASS          1.64s      658MB
+[pertest] hevm   ERC1155_OpenZeppelin proveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256,uint256)    FAIL          4.49s      886MB
+[pertest] hevm   ERC1155_OpenZeppelin proveFail_safeTransferFromZeroAddressForFrom(uint256,uint256)          PASS          1.65s      659MB
+[pertest] hevm   ERC1155_OpenZeppelin proveFail_safeTransferFromZeroAddressForTo(uint256,uint256)            PASS          1.64s      662MB
+[pertest] hevm   ERC1155_OpenZeppelin proveFail_setApprovalForAllSenderEqualsOperator(address,bool)          PASS          1.64s      677MB
+[pertest] hevm   ERC1155_OpenZeppelin prove_burn(uint256,uint256)                                            PASS          3.06s      914MB
+[pertest] hevm   ERC1155_OpenZeppelin prove_mint(uint256,uint256)                                            PASS          7.55s      878MB
+[pertest] hevm   ERC1155_OpenZeppelin prove_safeBatchTransferFrom(uint256,uint256[],uint256[])               ERROR         2.05s      794MB
+[pertest] hevm   ERC1155_OpenZeppelin prove_safeTransferFrom(uint256,uint256,uint256)                        PASS         38.59s     1098MB
+[pertest] hevm   ERC1155_OpenZeppelin prove_setApprovalForAll(address,bool)                                  PASS          1.85s      796MB
+[pertest] halmos ERC1155_Solmate      proveFail_burnBalanceLessThanAmount(uint256,uint256,uint256)           PASS          3.48s      481MB
+[pertest] halmos ERC1155_Solmate      proveFail_burnZeroAddress(uint256,uint256)                             FAIL          3.27s      494MB
+[pertest] halmos ERC1155_Solmate      proveFail_mintZeroAddress(uint256,uint256)                             PASS          3.26s      482MB
+[pertest] halmos ERC1155_Solmate      proveFail_safeTransferFromBalanceLessThanAmount(uint256,uint256,uint256) PASS          3.47s      480MB
+[pertest] halmos ERC1155_Solmate      proveFail_safeTransferFromWhenSenderIsNotApprovedForAll(uint256,uint256) PASS          3.27s      501MB
+[pertest] halmos ERC1155_Solmate      proveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256,uint256)    PASS          3.27s      494MB
+[pertest] halmos ERC1155_Solmate      proveFail_safeTransferFromZeroAddressForFrom(uint256,uint256)          PASS          3.27s      504MB
+[pertest] halmos ERC1155_Solmate      proveFail_safeTransferFromZeroAddressForTo(uint256,uint256)            PASS          3.27s      493MB
+[pertest] halmos ERC1155_Solmate      proveFail_setApprovalForAllSenderEqualsOperator(address,bool)          FAIL          3.47s      503MB
+[pertest] halmos ERC1155_Solmate      prove_burn(uint256,uint256)                                            PASS          3.27s      468MB
+[pertest] halmos ERC1155_Solmate      prove_mint(uint256,uint256)                                            PASS          3.27s      503MB
+[pertest] halmos ERC1155_Solmate      prove_safeBatchTransferFrom(uint256,uint256[],uint256[])               PASS          3.88s      469MB
+[pertest] halmos ERC1155_Solmate      prove_safeTransferFrom(uint256,uint256,uint256)                        PASS          3.47s      483MB
+[pertest] halmos ERC1155_Solmate      prove_setApprovalForAll(address,bool)                                  PASS          3.26s      504MB
+[pertest] hevm   ERC1155_Solmate      proveFail_burnBalanceLessThanAmount(uint256,uint256,uint256)           PASS          1.64s      659MB
+[pertest] hevm   ERC1155_Solmate      proveFail_burnZeroAddress(uint256,uint256)                             FAIL          1.84s      800MB
+[pertest] hevm   ERC1155_Solmate      proveFail_mintZeroAddress(uint256,uint256)                             PASS          1.64s      796MB
+[pertest] hevm   ERC1155_Solmate      proveFail_safeTransferFromBalanceLessThanAmount(uint256,uint256,uint256) PASS          1.63s      717MB
+[pertest] hevm   ERC1155_Solmate      proveFail_safeTransferFromWhenSenderIsNotApprovedForAll(uint256,uint256) PASS          1.65s      661MB
+[pertest] hevm   ERC1155_Solmate      proveFail_safeTransferFromWhenSenderIsNotMSGSender(uint256,uint256)    FAIL          2.86s      870MB
+[pertest] hevm   ERC1155_Solmate      proveFail_safeTransferFromZeroAddressForFrom(uint256,uint256)          PASS          1.64s      659MB
+[pertest] hevm   ERC1155_Solmate      proveFail_safeTransferFromZeroAddressForTo(uint256,uint256)            PASS          1.64s      788MB
+[pertest] hevm   ERC1155_Solmate      proveFail_setApprovalForAllSenderEqualsOperator(address,bool)          PASS          1.64s      780MB
+[pertest] hevm   ERC1155_Solmate      prove_burn(uint256,uint256)                                            PASS          1.84s      803MB
+[pertest] hevm   ERC1155_Solmate      prove_mint(uint256,uint256)                                            PASS          1.84s      802MB
+[pertest] hevm   ERC1155_Solmate      prove_safeBatchTransferFrom(uint256,uint256[],uint256[])               ERROR         2.05s      794MB
+[pertest] hevm   ERC1155_Solmate      prove_safeTransferFrom(uint256,uint256,uint256)                        PASS          2.05s      866MB
+[pertest] hevm   ERC1155_Solmate      prove_setApprovalForAll(address,bool)                                  PASS          1.84s      834MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_approvefrom_zero_address_reverts(address,uint256)            PASS          3.47s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_approvezero_address_reverts(address,uint256)                 PASS          3.26s      506MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_burn_exceeds_balance_reverts(address,uint256)                PASS          3.47s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_burn_from_zero_address_reverts(uint256)                      PASS          3.27s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_depositWithAmountLessThanAssets(address,address,uint256,uint256,address) ERROR         3.47s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_depositWithMSGSenderEqualsThis(address,uint256,uint256,address) PASS          3.47s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_depositWithReceiverEqualsThis(address,address,uint256,uint256,address) PASS          3.47s      509MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_mintWithAmountLessThanShares(address,address,uint256,uint256,address) PASS          3.88s      506MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_mintWithMSGSenderEqualsThis(uint256,address)                 ERROR         3.27s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_mintWithReceiverAsThis(address,address,uint256,uint256,address) FAIL          4.08s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_mint_overflow_reverts(address)                               PASS          3.47s      509MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_mint_to_zero_address_reverts(uint256)                        PASS          3.47s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_redeemWithAmountLessThanShares(address,address,uint256,uint256,address,address) ERROR         3.47s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_redeemWithMSGSenderEqualsThis(address,address,uint256,uint256,address,address) ERROR         5.52s      512MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_redeemWithReceiverEqualsThis(address,address,uint256,uint256,address,address) ERROR         4.29s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_transferFrom_from_zero_address_reverts(address,address,uint256) PASS          3.47s      506MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_transferFrom_insufficient_allowance_reverts(address,address,address,uint256) ERROR         3.47s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_transferFrom_insufficient_balance_reverts(address,address,address,uint256,uint256) ERROR         3.47s      509MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_transferFrom_to_zero_address_reverts(address,address,uint256) PASS          3.47s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_transfer_from_zero_address_reverts(address,uint256)          PASS          3.27s      507MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_transfer_insufficient_balance_reverts(address,address,uint256,uint256) PASS          3.47s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_transfer_to_zero_address_reverts(address,uint256)            PASS          3.27s      506MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_withdrawWithAmountLessThanAssets(address,address,uint256,uint256,address,address) ERROR         7.16s     1253MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_withdrawWithMSGSenderEqualsOwner(address,address,uint256,uint256,address,address) ERROR         7.17s     1282MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_withdrawWithMSGSenderEqualsThis(address,address,uint256,uint256,address,address) ERROR         4.69s      508MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_withdrawWithOwnerEqualsReceiver(address,address,uint256,uint256,address,address) ERROR         6.94s     1245MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_withdrawWithOwnerEqualsThis(address,address,uint256,uint256,address,address) ERROR         7.15s     1203MB
+[pertest] halmos ERC4626_OpenZeppelin proveFail_withdrawWithReceiverEqualsThis(address,address,uint256,uint256,address,address) ERROR         7.16s     1344MB
+[pertest] halmos ERC4626_OpenZeppelin prove_approveoverwrites_allowance(address,address,uint256,uint256)     PASS          3.48s      508MB
+[pertest] halmos ERC4626_OpenZeppelin prove_approvesets_allowance(address,address,uint256)                   PASS          3.47s      506MB
+[pertest] halmos ERC4626_OpenZeppelin prove_burn_decreases_balance(address,uint256)                          PASS          3.47s      508MB
+[pertest] halmos ERC4626_OpenZeppelin prove_convertToAssets_lte_previewMint(uint256)                         PASS          3.67s      508MB
+[pertest] halmos ERC4626_OpenZeppelin prove_convertToAssets_rounds_down_towards_0(uint256)                   ERROR        15.58s     9853MB
+[pertest] halmos ERC4626_OpenZeppelin prove_convertToShares_gte_previewDeposit(uint256,uint256)              PASS          3.88s      479MB
+[pertest] halmos ERC4626_OpenZeppelin prove_convertToShares_rounds_down_towards_0(uint256,uint256)           OOM          13.51s     9627MB
+[pertest] halmos ERC4626_OpenZeppelin prove_integrity_of_deposit(uint256,address)                            PASS          4.08s      507MB
+[pertest] halmos ERC4626_OpenZeppelin prove_integrity_of_redeem()                                            PASS          3.47s      508MB
+[pertest] halmos ERC4626_OpenZeppelin prove_integrity_of_withdraw()                                          ERROR         3.47s      508MB
+[pertest] halmos ERC4626_OpenZeppelin prove_maxDeposit_returns_correct_value(address)                        PASS          3.47s      504MB
+[pertest] halmos ERC4626_OpenZeppelin prove_maxMint_returns_correct_value(address)                           PASS          3.47s      504MB
+[pertest] halmos ERC4626_OpenZeppelin prove_mint_increases_balance(address,uint256)                          PASS          3.47s      508MB
+[pertest] halmos ERC4626_OpenZeppelin prove_previewDepositRelationToDeposit(uint256,address)                 PASS          3.47s      508MB
+[pertest] halmos ERC4626_OpenZeppelin prove_previewRedeem_lte_redeem(address,uint256)                        PASS          3.47s      508MB
+[pertest] halmos ERC4626_OpenZeppelin prove_share_price_maintained_after_mint(uint256,address)               PASS         13.67s     1914MB
+[pertest] halmos ERC4626_OpenZeppelin prove_transferFrom_updates_balances(address,address,address,uint256)   PASS          3.68s      487MB
+[pertest] halmos ERC4626_OpenZeppelin prove_transfer_updates_balances(address,address,uint256)               PASS          3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_approvefrom_zero_address_reverts(address,uint256)            FAIL          3.47s      506MB
+[pertest] halmos ERC4626_Solmate      proveFail_approvezero_address_reverts(address,uint256)                 FAIL          3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_burn_exceeds_balance_reverts(address,uint256)                PASS          3.48s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_burn_from_zero_address_reverts(uint256)                      FAIL          3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_depositWithAmountLessThanAssets(address,address,uint256,uint256,address) ERROR         3.48s      506MB
+[pertest] halmos ERC4626_Solmate      proveFail_depositWithMSGSenderEqualsThis(address,uint256,uint256,address) PASS          3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_depositWithReceiverEqualsThis(address,address,uint256,uint256,address) PASS          3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_mintWithAmountLessThanShares(address,address,uint256,uint256,address) PASS          3.67s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_mintWithMSGSenderEqualsThis(uint256,address)                 ERROR         3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_mintWithReceiverAsThis(address,address,uint256,uint256,address) FAIL          3.67s      509MB
+[pertest] halmos ERC4626_Solmate      proveFail_mint_overflow_reverts(address)                               PASS          3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_mint_to_zero_address_reverts(uint256)                        FAIL          3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_redeemWithAmountLessThanShares(address,address,uint256,uint256,address,address) ERROR         3.67s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_redeemWithMSGSenderEqualsThis(address,address,uint256,uint256,address,address) ERROR         3.47s      509MB
+[pertest] halmos ERC4626_Solmate      proveFail_redeemWithReceiverEqualsThis(address,address,uint256,uint256,address,address) ERROR         3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_transferFrom_from_zero_address_reverts(address,address,uint256) FAIL          3.48s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_transferFrom_insufficient_allowance_reverts(address,address,address,uint256) ERROR         3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_transferFrom_insufficient_balance_reverts(address,address,address,uint256,uint256) ERROR         3.67s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_transferFrom_to_zero_address_reverts(address,address,uint256) FAIL          3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_transfer_from_zero_address_reverts(address,uint256)          FAIL          3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_transfer_insufficient_balance_reverts(address,address,uint256,uint256) PASS          3.67s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_transfer_to_zero_address_reverts(address,uint256)            FAIL          3.47s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_withdrawWithAmountLessThanAssets(address,address,uint256,uint256,address,address) ERROR         3.67s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_withdrawWithMSGSenderEqualsOwner(address,address,uint256,uint256,address,address) ERROR         3.67s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_withdrawWithMSGSenderEqualsThis(address,address,uint256,uint256,address,address) ERROR         3.67s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_withdrawWithOwnerEqualsReceiver(address,address,uint256,uint256,address,address) ERROR         3.67s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_withdrawWithOwnerEqualsThis(address,address,uint256,uint256,address,address) ERROR         3.68s      508MB
+[pertest] halmos ERC4626_Solmate      proveFail_withdrawWithReceiverEqualsThis(address,address,uint256,uint256,address,address) ERROR         3.67s      508MB
+[pertest] halmos ERC4626_Solmate      prove_approveoverwrites_allowance(address,address,uint256,uint256)     PASS          3.47s      508MB
+[pertest] halmos ERC4626_Solmate      prove_approvesets_allowance(address,address,uint256)                   PASS          3.47s      508MB
+[pertest] halmos ERC4626_Solmate      prove_burn_decreases_balance(address,uint256)                          PASS          3.47s      508MB
+[pertest] halmos ERC4626_Solmate      prove_convertToAssets_lte_previewMint(uint256)                         TIMEOUT     600.16s     6084MB
+[pertest] halmos ERC4626_Solmate      prove_convertToAssets_rounds_down_towards_0(uint256)                   ERROR        13.90s    10031MB
+[pertest] halmos ERC4626_Solmate      prove_convertToShares_gte_previewDeposit(uint256,uint256)              PASS          3.68s      493MB
+[pertest] halmos ERC4626_Solmate      prove_convertToShares_rounds_down_towards_0(uint256,uint256)           ERROR        25.51s    10093MB
+[pertest] halmos ERC4626_Solmate      prove_integrity_of_deposit(uint256,address)                            PASS          3.68s      506MB
+[pertest] halmos ERC4626_Solmate      prove_integrity_of_redeem()                                            PASS          3.47s      509MB
+[pertest] halmos ERC4626_Solmate      prove_integrity_of_withdraw()                                          ERROR         3.47s      508MB
+[pertest] halmos ERC4626_Solmate      prove_maxDeposit_returns_correct_value(address)                        PASS          3.47s      494MB
+[pertest] halmos ERC4626_Solmate      prove_maxMint_returns_correct_value(address)                           PASS          3.47s      498MB
+[pertest] halmos ERC4626_Solmate      prove_mint_increases_balance(address,uint256)                          PASS          3.46s      508MB
+[pertest] halmos ERC4626_Solmate      prove_previewDepositRelationToDeposit(uint256,address)                 ERROR         3.47s      508MB
+[pertest] halmos ERC4626_Solmate      prove_previewRedeem_lte_redeem(address,uint256)                        ERROR         3.47s      488MB
+[pertest] halmos ERC4626_Solmate      prove_share_price_maintained_after_mint(uint256,address)               PASS          3.47s      508MB
+[pertest] halmos ERC4626_Solmate      prove_transferFrom_updates_balances(address,address,address,uint256)   PASS          3.67s      506MB
+[pertest] halmos ERC4626_Solmate      prove_transfer_updates_balances(address,address,uint256)               PASS          3.47s      508MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_ApproveFromZeroAddress(address,uint256)                      PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_ApproveToZeroAddress(address,uint256)                        PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_ApproveZeroAddress(address,uint256)                          PASS          3.48s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_ApproveZeroAddressForMSGSender(address,uint256)              PASS          3.48s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_BurnFromZeroAddress(uint256)                                 PASS          3.47s      490MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_BurnUnderBalance(address,uint256)                            PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_BurnUnderSupply(address,uint256)                             PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_DecreaseAllowanceUnderAllowance(address,uint256)             ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_IncreaseAllowanceUnderAllowance(address,uint256)             ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_MintOverflow(address)                                        PASS          3.47s      494MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_MintToZeroAddress(uint256)                                   PASS          3.47s      501MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_MintUnderSupply(address,uint256)                             ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromAllowanceReachesZero(address,address,address,uint256,uint256) ERROR         3.68s      487MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromNotEnoughAmount(address,address,uint256)         ERROR         3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromToZeroAddress33(address,address,uint256)         PASS          3.47s      491MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromUnderBalance(address,address,uint256)            PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromUnderBalancei(address,address,uint256)           PASS          3.48s      506MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromZeroAddress(address,address,uint256)             PASS          3.48s      510MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromZeroAddress(address,uint256)                     PASS          3.48s      510MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromZeroAddressForMSGSender(address,address,uint256) PASS          3.48s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferFromZeroAmountToZeroAddressReverts(address,address)  PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferToZeroAddress(address,uint256)                       PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferUnderBalance(address,uint256)                        PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferUnderBalancej(address,uint256)                       PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   proveFail_TransferZeroAmountToZeroAddressReverts(address)              PASS          3.47s      491MB
+[pertest] halmos ERC20_OpenZeppelin   prove_AllowanceUpdatedAfterBurn(address,address,uint256)               PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_Approve(address,uint256)                                         PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_ApproveMaxAmount(address,address)                                PASS          3.47s      496MB
+[pertest] halmos ERC20_OpenZeppelin   prove_ApproveNonZeroAmount(address,address,uint256)                    PASS          3.46s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_ApproveZeroAmount(address,address)                               PASS          3.48s      490MB
+[pertest] halmos ERC20_OpenZeppelin   prove_BalanceUpdatedAfterBurn(address,address,uint256)                 PASS          3.68s      504MB
+[pertest] halmos ERC20_OpenZeppelin   prove_BurnDifferentAccount(address,uint256,address,uint256)            PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_BurnFromNonZeroAddress(address,uint256)                          PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_BurnSameAccount(address,uint256)                                 PASS          3.47s      500MB
+[pertest] halmos ERC20_OpenZeppelin   prove_BurnZeroTokens(address)                                          PASS          3.47s      507MB
+[pertest] halmos ERC20_OpenZeppelin   prove_ConsecutiveApprovePositiveToPositive(address,address,uint256,uint256) PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_DecreaseAllowance(address,uint256)                               PASS          3.47s      489MB
+[pertest] halmos ERC20_OpenZeppelin   prove_IncreaseAllowance(address,uint256)                               PASS          3.48s      490MB
+[pertest] halmos ERC20_OpenZeppelin   prove_Mint(address,uint256)                                            PASS          3.48s      490MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MintZeroTokens(address)                                          PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MsgSenderCanRetrieveOtherBalance(address,uint256)                PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MsgSenderCanRetrieveOwnBalance(uint256)                          PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MsgSenderCanTransferTotalBalance(address,address,uint256)        PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MsgSenderCanTransferTotalBalanceZero(address,address)            PASS          3.47s      493MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MultipleTransferFromAllowed(address,address,address,uint256,uint256) PASS          3.68s      502MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MultipleTransferFromsOfZeroAmountAllowed(address,address,address,uint8) PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MultipleTransfersAllowed(address,address,uint256,uint256)        PASS          3.47s      502MB
+[pertest] halmos ERC20_OpenZeppelin   prove_MultipleTransfersOfZeroAmountAllowed(address,address,uint8)      PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_SelfApproveAndTransferFromOwnAccount(address,address,uint256)    PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_SelfApproveAndTransferFromOwnAccountZeroAmountAllowed(address,address) PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_SelfApprovePositiveAmount(address,uint256)                       PASS          3.47s      509MB
+[pertest] halmos ERC20_OpenZeppelin   prove_SelfApproveZeroAmountAllowed(address)                            PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_SelfTransferPositiveAmountAllowed(address,uint256)               PASS          3.48s      500MB
+[pertest] halmos ERC20_OpenZeppelin   prove_SelfTransferZeroAmountAllowed(address)                           PASS          3.47s      514MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TokenReceiverCanTransferFromTotalBalance(address,address,uint256) PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TokenReceiverCanTransferFromTotalBalanceZero(address,address,address) PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_Transfer(address,uint256,uint256)                                PASS          3.47s      515MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TransferDoesNotUpdateOtherBalances(address,address,address,uint256) PASS          3.47s      506MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TransferFrom(address,address,uint256,uint256)                    PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TransferFromDecreasesAllowance(address,address,address,uint256)  PASS          3.47s      504MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TransferFromDoesNotUpdateOtherBalances(address,address,address,address,uint256) ERROR         3.68s      508MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TransferFromNoFees(address,address,address,uint256)              PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TransferFromZeroAmount(address,address,address)                  PASS          3.47s      490MB
+[pertest] halmos ERC20_OpenZeppelin   prove_TransferZeroAmount(address,address)                              PASS          3.47s      488MB
+[pertest] halmos ERC20_OpenZeppelin   prove_ZeroAddressHasNoToken()                                          PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_ApproveFromZeroAddress(address,uint256)                      FAIL          3.47s      500MB
+[pertest] halmos ERC20_Solmate        proveFail_ApproveToZeroAddress(address,uint256)                        FAIL          3.47s      508MB
+[pertest] halmos ERC20_Solmate        proveFail_ApproveZeroAddress(address,uint256)                          FAIL          3.47s      490MB
+[pertest] halmos ERC20_Solmate        proveFail_ApproveZeroAddressForMSGSender(address,uint256)              FAIL          3.47s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_BurnFromZeroAddress(uint256)                                 PASS          3.48s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_BurnUnderBalance(address,uint256)                            PASS          3.47s      515MB
+[pertest] halmos ERC20_Solmate        proveFail_BurnUnderSupply(address,uint256)                             PASS          3.47s      492MB
+[pertest] halmos ERC20_Solmate        proveFail_DecreaseAllowanceUnderAllowance(address,uint256)             ERROR         3.47s      515MB
+[pertest] halmos ERC20_Solmate        proveFail_IncreaseAllowanceUnderAllowance(address,uint256)             ERROR         3.47s      508MB
+[pertest] halmos ERC20_Solmate        proveFail_MintOverflow(address)                                        PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_MintToZeroAddress(uint256)                                   FAIL          3.48s      515MB
+[pertest] halmos ERC20_Solmate        proveFail_MintUnderSupply(address,uint256)                             ERROR         3.47s      499MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromAllowanceReachesZero(address,address,address,uint256,uint256) ERROR         3.47s      487MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromNotEnoughAmount(address,address,uint256)         ERROR         3.47s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromToZeroAddress33(address,address,uint256)         FAIL          3.47s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromUnderBalance(address,address,uint256)            PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromUnderBalancei(address,address,uint256)           PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromZeroAddress(address,address,uint256)             PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromZeroAddress(address,uint256)                     PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromZeroAddressForMSGSender(address,address,uint256) FAIL          3.48s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferFromZeroAmountToZeroAddressReverts(address,address)  FAIL          3.68s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferToZeroAddress(address,uint256)                       FAIL          3.47s      489MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferUnderBalance(address,uint256)                        PASS          3.46s      512MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferUnderBalancej(address,uint256)                       PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        proveFail_TransferZeroAmountToZeroAddressReverts(address)              FAIL          3.47s      515MB
+[pertest] halmos ERC20_Solmate        prove_AllowanceUpdatedAfterBurn(address,address,uint256)               PASS          3.47s      500MB
+[pertest] halmos ERC20_Solmate        prove_Approve(address,uint256)                                         PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_ApproveMaxAmount(address,address)                                PASS          3.47s      515MB
+[pertest] halmos ERC20_Solmate        prove_ApproveNonZeroAmount(address,address,uint256)                    PASS          3.47s      503MB
+[pertest] halmos ERC20_Solmate        prove_ApproveZeroAmount(address,address)                               PASS          3.47s      504MB
+[pertest] halmos ERC20_Solmate        prove_BalanceUpdatedAfterBurn(address,address,uint256)                 PASS          3.48s      512MB
+[pertest] halmos ERC20_Solmate        prove_BurnDifferentAccount(address,uint256,address,uint256)            PASS          3.47s      490MB
+[pertest] halmos ERC20_Solmate        prove_BurnFromNonZeroAddress(address,uint256)                          PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_BurnSameAccount(address,uint256)                                 PASS          3.47s      498MB
+[pertest] halmos ERC20_Solmate        prove_BurnZeroTokens(address)                                          PASS          3.47s      490MB
+[pertest] halmos ERC20_Solmate        prove_ConsecutiveApprovePositiveToPositive(address,address,uint256,uint256) PASS          3.47s      501MB
+[pertest] halmos ERC20_Solmate        prove_DecreaseAllowance(address,uint256)                               PASS          3.48s      488MB
+[pertest] halmos ERC20_Solmate        prove_IncreaseAllowance(address,uint256)                               PASS          3.47s      511MB
+[pertest] halmos ERC20_Solmate        prove_Mint(address,uint256)                                            PASS          3.47s      489MB
+[pertest] halmos ERC20_Solmate        prove_MintZeroTokens(address)                                          PASS          3.47s      515MB
+[pertest] halmos ERC20_Solmate        prove_MsgSenderCanRetrieveOtherBalance(address,uint256)                PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_MsgSenderCanRetrieveOwnBalance(uint256)                          PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_MsgSenderCanTransferTotalBalance(address,address,uint256)        PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_MsgSenderCanTransferTotalBalanceZero(address,address)            PASS          3.47s      515MB
+[pertest] halmos ERC20_Solmate        prove_MultipleTransferFromAllowed(address,address,address,uint256,uint256) PASS          3.68s      488MB
+[pertest] halmos ERC20_Solmate        prove_MultipleTransferFromsOfZeroAmountAllowed(address,address,address,uint8) PASS          3.68s      488MB
+[pertest] halmos ERC20_Solmate        prove_MultipleTransfersAllowed(address,address,uint256,uint256)        PASS          3.68s      488MB
+[pertest] halmos ERC20_Solmate        prove_MultipleTransfersOfZeroAmountAllowed(address,address,uint8)      PASS          3.47s      507MB
+[pertest] halmos ERC20_Solmate        prove_SelfApproveAndTransferFromOwnAccount(address,address,uint256)    PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_SelfApproveAndTransferFromOwnAccountZeroAmountAllowed(address,address) PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_SelfApprovePositiveAmount(address,uint256)                       PASS          3.47s      515MB
+[pertest] halmos ERC20_Solmate        prove_SelfApproveZeroAmountAllowed(address)                            PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_SelfTransferPositiveAmountAllowed(address,uint256)               PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_SelfTransferZeroAmountAllowed(address)                           PASS          3.47s      494MB
+[pertest] halmos ERC20_Solmate        prove_TokenReceiverCanTransferFromTotalBalance(address,address,uint256) PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_TokenReceiverCanTransferFromTotalBalanceZero(address,address,address) PASS          3.47s      489MB
+[pertest] halmos ERC20_Solmate        prove_Transfer(address,uint256,uint256)                                PASS          3.47s      489MB
+[pertest] halmos ERC20_Solmate        prove_TransferDoesNotUpdateOtherBalances(address,address,address,uint256) PASS          3.47s      505MB
+[pertest] halmos ERC20_Solmate        prove_TransferFrom(address,address,uint256,uint256)                    PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_TransferFromDecreasesAllowance(address,address,address,uint256)  PASS          3.48s      488MB
+[pertest] halmos ERC20_Solmate        prove_TransferFromDoesNotUpdateOtherBalances(address,address,address,address,uint256) ERROR         3.68s      495MB
+[pertest] halmos ERC20_Solmate        prove_TransferFromNoFees(address,address,address,uint256)              PASS          3.47s      498MB
+[pertest] halmos ERC20_Solmate        prove_TransferFromZeroAmount(address,address,address)                  PASS          3.47s      488MB
+[pertest] halmos ERC20_Solmate        prove_TransferZeroAmount(address,address)                              PASS          3.47s      498MB
+[pertest] halmos ERC20_Solmate        prove_ZeroAddressHasNoToken()                                          PASS          3.47s      488MB
+[suite] run  1 halmos ERC20_OpenZeppelin   exited        6.94s      489MB
+[suite] run  1 halmos ERC20_Solmate        exited        8.18s      503MB
+[suite] run  2 halmos ERC20_OpenZeppelin   exited        6.94s      488MB
+[suite] run  2 halmos ERC20_Solmate        exited        7.97s      488MB
+[suite] run  3 halmos ERC20_OpenZeppelin   exited        6.73s      488MB
+[suite] run  3 halmos ERC20_Solmate        exited        8.18s      489MB
+[suite] run  4 halmos ERC20_OpenZeppelin   exited        6.74s      488MB
+[suite] run  4 halmos ERC20_Solmate        exited        7.76s      488MB
+[suite] run  5 halmos ERC20_OpenZeppelin   exited        6.73s      488MB
+[suite] run  5 halmos ERC20_Solmate        exited        7.97s      488MB
+[suite] run  6 halmos ERC20_OpenZeppelin   exited        6.73s      488MB
+[suite] run  6 halmos ERC20_Solmate        exited        7.96s      488MB
+[suite] run  7 halmos ERC20_OpenZeppelin   exited        6.94s      488MB
+[suite] run  7 halmos ERC20_Solmate        exited        7.98s      488MB
+[suite] run  8 halmos ERC20_OpenZeppelin   exited        6.73s      497MB
+[suite] run  8 halmos ERC20_Solmate        exited        8.17s      488MB
+[suite] run  9 halmos ERC20_OpenZeppelin   exited        6.94s      488MB
+[suite] run  9 halmos ERC20_Solmate        exited        8.18s      488MB
+[suite] run 10 halmos ERC20_OpenZeppelin   exited        6.73s      488MB
+[suite] run 10 halmos ERC20_Solmate        exited        7.98s      488MB
+Halmos: P = 0.873 (all 8 subjects), 0.957 without ERC-4626
+Hevm: P = 0.670 (all 8 subjects), 0.723 without ERC-4626
+tables written to results/tables
+MIGRATION_DONE

@@ -1,0 +1,17 @@
+subject,tool,inc_default,inc_sensitivity,inc_to_pass,new_fail,fail_lost
+ERC20_OpenZeppelin,halmos,4,4,0,0,0
+ERC20_OpenZeppelin,hevm,21,1,20,0,0
+ERC20_Solmate,halmos,4,4,0,0,0
+ERC20_Solmate,hevm,21,0,21,0,0
+ERC721_OpenZeppelin,halmos,1,1,0,0,0
+ERC721_OpenZeppelin,hevm,3,1,2,0,0
+ERC721_Solmate,halmos,0,0,0,0,0
+ERC721_Solmate,hevm,3,0,3,0,0
+ERC1155_OpenZeppelin,halmos,0,0,0,0,0
+ERC1155_OpenZeppelin,hevm,3,2,1,0,0
+ERC1155_Solmate,halmos,0,0,0,0,0
+ERC1155_Solmate,hevm,2,1,1,0,0
+ERC4626_OpenZeppelin,halmos,4,4,0,0,0
+ERC4626_OpenZeppelin,hevm,24,18,6,0,0
+ERC4626_Solmate,halmos,7,7,0,0,0
+ERC4626_Solmate,hevm,21,16,5,0,0

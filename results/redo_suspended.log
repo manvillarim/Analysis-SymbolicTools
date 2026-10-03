@@ -1,0 +1,6 @@
+removed 1 row(s) measured across the system suspend
+[pertest] hevm   ERC20_Solmate        prove_MultipleTransferFromsOfZeroAmountAllowed(address,address,address,uint8) PASS        685.33s     1481MB
+Halmos: P = 0.943 (all 8 subjects), 0.964 without ERC-4626
+Hevm: P = 0.658 (all 8 subjects), 0.707 without ERC-4626
+tables written to results/tables
+REDO_DONE

@@ -1,0 +1,276 @@
+Checking 65 function(s) in contract test/hevm/subjects/ERC20_OpenZeppelin_Hevm.t.sol:ERC20_OpenZeppelin_Hevm
+[96m[RUNNING][0m proveFail_TransferUnderBalancej(address,uint256)
+   [32m[PASS][0m proveFail_TransferUnderBalancej
+
+[96m[RUNNING][0m prove_ZeroAddressHasNoToken()
+   [32m[PASS][0m prove_ZeroAddressHasNoToken
+
+[96m[RUNNING][0m prove_TokenReceiverCanTransferFromTotalBalance(address,address,uint256)
+   [31m[FAIL][0m prove_TokenReceiverCanTransferFromTotalBalance
+   [33m[WARNING][0m prove_TokenReceiverCanTransferFromTotalBalance all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_TokenReceiverCanTransferFromTotalBalance due to: 
+      4x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 20 : "contract OpenZeppelinERC20 is OZERC20Mock {}"
+
+[96m[RUNNING][0m prove_TransferFromNoFees(address,address,address,uint256)
+   [31m[FAIL][0m prove_TransferFromNoFees
+   [33m[WARNING][0m prove_TransferFromNoFees all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_TransferFromNoFees due to: 
+      4x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 20 : "contract OpenZeppelinERC20 is OZERC20Mock {}"
+
+[96m[RUNNING][0m prove_MintZeroTokens(address)
+   [32m[PASS][0m prove_MintZeroTokens
+
+[96m[RUNNING][0m proveFail_TransferFromUnderBalancei(address,address,uint256)
+   [32m[PASS][0m proveFail_TransferFromUnderBalancei
+
+[96m[RUNNING][0m prove_TransferZeroAmount(address,address)
+   [32m[PASS][0m prove_TransferZeroAmount
+
+[96m[RUNNING][0m prove_TokenReceiverCanTransferFromTotalBalanceZero(address,address,address)
+   [31m[FAIL][0m prove_TokenReceiverCanTransferFromTotalBalanceZero
+   [33m[WARNING][0m prove_TokenReceiverCanTransferFromTotalBalanceZero all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_TokenReceiverCanTransferFromTotalBalanceZero due to: 
+      8x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 20 : "contract OpenZeppelinERC20 is OZERC20Mock {}"
+
+[96m[RUNNING][0m prove_AllowanceUpdatedAfterBurn(address,address,uint256)
+   [32m[PASS][0m prove_AllowanceUpdatedAfterBurn
+
+[96m[RUNNING][0m prove_Approve(address,uint256)
+   [32m[PASS][0m prove_Approve
+
+[96m[RUNNING][0m prove_SelfApproveAndTransferFromOwnAccount(address,address,uint256)
+   [31m[FAIL][0m prove_SelfApproveAndTransferFromOwnAccount
+   [33m[WARNING][0m prove_SelfApproveAndTransferFromOwnAccount all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_SelfApproveAndTransferFromOwnAccount due to: 
+      4x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 20 : "contract OpenZeppelinERC20 is OZERC20Mock {}"
+
+[96m[RUNNING][0m prove_SelfTransferZeroAmountAllowed(address)
+   [32m[PASS][0m prove_SelfTransferZeroAmountAllowed
+
+[96m[RUNNING][0m prove_TransferFromDecreasesAllowance(address,address,address,uint256)
+   [32m[PASS][0m prove_TransferFromDecreasesAllowance
+
+[96m[RUNNING][0m prove_BurnSameAccount(address,uint256)
+   [31m[FAIL][0m prove_BurnSameAccount
+   [33m[WARNING][0m prove_BurnSameAccount all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_BurnSameAccount due to: 
+      2x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 20 : "contract OpenZeppelinERC20 is OZERC20Mock {}"
+
+[96m[RUNNING][0m prove_TransferFrom(address,address,uint256,uint256)
+   [31m[FAIL][0m prove_TransferFrom
+   [33m[WARNING][0m prove_TransferFrom all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_TransferFrom due to: 
+      2x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 20 : "contract OpenZeppelinERC20 is OZERC20Mock {}"
+
+[96m[RUNNING][0m prove_TransferFromZeroAmount(address,address,address)
+   [31m[FAIL][0m prove_TransferFromZeroAmount
+   [33m[WARNING][0m prove_TransferFromZeroAmount all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_TransferFromZeroAmount due to: 
+      6x -> Max iterations reached at addr: LitAddr 0xD95322745865822719164b1fC167930754c248DE at pc: 3110
+
+[96m[RUNNING][0m proveFail_TransferFromZeroAddress(address,address,uint256)
+   [32m[PASS][0m proveFail_TransferFromZeroAddress
+
+[96m[RUNNING][0m prove_SelfTransferPositiveAmountAllowed(address,uint256)
+   [32m[PASS][0m prove_SelfTransferPositiveAmountAllowed
+
+[96m[RUNNING][0m proveFail_BurnUnderBalance(address,uint256)
+   [32m[PASS][0m proveFail_BurnUnderBalance
+
+[96m[RUNNING][0m proveFail_IncreaseAllowanceUnderAllowance(address,uint256)
+   [32m[PASS][0m proveFail_IncreaseAllowanceUnderAllowance
+
+[96m[RUNNING][0m proveFail_TransferFromNotEnoughAmount(address,address,uint256)
+   [32m[PASS][0m proveFail_TransferFromNotEnoughAmount
+
+[96m[RUNNING][0m proveFail_TransferFromAllowanceReachesZero(address,address,address,uint256,uint256)
+   [31m[FAIL][0m proveFail_TransferFromAllowanceReachesZero
+   [33m[WARNING][0m hevm was only able to partially explore the test proveFail_TransferFromAllowanceReachesZero due to: 
+      4x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 20 : "contract OpenZeppelinERC20 is OZERC20Mock {}"
+
+[96m[RUNNING][0m prove_MultipleTransfersAllowed(address,address,uint256,uint256)
+   [31m[FAIL][0m prove_MultipleTransfersAllowed
+   [33m[WARNING][0m prove_MultipleTransfersAllowed all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_MultipleTransfersAllowed due to: 
+      2x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 20 : "contract OpenZeppelinERC20 is OZERC20Mock {}"
+
+[96m[RUNNING][0m proveFail_MintToZeroAddress(uint256)
+   [32m[PASS][0m proveFail_MintToZeroAddress
+
+[96m[RUNNING][0m prove_ApproveNonZeroAmount(address,address,uint256)
+   [32m[PASS][0m prove_ApproveNonZeroAmount
+
+[96m[RUNNING][0m prove_SelfApprovePositiveAmount(address,uint256)
+   [32m[PASS][0m prove_SelfApprovePositiveAmount
+
+[96m[RUNNING][0m prove_TransferFromDoesNotUpdateOtherBalances(address,address,address,address,uint256)
+   [31m[FAIL][0m prove_TransferFromDoesNotUpdateOtherBalances
+   [33m[WARNING][0m prove_TransferFromDoesNotUpdateOtherBalances all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_TransferFromDoesNotUpdateOtherBalances due to: 
+      2x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 20 : "contract OpenZeppelinERC20 is OZERC20Mock {}"
+
+[96m[RUNNING][0m proveFail_TransferFromZeroAddressForMSGSender(address,address,uint256)
+   [32m[PASS][0m proveFail_TransferFromZeroAddressForMSGSender
+
+[96m[RUNNING][0m prove_MsgSenderCanRetrieveOtherBalance(address,uint256)
+   [32m[PASS][0m prove_MsgSenderCanRetrieveOtherBalance
+
+[96m[RUNNING][0m prove_SelfApproveAndTransferFromOwnAccountZeroAmountAllowed(address,address)
+   [31m[FAIL][0m prove_SelfApproveAndTransferFromOwnAccountZeroAmountAllowed
+   [33m[WARNING][0m prove_SelfApproveAndTransferFromOwnAccountZeroAmountAllowed all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_SelfApproveAndTransferFromOwnAccountZeroAmountAllowed due to: 
+      8x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 20 : "contract OpenZeppelinERC20 is OZERC20Mock {}"
+
+[96m[RUNNING][0m prove_Mint(address,uint256)
+   [32m[PASS][0m prove_Mint
+
+[96m[RUNNING][0m proveFail_ApproveZeroAddress(address,uint256)
+   [32m[PASS][0m proveFail_ApproveZeroAddress
+
+[96m[RUNNING][0m proveFail_TransferToZeroAddress(address,uint256)
+   [32m[PASS][0m proveFail_TransferToZeroAddress
+
+[96m[RUNNING][0m proveFail_BurnUnderSupply(address,uint256)
+   [32m[PASS][0m proveFail_BurnUnderSupply
+
+[96m[RUNNING][0m proveFail_ApproveFromZeroAddress(address,uint256)
+   [32m[PASS][0m proveFail_ApproveFromZeroAddress
+
+[96m[RUNNING][0m prove_MultipleTransfersOfZeroAmountAllowed(address,address,uint8)
+   [31m[FAIL][0m prove_MultipleTransfersOfZeroAmountAllowed
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_MultipleTransfersOfZeroAmountAllowed due to: 
+      4x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 20 : "contract OpenZeppelinERC20 is OZERC20Mock {}"
+
+[96m[RUNNING][0m proveFail_ApproveZeroAddressForMSGSender(address,uint256)
+   [32m[PASS][0m proveFail_ApproveZeroAddressForMSGSender
+
+[96m[RUNNING][0m prove_TransferDoesNotUpdateOtherBalances(address,address,address,uint256)
+   [31m[FAIL][0m prove_TransferDoesNotUpdateOtherBalances
+   [33m[WARNING][0m prove_TransferDoesNotUpdateOtherBalances all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_TransferDoesNotUpdateOtherBalances due to: 
+      2x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 20 : "contract OpenZeppelinERC20 is OZERC20Mock {}"
+
+[96m[RUNNING][0m proveFail_MintUnderSupply(address,uint256)
+   [32m[PASS][0m proveFail_MintUnderSupply
+
+[96m[RUNNING][0m prove_BurnZeroTokens(address)
+   [32m[PASS][0m prove_BurnZeroTokens
+
+[96m[RUNNING][0m prove_SelfApproveZeroAmountAllowed(address)
+   [32m[PASS][0m prove_SelfApproveZeroAmountAllowed
+
+[96m[RUNNING][0m prove_MsgSenderCanRetrieveOwnBalance(uint256)
+   [32m[PASS][0m prove_MsgSenderCanRetrieveOwnBalance
+
+[96m[RUNNING][0m prove_MsgSenderCanTransferTotalBalance(address,address,uint256)
+   [31m[FAIL][0m prove_MsgSenderCanTransferTotalBalance
+   [33m[WARNING][0m prove_MsgSenderCanTransferTotalBalance all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_MsgSenderCanTransferTotalBalance due to: 
+      2x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 20 : "contract OpenZeppelinERC20 is OZERC20Mock {}"
+
+[96m[RUNNING][0m prove_BurnDifferentAccount(address,uint256,address,uint256)
+   [31m[FAIL][0m prove_BurnDifferentAccount
+   [33m[WARNING][0m prove_BurnDifferentAccount all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_BurnDifferentAccount due to: 
+      2x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 20 : "contract OpenZeppelinERC20 is OZERC20Mock {}"
+
+[96m[RUNNING][0m prove_MsgSenderCanTransferTotalBalanceZero(address,address)
+   [32m[PASS][0m prove_MsgSenderCanTransferTotalBalanceZero
+
+[96m[RUNNING][0m proveFail_TransferFromUnderBalance(address,address,uint256)
+   [32m[PASS][0m proveFail_TransferFromUnderBalance
+
+[96m[RUNNING][0m prove_ConsecutiveApprovePositiveToPositive(address,address,uint256,uint256)
+   [32m[PASS][0m prove_ConsecutiveApprovePositiveToPositive
+
+[96m[RUNNING][0m proveFail_BurnFromZeroAddress(uint256)
+   [32m[PASS][0m proveFail_BurnFromZeroAddress
+
+[96m[RUNNING][0m proveFail_DecreaseAllowanceUnderAllowance(address,uint256)
+   [32m[PASS][0m proveFail_DecreaseAllowanceUnderAllowance
+
+[96m[RUNNING][0m prove_MultipleTransferFromAllowed(address,address,address,uint256,uint256)
+   [31m[FAIL][0m prove_MultipleTransferFromAllowed
+   [33m[WARNING][0m prove_MultipleTransferFromAllowed all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_MultipleTransferFromAllowed due to: 
+      8x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 20 : "contract OpenZeppelinERC20 is OZERC20Mock {}"
+
+[96m[RUNNING][0m proveFail_TransferFromZeroAddress(address,uint256)
+   [32m[PASS][0m proveFail_TransferFromZeroAddress
+
+[96m[RUNNING][0m proveFail_TransferUnderBalance(address,uint256)
+   [32m[PASS][0m proveFail_TransferUnderBalance
+
+[96m[RUNNING][0m prove_Transfer(address,uint256,uint256)
+   [31m[FAIL][0m prove_Transfer
+   [33m[WARNING][0m prove_Transfer all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_Transfer due to: 
+      2x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 20 : "contract OpenZeppelinERC20 is OZERC20Mock {}"
+
+[96m[RUNNING][0m prove_IncreaseAllowance(address,uint256)
+   [31m[FAIL][0m prove_IncreaseAllowance
+   [33m[WARNING][0m prove_IncreaseAllowance all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_IncreaseAllowance due to: 
+      4x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 20 : "contract OpenZeppelinERC20 is OZERC20Mock {}"
+
+[96m[RUNNING][0m prove_BalanceUpdatedAfterBurn(address,address,uint256)
+   [31m[FAIL][0m prove_BalanceUpdatedAfterBurn
+   [33m[WARNING][0m prove_BalanceUpdatedAfterBurn all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_BalanceUpdatedAfterBurn due to: 
+      2x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 20 : "contract OpenZeppelinERC20 is OZERC20Mock {}"
+
+[96m[RUNNING][0m prove_ApproveZeroAmount(address,address)
+   [32m[PASS][0m prove_ApproveZeroAmount
+
+[96m[RUNNING][0m proveFail_TransferZeroAmountToZeroAddressReverts(address)
+   [32m[PASS][0m proveFail_TransferZeroAmountToZeroAddressReverts
+
+[96m[RUNNING][0m proveFail_TransferFromToZeroAddress33(address,address,uint256)
+   [32m[PASS][0m proveFail_TransferFromToZeroAddress33
+
+[96m[RUNNING][0m prove_DecreaseAllowance(address,uint256)
+   [31m[FAIL][0m prove_DecreaseAllowance
+   [33m[WARNING][0m prove_DecreaseAllowance all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_DecreaseAllowance due to: 
+      2x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 20 : "contract OpenZeppelinERC20 is OZERC20Mock {}"
+
+[96m[RUNNING][0m prove_ApproveMaxAmount(address,address)
+   [32m[PASS][0m prove_ApproveMaxAmount
+
+[96m[RUNNING][0m prove_BurnFromNonZeroAddress(address,uint256)
+   [32m[PASS][0m prove_BurnFromNonZeroAddress
+
+[96m[RUNNING][0m proveFail_TransferFromZeroAmountToZeroAddressReverts(address,address)
+   [32m[PASS][0m proveFail_TransferFromZeroAmountToZeroAddressReverts
+
+[96m[RUNNING][0m prove_MultipleTransferFromsOfZeroAmountAllowed(address,address,address,uint8)
+   [31m[FAIL][0m prove_MultipleTransferFromsOfZeroAmountAllowed
+   [33m[WARNING][0m prove_MultipleTransferFromsOfZeroAmountAllowed all branches reverted
+
+   [33m[WARNING][0m hevm was only able to partially explore the test prove_MultipleTransferFromsOfZeroAmountAllowed due to: 
+      2x -> Max iterations reached in file "src/mocks/Mocks.sol" on line 20 : "contract OpenZeppelinERC20 is OZERC20Mock {}"
+
+[96m[RUNNING][0m proveFail_MintOverflow(address)
+   [32m[PASS][0m proveFail_MintOverflow
+
+[96m[RUNNING][0m proveFail_ApproveToZeroAddress(address,uint256)
+   [32m[PASS][0m proveFail_ApproveToZeroAddress
+

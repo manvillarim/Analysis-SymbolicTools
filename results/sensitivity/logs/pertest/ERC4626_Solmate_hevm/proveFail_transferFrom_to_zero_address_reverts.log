@@ -1,0 +1,10 @@
+Checking 1 function(s) in contract test/hevm/subjects/ERC4626_Solmate_Hevm.t.sol:ERC4626_Solmate_Hevm
+[96m[RUNNING][0m proveFail_transferFrom_to_zero_address_reverts(address,address,uint256)
+   Counterexample:   [90m[validated][0m
+     calldata: proveFail_transferFrom_to_zero_address_reverts(0x0400000800000000000000000000000000000000,0x000000004200180042000000210000000000000a,115792089237316195423570985008687907853269984665640564039457584007913129639935)
+     result:   Successful execution
+   Counterexample:   [90m[validated][0m
+     calldata: proveFail_transferFrom_to_zero_address_reverts(0x0000040040010000000100000000000000800000,0x100002000000000000000000000000000000000A,19337289194249480502809711108686882604462446001418774190165741798363378897120)
+     result:   Successful execution
+   [31m[FAIL][0m proveFail_transferFrom_to_zero_address_reverts
+

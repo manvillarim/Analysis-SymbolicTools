@@ -1,0 +1,21 @@
+\begin{table}[htb]
+\centering
+\begin{scriptsize}
+\begin{tabular}{lcccccc}
+\toprule
+\textbf{Subject} & \textbf{Halmos mean} & \textbf{Halmos max} & \textbf{Hevm mean} & \textbf{Hevm max} & \textbf{Halmos max/test} & \textbf{Hevm max/test} \\
+\midrule
+ERC-20 OpenZeppelin & 503 & 516 & 1036 & 1038 & 500 & 1005 \\
+ERC-20 Solmate & 488 & 489 & 1325 & 1327 & 515 & 1280 \\
+ERC-721 OpenZeppelin & 491 & 502 & 1013 & 1112 & 504 & 934 \\
+ERC-721 Solmate & 487 & 502 & 1015 & 1234 & 491 & 888 \\
+ERC-1155 OpenZeppelin & 484 & 502 & 1659 & 1662 & 504 & 1656 \\
+ERC-1155 Solmate & 500 & 504 & 875 & 896 & 503 & 864 \\
+ERC-4626 OpenZeppelin & 2010 & 2189 & 6325 & 6414 & 10266 & 6193 \\
+ERC-4626 Solmate & 5996 & 6101 & 4246 & 4349 & 10000 & 4230 \\
+\bottomrule
+\end{tabular}
+\end{scriptsize}
+\caption{Peak resident memory (MB) of the tool process tree, including solver processes. Suite: mean and maximum over 10 runs; per test: maximum over all test cases.}
+\label{tab:memory}
+\end{table}
